@@ -81,6 +81,10 @@ export default {
           "0%": { transform: "scale(0.95)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -89,6 +93,13 @@ export default {
         "slide-in-right": "slide-in-right 0.5s ease-out",
         "slide-in-left": "slide-in-left 0.5s ease-out",
         "zoom-in": "zoom-in 0.5s ease-out",
+        float: "float 3s ease-in-out infinite",
+      },
+      boxShadow: {
+        glass: "0 4px 30px rgba(0, 0, 0, 0.1)",
+      },
+      backdropBlur: {
+        glass: "blur(4px)",
       },
     },
   },

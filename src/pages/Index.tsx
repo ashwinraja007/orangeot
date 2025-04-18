@@ -1,8 +1,7 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Building2, FileCheck, Globe, Headset, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -39,6 +38,31 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in">
+              <CardContent className="p-8">
+                <h2 className="font-heading font-bold text-2xl mb-4 text-primary">Our Mission</h2>
+                <p className="text-gray-600 leading-relaxed">
+                  "We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders, helping them streamline operations, boost visibility, and scale efficiently."
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in">
+              <CardContent className="p-8">
+                <h2 className="font-heading font-bold text-2xl mb-4 text-primary">Our Vision</h2>
+                <p className="text-gray-600 leading-relaxed">
+                  "To set the industry benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage the rest."
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

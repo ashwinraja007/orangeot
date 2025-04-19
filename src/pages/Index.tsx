@@ -56,7 +56,7 @@ const Index = () => {
       <section className="pt-28 md:pt-32 pb-20 bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden">
         {/* Parallax background elements */}
         <div className="absolute inset-0 opacity-10" style={{
-        backgroundImage: "url('')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1920&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         transform: `translateY(${scrollY * 0.2}px)`
@@ -91,7 +91,7 @@ const Index = () => {
                     <ArrowRight className="h-5 w-5" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 animate-fade-in delay-150">
+                <Button size="lg" variant="outline" className="border-white hover:bg-white/20 animate-fade-in delay-150 text-[primar] text-[#ff8e00]">
                   <Link to="/services">Our Services</Link>
                 </Button>
               </div>

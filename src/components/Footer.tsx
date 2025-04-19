@@ -75,7 +75,7 @@ export const Footer = () => {
             text: "info@orangeot.com"
           }].map((contact, index) => <div key={index} className="flex space-x-2 items-center mb-2 group card-hover p-2 rounded-lg">
                 <contact.icon size={18} className="text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="text-gray-600 text-sm">{contact.text}</span>
+                <span className="text-white text-sm">{contact.text}</span>
               </div>)}
           </div>
           

@@ -436,7 +436,7 @@ const Index = () => {
                 <Button size="lg" variant="outline" className="border-white btn-hover-effect text-gray-950 bg-orange-500 hover:bg-orange-400">
                   <Link to="/services">Explore Services</Link>
                 </Button>
-                <Button size="lg" className="bg-white hover:bg-white/90 shadow-lg hover:shadow-xl btn-hover-effect text-orange-400">
+                <Button size="lg" className="shadow-lg hover:shadow-xl btn-hover-effect bg-orange-500 hover:bg-orange-400 text-gray-950">
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>

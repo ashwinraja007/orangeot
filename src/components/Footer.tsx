@@ -2,12 +2,12 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-gray-900 pt-16 pb-8 relative text-white">
+  return <footer className="bg-gray-900 pt-16 pb-8 relative text-white">
       {/* Shape divider */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-gray-900" style={{ clipPath: "polygon(0 0, 100% 100%, 100% 0)" }}></div>
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gray-900" style={{
+      clipPath: "polygon(0 0, 100% 100%, 100% 0)"
+    }}></div>
       
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -15,29 +15,31 @@ export const Footer = () => {
             <Link to="/" className="inline-block mb-4 hover-lift">
               <img src="/lovable-uploads/c80361a7-f9e6-4b5d-a689-95904676a926.png" alt="Orange Office Technologies" className="h-12 w-auto" />
             </Link>
-            <p className="text-gray-600 text-sm">
+            <p className="text-sm text-slate-50">
               Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider offering expert services in logistics operations.
             </p>
             <div className="flex space-x-4 mt-6">
-              {[
-                { icon: Facebook, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Instagram, href: "#" }
-              ].map((social, index) => (
-                <a 
-                  key={index}
-                  href={social.href}
-                  className="text-gray-500 hover:text-primary transition-all duration-300 hover:scale-125 transform p-2 rounded-full hover:bg-gray-100"
-                  aria-label={`Follow us on ${social.icon.name}`}
-                >
+              {[{
+              icon: Facebook,
+              href: "#"
+            }, {
+              icon: Twitter,
+              href: "#"
+            }, {
+              icon: Linkedin,
+              href: "#"
+            }, {
+              icon: Instagram,
+              href: "#"
+            }].map((social, index) => <a key={index} href={social.href} className="text-gray-500 hover:text-primary transition-all duration-300 hover:scale-125 transform p-2 rounded-full hover:bg-gray-100" aria-label={`Follow us on ${social.icon.name}`}>
                   <social.icon size={20} />
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
           
-          <div className="animate-fade-in" style={{ animationDelay: "100ms" }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: "100ms"
+        }}>
             <h4 className="font-heading font-bold text-lg mb-4 text-gradient">Chennai - Headquarters</h4>
             <div className="flex space-x-2 items-start mb-2 group card-hover p-2 rounded-lg">
               <MapPin size={18} className="text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
@@ -51,7 +53,9 @@ export const Footer = () => {
             </div>
           </div>
           
-          <div className="animate-fade-in" style={{ animationDelay: "200ms" }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: "200ms"
+        }}>
             <h4 className="font-heading font-bold text-lg mb-4 text-gradient">Kochi Office</h4>
             <div className="flex space-x-2 items-start mb-4 group card-hover p-2 rounded-lg">
               <MapPin size={18} className="text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
@@ -63,30 +67,25 @@ export const Footer = () => {
                 (Landmark: OPP Metro Pillar 394)
               </address>
             </div>
-            {[
-              { icon: Phone, text: "+91 44 4796 5437" },
-              { icon: Mail, text: "info@orangeot.com" }
-            ].map((contact, index) => (
-              <div key={index} className="flex space-x-2 items-center mb-2 group card-hover p-2 rounded-lg">
+            {[{
+            icon: Phone,
+            text: "+91 44 4796 5437"
+          }, {
+            icon: Mail,
+            text: "info@orangeot.com"
+          }].map((contact, index) => <div key={index} className="flex space-x-2 items-center mb-2 group card-hover p-2 rounded-lg">
                 <contact.icon size={18} className="text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <span className="text-gray-600 text-sm">{contact.text}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
           
-          <div className="animate-fade-in" style={{ animationDelay: "300ms" }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: "300ms"
+        }}>
             <h4 className="font-heading font-bold text-lg mb-4 text-gradient">Subscribe</h4>
             <form className="space-y-4">
-              <Input 
-                placeholder="Email" 
-                type="email" 
-                className="bg-white border-gray-300 focus:border-primary focus:ring-primary transition-all duration-300" 
-              />
-              <Input 
-                placeholder="Your Name" 
-                type="text" 
-                className="bg-white border-gray-300 focus:border-primary focus:ring-primary transition-all duration-300" 
-              />
+              <Input placeholder="Email" type="email" className="bg-white border-gray-300 focus:border-primary focus:ring-primary transition-all duration-300" />
+              <Input placeholder="Your Name" type="text" className="bg-white border-gray-300 focus:border-primary focus:ring-primary transition-all duration-300" />
               <Button className="w-full bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-effect">
                 Subscribe
               </Button>
@@ -100,23 +99,21 @@ export const Footer = () => {
               © {new Date().getFullYear()} Orange Office Technologies Pvt Ltd - All Rights Reserved.
             </p>
             <div className="flex space-x-6">
-              {[
-                { to: "/privacy-policy", label: "Privacy Policy" },
-                { to: "/terms", label: "Terms of Service" },
-                { to: "/sitemap", label: "Sitemap" }
-              ].map((link) => (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  className="text-gray-400 text-sm hover:text-primary transition-colors duration-300"
-                >
+              {[{
+              to: "/privacy-policy",
+              label: "Privacy Policy"
+            }, {
+              to: "/terms",
+              label: "Terms of Service"
+            }, {
+              to: "/sitemap",
+              label: "Sitemap"
+            }].map(link => <Link key={link.label} to={link.to} className="text-gray-400 text-sm hover:text-primary transition-colors duration-300">
                   {link.label}
-                </Link>
-              ))}
+                </Link>)}
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };

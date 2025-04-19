@@ -56,7 +56,7 @@ const Index = () => {
       <section className="pt-28 md:pt-32 pb-20 bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden">
         {/* Parallax background elements */}
         <div className="absolute inset-0 opacity-10" style={{
-        backgroundImage: "url('/62fc8e0582103.jpg')",
+        backgroundImage: "url('')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         transform: `translateY(${scrollY * 0.2}px)`

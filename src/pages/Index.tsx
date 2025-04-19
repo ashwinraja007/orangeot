@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,23 +6,22 @@ import { ArrowRight, Building2, FileCheck, Globe, Headset, Shield, Users } from 
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
-
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
   // Add state for parallax effect
   const [scrollY, setScrollY] = useState(0);
-  
+
   // Handle scroll for parallax effects
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-    
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, {
+      passive: true
+    });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   useEffect(() => {
     // Set up intersection observer for animation on scroll
     observerRef.current = new IntersectionObserver(entries => {
@@ -43,7 +41,6 @@ const Index = () => {
     animatedElements.forEach(el => {
       observerRef.current?.observe(el);
     });
-    
     return () => {
       if (observerRef.current) {
         animatedElements.forEach(el => {
@@ -52,44 +49,33 @@ const Index = () => {
       }
     };
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section with Improved Layout */}
       <section className="pt-28 md:pt-32 pb-20 bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden">
         {/* Parallax background elements */}
-        <div 
-          className="absolute inset-0 opacity-10" 
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1920&q=80')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            transform: `translateY(${scrollY * 0.2}px)`
-          }}
-        ></div>
+        <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1920&q=80')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        transform: `translateY(${scrollY * 0.2}px)`
+      }}></div>
         
         {/* Floating particles */}
         <div className="particle-container absolute inset-0 overflow-hidden">
-          {[...Array(10)].map((_, i) => (
-            <div 
-              key={i}
-              className="absolute rounded-full bg-white/30 animate-float-slow"
-              style={{
-                width: `${Math.random() * 60 + 20}px`,
-                height: `${Math.random() * 60 + 20}px`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDuration: `${Math.random() * 10 + 15}s`,
-                animationDelay: `${Math.random() * 5}s`,
-                opacity: Math.random() * 0.5 + 0.1
-              }}
-            ></div>
-          ))}
+          {[...Array(10)].map((_, i) => <div key={i} className="absolute rounded-full bg-white/30 animate-float-slow" style={{
+          width: `${Math.random() * 60 + 20}px`,
+          height: `${Math.random() * 60 + 20}px`,
+          top: `${Math.random() * 100}%`,
+          left: `${Math.random() * 100}%`,
+          animationDuration: `${Math.random() * 10 + 15}s`,
+          animationDelay: `${Math.random() * 5}s`,
+          opacity: Math.random() * 0.5 + 0.1
+        }}></div>)}
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto relative z-10 px-[20px] py-[77px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-white leading-tight tracking-tight">
@@ -112,11 +98,7 @@ const Index = () => {
             </div>
             <div className="relative mt-10 lg:mt-0 animate-slide-in-right">
               <div className="aspect-video glassmorphism rounded-2xl overflow-hidden shadow-2xl animate-float">
-                <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" 
-                  alt="IT Solutions for Freight Forwarders" 
-                  className="object-cover w-full h-full opacity-90"
-                />
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="IT Solutions for Freight Forwarders" className="object-cover w-full h-full opacity-90" />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                   <div className="text-center text-white p-6">
                     <Shield className="h-16 w-16 mx-auto mb-4 text-white" />
@@ -136,17 +118,9 @@ const Index = () => {
             <p className="text-white/80 text-center mb-6 text-sm uppercase tracking-wider font-medium">Trusted by leading companies</p>
             <div className="flex flex-wrap justify-center gap-8 md:gap-12">
               {/* Replace with actual client logos */}
-              {[
-                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg",
-                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg",
-                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg",
-                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg",
-                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg"
-              ].map((logo, i) => (
-                <div key={i} className="h-12 w-auto flex items-center justify-center p-2 backdrop-blur-sm">
-                  <img src={logo} alt={`Client logo ${i+1}`} className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-                </div>
-              ))}
+              {["https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg"].map((logo, i) => <div key={i} className="h-12 w-auto flex items-center justify-center p-2 backdrop-blur-sm">
+                  <img src={logo} alt={`Client logo ${i + 1}`} className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                </div>)}
             </div>
           </div>
         </div>
@@ -154,10 +128,7 @@ const Index = () => {
         {/* Enhanced wave divider */}
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
-            <path 
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.45,22.39,121.09,43.65,201.77,57.86,248.57,67.43,280.12,65.8,321.39,56.44Z" 
-              className="fill-white"
-            ></path>
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.45,22.39,121.09,43.65,201.77,57.86,248.57,67.43,280.12,65.8,321.39,56.44Z" className="fill-white"></path>
           </svg>
         </div>
       </section>
@@ -179,11 +150,7 @@ const Index = () => {
             <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden">
               <CardContent className="p-0">
                 <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=600&q=80" 
-                    alt="Our Mission" 
-                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=600&q=80" alt="Our Mission" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                     <h2 className="font-heading font-bold text-2xl p-6 text-white">Our Mission</h2>
                   </div>
@@ -199,11 +166,7 @@ const Index = () => {
             <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden">
               <CardContent className="p-0">
                 <div className="h-48 bg-gradient-to-br from-accent/10 to-accent/5 relative overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=600&q=80" 
-                    alt="Our Vision" 
-                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=600&q=80" alt="Our Vision" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                     <h2 className="font-heading font-bold text-2xl p-6 text-white">Our Vision</h2>
                   </div>
@@ -233,55 +196,41 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {[
-              {
-                icon: FileCheck,
-                title: "Documentation",
-                description: "Expert documentation services including invoices, credit notes, and job profit statements.",
-                image: "https://images.unsplash.com/photo-1582653841981-84d64c067ee5?auto=format&fit=crop&w=600&q=80"
-              }, 
-              {
-                icon: Users,
-                title: "Sales Support",
-                description: "Centralized sales support desk for lead management and customer relationships.",
-                image: "https://images.unsplash.com/photo-1543123289-93c36174a331?auto=format&fit=crop&w=600&q=80"
-              }, 
-              {
-                icon: Globe,
-                title: "Digital Marketing",
-                description: "Comprehensive digital marketing solutions to boost your online presence.",
-                image: "https://images.unsplash.com/photo-1587620962725-ead3750e5b90?auto=format&fit=crop&w=600&q=80"
-              }, 
-              {
-                icon: Building2,
-                title: "Accounts Management",
-                description: "Professional accounting services for trade and non-trade transactions.",
-                image: "https://images.unsplash.com/photo-1507842214779-846420a6bcd3?auto=format&fit=crop&w=600&q=80"
-              }, 
-              {
-                icon: Headset,
-                title: "Customer Service",
-                description: "Dedicated customer service team for bookings and nominations.",
-                image: "https://images.unsplash.com/photo-1551033406-611732b5e7ca?auto=format&fit=crop&w=600&q=80"
-              }, 
-              {
-                icon: Shield,
-                title: "Software Solutions",
-                description: "Custom software development following industry best practices.",
-                image: "https://images.unsplash.com/photo-1518770660439-46493ca4a0db?auto=format&fit=crop&w=600&q=80"
-              }
-            ].map((service, index) => (
-              <Card 
-                key={index} 
-                className="group border-none rounded-xl shadow-card hover:shadow-xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {[{
+            icon: FileCheck,
+            title: "Documentation",
+            description: "Expert documentation services including invoices, credit notes, and job profit statements.",
+            image: "https://images.unsplash.com/photo-1582653841981-84d64c067ee5?auto=format&fit=crop&w=600&q=80"
+          }, {
+            icon: Users,
+            title: "Sales Support",
+            description: "Centralized sales support desk for lead management and customer relationships.",
+            image: "https://images.unsplash.com/photo-1543123289-93c36174a331?auto=format&fit=crop&w=600&q=80"
+          }, {
+            icon: Globe,
+            title: "Digital Marketing",
+            description: "Comprehensive digital marketing solutions to boost your online presence.",
+            image: "https://images.unsplash.com/photo-1587620962725-ead3750e5b90?auto=format&fit=crop&w=600&q=80"
+          }, {
+            icon: Building2,
+            title: "Accounts Management",
+            description: "Professional accounting services for trade and non-trade transactions.",
+            image: "https://images.unsplash.com/photo-1507842214779-846420a6bcd3?auto=format&fit=crop&w=600&q=80"
+          }, {
+            icon: Headset,
+            title: "Customer Service",
+            description: "Dedicated customer service team for bookings and nominations.",
+            image: "https://images.unsplash.com/photo-1551033406-611732b5e7ca?auto=format&fit=crop&w=600&q=80"
+          }, {
+            icon: Shield,
+            title: "Software Solutions",
+            description: "Custom software development following industry best practices.",
+            image: "https://images.unsplash.com/photo-1518770660439-46493ca4a0db?auto=format&fit=crop&w=600&q=80"
+          }].map((service, index) => <Card key={index} className="group border-none rounded-xl shadow-card hover:shadow-xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="h-40 relative overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-6">
                     <service.icon className="h-10 w-10 text-white" />
@@ -295,8 +244,7 @@ const Index = () => {
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -348,11 +296,7 @@ const Index = () => {
             <div className="order-1 lg:order-2 animate-on-scroll">
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551288033-cc57f1700a3b?auto=format&fit=crop&w=800&q=80" 
-                    alt="Orange Office Technologies Building" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="https://images.unsplash.com/photo-1551288033-cc57f1700a3b?auto=format&fit=crop&w=800&q=80" alt="Orange Office Technologies Building" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent"></div>
                 </div>
                 
@@ -387,40 +331,31 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-            {[
-              {
-                number: "10+",
-                label: "Years Experience",
-                icon: Building2
-              }, 
-              {
-                number: "100+",
-                label: "Happy Employees",
-                icon: Users
-              }, 
-              {
-                number: "50+",
-                label: "Satisfied Clients",
-                icon: Headset
-              }, 
-              {
-                number: "200+",
-                label: "Projects Completed",
-                icon: FileCheck
-              }
-            ].map((stat, index) => (
-              <div 
-                key={index} 
-                className="text-center p-6 md:p-8 glass-card rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll bg-white border-t-4 border-primary group hover:-translate-y-1" 
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {[{
+            number: "10+",
+            label: "Years Experience",
+            icon: Building2
+          }, {
+            number: "100+",
+            label: "Happy Employees",
+            icon: Users
+          }, {
+            number: "50+",
+            label: "Satisfied Clients",
+            icon: Headset
+          }, {
+            number: "200+",
+            label: "Projects Completed",
+            icon: FileCheck
+          }].map((stat, index) => <div key={index} className="text-center p-6 md:p-8 glass-card rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll bg-white border-t-4 border-primary group hover:-translate-y-1" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                   <stat.icon className="h-8 w-8 text-primary" />
                 </div>
                 <div className="font-heading font-bold text-4xl text-primary mb-2 animate-count-up">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -437,15 +372,12 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <Card key={i} className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden">
+            {[1, 2, 3].map(i => <Card key={i} className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden">
                 <CardContent className="p-8">
                   <div className="flex mb-6">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    {[...Array(5)].map((_, i) => <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>
-                    ))}
+                      </svg>)}
                   </div>
                   <p className="text-gray-600 italic mb-6">
                     "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry."
@@ -460,8 +392,7 @@ const Index = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -589,8 +520,6 @@ const Index = () => {
       `}</style>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

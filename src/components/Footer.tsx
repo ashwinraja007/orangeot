@@ -59,7 +59,7 @@ export const Footer = () => {
             <h4 className="font-heading font-bold text-lg mb-4 text-gradient">Kochi Office</h4>
             <div className="flex space-x-2 items-start mb-4 group card-hover p-2 rounded-lg">
               <MapPin size={18} className="text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-              <address className="text-gray-600 text-sm not-italic">
+              <address className="text-white text-sm not-italic">
                 No 34/656, Neelima,<br />
                 Toll Jn, Edappally,<br />
                 Ernakulam, Kochi,<br />

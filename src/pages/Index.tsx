@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,6 @@ import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -48,10 +46,9 @@ const Index = () => {
     animatedElements.forEach(el => {
       observerRef.current?.observe(el);
     });
-    
+
     // Ensure scroll to top on page load
     window.scrollTo(0, 0);
-    
     return () => {
       if (observerRef.current) {
         animatedElements.forEach(el => {
@@ -60,25 +57,17 @@ const Index = () => {
       }
     };
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section with Video Background */}
       <section className="pt-24 md:pt-28 pb-20 bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden min-h-screen flex items-center">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover opacity-30"
-          >
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-30">
             <source src="https://cdn.coverr.co/videos/coverr-digital-transformation-in-business-2315/1080p.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 to-gray-900/90"></div>
+          <div className="absolute inset-0 bg-[#FFC78E]\n"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -104,13 +93,7 @@ const Index = () => {
             </div>
             <div className="relative mt-10 lg:mt-0 animate-slide-in-right">
               <div className="aspect-video glassmorphism rounded-2xl overflow-hidden shadow-2xl animate-float">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
-                >
+                <video autoPlay loop muted playsInline className="w-full h-full object-cover">
                   <source src="https://cdn.coverr.co/videos/coverr-close-up-of-a-security-lock-3453/1080p.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/40 flex items-center justify-center">
@@ -392,32 +375,27 @@ const Index = () => {
           </div>
           
           <div className="max-w-5xl mx-auto">
-            <AutoplayCarousel testimonials={[
-              {
-                quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
-                author: "John Smith",
-                position: "CEO",
-                company: "Global Shipping Ltd"
-              },
-              {
-                quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
-                author: "Sarah Johnson",
-                position: "Operations Director",
-                company: "Pacific Logistics"
-              },
-              {
-                quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
-                author: "Michael Chang",
-                position: "Managing Director",
-                company: "EastWest Freight Services"
-              },
-              {
-                quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
-                author: "Anna Martinez",
-                position: "Marketing Head",
-                company: "Express Cargo Systems"
-              }
-            ]} />
+            <AutoplayCarousel testimonials={[{
+            quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
+            author: "John Smith",
+            position: "CEO",
+            company: "Global Shipping Ltd"
+          }, {
+            quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
+            author: "Sarah Johnson",
+            position: "Operations Director",
+            company: "Pacific Logistics"
+          }, {
+            quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
+            author: "Michael Chang",
+            position: "Managing Director",
+            company: "EastWest Freight Services"
+          }, {
+            quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
+            author: "Anna Martinez",
+            position: "Marketing Head",
+            company: "Express Cargo Systems"
+          }]} />
           </div>
         </div>
       </section>
@@ -468,15 +446,15 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
 
 // Auto-scrolling testimonial carousel component
-const AutoplayCarousel = ({ testimonials }) => {
+const AutoplayCarousel = ({
+  testimonials
+}) => {
   const [api, setApi] = useState(null);
   const isMobile = useIsMobile();
-
   useEffect(() => {
     if (!api) return;
 
@@ -484,22 +462,14 @@ const AutoplayCarousel = ({ testimonials }) => {
     const interval = setInterval(() => {
       api.scrollNext();
     }, 5000);
-
     return () => clearInterval(interval);
   }, [api]);
-
-  return (
-    <Carousel
-      className="w-full"
-      setApi={setApi}
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-    >
+  return <Carousel className="w-full" setApi={setApi} opts={{
+    align: "start",
+    loop: true
+  }}>
       <CarouselContent>
-        {testimonials.map((testimonial, index) => (
-          <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+        {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
             <div className="p-4">
               <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8 flex flex-col h-full">
@@ -517,15 +487,12 @@ const AutoplayCarousel = ({ testimonials }) => {
                 </CardContent>
               </Card>
             </div>
-          </CarouselItem>
-        ))}
+          </CarouselItem>)}
       </CarouselContent>
       <div className="flex justify-center mt-8 gap-2">
         <CarouselPrevious className="relative static translate-y-0 left-0" />
         <CarouselNext className="relative static translate-y-0 right-0" />
       </div>
-    </Carousel>
-  );
+    </Carousel>;
 };
-
 export default Index;

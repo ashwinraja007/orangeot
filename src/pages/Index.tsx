@@ -153,9 +153,7 @@ const Index = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 </div>
                 <div className="p-8 relative z-10 bg-slate-100">
-                  <div className="absolute -top-12 left-6 w-16 h-16 bg-silver-gray/20 rounded-2xl flex items-center justify-center transform -rotate-6 shadow-lg">
-                    <Shield className="h-8 w-8 text-gray-700" />
-                  </div>
+                  
                   <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900 mt-2">Our Mission</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Delivering comprehensive solutions that empower freight forwarders to streamline operations, enhance visibility, and achieve sustainable growth in the digital age.
@@ -171,9 +169,7 @@ const Index = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 </div>
                 <div className="p-8 relative z-10 bg-gray-50">
-                  <div className="absolute -top-12 left-6 w-16 h-16 bg-silver-gray/20 rounded-2xl flex items-center justify-center transform rotate-6 shadow-lg">
-                    <Globe className="h-8 w-8 text-gray-700" />
-                  </div>
+                  
                   <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900 mt-2">Our Vision</h3>
                   <p className="text-gray-600 leading-relaxed">
                     To be the global benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage their operations seamlessly.

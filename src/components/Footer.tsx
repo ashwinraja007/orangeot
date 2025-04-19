@@ -1,4 +1,3 @@
-
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
@@ -6,9 +5,9 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-50 pt-16 pb-8 relative">
+    <footer className="bg-gray-900 pt-16 pb-8 relative text-white">
       {/* Shape divider */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-gray-50" style={{ clipPath: "polygon(0 0, 100% 100%, 100% 0)" }}></div>
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gray-900" style={{ clipPath: "polygon(0 0, 100% 100%, 100% 0)" }}></div>
       
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -95,9 +94,9 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t pt-8">
+        <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 text-sm mb-4 md:mb-0">
+            <p className="text-gray-400 text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} Orange Office Technologies Pvt Ltd - All Rights Reserved.
             </p>
             <div className="flex space-x-6">
@@ -109,7 +108,7 @@ export const Footer = () => {
                 <Link
                   key={link.label}
                   to={link.to}
-                  className="text-gray-600 text-sm hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                  className="text-gray-400 text-sm hover:text-primary transition-colors duration-300"
                 >
                   {link.label}
                 </Link>

@@ -6,6 +6,7 @@ import { ArrowRight, Building2, FileCheck, Globe, Headset, Shield, Users } from 
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
+
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -49,33 +50,27 @@ const Index = () => {
       }
     };
   }, []);
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section with Improved Layout */}
-      <section className="pt-28 md:pt-32 pb-20 bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden">
-        {/* Parallax background elements */}
-        <div className="absolute inset-0 opacity-10" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1920&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        transform: `translateY(${scrollY * 0.2}px)`
-      }}></div>
-        
-        {/* Floating particles */}
-        <div className="particle-container absolute inset-0 overflow-hidden">
-          {[...Array(10)].map((_, i) => <div key={i} className="absolute rounded-full bg-white/30 animate-float-slow" style={{
-          width: `${Math.random() * 60 + 20}px`,
-          height: `${Math.random() * 60 + 20}px`,
-          top: `${Math.random() * 100}%`,
-          left: `${Math.random() * 100}%`,
-          animationDuration: `${Math.random() * 10 + 15}s`,
-          animationDelay: `${Math.random() * 5}s`,
-          opacity: Math.random() * 0.5 + 0.1
-        }}></div>)}
+      {/* Hero Section with Video Background */}
+      <section className="pt-24 md:pt-28 pb-20 bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden min-h-screen flex items-center">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-20"
+          >
+            <source src="https://cdn.coverr.co/videos/coverr-digital-transformation-in-business-2315/1080p.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/40 to-primary/90"></div>
         </div>
-        
-        <div className="container mx-auto relative z-10 px-[20px] py-[77px]">
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-white leading-tight tracking-tight">
@@ -133,47 +128,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Mission & Vision Section with Hover Cards */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      {/* Mission & Vision Section with Enhanced Design */}
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient">Mission & Vision</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We're committed to revolutionizing how freight forwarders operate in the digital age.
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient">
+              Our Purpose & Vision
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Revolutionizing logistics operations through innovation and expertise
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=600&q=80" alt="Our Mission" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h2 className="font-heading font-bold text-2xl p-6 text-white">Our Mission</h2>
+            <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden bg-gradient-to-br from-white to-gray-50">
+              <CardContent className="p-8 relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 transform -rotate-6">
+                    <Shield className="h-8 w-8 text-primary" />
                   </div>
-                </div>
-                <div className="p-8">
-                  <p className="text-gray-600 leading-relaxed">
-                    We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders, helping them streamline operations, boost visibility, and scale efficiently.
+                  <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900">Our Mission</h3>
+                  <p className="text-gray-600 leading-relaxed text-lg">
+                    Delivering comprehensive solutions that empower freight forwarders to streamline operations, enhance visibility, and achieve sustainable growth in the digital age.
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="h-48 bg-gradient-to-br from-accent/10 to-accent/5 relative overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=600&q=80" alt="Our Vision" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h2 className="font-heading font-bold text-2xl p-6 text-white">Our Vision</h2>
+            <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden bg-gradient-to-br from-white to-gray-50">
+              <CardContent className="p-8 relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-2xl"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 transform rotate-6">
+                    <Globe className="h-8 w-8 text-accent" />
                   </div>
-                </div>
-                <div className="p-8">
-                  <p className="text-gray-600 leading-relaxed">
-                    To set the industry benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage the rest.
+                  <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900">Our Vision</h3>
+                  <p className="text-gray-600 leading-relaxed text-lg">
+                    To be the global benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage their operations seamlessly.
                   </p>
                 </div>
               </CardContent>
@@ -447,6 +442,9 @@ const Index = () => {
 
       {/* Add Global CSS */}
       <style>{`
+        html {
+          scroll-behavior: smooth;
+        }
         /* Add animations */
         @keyframes float {
           0%, 100% { transform: translateY(0); }
@@ -520,6 +518,8 @@ const Index = () => {
       `}</style>
       
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;

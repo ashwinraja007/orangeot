@@ -430,10 +430,10 @@ const Index = () => {
             </Card>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
-              <Button size="lg" variant="outline" className="border-silver-gray/30 text-silver-gray hover:bg-white/10 btn-hover-effect text-slate-950">
+              <Button size="lg" variant="outline" className="border-silver-gray/30 text-silver-gray btn-hover-effect bg-slate-100 text-gray-950">
                 <Link to="/services">Explore Services</Link>
               </Button>
-              <Button size="lg" className="bg-silver-gray/20 hover:bg-silver-gray/30 text-white shadow-lg hover:shadow-xl btn-hover-effect">
+              <Button size="lg" className="bg-silver-gray/20 hover:bg-silver-gray/30 shadow-lg hover:shadow-xl btn-hover-effect bg-slate-50 text-gray-950">
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>

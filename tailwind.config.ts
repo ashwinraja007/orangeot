@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -46,8 +47,9 @@ export default {
         },
       },
       fontFamily: {
-        heading: ["Poppins", "sans-serif"], // Updated to Poppins
-        body: ["Inter", "sans-serif"], // Updated to Inter
+        heading: ["Poppins", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

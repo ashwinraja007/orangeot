@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -53,29 +52,22 @@ const Index = () => {
     };
   }, []);
 
-  // Add custom CSS variables to the document root
-  useEffect(() => {
-    document.documentElement.style.setProperty('--color-primary', '#FF6B00');  // Orange
-    document.documentElement.style.setProperty('--color-accent', '#007AFF');   // Blue
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section with Parallax */}
-      <section className="pt-24 md:pt-32 pb-20 bg-hero-gradient relative overflow-hidden">
+      {/* Hero Section with Improved Layout */}
+      <section className="pt-28 md:pt-32 pb-20 bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden">
         {/* Parallax background elements */}
         <div 
-          className="absolute inset-0 opacity-20" 
+          className="absolute inset-0 opacity-10" 
           style={{
-            backgroundImage: "url('/api/placeholder/1920/1080')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1920&q=80')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             transform: `translateY(${scrollY * 0.2}px)`
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/40"></div>
         
         {/* Floating particles */}
         <div className="particle-container absolute inset-0 overflow-hidden">
@@ -100,7 +92,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-white leading-tight tracking-tight">
-                Your <span className="text-accent">Preferred</span> IT Partner
+                Your <span className="text-accent font-extrabold">Preferred</span><br className="hidden md:block" /> IT Partner
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
                 We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders.
@@ -117,12 +109,12 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative mt-10 lg:mt-0 animate-slide-in-right hidden md:block">
+            <div className="relative mt-10 lg:mt-0 animate-slide-in-right">
               <div className="aspect-video glassmorphism rounded-2xl overflow-hidden shadow-2xl animate-float">
                 <img 
-                  src="/api/placeholder/800/480" 
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" 
                   alt="IT Solutions for Freight Forwarders" 
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                   <div className="text-center text-white p-6">
@@ -138,13 +130,20 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Client logos */}
+          {/* Client logos - Fixed visibility */}
           <div className="mt-16 animate-fade-in delay-200">
-            <p className="text-white/80 text-center mb-4 text-sm uppercase tracking-wider font-medium">Trusted by leading companies</p>
+            <p className="text-white/80 text-center mb-6 text-sm uppercase tracking-wider font-medium">Trusted by leading companies</p>
             <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="h-12 w-24 bg-white/10 rounded-md flex items-center justify-center p-2 backdrop-blur-sm">
-                  <div className="w-full h-full bg-white/80 rounded opacity-70"></div>
+              {/* Replace with actual client logos */}
+              {[
+                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg",
+                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg",
+                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg",
+                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg",
+                "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg"
+              ].map((logo, i) => (
+                <div key={i} className="h-12 w-auto flex items-center justify-center p-2 backdrop-blur-sm">
+                  <img src={logo} alt={`Client logo ${i+1}`} className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 </div>
               ))}
             </div>
@@ -180,7 +179,7 @@ const Index = () => {
               <CardContent className="p-0">
                 <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
                   <img 
-                    src="/api/placeholder/600/400" 
+                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=600&q=80" 
                     alt="Our Mission" 
                     className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                   />
@@ -200,7 +199,7 @@ const Index = () => {
               <CardContent className="p-0">
                 <div className="h-48 bg-gradient-to-br from-accent/10 to-accent/5 relative overflow-hidden">
                   <img 
-                    src="/api/placeholder/600/400" 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=600&q=80" 
                     alt="Our Vision" 
                     className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                   />
@@ -238,37 +237,37 @@ const Index = () => {
                 icon: FileCheck,
                 title: "Documentation",
                 description: "Expert documentation services including invoices, credit notes, and job profit statements.",
-                image: "/api/placeholder/600/400"
+                image: "https://images.unsplash.com/photo-1582653841981-84d64c067ee5?auto=format&fit=crop&w=600&q=80"
               }, 
               {
                 icon: Users,
                 title: "Sales Support",
                 description: "Centralized sales support desk for lead management and customer relationships.",
-                image: "/api/placeholder/600/400"
+                image: "https://images.unsplash.com/photo-1543123289-93c36174a331?auto=format&fit=crop&w=600&q=80"
               }, 
               {
                 icon: Globe,
                 title: "Digital Marketing",
                 description: "Comprehensive digital marketing solutions to boost your online presence.",
-                image: "/api/placeholder/600/400"
+                image: "https://images.unsplash.com/photo-1587620962725-ead3750e5b90?auto=format&fit=crop&w=600&q=80"
               }, 
               {
                 icon: Building2,
                 title: "Accounts Management",
                 description: "Professional accounting services for trade and non-trade transactions.",
-                image: "/api/placeholder/600/400"
+                image: "https://images.unsplash.com/photo-1507842214779-846420a6bcd3?auto=format&fit=crop&w=600&q=80"
               }, 
               {
                 icon: Headset,
                 title: "Customer Service",
                 description: "Dedicated customer service team for bookings and nominations.",
-                image: "/api/placeholder/600/400"
+                image: "https://images.unsplash.com/photo-1551033406-611732b5e7ca?auto=format&fit=crop&w=600&q=80"
               }, 
               {
                 icon: Shield,
                 title: "Software Solutions",
                 description: "Custom software development following industry best practices.",
-                image: "/api/placeholder/600/400"
+                image: "https://images.unsplash.com/photo-1518770660439-46493ca4a0db?auto=format&fit=crop&w=600&q=80"
               }
             ].map((service, index) => (
               <Card 
@@ -349,7 +348,7 @@ const Index = () => {
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/api/placeholder/800/800" 
+                    src="https://images.unsplash.com/photo-1551288033-cc57f1700a3b?auto=format&fit=crop&w=800&q=80" 
                     alt="Orange Office Technologies Building" 
                     className="w-full h-full object-cover"
                   />
@@ -452,7 +451,7 @@ const Index = () => {
                   </p>
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
-                      <img src="/api/placeholder/100/100" alt="Client" className="w-full h-full object-cover" />
+                      <img src="https://images.unsplash.com/photo-1570295999680-5e27cac9d2ca?auto=format&fit=crop&w=100&q=80" alt="Client" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">John Smith</h4>
@@ -550,6 +549,22 @@ const Index = () => {
           animation: fade-in 1s forwards;
         }
         
+        .delay-75 {
+          animation-delay: 75ms;
+        }
+        
+        .delay-100 {
+          animation-delay: 100ms;
+        }
+        
+        .delay-150 {
+          animation-delay: 150ms;
+        }
+        
+        .delay-200 {
+          animation-delay: 200ms;
+        }
+        
         .animate-count-up {
           counter-reset: count 0;
           animation: count-up 2s forwards ease-out;
@@ -568,80 +583,4 @@ const Index = () => {
         
         /* Background patterns */
         .bg-pattern {
-          background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.09'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-       /* Glassmorphism */
-        .glassmorphism {
-          background: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .glass-card {
-          background: rgba(255, 255, 255, 0.8);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          transition: all 0.3s ease;
-        }
-        
-        /* Text gradient */
-        .text-gradient {
-          background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          color: transparent;
-        }
-        
-        /* Button hover effect */
-        .btn-hover-effect {
-          position: relative;
-          overflow: hidden;
-        }
-        
-        .btn-hover-effect::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 100%;
-          height: 0;
-          padding-bottom: 100%;
-          border-radius: 50%;
-          background-color: rgba(255, 255, 255, 0.3);
-          opacity: 0;
-          transform: translate(-50%, -50%) scale(0);
-          transition: transform 0.5s, opacity 0.5s;
-        }
-        
-        .btn-hover-effect:hover::after {
-          opacity: 1;
-          transform: translate(-50%, -50%) scale(1.5);
-        }
-        
-        /* Background gradients */
-        .bg-hero-gradient {
-          background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-        }
-        
-        /* Clip path for dividers */
-        .clip-path-slant {
-          clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-          .container {
-            padding-left: 1rem;
-            padding-right: 1rem;
-          }
-        }
-      `}</style>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default Index;
+          background-image: url("data

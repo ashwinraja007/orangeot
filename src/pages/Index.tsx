@@ -397,7 +397,7 @@ const Index = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+      <section className="py-20 text-white relative overflow-hidden bg-[#ff6a00]">
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-silver-gray/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-silver-gray/5 rounded-full blur-3xl"></div>
         
@@ -410,15 +410,15 @@ const Index = () => {
               Let us help you streamline your processes and boost your business growth with our tailored solutions.
             </p>
             
-            <Card className="border-none shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-white/5">
+            <Card className="border-none shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-slate-50">
               <CardContent className="p-0 text-left">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
                   <div className="col-span-2">
-                    <h3 className="text-white text-2xl font-bold mb-2">Book a Free Consultation</h3>
-                    <p className="text-white/80">Get expert advice on how we can help optimize your operations</p>
+                    <h3 className="text-2xl font-bold mb-2 text-gray-950">Book a Free Consultation</h3>
+                    <p className="text-gray-950">Get expert advice on how we can help optimize your operations</p>
                   </div>
                   <div className="text-right">
-                    <Button size="lg" className="bg-white text-gray-900 hover:bg-white/90 shadow-lg hover:shadow-xl btn-hover-effect w-full md:w-auto">
+                    <Button size="lg" className="text-gray-900 shadow-lg hover:shadow-xl btn-hover-effect w-full md:w-auto bg-[s#] bg-[#ff6a00]">
                       <Link to="/contact" className="flex items-center justify-center gap-2">
                         Schedule Now
                         <ArrowRight className="h-5 w-5" />

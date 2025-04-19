@@ -67,7 +67,7 @@ const Index = () => {
           <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-30">
             <source src="https://cdn.coverr.co/videos/coverr-digital-transformation-in-business-2315/1080p.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-[#FFC78E]\n"></div>
+          <div className="absolute inset-0 bg-[#FFC78E]\\n bg-[t#FF6A00] bg-[#ff6a00]"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

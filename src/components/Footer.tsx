@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-50 pt-16 pb-8">
+    <footer className="bg-gray-50 pt-16 pb-8 relative">
+      {/* Shape divider */}
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gray-50" style={{ clipPath: "polygon(0 0, 100% 100%, 100% 0)" }}></div>
+      
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="animate-fade-in">
@@ -26,7 +29,8 @@ export const Footer = () => {
                 <a 
                   key={index}
                   href={social.href}
-                  className="text-gray-500 hover:text-primary transition-colors duration-300 hover:scale-110 transform"
+                  className="text-gray-500 hover:text-primary transition-all duration-300 hover:scale-125 transform p-2 rounded-full hover:bg-gray-100"
+                  aria-label={`Follow us on ${social.icon.name}`}
                 >
                   <social.icon size={20} />
                 </a>
@@ -35,8 +39,8 @@ export const Footer = () => {
           </div>
           
           <div className="animate-fade-in" style={{ animationDelay: "100ms" }}>
-            <h4 className="font-heading font-bold text-lg mb-4">Chennai - Headquarters</h4>
-            <div className="flex space-x-2 items-start mb-2 group hover-lift">
+            <h4 className="font-heading font-bold text-lg mb-4 text-gradient">Chennai - Headquarters</h4>
+            <div className="flex space-x-2 items-start mb-2 group card-hover p-2 rounded-lg">
               <MapPin size={18} className="text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
               <address className="text-gray-600 text-sm not-italic">
                 "KAIZEN" 2nd & 3rd Floor<br />
@@ -49,8 +53,8 @@ export const Footer = () => {
           </div>
           
           <div className="animate-fade-in" style={{ animationDelay: "200ms" }}>
-            <h4 className="font-heading font-bold text-lg mb-4">Kochi Office</h4>
-            <div className="flex space-x-2 items-start mb-4 group hover-lift">
+            <h4 className="font-heading font-bold text-lg mb-4 text-gradient">Kochi Office</h4>
+            <div className="flex space-x-2 items-start mb-4 group card-hover p-2 rounded-lg">
               <MapPin size={18} className="text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
               <address className="text-gray-600 text-sm not-italic">
                 No 34/656, Neelima,<br />
@@ -64,7 +68,7 @@ export const Footer = () => {
               { icon: Phone, text: "+91 44 4796 5437" },
               { icon: Mail, text: "info@orangeot.com" }
             ].map((contact, index) => (
-              <div key={index} className="flex space-x-2 items-center mb-2 group hover-lift">
+              <div key={index} className="flex space-x-2 items-center mb-2 group card-hover p-2 rounded-lg">
                 <contact.icon size={18} className="text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <span className="text-gray-600 text-sm">{contact.text}</span>
               </div>
@@ -72,7 +76,7 @@ export const Footer = () => {
           </div>
           
           <div className="animate-fade-in" style={{ animationDelay: "300ms" }}>
-            <h4 className="font-heading font-bold text-lg mb-4">Subscribe</h4>
+            <h4 className="font-heading font-bold text-lg mb-4 text-gradient">Subscribe</h4>
             <form className="space-y-4">
               <Input 
                 placeholder="Email" 
@@ -84,7 +88,7 @@ export const Footer = () => {
                 type="text" 
                 className="bg-white border-gray-300 focus:border-primary focus:ring-primary transition-all duration-300" 
               />
-              <Button className="w-full bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-200">
+              <Button className="w-full bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-effect">
                 Subscribe
               </Button>
             </form>
@@ -94,7 +98,7 @@ export const Footer = () => {
         <div className="border-t pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 text-sm mb-4 md:mb-0">
-              © 2024 Orange Office Technologies Pvt Ltd - All Rights Reserved.
+              © {new Date().getFullYear()} Orange Office Technologies Pvt Ltd - All Rights Reserved.
             </p>
             <div className="flex space-x-6">
               {[
@@ -105,7 +109,7 @@ export const Footer = () => {
                 <Link
                   key={link.label}
                   to={link.to}
-                  className="text-gray-600 text-sm hover:text-primary transition-colors duration-200"
+                  className="text-gray-600 text-sm hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
                   {link.label}
                 </Link>

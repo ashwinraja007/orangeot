@@ -1,21 +1,50 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b shadow-sm">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? "bg-white/95 backdrop-blur-md shadow-md py-3" 
+          : "bg-transparent py-5"
+      }`}
+    >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-2 group">
+        <div className="flex items-center justify-between">
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2 group"
+            aria-label="Home"
+          >
             <img 
               src="/lovable-uploads/c80361a7-f9e6-4b5d-a689-95904676a926.png" 
               alt="Orange Office Technologies" 
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
             />
             <span className="font-heading font-bold text-lg hidden md:block animate-fade-in">
               Orange Office Technologies
@@ -34,7 +63,9 @@ export const Header = () => {
               <Link
                 key={item.label}
                 to={item.to}
-                className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className={`text-gray-700 font-medium transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
+                  isActive(item.to) ? "text-primary after:scale-x-100" : "hover:text-primary"
+                }`}
               >
                 {item.label}
               </Link>
@@ -42,7 +73,9 @@ export const Header = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button className="hidden md:flex bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-200 animate-fade-in">
+            <Button 
+              className="hidden md:flex bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-effect"
+            >
               <Link to="/contact">Contact Us</Link>
             </Button>
             
@@ -50,6 +83,7 @@ export const Header = () => {
               className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6 text-gray-700" />
@@ -62,7 +96,7 @@ export const Header = () => {
       </div>
       
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-b animate-fade-in">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-b animate-fade-in">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {[
               { to: "/", label: "Home" },
@@ -75,13 +109,15 @@ export const Header = () => {
               <Link
                 key={item.label}
                 to={item.to}
-                className="text-gray-700 hover:text-primary font-medium py-2 transition-colors duration-200"
+                className={`text-gray-700 hover:text-primary font-medium py-2 transition-colors duration-300 ${
+                  isActive(item.to) ? "text-primary" : ""
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <Button className="w-full bg-primary hover:bg-primary/90">
+            <Button className="w-full bg-primary hover:bg-primary/90 btn-hover-effect">
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                 Contact Us
               </Link>

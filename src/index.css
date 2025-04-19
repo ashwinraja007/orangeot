@@ -41,7 +41,7 @@
   }
 
   .glass-card {
-    @apply backdrop-blur-glass bg-white/70 shadow-glass border border-white/20;
+    @apply backdrop-blur-glass bg-white/70 shadow-glass border border-white/20 transition-all duration-300 hover:shadow-hover;
   }
 
   .hover-lift {
@@ -51,10 +51,71 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent;
   }
+  
+  /* New glassmorphism styles */
+  .glassmorphism {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-glass;
+  }
+  
+  /* Animation utilities */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-hover hover:-translate-y-1;
+  }
+  
+  /* Button animations */
+  .btn-hover-effect {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .btn-hover-effect::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-white/20 -translate-x-full skew-x-45 transition-transform duration-500;
+  }
+  
+  .btn-hover-effect:hover::before {
+    @apply translate-x-full;
+  }
+  
+  /* Advanced card styles */
+  .advanced-card {
+    @apply relative overflow-hidden rounded-xl;
+  }
+  
+  .advanced-card::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 transition-opacity duration-300;
+  }
+  
+  .advanced-card:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Interactive icon animation */
+  .icon-bounce {
+    @apply transition-transform duration-300 hover:scale-110;
+  }
 }
 
 @layer utilities {
   .section-padding {
     @apply py-16 md:py-24 px-4 md:px-8;
+  }
+  
+  .clip-path-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  
+  .text-balance {
+    text-wrap: balance;
   }
 }

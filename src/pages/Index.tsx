@@ -91,7 +91,7 @@ const Index = () => {
                     <ArrowRight className="h-5 w-5" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white hover:bg-white/20 animate-fade-in delay-150 text-[primar] text-[#ff8e00]">
+                <Button size="lg" variant="outline" className="border-white hover:bg-white/20 animate-fade-in delay-150 text-[primar] text-primary-DEFAULT">
                   <Link to="/services">Our Services</Link>
                 </Button>
               </div>

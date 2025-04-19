@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -63,7 +62,6 @@ const testimonials = [{
   position: "Marketing Director",
   company: "Asia Connect Logistics"
 }];
-
 const Clients = () => {
   const [api, setApi] = useState(null);
   const [clientsApi, setClientsApi] = useState(null);
@@ -72,22 +70,18 @@ const Clients = () => {
   // Set up auto-scrolling for testimonials
   useEffect(() => {
     if (!api) return;
-    
     const interval = setInterval(() => {
       api.scrollNext();
     }, 5000);
-    
     return () => clearInterval(interval);
   }, [api]);
 
   // Set up auto-scrolling for client logos
   useEffect(() => {
     if (!clientsApi) return;
-    
     const interval = setInterval(() => {
       clientsApi.scrollNext();
     }, 3000);
-    
     return () => clearInterval(interval);
   }, [clientsApi]);
 
@@ -95,16 +89,14 @@ const Clients = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 bg-gray-200">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-6 animate-fade-in bg-gradient-to-r from-white to-silver-gray/80 bg-clip-text text-transparent">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-6 animate-fade-in bg-gradient-to-r from-white to-silver-gray/80 bg-clip-text text-[#ff6a00]">
               Trusted By Leading Organizations
             </h1>
             <p className="text-xl text-silver-gray/90 mb-8 animate-fade-in">
@@ -115,7 +107,7 @@ const Clients = () => {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[{
@@ -155,10 +147,12 @@ const Clients = () => {
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-12 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">Our Clients</h2>
           
           <div className="max-w-6xl mx-auto">
-            <Carousel setApi={setClientsApi} opts={{ align: "start", loop: true }}>
+            <Carousel setApi={setClientsApi} opts={{
+            align: "start",
+            loop: true
+          }}>
               <CarouselContent>
-                {clientLogos.map((client, index) => (
-                  <CarouselItem key={index} className={`${isMobile ? 'basis-1/2' : 'basis-1/4'} p-2`}>
+                {clientLogos.map((client, index) => <CarouselItem key={index} className={`${isMobile ? 'basis-1/2' : 'basis-1/4'} p-2`}>
                     <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-center aspect-video h-full transform hover:-translate-y-1">
                       <div className="w-16 h-16 rounded-full bg-silver-gray/10 flex items-center justify-center mb-4">
                         <Briefcase className="h-8 w-8 text-gray-700" />
@@ -166,8 +160,7 @@ const Clients = () => {
                       <h3 className="font-heading font-bold text-lg text-center">{client.name}</h3>
                       <p className="text-gray-500 text-sm text-center">{client.industry}</p>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
               <div className="flex justify-center mt-8 gap-2">
                 <CarouselPrevious className="relative static translate-y-0 left-0" />
@@ -184,10 +177,12 @@ const Clients = () => {
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-12 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">What Our Clients Say</h2>
           
           <div className="max-w-5xl mx-auto">
-            <Carousel setApi={setApi} opts={{ align: "start", loop: true }}>
+            <Carousel setApi={setApi} opts={{
+            align: "start",
+            loop: true
+          }}>
               <CarouselContent>
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+                {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
                     <div className="p-4">
                       <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                         <CardContent className="p-8 flex flex-col h-full">
@@ -205,8 +200,7 @@ const Clients = () => {
                         </CardContent>
                       </Card>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
               <div className="flex justify-center mt-8 gap-2">
                 <CarouselPrevious className="relative static translate-y-0 left-0" />
@@ -238,8 +232,6 @@ const Clients = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Clients;

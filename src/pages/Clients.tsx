@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -154,7 +155,7 @@ const Clients = () => {
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-12 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">Our Clients</h2>
           
           <div className="max-w-6xl mx-auto">
-            <Carousel className="w-full" setApi={setClientsApi} opts={{ align: "start", loop: true }}>
+            <Carousel setApi={setClientsApi} opts={{ align: "start", loop: true }}>
               <CarouselContent>
                 {clientLogos.map((client, index) => (
                   <CarouselItem key={index} className={`${isMobile ? 'basis-1/2' : 'basis-1/4'} p-2`}>
@@ -168,11 +169,11 @@ const Clients = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
+              <div className="flex justify-center mt-8 gap-2">
+                <CarouselPrevious className="relative static translate-y-0 left-0" />
+                <CarouselNext className="relative static translate-y-0 right-0" />
+              </div>
             </Carousel>
-            <div className="flex justify-center mt-8 gap-2">
-              <CarouselPrevious className="relative static translate-y-0 left-0" />
-              <CarouselNext className="relative static translate-y-0 right-0" />
-            </div>
           </div>
         </div>
       </section>
@@ -183,7 +184,7 @@ const Clients = () => {
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-12 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">What Our Clients Say</h2>
           
           <div className="max-w-5xl mx-auto">
-            <Carousel className="w-full" setApi={setApi} opts={{ align: "start", loop: true }}>
+            <Carousel setApi={setApi} opts={{ align: "start", loop: true }}>
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
@@ -207,11 +208,11 @@ const Clients = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
+              <div className="flex justify-center mt-8 gap-2">
+                <CarouselPrevious className="relative static translate-y-0 left-0" />
+                <CarouselNext className="relative static translate-y-0 right-0" />
+              </div>
             </Carousel>
-            <div className="flex justify-center mt-8 gap-2">
-              <CarouselPrevious className="relative static translate-y-0 left-0" />
-              <CarouselNext className="relative static translate-y-0 right-0" />
-            </div>
           </div>
         </div>
       </section>

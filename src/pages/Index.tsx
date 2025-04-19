@@ -413,7 +413,7 @@ const Index = () => {
                 Let us help you streamline your processes and boost your business growth with our tailored solutions.
               </p>
               
-              <Card className="border-none shadow-2xl bg-white/10 backdrop-blur-md p-8 mb-10 animate-on-scroll">
+              <Card className="border-none shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-primary-DEFAULT">
                 <CardContent className="p-0 text-left">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
                     <div className="col-span-2">

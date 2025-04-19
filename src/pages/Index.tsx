@@ -399,15 +399,15 @@ const Index = () => {
 
       {/* Enhanced CTA Section */}
       <GradientBackground animated intensity="strong">
-        <section className="py-20 bg-primary-DEFAULT">
+        <section className="py-20 bg-primary-DEFAULT bg-[S]">
           <div className="container mx-auto px-4 bg-primary-DEFAULT">
             <div className="max-w-4xl mx-auto text-center relative">
               {/* Floating Elements */}
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse-slow"></div>
               <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-float"></div>
               
-              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-white animate-on-scroll leading-tight">
-                Ready to Transform Your <span className="text-accent">Logistics Operations</span>?
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-black animate-on-scroll leading-tight">
+                Ready to Transform Your <span className="text-[S#FF6A00] text-primary-DEFAULT">Logistics Operations</span>?
               </h2>
               <p className="text-xl mb-10 text-white/90 animate-on-scroll max-w-2xl mx-auto">
                 Let us help you streamline your processes and boost your business growth with our tailored solutions.

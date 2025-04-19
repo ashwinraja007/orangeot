@@ -50,17 +50,17 @@ const Contact = () => {
     });
   };
   
-  // Map locations for Chennai and Kochi offices
+  // Map locations for Chennai and Kochi offices - properly typed as [number, number] tuples
   const officeLocations = [
     {
       title: "Chennai - Headquarters",
       description: "KAIZEN, 2nd & 3rd Floor, Anna Nagar East",
-      coordinates: [80.2707, 13.0827] // Approximate coordinates for Chennai
+      coordinates: [80.2707, 13.0827] as [number, number] // Explicit tuple typing
     },
     {
       title: "Kochi Office",
       description: "No 34/656, Neelima, Toll Jn, Edappally",
-      coordinates: [76.3219, 9.9816] // Approximate coordinates for Kochi
+      coordinates: [76.3219, 9.9816] as [number, number] // Explicit tuple typing
     }
   ];
 

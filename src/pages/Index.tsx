@@ -346,9 +346,9 @@ const Index = () => {
             number: "200+",
             label: "Projects Completed",
             icon: FileCheck
-          }].map((stat, index) => <div key={index} className="text-center p-6 md:p-8 glass-card rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll bg-white border-t-4 border-silver-gray group hover:-translate-y-1" style={{
+          }].map((stat, index) => <div key={index} style={{
             animationDelay: `${index * 100}ms`
-          }}>
+          }} className="text-center p-6 md:p-8 glass-card rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll border-t-4 border-silver-gray group hover:-translate-y-1 bg-gray-300">
                 <div className="w-16 h-16 rounded-full bg-silver-gray/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-silver-gray/20 transition-colors">
                   <stat.icon className="h-8 w-8 text-gray-700" />
                 </div>
@@ -364,7 +364,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll">
             <span className="inline-block px-4 py-2 rounded-full bg-silver-gray/10 text-gray-700 font-medium text-sm mb-4">TESTIMONIALS</span>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">What Our Clients Say</h2>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-[#ff6a00]">What Our Clients Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Don't just take our word for it. Here's what our clients have to say about our services.
             </p>

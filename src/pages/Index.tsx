@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -50,6 +51,12 @@ const Index = () => {
         });
       }
     };
+  }, []);
+
+  // Add custom CSS variables to the document root
+  useEffect(() => {
+    document.documentElement.style.setProperty('--color-primary', '#FF6B00');  // Orange
+    document.documentElement.style.setProperty('--color-accent', '#007AFF');   // Blue
   }, []);
 
   return (
@@ -636,11 +643,5 @@ const Index = () => {
     </div>
   );
 };
-
-// Add custom CSS variables to the document root
-useEffect(() => {
-  document.documentElement.style.setProperty('--color-primary', '#FF6B00');  // Orange
-  document.documentElement.style.setProperty('--color-accent', '#007AFF');   // Blue
-}, []);
 
 export default Index;

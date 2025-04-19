@@ -5,10 +5,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Building2, FileCheck, Globe, Headset, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
 const Index = () => {
   // Intersection Observer for scroll animations
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  const observerRef = useRef(null);
+  // Add state for parallax effect
+  const [scrollY, setScrollY] = useState(0);
+  
+  // Handle scroll for parallax effects
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   useEffect(() => {
     // Set up intersection observer for animation on scroll
     observerRef.current = new IntersectionObserver(entries => {
@@ -19,7 +33,8 @@ const Index = () => {
         }
       });
     }, {
-      threshold: 0.2
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px"
     });
 
     // Get all elements with animate-on-scroll class
@@ -27,6 +42,7 @@ const Index = () => {
     animatedElements.forEach(el => {
       observerRef.current?.observe(el);
     });
+    
     return () => {
       if (observerRef.current) {
         animatedElements.forEach(el => {
@@ -35,190 +51,454 @@ const Index = () => {
       }
     };
   }, []);
-  return <div className="min-h-screen flex flex-col">
+
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-hero-gradient relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-radial from-white/10 to-transparent opacity-70"></div>
+      {/* Hero Section with Parallax */}
+      <section className="pt-24 md:pt-32 pb-20 bg-hero-gradient relative overflow-hidden">
+        {/* Parallax background elements */}
+        <div 
+          className="absolute inset-0 opacity-20" 
+          style={{
+            backgroundImage: "url('/api/placeholder/1920/1080')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            transform: `translateY(${scrollY * 0.2}px)`
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/40"></div>
+        
+        {/* Floating particles */}
+        <div className="particle-container absolute inset-0 overflow-hidden">
+          {[...Array(10)].map((_, i) => (
+            <div 
+              key={i}
+              className="absolute rounded-full bg-white/30 animate-float-slow"
+              style={{
+                width: `${Math.random() * 60 + 20}px`,
+                height: `${Math.random() * 60 + 20}px`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDuration: `${Math.random() * 10 + 15}s`,
+                animationDelay: `${Math.random() * 5}s`,
+                opacity: Math.random() * 0.5 + 0.1
+              }}
+            ></div>
+          ))}
+        </div>
+        
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-white">
-                Your Preferred IT Partner
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-white leading-tight tracking-tight">
+                Your <span className="text-accent">Preferred</span> IT Partner
               </h1>
-              <p className="text-xl text-white/90 mb-8 animate-fade-in delay-75">
+              <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
                 We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-effect animate-fade-in delay-100">
-                  <Link to="/contact">Get Started</Link>
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300 btn-hover-effect animate-fade-in delay-100">
+                  <Link to="/contact" className="flex items-center gap-2">
+                    Get Started
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 animate-fade-in delay-150">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 animate-fade-in delay-150">
                   <Link to="/services">Our Services</Link>
                 </Button>
               </div>
             </div>
-            <div className="relative animate-slide-in-right">
-              <div className="aspect-video glassmorphism rounded-2xl overflow-hidden shadow-xl animate-float">
-                {/* Placeholder for a hero image - would be replaced with an actual image */}
+            <div className="relative mt-10 lg:mt-0 animate-slide-in-right hidden md:block">
+              <div className="aspect-video glassmorphism rounded-2xl overflow-hidden shadow-2xl animate-float">
+                <img 
+                  src="/api/placeholder/800/480" 
+                  alt="IT Solutions for Freight Forwarders" 
+                  className="object-cover w-full h-full"
+                />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <Shield className="h-24 w-24 text-white" />
+                  <div className="text-center text-white p-6">
+                    <Shield className="h-16 w-16 mx-auto mb-4 text-white" />
+                    <h3 className="text-xl font-semibold">Secure & Reliable Solutions</h3>
+                  </div>
                 </div>
               </div>
               
               {/* Floating elements for visual interest */}
-              <div className="absolute -top-10 -right-10 w-20 h-20 bg-accent/20 rounded-full blur-2xl animate-pulse"></div>
-              <div className="absolute -bottom-10 -left-10 w-16 h-16 bg-primary/20 rounded-full blur-xl animate-float"></div>
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent/30 rounded-full blur-3xl animate-pulse-slow"></div>
+              <div className="absolute -bottom-16 -left-10 w-40 h-40 bg-primary/30 rounded-full blur-3xl animate-float"></div>
+            </div>
+          </div>
+          
+          {/* Client logos */}
+          <div className="mt-16 animate-fade-in delay-200">
+            <p className="text-white/80 text-center mb-4 text-sm uppercase tracking-wider font-medium">Trusted by leading companies</p>
+            <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div key={i} className="h-12 w-24 bg-white/10 rounded-md flex items-center justify-center p-2 backdrop-blur-sm">
+                  <div className="w-full h-full bg-white/80 rounded opacity-70"></div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
         
-        {/* Shape divider */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-white clip-path-slant"></div>
+        {/* Enhanced wave divider */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
+            <path 
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.45,22.39,121.09,43.65,201.77,57.86,248.57,67.43,280.12,65.8,321.39,56.44Z" 
+              className="fill-white"
+            ></path>
+          </svg>
+        </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll glass-card">
-              <CardContent className="p-8">
-                <h2 className="font-heading font-bold text-2xl mb-4 text-gradient">Our Mission</h2>
-                <p className="text-gray-600 leading-relaxed">We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders, helping them streamline operations, boost visibility, and scale efficiently.</p>
+      {/* Mission & Vision Section with Hover Cards */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient">Our Purpose</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We're committed to revolutionizing how freight forwarders operate in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
+                  <img 
+                    src="/api/placeholder/600/400" 
+                    alt="Our Mission" 
+                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                    <h2 className="font-heading font-bold text-2xl p-6 text-white">Our Mission</h2>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-600 leading-relaxed">
+                    We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders, helping them streamline operations, boost visibility, and scale efficiently.
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll glass-card">
-              <CardContent className="p-8">
-                <h2 className="font-heading font-bold text-2xl mb-4 text-gradient">Our Vision</h2>
-                <p className="text-gray-600 leading-relaxed">To set the industry benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage the rest.</p>
+            <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-48 bg-gradient-to-br from-accent/10 to-accent/5 relative overflow-hidden">
+                  <img 
+                    src="/api/placeholder/600/400" 
+                    alt="Our Vision" 
+                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                    <h2 className="font-heading font-bold text-2xl p-6 text-white">Our Vision</h2>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-600 leading-relaxed">
+                    To set the industry benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage the rest.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      {/* Services Section with Enhanced Cards */}
+      <section className="py-20 bg-gray-50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient">Our Services</h2>
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">WHAT WE OFFER</span>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient">Our Services</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We offer comprehensive solutions tailored for the freight forwarding and logistics industry.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[{
-            icon: FileCheck,
-            title: "Documentation",
-            description: "Expert documentation services including invoices, credit notes, and job profit statements."
-          }, {
-            icon: Users,
-            title: "Sales Support",
-            description: "Centralized sales support desk for lead management and customer relationships."
-          }, {
-            icon: Globe,
-            title: "Digital Marketing",
-            description: "Comprehensive digital marketing solutions to boost your online presence."
-          }, {
-            icon: Building2,
-            title: "Accounts Management",
-            description: "Professional accounting services for trade and non-trade transactions."
-          }, {
-            icon: Headset,
-            title: "Customer Service",
-            description: "Dedicated customer service team for bookings and nominations."
-          }, {
-            icon: Shield,
-            title: "Software Solutions",
-            description: "Custom software development following industry best practices."
-          }].map((service, index) => <Card key={index} className="group p-6 border-none shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll glass-card animate-tilt" style={{
-            animationDelay: `${index * 100}ms`
-          }}>
-                <service.icon className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="font-heading font-bold text-xl mb-2">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <Link to="/services" className="inline-flex items-center text-primary font-medium hover:underline group">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-              </Card>)}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                icon: FileCheck,
+                title: "Documentation",
+                description: "Expert documentation services including invoices, credit notes, and job profit statements.",
+                image: "/api/placeholder/600/400"
+              }, 
+              {
+                icon: Users,
+                title: "Sales Support",
+                description: "Centralized sales support desk for lead management and customer relationships.",
+                image: "/api/placeholder/600/400"
+              }, 
+              {
+                icon: Globe,
+                title: "Digital Marketing",
+                description: "Comprehensive digital marketing solutions to boost your online presence.",
+                image: "/api/placeholder/600/400"
+              }, 
+              {
+                icon: Building2,
+                title: "Accounts Management",
+                description: "Professional accounting services for trade and non-trade transactions.",
+                image: "/api/placeholder/600/400"
+              }, 
+              {
+                icon: Headset,
+                title: "Customer Service",
+                description: "Dedicated customer service team for bookings and nominations.",
+                image: "/api/placeholder/600/400"
+              }, 
+              {
+                icon: Shield,
+                title: "Software Solutions",
+                description: "Custom software development following industry best practices.",
+                image: "/api/placeholder/600/400"
+              }
+            ].map((service, index) => (
+              <Card 
+                key={index} 
+                className="group border-none rounded-xl shadow-card hover:shadow-xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="h-40 relative overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <service.icon className="h-10 w-10 text-white" />
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="font-heading font-bold text-xl mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <Link to="/services" className="inline-flex items-center text-primary font-medium hover:underline group">
+                    Learn more 
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section className="py-20">
+      {/* About Us Section with Enhanced Layout */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl"></div>
+        
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-on-scroll">
-              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 text-gradient">About Orange Office Technologies</h2>
-              <p className="text-gray-600 mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">ABOUT US</span>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-gradient">Orange Office Technologies</h2>
+              <p className="text-gray-600 mb-6 text-lg">
                 Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider who offers the shipping & logistics players worldwide, the competitive edge in the market.
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-8">
                 We provide expert service in all the core segments of day-to-day operations starting from Documentation & Operation, sales support, Customer service & Accounting activity.
               </p>
-              <Button className="bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-effect">
-                <Link to="/about">Learn More About Us</Link>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <div className="flex items-start">
+                  <div className="mr-4 bg-primary/10 rounded-full p-2">
+                    <Shield className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-1">Top Security</h4>
+                    <p className="text-gray-600 text-sm">Enterprise-grade security for all data</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-4 bg-primary/10 rounded-full p-2">
+                    <Users className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-1">Expert Team</h4>
+                    <p className="text-gray-600 text-sm">Qualified professionals in logistics</p>
+                  </div>
+                </div>
+              </div>
+              
+              <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-effect">
+                <Link to="/about" className="flex items-center gap-2">
+                  Learn More About Us
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
               </Button>
             </div>
             <div className="order-1 lg:order-2 animate-on-scroll">
               <div className="relative">
-                <div className="aspect-square rounded-lg overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center glassmorphism animate-float shadow-xl">
-                  {/* Placeholder for about image - would be replaced with an actual image */}
-                  <Building2 className="h-32 w-32 text-primary" />
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="/api/placeholder/800/800" 
+                    alt="Orange Office Technologies Building" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent"></div>
                 </div>
+                
+                {/* Floating card */}
+                <div className="absolute -bottom-10 -right-10 bg-white rounded-lg shadow-xl p-6 max-w-xs animate-float">
+                  <div className="flex items-center mb-3">
+                    <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                    <p className="font-medium">Always Available</p>
+                  </div>
+                  <p className="text-gray-600 text-sm">24/7 customer support for all your logistics needs</p>
+                </div>
+                
                 {/* Decorative elements */}
-                <div className="absolute -top-6 -right-6 w-12 h-12 bg-accent rounded-full opacity-20 animate-pulse"></div>
-                <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-primary rounded-full opacity-20 animate-float"></div>
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-accent/20 rounded-full blur-xl animate-pulse-slow"></div>
+                <div className="absolute -bottom-16 -left-6 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-float"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Enhanced Stats Section */}
+      <section className="py-20 bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-pattern opacity-5"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12 animate-on-scroll">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient">Our Impact</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We've built a strong track record of success over the years.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+            {[
+              {
+                number: "10+",
+                label: "Years Experience",
+                icon: Building2
+              }, 
+              {
+                number: "100+",
+                label: "Happy Employees",
+                icon: Users
+              }, 
+              {
+                number: "50+",
+                label: "Satisfied Clients",
+                icon: Headset
+              }, 
+              {
+                number: "200+",
+                label: "Projects Completed",
+                icon: FileCheck
+              }
+            ].map((stat, index) => (
+              <div 
+                key={index} 
+                className="text-center p-6 md:p-8 glass-card rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll bg-white border-t-4 border-primary group hover:-translate-y-1" 
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <stat.icon className="h-8 w-8 text-primary" />
+                </div>
+                <div className="font-heading font-bold text-4xl text-primary mb-2 animate-count-up">{stat.number}</div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Testimonials Section (New) */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[{
-            number: "10+",
-            label: "Years Experience"
-          }, {
-            number: "100+",
-            label: "Happy Employees"
-          }, {
-            number: "50+",
-            label: "Satisfied Clients"
-          }, {
-            number: "200+",
-            label: "Projects Completed"
-          }].map((stat, index) => <div key={index} className="text-center p-8 glass-card rounded-lg shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll" style={{
-            animationDelay: `${index * 100}ms`
-          }}>
-                <div className="font-heading font-bold text-4xl text-primary mb-2 animate-fade-in">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>)}
+          <div className="text-center mb-16 animate-on-scroll">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">TESTIMONIALS</span>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient">What Our Clients Say</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about our services.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <Card key={i} className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden">
+                <CardContent className="p-8">
+                  <div className="flex mb-6">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 italic mb-6">
+                    "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+                      <img src="/api/placeholder/100/100" alt="Client" className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-gray-900">John Smith</h4>
+                      <p className="text-gray-500 text-sm">CEO, Global Shipping Ltd</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <GradientBackground animated intensity="medium">
+      {/* Enhanced CTA Section */}
+      <GradientBackground animated intensity="high">
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 text-white animate-on-scroll">Ready to Transform Your Operations?</h2>
-              <p className="text-lg mb-8 text-white/90 animate-on-scroll">
-                Let us help you streamline your logistics processes and boost your business growth.
+            <div className="max-w-4xl mx-auto text-center relative">
+              {/* Floating Elements */}
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse-slow"></div>
+              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-float"></div>
+              
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-white animate-on-scroll leading-tight">
+                Ready to Transform Your <span className="text-accent">Logistics Operations</span>?
+              </h2>
+              <p className="text-xl mb-10 text-white/90 animate-on-scroll max-w-2xl mx-auto">
+                Let us help you streamline your processes and boost your business growth with our tailored solutions.
               </p>
+              
+              <Card className="border-none shadow-2xl bg-white/10 backdrop-blur-md p-8 mb-10 animate-on-scroll">
+                <CardContent className="p-0 text-left">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                    <div className="col-span-2">
+                      <h3 className="text-white text-2xl font-bold mb-2">Book a Free Consultation</h3>
+                      <p className="text-white/80">Get expert advice on how we can help optimize your operations</p>
+                    </div>
+                    <div className="text-right">
+                      <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl btn-hover-effect w-full md:w-auto">
+                        <Link to="/contact" className="flex items-center justify-center gap-2">
+                          Schedule Now
+                          <ArrowRight className="h-5 w-5" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
               <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
-                <Button variant="outline" className="border-white text-white hover:bg-white/10 btn-hover-effect">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 btn-hover-effect">
                   <Link to="/services">Explore Services</Link>
                 </Button>
-                <Button className="bg-white text-primary hover:bg-white/90 shadow-md hover:shadow-lg btn-hover-effect">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl btn-hover-effect">
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
@@ -227,7 +507,140 @@ const Index = () => {
         </section>
       </GradientBackground>
 
+      {/* Add Global CSS */}
+      <style jsx global>{`
+        /* Add animations */
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 0.8; }
+        }
+        
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Animation classes */
+        .animate-float {
+          animation: float in 6s infinite ease-in-out;
+        }
+        
+        .animate-float-slow {
+          animation: float 8s infinite ease-in-out;
+        }
+        
+        .animate-pulse-slow {
+          animation: pulse-slow 4s infinite ease-in-out;
+        }
+        
+        .animate-fade-in {
+          opacity: 0;
+          animation: fade-in 1s forwards;
+        }
+        
+        .animate-count-up {
+          counter-reset: count 0;
+          animation: count-up 2s forwards ease-out;
+        }
+        
+        .animate-on-scroll {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .animate-on-scroll.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        /* Background patterns */
+        .bg-pattern {
+          background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.09'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+       /* Glassmorphism */
+        .glassmorphism {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-card {
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          transition: all 0.3s ease;
+        }
+        
+        /* Text gradient */
+        .text-gradient {
+          background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+        }
+        
+        /* Button hover effect */
+        .btn-hover-effect {
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .btn-hover-effect::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.3);
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0);
+          transition: transform 0.5s, opacity 0.5s;
+        }
+        
+        .btn-hover-effect:hover::after {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1.5);
+        }
+        
+        /* Background gradients */
+        .bg-hero-gradient {
+          background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+        }
+        
+        /* Clip path for dividers */
+        .clip-path-slant {
+          clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+        }
+      `}</style>
+
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
+// Add custom CSS variables to the document root
+useEffect(() => {
+  document.documentElement.style.setProperty('--color-primary', '#FF6B00');  // Orange
+  document.documentElement.style.setProperty('--color-accent', '#007AFF');   // Blue
+}, []);
+
 export default Index;

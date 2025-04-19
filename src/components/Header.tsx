@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
@@ -28,9 +29,9 @@ export const Header = () => {
             <img 
               src="/lovable-uploads/c80361a7-f9e6-4b5d-a689-95904676a926.png" 
               alt="Orange Office Technologies" 
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
+              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
             />
-            <span className="font-heading font-bold text-lg hidden md:block animate-fade-in">
+            <span className="font-heading font-bold text-lg md:text-xl animate-fade-in">
               Orange Office Technologies
             </span>
           </Link>

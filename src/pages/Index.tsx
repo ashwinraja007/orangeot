@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -6,12 +7,15 @@ import { ArrowRight, Building2, FileCheck, Globe, Headset, Shield, Users } from 
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
   // Add state for parallax effect
   const [scrollY, setScrollY] = useState(0);
+  const isMobile = useIsMobile();
 
   // Handle scroll for parallax effects
   useEffect(() => {
@@ -23,6 +27,8 @@ const Index = () => {
     });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Set up scroll animations
   useEffect(() => {
     // Set up intersection observer for animation on scroll
     observerRef.current = new IntersectionObserver(entries => {
@@ -42,6 +48,10 @@ const Index = () => {
     animatedElements.forEach(el => {
       observerRef.current?.observe(el);
     });
+    
+    // Ensure scroll to top on page load
+    window.scrollTo(0, 0);
+    
     return () => {
       if (observerRef.current) {
         animatedElements.forEach(el => {
@@ -50,12 +60,13 @@ const Index = () => {
       }
     };
   }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section with Video Background */}
-      <section className="pt-24 md:pt-28 pb-20 bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden min-h-screen flex items-center">
+      <section className="pt-24 md:pt-28 pb-20 bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden min-h-screen flex items-center">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
           <video
@@ -63,48 +74,56 @@ const Index = () => {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-30"
           >
             <source src="https://cdn.coverr.co/videos/coverr-digital-transformation-in-business-2315/1080p.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/40 to-primary/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 to-gray-900/90"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-white leading-tight tracking-tight">
-                Your <span className="text-accent font-extrabold">Preferred</span><br className="hidden md:block" /> IT Partner
+                Your <span className="text-silver-gray font-extrabold">Preferred</span><br className="hidden md:block" /> IT Partner
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
                 We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300 btn-hover-effect animate-fade-in delay-100">
+                <Button size="lg" className="bg-white text-gray-800 hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300 btn-hover-effect animate-fade-in delay-100">
                   <Link to="/contact" className="flex items-center gap-2">
                     Get Started
                     <ArrowRight className="h-5 w-5" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white hover:bg-white/20 animate-fade-in delay-150 text-[primar] text-primary-DEFAULT">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 animate-fade-in delay-150">
                   <Link to="/services">Our Services</Link>
                 </Button>
               </div>
             </div>
             <div className="relative mt-10 lg:mt-0 animate-slide-in-right">
               <div className="aspect-video glassmorphism rounded-2xl overflow-hidden shadow-2xl animate-float">
-                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="IT Solutions for Freight Forwarders" className="object-cover w-full h-full opacity-90" />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="https://cdn.coverr.co/videos/coverr-close-up-of-a-security-lock-3453/1080p.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/40 flex items-center justify-center">
                   <div className="text-center text-white p-6">
-                    <Shield className="h-16 w-16 mx-auto mb-4 text-white" />
+                    <Shield className="h-16 w-16 mx-auto mb-4 text-silver-gray animate-pulse" />
                     <h3 className="text-xl font-semibold">Secure & Reliable Solutions</h3>
                   </div>
                 </div>
               </div>
               
               {/* Floating elements for visual interest */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent/30 rounded-full blur-3xl animate-pulse-slow"></div>
-              <div className="absolute -bottom-16 -left-10 w-40 h-40 bg-primary/30 rounded-full blur-3xl animate-float"></div>
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-silver-gray/30 rounded-full blur-3xl animate-pulse-slow"></div>
+              <div className="absolute -bottom-16 -left-10 w-40 h-40 bg-silver-gray/30 rounded-full blur-3xl animate-float"></div>
             </div>
           </div>
           
@@ -130,12 +149,12 @@ const Index = () => {
 
       {/* Mission & Vision Section with Enhanced Design */}
       <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-silver-gray/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-silver-gray/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">
               Our Purpose & Vision
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
@@ -145,14 +164,17 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden bg-gradient-to-br from-white to-gray-50">
-              <CardContent className="p-8 relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 transform -rotate-6">
-                    <Shield className="h-8 w-8 text-primary" />
+              <CardContent className="p-0 relative">
+                <div className="h-48 md:h-64 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Our Mission" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+                </div>
+                <div className="p-8 relative z-10">
+                  <div className="absolute -top-12 left-6 w-16 h-16 bg-silver-gray/20 rounded-2xl flex items-center justify-center transform -rotate-6 shadow-lg">
+                    <Shield className="h-8 w-8 text-gray-700" />
                   </div>
-                  <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900">Our Mission</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">
+                  <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900 mt-2">Our Mission</h3>
+                  <p className="text-gray-600 leading-relaxed">
                     Delivering comprehensive solutions that empower freight forwarders to streamline operations, enhance visibility, and achieve sustainable growth in the digital age.
                   </p>
                 </div>
@@ -160,14 +182,17 @@ const Index = () => {
             </Card>
 
             <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden bg-gradient-to-br from-white to-gray-50">
-              <CardContent className="p-8 relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-2xl"></div>
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 transform rotate-6">
-                    <Globe className="h-8 w-8 text-accent" />
+              <CardContent className="p-0 relative">
+                <div className="h-48 md:h-64 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80" alt="Our Vision" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+                </div>
+                <div className="p-8 relative z-10">
+                  <div className="absolute -top-12 left-6 w-16 h-16 bg-silver-gray/20 rounded-2xl flex items-center justify-center transform rotate-6 shadow-lg">
+                    <Globe className="h-8 w-8 text-gray-700" />
                   </div>
-                  <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900">Our Vision</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">
+                  <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900 mt-2">Our Vision</h3>
+                  <p className="text-gray-600 leading-relaxed">
                     To be the global benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage their operations seamlessly.
                   </p>
                 </div>
@@ -183,8 +208,8 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">WHAT WE OFFER</span>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient">Our Services</h2>
+            <span className="inline-block px-4 py-2 rounded-full bg-silver-gray/10 text-gray-700 font-medium text-sm mb-4">WHAT WE OFFER</span>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">Our Services</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We offer comprehensive solutions tailored for the freight forwarding and logistics industry.
             </p>
@@ -226,15 +251,15 @@ const Index = () => {
           }}>
                 <div className="h-40 relative overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-800/70 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-6">
                     <service.icon className="h-10 w-10 text-white" />
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-heading font-bold text-xl mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
+                  <h3 className="font-heading font-bold text-xl mb-3 group-hover:text-gray-700 transition-colors">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Link to="/services" className="inline-flex items-center text-primary font-medium hover:underline group">
+                  <Link to="/services" className="inline-flex items-center text-gray-700 font-medium hover:underline group">
                     Learn more 
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
@@ -246,13 +271,13 @@ const Index = () => {
 
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl"></div>
+        <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-silver-gray/5 blur-3xl"></div>
         
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-on-scroll">
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">ABOUT US</span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-gradient">Orange Office Technologies</h2>
+              <span className="inline-block px-4 py-2 rounded-full bg-silver-gray/10 text-gray-700 font-medium text-sm mb-4">ABOUT US</span>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">Orange Office Technologies</h2>
               <p className="text-gray-600 mb-6 text-lg">
                 Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider who offers the shipping & logistics players worldwide, the competitive edge in the market.
               </p>
@@ -262,8 +287,8 @@ const Index = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary/10 rounded-full p-2">
-                    <Shield className="h-6 w-6 text-primary" />
+                  <div className="mr-4 bg-silver-gray/10 rounded-full p-2">
+                    <Shield className="h-6 w-6 text-gray-700" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-1">Top Security</h4>
@@ -271,8 +296,8 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary/10 rounded-full p-2">
-                    <Users className="h-6 w-6 text-primary" />
+                  <div className="mr-4 bg-silver-gray/10 rounded-full p-2">
+                    <Users className="h-6 w-6 text-gray-700" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-1">Expert Team</h4>
@@ -281,7 +306,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-effect">
+              <Button size="lg" className="bg-gray-800 hover:bg-gray-700 text-white shadow-md hover:shadow-lg transition-all duration-300 btn-hover-effect">
                 <Link to="/about" className="flex items-center gap-2">
                   Learn More About Us
                   <ArrowRight className="h-5 w-5" />
@@ -292,7 +317,7 @@ const Index = () => {
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <img src="https://images.unsplash.com/photo-1551288033-cc57f1700a3b?auto=format&fit=crop&w=800&q=80" alt="Orange Office Technologies Building" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/30 to-transparent"></div>
                 </div>
                 
                 {/* Floating card */}
@@ -305,8 +330,8 @@ const Index = () => {
                 </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-accent/20 rounded-full blur-xl animate-pulse-slow"></div>
-                <div className="absolute -bottom-16 -left-6 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-float"></div>
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-silver-gray/20 rounded-full blur-xl animate-pulse-slow"></div>
+                <div className="absolute -bottom-16 -left-6 w-20 h-20 bg-silver-gray/20 rounded-full blur-xl animate-float"></div>
               </div>
             </div>
           </div>
@@ -319,7 +344,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient">Our Impact</h2>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">Our Impact</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We've built a strong track record of success over the years.
             </p>
@@ -342,183 +367,164 @@ const Index = () => {
             number: "200+",
             label: "Projects Completed",
             icon: FileCheck
-          }].map((stat, index) => <div key={index} className="text-center p-6 md:p-8 glass-card rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll bg-white border-t-4 border-primary group hover:-translate-y-1" style={{
+          }].map((stat, index) => <div key={index} className="text-center p-6 md:p-8 glass-card rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll bg-white border-t-4 border-silver-gray group hover:-translate-y-1" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <stat.icon className="h-8 w-8 text-primary" />
+                <div className="w-16 h-16 rounded-full bg-silver-gray/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-silver-gray/20 transition-colors">
+                  <stat.icon className="h-8 w-8 text-gray-700" />
                 </div>
-                <div className="font-heading font-bold text-4xl text-primary mb-2 animate-count-up">{stat.number}</div>
+                <div className="font-heading font-bold text-4xl text-gray-700 mb-2 animate-count-up">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>)}
           </div>
         </div>
       </section>
       
-      {/* Testimonials Section (New) */}
+      {/* Testimonials Section with Auto-scrolling Carousel */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">TESTIMONIALS</span>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient">What Our Clients Say</h2>
+            <span className="inline-block px-4 py-2 rounded-full bg-silver-gray/10 text-gray-700 font-medium text-sm mb-4">TESTIMONIALS</span>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">What Our Clients Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Don't just take our word for it. Here's what our clients have to say about our services.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map(i => <Card key={i} className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden">
-                <CardContent className="p-8">
-                  <div className="flex mb-6">
-                    {[...Array(5)].map((_, i) => <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>)}
-                  </div>
-                  <p className="text-gray-600 italic mb-6">
-                    "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry."
-                  </p>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
-                      <img src="https://images.unsplash.com/photo-1570295999680-5e27cac9d2ca?auto=format&fit=crop&w=100&q=80" alt="Client" className="w-full h-full object-cover" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">John Smith</h4>
-                      <p className="text-gray-500 text-sm">CEO, Global Shipping Ltd</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>)}
+          <div className="max-w-5xl mx-auto">
+            <AutoplayCarousel testimonials={[
+              {
+                quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
+                author: "John Smith",
+                position: "CEO",
+                company: "Global Shipping Ltd"
+              },
+              {
+                quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
+                author: "Sarah Johnson",
+                position: "Operations Director",
+                company: "Pacific Logistics"
+              },
+              {
+                quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
+                author: "Michael Chang",
+                position: "Managing Director",
+                company: "EastWest Freight Services"
+              },
+              {
+                quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
+                author: "Anna Martinez",
+                position: "Marketing Head",
+                company: "Express Cargo Systems"
+              }
+            ]} />
           </div>
         </div>
       </section>
 
       {/* Enhanced CTA Section */}
-      <GradientBackground animated intensity="strong">
-        <section className="py-20 bg-primary-DEFAULT bg-[S]">
-          <div className="container mx-auto px-4 bg-primary-DEFAULT">
-            <div className="max-w-4xl mx-auto text-center relative">
-              {/* Floating Elements */}
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse-slow"></div>
-              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-float"></div>
-              
-              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight lg:text-[S#FF6A00] text-primary-DEFAULT">
-                Ready to Transform Your <span className="text-[S#FF6A00] text-primary-DEFAULT">Logistics Operations</span>?
-              </h2>
-              <p className="text-xl mb-10 animate-on-scroll max-w-2xl mx-auto text-slate-950">
-                Let us help you streamline your processes and boost your business growth with our tailored solutions.
-              </p>
-              
-              <Card className="border-none shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-orange-600">
-                <CardContent className="p-0 text-left">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-                    <div className="col-span-2">
-                      <h3 className="text-white text-2xl font-bold mb-2">Book a Free Consultation</h3>
-                      <p className="text-white/80">Get expert advice on how we can help optimize your operations</p>
-                    </div>
-                    <div className="text-right">
-                      <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl btn-hover-effect w-full md:w-auto">
-                        <Link to="/contact" className="flex items-center justify-center gap-2">
-                          Schedule Now
-                          <ArrowRight className="h-5 w-5" />
-                        </Link>
-                      </Button>
-                    </div>
+      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-silver-gray/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-silver-gray/5 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight text-transparent bg-gradient-to-r from-white to-silver-gray/80 bg-clip-text">
+              Ready to Transform Your Logistics Operations?
+            </h2>
+            <p className="text-xl mb-10 animate-on-scroll max-w-2xl mx-auto text-silver-gray/90">
+              Let us help you streamline your processes and boost your business growth with our tailored solutions.
+            </p>
+            
+            <Card className="border-none shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-white/5">
+              <CardContent className="p-0 text-left">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                  <div className="col-span-2">
+                    <h3 className="text-white text-2xl font-bold mb-2">Book a Free Consultation</h3>
+                    <p className="text-white/80">Get expert advice on how we can help optimize your operations</p>
+                  </div>
+                  <div className="text-right">
+                    <Button size="lg" className="bg-white text-gray-900 hover:bg-white/90 shadow-lg hover:shadow-xl btn-hover-effect w-full md:w-auto">
+                      <Link to="/contact" className="flex items-center justify-center gap-2">
+                        Schedule Now
+                        <ArrowRight className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
+              <Button size="lg" variant="outline" className="border-silver-gray/30 text-silver-gray hover:bg-white/10 btn-hover-effect">
+                <Link to="/services">Explore Services</Link>
+              </Button>
+              <Button size="lg" className="bg-silver-gray/20 hover:bg-silver-gray/30 text-white shadow-lg hover:shadow-xl btn-hover-effect">
+                <Link to="/contact">Contact Us</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+// Auto-scrolling testimonial carousel component
+const AutoplayCarousel = ({ testimonials }) => {
+  const [api, setApi] = useState(null);
+  const isMobile = useIsMobile();
+
+  useEffect(() => {
+    if (!api) return;
+
+    // Set up autoplay
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [api]);
+
+  return (
+    <Carousel
+      className="w-full"
+      setApi={setApi}
+      opts={{
+        align: "start",
+        loop: true,
+      }}
+    >
+      <CarouselContent>
+        {testimonials.map((testimonial, index) => (
+          <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+            <div className="p-4">
+              <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                <CardContent className="p-8 flex flex-col h-full">
+                  <div className="flex justify-center mb-6">
+                    <div className="text-6xl text-silver-gray">"</div>
+                  </div>
+                  <blockquote className="text-lg text-center italic mb-8 flex-grow">
+                    {testimonial.quote}
+                  </blockquote>
+                  <div className="text-center mt-auto">
+                    <p className="font-heading font-bold text-lg">{testimonial.author}</p>
+                    <p className="text-gray-600">{testimonial.position}</p>
+                    <p className="text-gray-700 font-medium">{testimonial.company}</p>
                   </div>
                 </CardContent>
               </Card>
-              
-              <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
-                <Button size="lg" variant="outline" className="border-white btn-hover-effect text-gray-950 bg-orange-500 hover:bg-orange-400">
-                  <Link to="/services">Explore Services</Link>
-                </Button>
-                <Button size="lg" className="shadow-lg hover:shadow-xl btn-hover-effect bg-orange-500 hover:bg-orange-400 text-gray-950">
-                  <Link to="/contact">Contact Us</Link>
-                </Button>
-              </div>
             </div>
-          </div>
-        </section>
-      </GradientBackground>
-
-      {/* Add Global CSS */}
-      <style>{`
-        html {
-          scroll-behavior: smooth;
-        }
-        /* Add animations */
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes pulse-slow {
-          0%, 100% { opacity: 0.5; }
-          50% { opacity: 0.8; }
-        }
-        
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Animation classes */
-        .animate-float {
-          animation: float 6s infinite ease-in-out;
-        }
-        
-        .animate-float-slow {
-          animation: float 8s infinite ease-in-out;
-        }
-        
-        .animate-pulse-slow {
-          animation: pulse-slow 4s infinite ease-in-out;
-        }
-        
-        .animate-fade-in {
-          opacity: 0;
-          animation: fade-in 1s forwards;
-        }
-        
-        .delay-75 {
-          animation-delay: 75ms;
-        }
-        
-        .delay-100 {
-          animation-delay: 100ms;
-        }
-        
-        .delay-150 {
-          animation-delay: 150ms;
-        }
-        
-        .delay-200 {
-          animation-delay: 200ms;
-        }
-        
-        .animate-count-up {
-          counter-reset: count 0;
-          animation: count-up 2s forwards ease-out;
-        }
-        
-        .animate-on-scroll {
-          opacity: 0;
-          transform: translateY(30px);
-          transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .animate-on-scroll.visible {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        
-        /* Background patterns */
-        .bg-pattern {
-          background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-        }
-      `}</style>
-      
-      <Footer />
-    </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <div className="flex justify-center mt-8 gap-2">
+        <CarouselPrevious className="relative static translate-y-0 left-0" />
+        <CarouselNext className="relative static translate-y-0 right-0" />
+      </div>
+    </Carousel>
   );
 };
 

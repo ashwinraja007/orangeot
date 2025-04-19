@@ -19,6 +19,11 @@ export default {
           DEFAULT: "#ff6a00",
           foreground: "#ffffff",
         },
+        "silver-gray": {
+          DEFAULT: "#9F9EA1",
+          light: "#c5c4c6",
+          dark: "#7a797b",
+        },
         accent: "#ffd000",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -119,6 +124,10 @@ export default {
           "25%": { transform: "rotate(1deg)" },
           "75%": { transform: "rotate(-1deg)" },
         },
+        shimmer: {
+          "0%": { backgroundPosition: "-1000px 0" },
+          "100%": { backgroundPosition: "1000px 0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -133,19 +142,22 @@ export default {
         pulse: "pulse 3s ease-in-out infinite",
         "count-up": "count-up 2s ease-out forwards",
         tilt: "tilt 10s ease-in-out infinite",
+        shimmer: "shimmer 2s infinite linear",
       },
       boxShadow: {
         glass: "0 4px 30px rgba(0, 0, 0, 0.1)",
         hover: "0 10px 40px -15px rgba(0, 0, 0, 0.15)",
         card: "0 7px 20px rgba(0, 0, 0, 0.05)",
+        "silver-glow": "0 0 15px rgba(159, 158, 161, 0.7)",
       },
       backdropBlur: {
         glass: "blur(10px)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(135deg, #ff6a00 0%, #ffd000 100%)",
+        "hero-gradient": "linear-gradient(135deg, #303030 0%, #505050 100%)",
         "card-gradient": "linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05))",
+        "silver-shine": "linear-gradient(90deg, transparent, rgba(159, 158, 161, 0.3), transparent)",
       },
       // Add custom skew transform
       skew: {

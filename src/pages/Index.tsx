@@ -256,7 +256,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-on-scroll">
               <span className="inline-block px-4 py-2 rounded-full bg-silver-gray/10 text-gray-700 font-medium text-sm mb-4">ABOUT US</span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">Orange Office Technologies</h2>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-[#ff6a00]">Orange Office Technologies</h2>
               <p className="text-gray-600 mb-6 text-lg">
                 Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider who offers the shipping & logistics players worldwide, the competitive edge in the market.
               </p>

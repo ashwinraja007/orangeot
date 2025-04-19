@@ -152,7 +152,7 @@ const Index = () => {
                   <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Our Mission" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 </div>
-                <div className="p-8 relative z-10">
+                <div className="p-8 relative z-10 bg-slate-100">
                   <div className="absolute -top-12 left-6 w-16 h-16 bg-silver-gray/20 rounded-2xl flex items-center justify-center transform -rotate-6 shadow-lg">
                     <Shield className="h-8 w-8 text-gray-700" />
                   </div>
@@ -170,7 +170,7 @@ const Index = () => {
                   <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80" alt="Our Vision" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 </div>
-                <div className="p-8 relative z-10">
+                <div className="p-8 relative z-10 bg-gray-50">
                   <div className="absolute -top-12 left-6 w-16 h-16 bg-silver-gray/20 rounded-2xl flex items-center justify-center transform rotate-6 shadow-lg">
                     <Globe className="h-8 w-8 text-gray-700" />
                   </div>

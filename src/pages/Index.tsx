@@ -323,7 +323,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">Our Impact</h2>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-[#ff6a00]">Our Impact</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We've built a strong track record of success over the years.
             </p>
@@ -352,7 +352,7 @@ const Index = () => {
                 <div className="w-16 h-16 rounded-full bg-silver-gray/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-silver-gray/20 transition-colors">
                   <stat.icon className="h-8 w-8 text-gray-700" />
                 </div>
-                <div className="font-heading font-bold text-4xl text-gray-700 mb-2 animate-count-up">{stat.number}</div>
+                <div className="font-heading font-bold text-4xl text-gray-700 mb-2 animate-count-up bg-[t#] bg-[#ff6a00]">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>)}
           </div>

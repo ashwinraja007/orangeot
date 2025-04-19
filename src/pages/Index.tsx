@@ -399,7 +399,7 @@ const Index = () => {
 
       {/* Enhanced CTA Section */}
       <GradientBackground animated intensity="strong">
-        <section className="py-20">
+        <section className="py-20 bg-primary-DEFAULT">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center relative">
               {/* Floating Elements */}

@@ -467,7 +467,7 @@ const Index = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <GradientBackground animated intensity="high">
+      <GradientBackground animated intensity="strong">
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center relative">
@@ -515,7 +515,7 @@ const Index = () => {
       </GradientBackground>
 
       {/* Add Global CSS */}
-      <style jsx global>{`
+      <style>{`
         /* Add animations */
         @keyframes float {
           0%, 100% { transform: translateY(0); }
@@ -534,7 +534,7 @@ const Index = () => {
         
         /* Animation classes */
         .animate-float {
-          animation: float in 6s infinite ease-in-out;
+          animation: float 6s infinite ease-in-out;
         }
         
         .animate-float-slow {

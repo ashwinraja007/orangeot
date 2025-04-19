@@ -22,13 +22,18 @@ export const GradientBackground = ({
   
   // Get gradient color based on variant
   const getGradient = () => {
+    // Ensure intensity is a valid value
+    const validIntensity = ["light", "medium", "strong"].includes(intensity) 
+      ? intensity 
+      : "medium";
+    
     const intensityMap = {
       light: { fromOpacity: "5", viaOpacity: "3", toOpacity: "1" },
       medium: { fromOpacity: "10", viaOpacity: "5", toOpacity: "3" },
       strong: { fromOpacity: "20", viaOpacity: "10", toOpacity: "5" },
     };
     
-    const { fromOpacity, viaOpacity, toOpacity } = intensityMap[intensity];
+    const { fromOpacity, viaOpacity, toOpacity } = intensityMap[validIntensity];
     
     switch (variant) {
       case "primary":

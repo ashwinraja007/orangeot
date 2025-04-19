@@ -400,7 +400,7 @@ const Index = () => {
       {/* Enhanced CTA Section */}
       <GradientBackground animated intensity="strong">
         <section className="py-20 bg-primary-DEFAULT">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 bg-primary-DEFAULT">
             <div className="max-w-4xl mx-auto text-center relative">
               {/* Floating Elements */}
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse-slow"></div>

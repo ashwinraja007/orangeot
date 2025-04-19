@@ -43,7 +43,7 @@ export const Footer = () => {
             <h4 className="font-heading font-bold text-lg mb-4 text-gradient">Chennai - Headquarters</h4>
             <div className="flex space-x-2 items-start mb-2 group card-hover p-2 rounded-lg">
               <MapPin size={18} className="text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-              <address className="text-gray-600 text-sm not-italic">
+              <address className="text-white text-sm not-italic">
                 "KAIZEN" 2nd & 3rd Floor<br />
                 New No.G3 (Old No.G1), G Block,<br />
                 Plot No.565Q, 18th Street,<br />

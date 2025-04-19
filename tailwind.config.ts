@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -145,6 +144,10 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "hero-gradient": "linear-gradient(135deg, #ff6a00 0%, #ffd000 100%)",
         "card-gradient": "linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05))",
+      },
+      // Add custom skew transform
+      skew: {
+        '45': '45deg',
       },
     },
   },

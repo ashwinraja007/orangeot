@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,9 +9,10 @@ import { GradientBackground } from "@/components/GradientBackground";
 import MapComponent from "@/components/MapComponent";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -21,24 +21,28 @@ const Contact = () => {
     subject: "",
     message: ""
   });
-  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would normally send the form data to a server
     console.log("Form data submitted:", formData);
-    
+
     // Show success toast
     toast({
       title: "Message Sent!",
       description: "We'll get back to you as soon as possible.",
-      duration: 5000,
+      duration: 5000
     });
-    
+
     // Reset form
     setFormData({
       firstName: "",
@@ -49,23 +53,18 @@ const Contact = () => {
       message: ""
     });
   };
-  
-  // Map locations for Chennai and Kochi offices - properly typed as [number, number] tuples
-  const officeLocations = [
-    {
-      title: "Chennai - Headquarters",
-      description: "KAIZEN, 2nd & 3rd Floor, Anna Nagar East",
-      coordinates: [80.2707, 13.0827] as [number, number] // Explicit tuple typing
-    },
-    {
-      title: "Kochi Office",
-      description: "No 34/656, Neelima, Toll Jn, Edappally",
-      coordinates: [76.3219, 9.9816] as [number, number] // Explicit tuple typing
-    }
-  ];
 
-  return (
-    <div className="min-h-screen flex flex-col">
+  // Map locations for Chennai and Kochi offices - properly typed as [number, number] tuples
+  const officeLocations = [{
+    title: "Chennai - Headquarters",
+    description: "KAIZEN, 2nd & 3rd Floor, Anna Nagar East",
+    coordinates: [80.2707, 13.0827] as [number, number] // Explicit tuple typing
+  }, {
+    title: "Kochi Office",
+    description: "No 34/656, Neelima, Toll Jn, Edappally",
+    coordinates: [76.3219, 9.9816] as [number, number] // Explicit tuple typing
+  }];
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
@@ -73,7 +72,7 @@ const Contact = () => {
         <section className="pt-32 pb-16">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-heading font-bold text-4xl md:text-5xl mb-6 animate-fade-in text-white">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl mb-6 animate-fade-in text-[#ff6a00]">
                 Get in Touch
               </h1>
               <p className="text-xl text-white/90 mb-8 animate-fade-in delay-75">
@@ -97,81 +96,32 @@ const Contact = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label htmlFor="firstName" className="text-sm font-medium text-gray-700">First Name</label>
-                        <Input 
-                          id="firstName"
-                          name="firstName"
-                          placeholder="John" 
-                          className="bg-gray-50" 
-                          value={formData.firstName}
-                          onChange={handleInputChange}
-                          required
-                        />
+                        <Input id="firstName" name="firstName" placeholder="John" className="bg-gray-50" value={formData.firstName} onChange={handleInputChange} required />
                       </div>
                       <div className="space-y-2">
                         <label htmlFor="lastName" className="text-sm font-medium text-gray-700">Last Name</label>
-                        <Input 
-                          id="lastName"
-                          name="lastName"
-                          placeholder="Doe" 
-                          className="bg-gray-50" 
-                          value={formData.lastName}
-                          onChange={handleInputChange}
-                          required
-                        />
+                        <Input id="lastName" name="lastName" placeholder="Doe" className="bg-gray-50" value={formData.lastName} onChange={handleInputChange} required />
                       </div>
                     </div>
                     
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium text-gray-700">Email</label>
-                      <Input 
-                        id="email"
-                        name="email"
-                        placeholder="you@example.com" 
-                        type="email" 
-                        className="bg-gray-50" 
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                      />
+                      <Input id="email" name="email" placeholder="you@example.com" type="email" className="bg-gray-50" value={formData.email} onChange={handleInputChange} required />
                     </div>
                     
                     <div className="space-y-2">
                       <label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone</label>
-                      <Input 
-                        id="phone"
-                        name="phone"
-                        placeholder="+91 98765 43210" 
-                        type="tel" 
-                        className="bg-gray-50" 
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                      />
+                      <Input id="phone" name="phone" placeholder="+91 98765 43210" type="tel" className="bg-gray-50" value={formData.phone} onChange={handleInputChange} />
                     </div>
                     
                     <div className="space-y-2">
                       <label htmlFor="subject" className="text-sm font-medium text-gray-700">Subject</label>
-                      <Input 
-                        id="subject"
-                        name="subject"
-                        placeholder="How can we help you?" 
-                        className="bg-gray-50" 
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        required
-                      />
+                      <Input id="subject" name="subject" placeholder="How can we help you?" className="bg-gray-50" value={formData.subject} onChange={handleInputChange} required />
                     </div>
                     
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium text-gray-700">Your Message</label>
-                      <Textarea 
-                        id="message"
-                        name="message"
-                        placeholder="Please provide details about your inquiry..." 
-                        className="bg-gray-50 min-h-[150px]" 
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        required
-                      />
+                      <Textarea id="message" name="message" placeholder="Please provide details about your inquiry..." className="bg-gray-50 min-h-[150px]" value={formData.message} onChange={handleInputChange} required />
                     </div>
                     
                     <Button type="submit" className="w-full group bg-primary hover:bg-primary/90">
@@ -265,8 +215,6 @@ const Contact = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;

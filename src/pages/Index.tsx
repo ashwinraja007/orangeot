@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,28 +6,27 @@ import { ArrowRight, Building2, FileCheck, Globe, Headset, Shield, Users } from 
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef } from "react";
-
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef<IntersectionObserver | null>(null);
-  
   useEffect(() => {
     // Set up intersection observer for animation on scroll
-    observerRef.current = new IntersectionObserver((entries) => {
+    observerRef.current = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observerRef.current?.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.2 });
-    
+    }, {
+      threshold: 0.2
+    });
+
     // Get all elements with animate-on-scroll class
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => {
       observerRef.current?.observe(el);
     });
-    
     return () => {
       if (observerRef.current) {
         animatedElements.forEach(el => {
@@ -37,9 +35,7 @@ const Index = () => {
       }
     };
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
@@ -89,18 +85,14 @@ const Index = () => {
             <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll glass-card">
               <CardContent className="p-8">
                 <h2 className="font-heading font-bold text-2xl mb-4 text-gradient">Our Mission</h2>
-                <p className="text-gray-600 leading-relaxed">
-                  "We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders, helping them streamline operations, boost visibility, and scale efficiently."
-                </p>
+                <p className="text-gray-600 leading-relaxed">We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders, helping them streamline operations, boost visibility, and scale efficiently.</p>
               </CardContent>
             </Card>
 
             <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll glass-card">
               <CardContent className="p-8">
                 <h2 className="font-heading font-bold text-2xl mb-4 text-gradient">Our Vision</h2>
-                <p className="text-gray-600 leading-relaxed">
-                  "To set the industry benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage the rest."
-                </p>
+                <p className="text-gray-600 leading-relaxed">To set the industry benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage the rest.</p>
               </CardContent>
             </Card>
           </div>
@@ -118,51 +110,40 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: FileCheck,
-                title: "Documentation",
-                description: "Expert documentation services including invoices, credit notes, and job profit statements."
-              },
-              {
-                icon: Users,
-                title: "Sales Support",
-                description: "Centralized sales support desk for lead management and customer relationships."
-              },
-              {
-                icon: Globe,
-                title: "Digital Marketing",
-                description: "Comprehensive digital marketing solutions to boost your online presence."
-              },
-              {
-                icon: Building2,
-                title: "Accounts Management",
-                description: "Professional accounting services for trade and non-trade transactions."
-              },
-              {
-                icon: Headset,
-                title: "Customer Service",
-                description: "Dedicated customer service team for bookings and nominations."
-              },
-              {
-                icon: Shield,
-                title: "Software Solutions",
-                description: "Custom software development following industry best practices."
-              }
-            ].map((service, index) => (
-              <Card 
-                key={index} 
-                className="group p-6 border-none shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll glass-card animate-tilt"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {[{
+            icon: FileCheck,
+            title: "Documentation",
+            description: "Expert documentation services including invoices, credit notes, and job profit statements."
+          }, {
+            icon: Users,
+            title: "Sales Support",
+            description: "Centralized sales support desk for lead management and customer relationships."
+          }, {
+            icon: Globe,
+            title: "Digital Marketing",
+            description: "Comprehensive digital marketing solutions to boost your online presence."
+          }, {
+            icon: Building2,
+            title: "Accounts Management",
+            description: "Professional accounting services for trade and non-trade transactions."
+          }, {
+            icon: Headset,
+            title: "Customer Service",
+            description: "Dedicated customer service team for bookings and nominations."
+          }, {
+            icon: Shield,
+            title: "Software Solutions",
+            description: "Custom software development following industry best practices."
+          }].map((service, index) => <Card key={index} className="group p-6 border-none shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll glass-card animate-tilt" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <service.icon className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="font-heading font-bold text-xl mb-2">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <Link to="/services" className="inline-flex items-center text-primary font-medium hover:underline group">
                   Learn more <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -202,21 +183,24 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: "10+", label: "Years Experience" },
-              { number: "100+", label: "Happy Employees" },
-              { number: "50+", label: "Satisfied Clients" },
-              { number: "200+", label: "Projects Completed" }
-            ].map((stat, index) => (
-              <div 
-                key={index} 
-                className="text-center p-8 glass-card rounded-lg shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {[{
+            number: "10+",
+            label: "Years Experience"
+          }, {
+            number: "100+",
+            label: "Happy Employees"
+          }, {
+            number: "50+",
+            label: "Satisfied Clients"
+          }, {
+            number: "200+",
+            label: "Projects Completed"
+          }].map((stat, index) => <div key={index} className="text-center p-8 glass-card rounded-lg shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="font-heading font-bold text-4xl text-primary mb-2 animate-fade-in">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -244,8 +228,6 @@ const Index = () => {
       </GradientBackground>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

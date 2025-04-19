@@ -17,7 +17,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 group" aria-label="Home">
             <img src="/lovable-uploads/c80361a7-f9e6-4b5d-a689-95904676a926.png" alt="Orange Office Technologies" className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110" />
-            <span className="font-heading text-lg md:text-xl animate-fade-in font-normal">
+            <span className="font-heading text-lg md:text-xl animate-fade-in font-semibold">
               Orange Office Technologies
             </span>
           </Link>

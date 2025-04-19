@@ -131,13 +131,13 @@ const Index = () => {
       </section>
 
       {/* Mission & Vision Section with Enhanced Design */}
-      <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden bg-slate-200">
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden bg-gray-50">
         <div className="absolute top-0 right-0 w-96 h-96 bg-silver-gray/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-silver-gray/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10 bg-gray-50">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-[#ff6a00]">
               Our Purpose & Vision
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">

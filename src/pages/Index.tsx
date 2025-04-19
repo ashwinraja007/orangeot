@@ -409,11 +409,11 @@ const Index = () => {
               <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight lg:text-[S#FF6A00] text-primary-DEFAULT">
                 Ready to Transform Your <span className="text-[S#FF6A00] text-primary-DEFAULT">Logistics Operations</span>?
               </h2>
-              <p className="text-xl mb-10 text-white/90 animate-on-scroll max-w-2xl mx-auto">
+              <p className="text-xl mb-10 animate-on-scroll max-w-2xl mx-auto text-slate-950">
                 Let us help you streamline your processes and boost your business growth with our tailored solutions.
               </p>
               
-              <Card className="border-none shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-primary-DEFAULT">
+              <Card className="border-none shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-orange-600">
                 <CardContent className="p-0 text-left">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
                     <div className="col-span-2">

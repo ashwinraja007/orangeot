@@ -230,7 +230,7 @@ const Index = () => {
             icon: FileCheck,
             title: "Documentation",
             description: "Expert documentation services including invoices, credit notes, and job profit statements.",
-            image: "https://images.unsplash.com/photo-1582653841981-84d64c067ee5?auto=format&fit=crop&w=600&q=80"
+            image: "/documentation.png"
           }, {
             icon: Users,
             title: "Sales Support",

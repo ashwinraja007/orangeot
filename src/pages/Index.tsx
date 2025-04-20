@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -58,6 +59,7 @@ const Index = () => {
       }
     };
   }, []);
+  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -431,7 +433,7 @@ const Index = () => {
                     <p className="text-gray-950">Get expert advice on how we can help optimize your operations</p>
                   </div>
                   <div className="text-right">
-                    <Button size="lg" className="text-gray-900 shadow-lg hover:shadow-xl btn-hover-effect w-full md:w-auto bg-[s#] bg-[#ff6a00]">
+                    <Button size="lg" className="text-gray-900 shadow-lg hover:shadow-xl btn-hover-effect w-full md:w-auto bg-[#ff6a00]">
                       <Link to="/contact" className="flex items-center justify-center gap-2">
                         Schedule Now
                         <ArrowRight className="h-5 w-5" />
@@ -473,12 +475,15 @@ const AutoplayCarousel = ({
     }, 5000);
     return () => clearInterval(interval);
   }, [api]);
-  return <Carousel className="w-full" setApi={setApi} opts={{
-    align: "start",
-    loop: true
-  }}>
+  
+  return (
+    <Carousel className="w-full" setApi={setApi} opts={{
+      align: "start",
+      loop: true
+    }}>
       <CarouselContent>
-        {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+        {testimonials.map((testimonial, index) => (
+          <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
             <div className="p-4">
               <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8 flex flex-col h-full">
@@ -496,7 +501,15 @@ const AutoplayCarousel = ({
                 </CardContent>
               </Card>
             </div>
-          </CarouselItem>)}
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <div className="flex justify-center mt-8 gap-2">
         <CarouselPrevious className="relative static translate-y-0 left-0" />
+        <CarouselNext className="relative static translate-y-0 right-0" />
+      </div>
+    </Carousel>
+  );
+};
+
+export default Index;

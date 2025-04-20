@@ -139,11 +139,9 @@ const Index = () => {
               <VideoPlayer src="https://cdn.coverr.co/videos/coverr-a-business-meeting-in-an-office-5544/1080p.mp4" title={<div>
                     <div className="flex items-center gap-3 mb-3">
                       <Shield className="h-8 w-8 text-[#F58220]" />
-                      <h3 className="text-xl font-semibold">Secure & Reliable Solutions</h3>
+                      
                     </div>
-                    <p className="text-white/90 max-w-md">
-                      Enterprise-grade security and reliability for your business operations
-                    </p>
+                    
                   </div>} className="aspect-video rounded-2xl overflow-hidden shadow-2xl group hover:scale-105 transition-transform duration-500" showControls={true} />
               
               {/* Decorative elements */}

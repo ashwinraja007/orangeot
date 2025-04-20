@@ -19,6 +19,12 @@ const clientLogos = [
   { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg", alt: "Apple" },
   { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg", alt: "Netflix" },
   { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg", alt: "Airbnb" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg", alt: "Spotify" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg", alt: "Microsoft" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg", alt: "Google" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg", alt: "Apple" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg", alt: "Netflix" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg", alt: "Airbnb" },
 ];
 
 const Index = () => {

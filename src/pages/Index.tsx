@@ -12,21 +12,43 @@ import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { VideoPlayer } from "@/components/ui/video-player";
 
 // Client logos data
-const clientLogos = [
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg", alt: "Spotify" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg", alt: "Microsoft" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg", alt: "Google" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg", alt: "Apple" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg", alt: "Netflix" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg", alt: "Airbnb" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg", alt: "Spotify" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg", alt: "Microsoft" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg", alt: "Google" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg", alt: "Apple" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg", alt: "Netflix" },
-  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg", alt: "Airbnb" },
-];
-
+const clientLogos = [{
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg",
+  alt: "Spotify"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg",
+  alt: "Microsoft"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg",
+  alt: "Google"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg",
+  alt: "Apple"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg",
+  alt: "Netflix"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg",
+  alt: "Airbnb"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg",
+  alt: "Spotify"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg",
+  alt: "Microsoft"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg",
+  alt: "Google"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg",
+  alt: "Apple"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg",
+  alt: "Netflix"
+}, {
+  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg",
+  alt: "Airbnb"
+}];
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -76,8 +98,7 @@ const Index = () => {
       }
     };
   }, []);
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section with Video and Auto-scrolling Logos */}
@@ -117,10 +138,7 @@ const Index = () => {
             </div>
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
               {/* Enhanced video component with better UI */}
-              <VideoPlayer 
-                src="https://cdn.coverr.co/videos/coverr-a-business-meeting-in-an-office-5544/1080p.mp4"
-                title={
-                  <div>
+              <VideoPlayer src="https://cdn.coverr.co/videos/coverr-a-business-meeting-in-an-office-5544/1080p.mp4" title={<div>
                     <div className="flex items-center gap-3 mb-3">
                       <Shield className="h-8 w-8 text-[#F58220]" />
                       <h3 className="text-xl font-semibold">Secure & Reliable Solutions</h3>
@@ -128,11 +146,7 @@ const Index = () => {
                     <p className="text-white/90 max-w-md">
                       Enterprise-grade security and reliability for your business operations
                     </p>
-                  </div>
-                }
-                className="aspect-video rounded-2xl overflow-hidden shadow-2xl group hover:scale-105 transition-transform duration-500"
-                showControls={true}
-              />
+                  </div>} className="aspect-video rounded-2xl overflow-hidden shadow-2xl group hover:scale-105 transition-transform duration-500" showControls={true} />
               
               {/* Decorative elements */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#FFC78E]/30 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -149,9 +163,7 @@ const Index = () => {
         
         {/* Enhanced wave divider */}
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full rotate-180">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-white"></path>
-          </svg>
+          
         </div>
       </section>
       
@@ -397,26 +409,26 @@ const Index = () => {
           
           <div className="max-w-5xl mx-auto">
             <AutoplayCarousel testimonials={[{
-              quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
-              author: "John Smith",
-              position: "CEO",
-              company: "Global Shipping Ltd"
-            }, {
-              quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
-              author: "Sarah Johnson",
-              position: "Operations Director",
-              company: "Pacific Logistics"
-            }, {
-              quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
-              author: "Michael Chang",
-              position: "Managing Director",
-              company: "EastWest Freight Services"
-            }, {
-              quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
-              author: "Anna Martinez",
-              position: "Marketing Head",
-              company: "Express Cargo Systems"
-            }]} />
+            quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
+            author: "John Smith",
+            position: "CEO",
+            company: "Global Shipping Ltd"
+          }, {
+            quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
+            author: "Sarah Johnson",
+            position: "Operations Director",
+            company: "Pacific Logistics"
+          }, {
+            quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
+            author: "Michael Chang",
+            position: "Managing Director",
+            company: "EastWest Freight Services"
+          }, {
+            quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
+            author: "Anna Martinez",
+            position: "Marketing Head",
+            company: "Express Cargo Systems"
+          }]} />
           </div>
         </div>
       </section>
@@ -467,15 +479,15 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
 
 // Auto-scrolling testimonial carousel component
-const AutoplayCarousel = ({ testimonials }) => {
+const AutoplayCarousel = ({
+  testimonials
+}) => {
   const [api, setApi] = useState(null);
   const isMobile = useIsMobile();
-  
   useEffect(() => {
     if (!api) return;
 
@@ -485,12 +497,12 @@ const AutoplayCarousel = ({ testimonials }) => {
     }, 5000);
     return () => clearInterval(interval);
   }, [api]);
-  
-  return (
-    <Carousel className="w-full" setApi={setApi} opts={{ align: "start", loop: true }}>
+  return <Carousel className="w-full" setApi={setApi} opts={{
+    align: "start",
+    loop: true
+  }}>
       <CarouselContent>
-        {testimonials.map((testimonial, index) => (
-          <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+        {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
             <div className="p-4">
               <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8 flex flex-col h-full">
@@ -508,15 +520,12 @@ const AutoplayCarousel = ({ testimonials }) => {
                 </CardContent>
               </Card>
             </div>
-          </CarouselItem>
-        ))}
+          </CarouselItem>)}
       </CarouselContent>
       <div className="flex justify-center mt-8 gap-2">
         <CarouselPrevious className="relative static translate-y-0 left-0" />
         <CarouselNext className="relative static translate-y-0 right-0" />
       </div>
-    </Carousel>
-  );
+    </Carousel>;
 };
-
 export default Index;

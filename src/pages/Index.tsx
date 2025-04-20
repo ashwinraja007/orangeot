@@ -111,8 +111,6 @@ const Index = () => {
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] transform -translate-x-1/3 translate-y-1/4">
             <div className="w-full h-full bg-[#FFC78E]/20 transform -rotate-45"></div>
           </div>
-          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-[#FF7F50]/30 rounded-full"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-[#F58220]/20 rounded-full"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

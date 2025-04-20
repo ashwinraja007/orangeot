@@ -433,7 +433,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight text-transparent bg-gradient-to-r from-white to-silver-gray/80 bg-clip-text">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight bg-gradient-to-r from-white to-silver-gray/80 bg-clip-text text-slate-50">
               Ready to Transform Your Logistics Operations?
             </h2>
             <p className="text-xl mb-10 animate-on-scroll max-w-2xl mx-auto text-silver-gray/90">
@@ -460,10 +460,10 @@ const Index = () => {
             </Card>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
-              <Button size="lg" variant="outline" className="border-silver-gray/30 text-silver-gray btn-hover-effect bg-slate-100 text-gray-950">
+              <Button size="lg" variant="outline" className="border-silver-gray/30 text-silver-gray btn-hover-effect text-gray-950 bg-yellow-500 hover:bg-yellow-400">
                 <Link to="/services">Explore Services</Link>
               </Button>
-              <Button size="lg" className="bg-silver-gray/20 hover:bg-silver-gray/30 shadow-lg hover:shadow-xl btn-hover-effect bg-slate-50 text-gray-950">
+              <Button size="lg" className="bg-silver-gray/20 hover:bg-silver-gray/30 shadow-lg hover:shadow-xl btn-hover-effect text-gray-950 bg-yellow-500 hover:bg-yellow-400">
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>

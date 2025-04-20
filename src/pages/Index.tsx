@@ -19,7 +19,7 @@ const clientLogos = [{
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg",
   alt: "GC"
 }, {
-  src: "/62fb7890bc643.svg",
+  src: "/62fb77880f0df.png",
   alt: "amass"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg",

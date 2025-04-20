@@ -5,9 +5,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Pages
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Documentation from "./pages/services/Documentation";
 import Careers from "./pages/Careers";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
@@ -26,6 +29,7 @@ const App: React.FC = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/documentation" element={<Documentation />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/contact" element={<Contact />} />

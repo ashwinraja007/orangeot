@@ -35,8 +35,29 @@
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 
-  /* Base Typography */
+  /* Update text sizes for better mobile responsiveness */
   h1 {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-base sm:text-lg md:text-xl font-semibold;
+  }
+
+  p {
+    @apply text-sm sm:text-base md:text-lg leading-relaxed;
+  }
+
+  /* Custom Typography */
+  /* h1 {
     @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight;
   }
 
@@ -54,7 +75,7 @@
 
   p {
     @apply text-base md:text-lg leading-relaxed;
-  }
+  } */
 
   /* Custom Classes */
   .text-balance {

@@ -138,7 +138,6 @@ const Index = () => {
               {/* Enhanced video component with better UI */}
               <VideoPlayer src="/videoh.mp4" title={<div>
                     <div className="flex items-center gap-3 mb-3">
-                      <Shield className="h-8 w-8 text-[#F58220]" />
                       
                     </div>
                     
@@ -230,32 +229,32 @@ const Index = () => {
             icon: FileCheck,
             title: "Documentation",
             description: "Expert documentation services including invoices, credit notes, and job profit statements.",
-            image: "/documentation.png"
+            image: "/1.png"
           }, {
             icon: Users,
             title: "Sales Support",
             description: "Centralized sales support desk for lead management and customer relationships.",
-            image: "https://images.unsplash.com/photo-1543123289-93c36174a331?auto=format&fit=crop&w=600&q=80"
+            image: "/2.png"
           }, {
             icon: Globe,
             title: "Digital Marketing",
             description: "Comprehensive digital marketing solutions to boost your online presence.",
-            image: "https://images.unsplash.com/photo-1587620962725-ead3750e5b90?auto=format&fit=crop&w=600&q=80"
+            image: "/3.png"
           }, {
             icon: Building2,
             title: "Accounts Management",
             description: "Professional accounting services for trade and non-trade transactions.",
-            image: "https://images.unsplash.com/photo-1507842214779-846420a6bcd3?auto=format&fit=crop&w=600&q=80"
+            image: "/4.png"
           }, {
             icon: Headset,
             title: "Customer Service",
             description: "Dedicated customer service team for bookings and nominations.",
-            image: "https://images.unsplash.com/photo-1551033406-611732b5e7ca?auto=format&fit=crop&w=600&q=80"
+            image: "/5.png"
           }, {
             icon: Shield,
             title: "Software Solutions",
             description: "Custom software development following industry best practices.",
-            image: "https://images.unsplash.com/photo-1518770660439-46493ca4a0db?auto=format&fit=crop&w=600&q=80"
+            image: "/6.png"
           }].map((service, index) => <Card key={index} className="group border-none rounded-xl shadow-card hover:shadow-xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
             animationDelay: `${index * 100}ms`
           }}>

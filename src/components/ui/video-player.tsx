@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 interface VideoPlayerProps {
   src: string;
-  title: string;
+  title: React.ReactNode; // Changed from string to ReactNode to accept elements
   className?: string;
   autoPlay?: boolean;
   loop?: boolean;

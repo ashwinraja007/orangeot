@@ -268,7 +268,7 @@ const Index = () => {
                 <CardContent className="p-6">
                   <h3 className="font-heading font-bold text-xl mb-3 group-hover:text-gray-700 transition-colors">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Link to="/services" className="inline-flex items-center text-gray-700 font-medium hover:underline group">
+                  <Link to="/services" className="inline-flex items-center text-orange-500   font-medium hover:underline group">
                     Learn more 
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>

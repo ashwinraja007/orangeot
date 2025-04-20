@@ -8,6 +8,19 @@ import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { LogoCarousel } from "@/components/ui/logo-carousel";
+import { VideoPlayer } from "@/components/ui/video-player";
+
+// Client logos data
+const clientLogos = [
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg", alt: "Spotify" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg", alt: "Microsoft" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg", alt: "Google" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg", alt: "Apple" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg", alt: "Netflix" },
+  { src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg", alt: "Airbnb" },
+];
+
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -57,10 +70,11 @@ const Index = () => {
       }
     };
   }, []);
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Enhanced Hero Section with Geometric Patterns */}
+      {/* Enhanced Hero Section with Video and Auto-scrolling Logos */}
       <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-[#FDF7F3] to-white">
         {/* Geometric Pattern Overlays */}
         <div className="absolute inset-0 overflow-hidden">
@@ -96,12 +110,11 @@ const Index = () => {
               </div>
             </div>
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative group hover:scale-105 transition-transform duration-500">
-                <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                  <source src="https://cdn.coverr.co/videos/coverr-a-business-meeting-in-an-office-5544/1080p.mp4" type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2C2C2C]/80 to-transparent flex items-end justify-start p-8">
-                  <div className="text-white">
+              {/* Enhanced video component with better UI */}
+              <VideoPlayer 
+                src="https://cdn.coverr.co/videos/coverr-a-business-meeting-in-an-office-5544/1080p.mp4"
+                title={
+                  <div>
                     <div className="flex items-center gap-3 mb-3">
                       <Shield className="h-8 w-8 text-[#F58220]" />
                       <h3 className="text-xl font-semibold">Secure & Reliable Solutions</h3>
@@ -110,11 +123,10 @@ const Index = () => {
                       Enterprise-grade security and reliability for your business operations
                     </p>
                   </div>
-                </div>
-                <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 transition-colors duration-300 rounded-full p-4 backdrop-blur-sm opacity-0 group-hover:opacity-100">
-                  <Play className="h-8 w-8 text-white" />
-                </button>
-              </div>
+                }
+                className="aspect-video rounded-2xl overflow-hidden shadow-2xl group hover:scale-105 transition-transform duration-500"
+                showControls={true}
+              />
               
               {/* Decorative elements */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#FFC78E]/30 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -122,24 +134,21 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Client logos - Fixed visibility */}
+          {/* Client logos - Auto-scrolling */}
           <div className="mt-16 animate-fade-in delay-200">
             <p className="text-gray-800 text-center mb-6 text-sm uppercase tracking-wider font-medium">Trusted by leading companies</p>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-              {/* Replace with actual client logos */}
-              {["https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg"].map((logo, i) => <div key={i} className="h-12 w-auto flex items-center justify-center p-2 backdrop-blur-sm">
-                  <img src={logo} alt={`Client logo ${i + 1}`} className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-                </div>)}
-            </div>
+            <LogoCarousel logos={clientLogos} className="py-4" />
           </div>
         </div>
         
         {/* Enhanced wave divider */}
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24">
-          
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full rotate-180">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-white"></path>
+          </svg>
         </div>
       </section>
-
+      
       {/* Mission & Vision Section with Enhanced Design */}
       <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden bg-gray-50">
         <div className="absolute top-0 right-0 w-96 h-96 bg-silver-gray/5 rounded-full blur-3xl"></div>
@@ -382,26 +391,26 @@ const Index = () => {
           
           <div className="max-w-5xl mx-auto">
             <AutoplayCarousel testimonials={[{
-            quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
-            author: "John Smith",
-            position: "CEO",
-            company: "Global Shipping Ltd"
-          }, {
-            quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
-            author: "Sarah Johnson",
-            position: "Operations Director",
-            company: "Pacific Logistics"
-          }, {
-            quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
-            author: "Michael Chang",
-            position: "Managing Director",
-            company: "EastWest Freight Services"
-          }, {
-            quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
-            author: "Anna Martinez",
-            position: "Marketing Head",
-            company: "Express Cargo Systems"
-          }]} />
+              quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
+              author: "John Smith",
+              position: "CEO",
+              company: "Global Shipping Ltd"
+            }, {
+              quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
+              author: "Sarah Johnson",
+              position: "Operations Director",
+              company: "Pacific Logistics"
+            }, {
+              quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
+              author: "Michael Chang",
+              position: "Managing Director",
+              company: "EastWest Freight Services"
+            }, {
+              quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
+              author: "Anna Martinez",
+              position: "Marketing Head",
+              company: "Express Cargo Systems"
+            }]} />
           </div>
         </div>
       </section>
@@ -452,15 +461,15 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 // Auto-scrolling testimonial carousel component
-const AutoplayCarousel = ({
-  testimonials
-}) => {
+const AutoplayCarousel = ({ testimonials }) => {
   const [api, setApi] = useState(null);
   const isMobile = useIsMobile();
+  
   useEffect(() => {
     if (!api) return;
 
@@ -470,12 +479,12 @@ const AutoplayCarousel = ({
     }, 5000);
     return () => clearInterval(interval);
   }, [api]);
-  return <Carousel className="w-full" setApi={setApi} opts={{
-    align: "start",
-    loop: true
-  }}>
+  
+  return (
+    <Carousel className="w-full" setApi={setApi} opts={{ align: "start", loop: true }}>
       <CarouselContent>
-        {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+        {testimonials.map((testimonial, index) => (
+          <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
             <div className="p-4">
               <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8 flex flex-col h-full">
@@ -493,12 +502,15 @@ const AutoplayCarousel = ({
                 </CardContent>
               </Card>
             </div>
-          </CarouselItem>)}
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <div className="flex justify-center mt-8 gap-2">
         <CarouselPrevious className="relative static translate-y-0 left-0" />
         <CarouselNext className="relative static translate-y-0 right-0" />
       </div>
-    </Carousel>;
+    </Carousel>
+  );
 };
+
 export default Index;

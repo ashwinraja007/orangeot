@@ -325,7 +325,7 @@ const Index = () => {
             <div className="order-1 lg:order-2 animate-on-scroll">
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                  <img src="https://images.unsplash.com/photo-1551288033-cc57f1700a3b?auto=format&fit=crop&w=800&q=80" alt="Orange Office Technologies Building" className="w-full h-full object-cover" />
+                  <img src="/office.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/30 to-transparent"></div>
                 </div>
                 

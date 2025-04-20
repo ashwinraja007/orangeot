@@ -13,40 +13,40 @@ import { VideoPlayer } from "@/components/ui/video-player";
 
 // Client logos data
 const clientLogos = [{
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg",
+  src: "/62fb7958e1cf7.png",
   alt: "OECL"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg",
+  src: "/62fb78ee5cd45.png",
   alt: "GC"
 }, {
   src: "/62fb77880f0df.png",
   alt: "amass"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg",
+  src: "/62fb79231e921.png",
   alt: "oneglobal"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg",
+  src: "/62fb77c2d5890.png",
   alt: "citygen"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg",
+  src: "/62fb783408cd1.png",
   alt: "futurenet"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg",
+  src: "/62fb7890bc643.png",
   alt: "ggl"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg",
+  src: "/62fb79b61d0c8.png",
   alt: "primeshiping"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg",
+  src: "/62fb79faa960d.png",
   alt: "shipsoft"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg",
+  src: "/62fb7adfb0edb.png",
   alt: "haixun"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg",
+  src: "/63048b56bd44e.png",
   alt: "moltech"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg",
+  src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
 const Index = () => {

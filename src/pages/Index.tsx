@@ -14,40 +14,40 @@ import { VideoPlayer } from "@/components/ui/video-player";
 // Client logos data
 const clientLogos = [{
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg",
-  alt: "Spotify"
+  alt: "OECL"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg",
-  alt: "Microsoft"
+  alt: "GC"
 }, {
-  src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg",
-  alt: "Google"
+  src: "62fb77880f0df.png",
+  alt: "amass"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg",
-  alt: "Apple"
+  alt: "oneglobal"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg",
-  alt: "Netflix"
+  alt: "citygen"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg",
-  alt: "Airbnb"
+  alt: "futurenet"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg",
-  alt: "Spotify"
+  alt: "ggl"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg",
-  alt: "Microsoft"
+  alt: "primeshiping"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg",
-  alt: "Google"
+  alt: "shipsoft"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg",
-  alt: "Apple"
+  alt: "haixun"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg",
-  alt: "Netflix"
+  alt: "moltech"
 }, {
   src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg",
-  alt: "Airbnb"
+  alt: "aerofreight"
 }];
 const Index = () => {
   // Intersection Observer for scroll animations

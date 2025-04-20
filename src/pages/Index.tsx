@@ -378,11 +378,11 @@ const Index = () => {
             icon: FileCheck
           }].map((stat, index) => <div key={index} style={{
             animationDelay: `${index * 100}ms`
-          }} className="text-center p-6 md:p-8 glass-card rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll border-t-4 border-silver-gray group hover:-translate-y-1 bg-gray-300">
+          }} className="text-center p-6 md:p-8 glass-card rounded-xl shadow-card hover:shadow-xl transition-all duration-300 animate-on-scroll border-t-4 border-silver-gray group hover:-translate-y-1 bg-amber-400">
                 <div className="w-16 h-16 rounded-full bg-silver-gray/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-silver-gray/20 transition-colors">
                   <stat.icon className="h-8 w-8 text-gray-700" />
                 </div>
-                <div className="font-heading font-bold text-4xl text-gray-700 mb-2 animate-count-up bg-[t#] bg-[#ff6a00]">{stat.number}</div>
+                <div className="font-heading font-bold text-4xl text-gray-700 mb-2 animate-count-up bg-[t#] bg-amber-400">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>)}
           </div>

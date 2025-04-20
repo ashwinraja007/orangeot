@@ -285,7 +285,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-on-scroll">
-              <span className="inline-block px-4 py-2 rounded-full bg-silver-gray/10 font-medium text-sm mb-4 text-[#ff6a00]">ABOUT US</span>
+              <span className="inline-block px-4 rounded-full bg-silver-gray/10 font-medium text-sm mb-4 text-[#ff6a00] py-0">ABOUT US</span>
               <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-[#ff6a00]">Orange Office Technologies</h2>
               <p className="text-gray-600 mb-6 text-lg">
                 Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider who offers the shipping & logistics players worldwide, the competitive edge in the market.
@@ -433,12 +433,10 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight bg-gradient-to-r from-white to-silver-gray/80 bg-clip-text text-slate-50">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight bg-gradient-to-r from-white to-silver-gray/80 bg-clip-text text-center text-slate-50">
               Ready to Transform Your Logistics Operations?
             </h2>
-            <p className="text-xl mb-10 animate-on-scroll max-w-2xl mx-auto text-silver-gray/90">
-              Let us help you streamline your processes and boost your business growth with our tailored solutions.
-            </p>
+            
             
             <Card className="border-none shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-slate-100">
               <CardContent className="p-0 text-left">

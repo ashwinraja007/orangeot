@@ -160,6 +160,24 @@
   }
 }
 
+@layer components {
+  .geometric-pattern {
+    @apply absolute w-full h-full bg-gradient-to-br from-[#F58220]/10 to-transparent transform;
+  }
+  
+  .hero-heading {
+    @apply font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-[#2C2C2C] leading-tight tracking-tight;
+  }
+  
+  .hero-subheading {
+    @apply text-lg md:text-xl text-gray-700 leading-relaxed;
+  }
+  
+  .video-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300;
+  }
+}
+
 @layer utilities {
   .section-padding {
     @apply py-16 md:py-24 px-4 md:px-8;

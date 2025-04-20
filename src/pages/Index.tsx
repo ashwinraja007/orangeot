@@ -2,12 +2,13 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Building2, FileCheck, Globe, Headset, Shield, Users } from "lucide-react";
+import { ArrowRight, Building2, FileCheck, Globe, Headset, Play, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
+
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -60,59 +61,71 @@ const Index = () => {
   return <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section with Video Background */}
-      <section className="pt-24 md:pt-28 pb-20 bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden min-h-screen flex items-center">
-        {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-30">
-            <source src="https://cdn.coverr.co/videos/coverr-digital-transformation-in-business-2315/1080p.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-[#FFC78E]\\n bg-[t#FF6A00] bg-[#ff6a00]"></div>
+      {/* Enhanced Hero Section with Geometric Patterns */}
+      <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-[#FDF7F3] to-white">
+        {/* Geometric Pattern Overlays */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] transform translate-x-1/3 -translate-y-1/4">
+            <div className="w-full h-full bg-[#F58220]/10 transform rotate-45"></div>
+          </div>
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] transform -translate-x-1/3 translate-y-1/4">
+            <div className="w-full h-full bg-[#FFC78E]/20 transform -rotate-45"></div>
+          </div>
+          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-[#FF7F50]/30 rounded-full"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-[#F58220]/20 rounded-full"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-white leading-tight tracking-tight">
-                Your <span className="text-silver-gray font-extrabold">Preferred</span><br className="hidden md:block" /> IT Partner
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-[#2C2C2C] leading-tight tracking-tight">
+                Your <span className="text-[#F58220] font-extrabold">Preferred</span><br className="hidden md:block" /> IT Partner
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
+              <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
                 We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-white text-gray-800 hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300 btn-hover-effect animate-fade-in delay-100">
+                <Button size="lg" className="bg-[#F58220] hover:bg-[#F58220]/90 text-white shadow-lg hover:shadow-xl transition-all duration-300">
                   <Link to="/contact" className="flex items-center gap-2">
                     Get Started
                     <ArrowRight className="h-5 w-5" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white hover:bg-white/20 animate-fade-in delay-150 text-gray-950">
+                <Button size="lg" variant="outline" className="border-[#F58220] text-[#F58220] hover:bg-[#F58220]/10">
                   <Link to="/services">Our Services</Link>
                 </Button>
               </div>
             </div>
-            <div className="relative mt-10 lg:mt-0 animate-slide-in-right">
-              <div className="aspect-video glassmorphism rounded-2xl overflow-hidden shadow-2xl animate-float">
+            <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative group hover:scale-105 transition-transform duration-500">
                 <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                  <source src="https://cdn.coverr.co/videos/coverr-close-up-of-a-security-lock-3453/1080p.mp4" type="video/mp4" />
+                  <source src="https://cdn.coverr.co/videos/coverr-a-business-meeting-in-an-office-5544/1080p.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/40 flex items-center justify-center">
-                  <div className="text-center text-white p-6">
-                    <Shield className="h-16 w-16 mx-auto mb-4 text-silver-gray animate-pulse" />
-                    <h3 className="text-xl font-semibold">Secure & Reliable Solutions</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2C2C2C]/80 to-transparent flex items-end justify-start p-8">
+                  <div className="text-white">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Shield className="h-8 w-8 text-[#F58220]" />
+                      <h3 className="text-xl font-semibold">Secure & Reliable Solutions</h3>
+                    </div>
+                    <p className="text-white/90 max-w-md">
+                      Enterprise-grade security and reliability for your business operations
+                    </p>
                   </div>
                 </div>
+                <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 transition-colors duration-300 rounded-full p-4 backdrop-blur-sm opacity-0 group-hover:opacity-100">
+                  <Play className="h-8 w-8 text-white" />
+                </button>
               </div>
               
-              {/* Floating elements for visual interest */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-silver-gray/30 rounded-full blur-3xl animate-pulse-slow"></div>
-              <div className="absolute -bottom-16 -left-10 w-40 h-40 bg-silver-gray/30 rounded-full blur-3xl animate-float"></div>
+              {/* Decorative elements */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#FFC78E]/30 rounded-full blur-3xl animate-pulse-slow"></div>
+              <div className="absolute -bottom-16 -left-10 w-40 h-40 bg-[#FF7F50]/20 rounded-full blur-3xl animate-float"></div>
             </div>
           </div>
           
           {/* Client logos - Fixed visibility */}
           <div className="mt-16 animate-fade-in delay-200">
-            <p className="text-white/80 text-center mb-6 text-sm uppercase tracking-wider font-medium">Trusted by leading companies</p>
+            <p className="text-gray-800 text-center mb-6 text-sm uppercase tracking-wider font-medium">Trusted by leading companies</p>
             <div className="flex flex-wrap justify-center gap-8 md:gap-12">
               {/* Replace with actual client logos */}
               {["https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg", "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg"].map((logo, i) => <div key={i} className="h-12 w-auto flex items-center justify-center p-2 backdrop-blur-sm">
@@ -124,8 +137,8 @@ const Index = () => {
         
         {/* Enhanced wave divider */}
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.45,22.39,121.09,43.65,201.77,57.86,248.57,67.43,280.12,65.8,321.39,56.44Z" className="fill-white"></path>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full rotate-180">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-white"></path>
           </svg>
         </div>
       </section>
@@ -487,8 +500,3 @@ const AutoplayCarousel = ({
       </CarouselContent>
       <div className="flex justify-center mt-8 gap-2">
         <CarouselPrevious className="relative static translate-y-0 left-0" />
-        <CarouselNext className="relative static translate-y-0 right-0" />
-      </div>
-    </Carousel>;
-};
-export default Index;

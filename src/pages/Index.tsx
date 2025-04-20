@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,6 @@ import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -59,7 +57,6 @@ const Index = () => {
       }
     };
   }, []);
-  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -139,9 +136,7 @@ const Index = () => {
         
         {/* Enhanced wave divider */}
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full rotate-180">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-white"></path>
-          </svg>
+          
         </div>
       </section>
 
@@ -475,15 +470,12 @@ const AutoplayCarousel = ({
     }, 5000);
     return () => clearInterval(interval);
   }, [api]);
-  
-  return (
-    <Carousel className="w-full" setApi={setApi} opts={{
-      align: "start",
-      loop: true
-    }}>
+  return <Carousel className="w-full" setApi={setApi} opts={{
+    align: "start",
+    loop: true
+  }}>
       <CarouselContent>
-        {testimonials.map((testimonial, index) => (
-          <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+        {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
             <div className="p-4">
               <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8 flex flex-col h-full">
@@ -501,15 +493,12 @@ const AutoplayCarousel = ({
                 </CardContent>
               </Card>
             </div>
-          </CarouselItem>
-        ))}
+          </CarouselItem>)}
       </CarouselContent>
       <div className="flex justify-center mt-8 gap-2">
         <CarouselPrevious className="relative static translate-y-0 left-0" />
         <CarouselNext className="relative static translate-y-0 right-0" />
       </div>
-    </Carousel>
-  );
+    </Carousel>;
 };
-
 export default Index;

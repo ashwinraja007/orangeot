@@ -136,7 +136,7 @@ const Index = () => {
             </div>
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
               {/* Enhanced video component with better UI */}
-              <VideoPlayer src="https://cdn.coverr.co/videos/coverr-a-business-meeting-in-an-office-5544/1080p.mp4" title={<div>
+              <VideoPlayer src="/videoh.mp4" title={<div>
                     <div className="flex items-center gap-3 mb-3">
                       <Shield className="h-8 w-8 text-[#F58220]" />
                       

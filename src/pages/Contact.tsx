@@ -75,7 +75,7 @@ const Contact = () => {
               <h1 className="font-heading font-bold text-4xl md:text-5xl mb-6 animate-fade-in text-[#ff6a00]">
                 Get in Touch
               </h1>
-              <p className="text-xl text-white/90 mb-8 animate-fade-in delay-75">
+              <p className="text-xl mb-8 animate-fade-in delay-75 text-zinc-950">
                 Let's discuss how we can help transform your operations
               </p>
             </div>

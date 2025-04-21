@@ -12,44 +12,44 @@ import { Link } from "react-router-dom";
 // Client logos - in a real implementation, these would be actual client logos
 const clientLogos = [
   {
-    name: "Global Shipping",
+    name: "OECL",
     industry: "Logistics",
-    logo: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/spotify-grayscale.svg"
+    logo: "/62fb7958e1cf7.png"
   },
   {
-    name: "Pacific Express",
+    name: "GC",
     industry: "Shipping",
-    logo: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/microsoft-grayscale.svg"
+    logo: "/62fb78ee5cd45.png"
   },
   {
-    name: "Atlas Freight",
+    name: "amass",
     industry: "Freight Forwarding",
-    logo: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/google-grayscale.svg"
+    logo: "/62fb77880f0df.png"
   },
   {
-    name: "LogiTech Solutions",
+    name: "oneglobal",
     industry: "Supply Chain",
-    logo: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/apple-grayscale.svg"
+    logo: "/62fb79231e921.png"
   },
   {
-    name: "Rapid Transit",
+    name: "citygen",
     industry: "Transportation",
-    logo: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/netflix-grayscale.svg"
+    logo: "/62fb77c2d5890.png"
   },
   {
-    name: "Warehouse Pro",
+    name: "futurenet",
     industry: "Warehousing",
-    logo: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/airbnb-grayscale.svg"
+    logo: "/62fb783408cd1.png"
   },
   {
-    name: "Global Distribution",
+    name: "ggl",
     industry: "Distribution",
-    logo: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/uber-grayscale.svg"
+    logo: "/62fb7890bc643.png"
   },
   {
-    name: "Trade Connect",
+    name: "primeshiping",
     industry: "Export/Import",
-    logo: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/clients/slack-grayscale.svg"
+    logo: "/62fb79b61d0c8.png"
   }
 ];
 

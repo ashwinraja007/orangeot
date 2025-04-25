@@ -278,6 +278,61 @@ const Index = () => {
         </div>
       </section>
 
+      {/* New Founders Preview Section */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-100/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-orange-100/20 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-[#ff6a00]">
+              Meet Our Founders
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Visionary leaders driving innovation in logistics technology
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[{
+              image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+              name: "John Smith",
+              position: "CEO & Co-Founder"
+            }, {
+              image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
+              name: "Sarah Johnson",
+              position: "CTO & Co-Founder"
+            }].map((founder, index) => (
+              <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white group hover:-translate-y-2">
+                <CardContent className="p-0">
+                  <div className="aspect-video relative overflow-hidden">
+                    <img
+                      src={founder.image}
+                      alt={founder.name}
+                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 p-6 text-white">
+                      <h3 className="text-2xl font-bold mb-1">{founder.name}</h3>
+                      <p className="text-white/90">{founder.position}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-[#ff6a00] hover:bg-[#ff6a00]/90 text-white shadow-lg hover:shadow-xl transition-all duration-300">
+              <Link to="/founders" className="flex items-center gap-2">
+                Meet Our Team
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-silver-gray/5 blur-3xl"></div>
@@ -513,10 +568,4 @@ const AutoplayCarousel = ({
             </div>
           </CarouselItem>)}
       </CarouselContent>
-      <div className="flex justify-center mt-8 gap-2">
-        <CarouselPrevious className="relative static translate-y-0 left-0" />
-        <CarouselNext className="relative static translate-y-0 right-0" />
-      </div>
-    </Carousel>;
-};
-export default Index;
+      <div className="

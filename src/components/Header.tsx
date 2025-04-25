@@ -12,7 +12,7 @@ export const Header = () => {
     // Scroll to top on route change
     window.scrollTo(0, 0);
   }, [location.pathname]);
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm py-3">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm py-3">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 group" aria-label="Home">
@@ -32,6 +32,9 @@ export const Header = () => {
           }, {
             to: "/services",
             label: "Services"
+          }, {
+            to: "/founders",
+            label: "Founders"
           }, {
             to: "/careers",
             label: "Careers"
@@ -69,6 +72,9 @@ export const Header = () => {
         }, {
           to: "/services",
           label: "Services"
+        }, {
+          to: "/founders",
+          label: "Founders"
         }, {
           to: "/careers",
           label: "Careers"

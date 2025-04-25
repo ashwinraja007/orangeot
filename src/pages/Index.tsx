@@ -543,12 +543,14 @@ const AutoplayCarousel = ({
     }, 5000);
     return () => clearInterval(interval);
   }, [api]);
-  return <Carousel className="w-full" setApi={setApi} opts={{
-    align: "start",
-    loop: true
-  }}>
+  return (
+    <Carousel className="w-full" setApi={setApi} opts={{
+      align: "start",
+      loop: true
+    }}>
       <CarouselContent>
-        {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+        {testimonials.map((testimonial, index) => (
+          <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
             <div className="p-4">
               <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8 flex flex-col h-full">
@@ -566,6 +568,6 @@ const AutoplayCarousel = ({
                 </CardContent>
               </Card>
             </div>
-          </CarouselItem>)}
-      </CarouselContent>
-      <div className="
+          </CarouselItem>
+        ))}
+      </Carousel

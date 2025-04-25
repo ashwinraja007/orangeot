@@ -49,6 +49,7 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
+
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -533,6 +534,7 @@ const AutoplayCarousel = ({
 }) => {
   const [api, setApi] = useState(null);
   const isMobile = useIsMobile();
+  
   useEffect(() => {
     if (!api) return;
 
@@ -542,6 +544,7 @@ const AutoplayCarousel = ({
     }, 5000);
     return () => clearInterval(interval);
   }, [api]);
+  
   return (
     <Carousel className="w-full" setApi={setApi} opts={{
       align: "start",
@@ -569,4 +572,3 @@ const AutoplayCarousel = ({
             </div>
           </CarouselItem>
         ))}
-      </Carousel

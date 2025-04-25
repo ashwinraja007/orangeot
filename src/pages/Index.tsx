@@ -202,8 +202,7 @@ const Index = () => {
                   
                   <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900 mt-2">Our Vision</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    To be the global benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage their operations seamlessly.
-                  </p>
+                    To be the global benchmark in KPO services for freight forwarding and logistics, enabling our partners to focus on growth while we manage their operations seamlessly.\n                  </p>
                 </div>
               </CardContent>
             </Card>

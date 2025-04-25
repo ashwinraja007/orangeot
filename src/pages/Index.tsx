@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -572,3 +573,11 @@ const AutoplayCarousel = ({
             </div>
           </CarouselItem>
         ))}
+      </CarouselContent>
+      <CarouselPrevious className="left-2 bg-white/50 hover:bg-white/80" />
+      <CarouselNext className="right-2 bg-white/50 hover:bg-white/80" />
+    </Carousel>
+  );
+};
+
+export default Index;

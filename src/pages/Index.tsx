@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,6 +10,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { useIsMobile } from "@/hooks/use-mobile";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { VideoPlayer } from "@/components/ui/video-player";
+import { ArrowLeft } from "lucide-react";
 
 // Client logos data
 const clientLogos = [{
@@ -137,13 +137,37 @@ const Index = () => {
               </div>
             </div>
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
-              {/* Enhanced video component with better UI */}
-              <VideoPlayer src="/videoh.mp4" title={<div>
-                    <div className="flex items-center gap-3 mb-3">
-                      
-                    </div>
-                    
-                  </div>} className="aspect-video rounded-2xl overflow-hidden shadow-2xl group hover:scale-105 transition-transform duration-500" showControls={true} />
+              {/* Hero Images Carousel */}
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl group">
+                <Carousel className="w-full h-full" opts={{ loop: true }}>
+                  <CarouselContent>
+                    <CarouselItem>
+                      <img 
+                        src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80" 
+                        alt="Tech Innovation" 
+                        className="w-full h-full object-cover"
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img 
+                        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" 
+                        alt="Team Collaboration" 
+                        className="w-full h-full object-cover"
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img 
+                        src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80" 
+                        alt="Modern Workspace" 
+                        className="w-full h-full object-cover"
+                      />
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2 bg-white/50 hover:bg-white/80" />
+                  <CarouselNext className="right-2 bg-white/50 hover:bg-white/80" />
+                </Carousel>
+                <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/30 to-transparent"></div>
+              </div>
               
               {/* Decorative elements */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#FFC78E]/30 rounded-full blur-3xl animate-pulse-slow"></div>

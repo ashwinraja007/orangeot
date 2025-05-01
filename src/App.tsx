@@ -14,6 +14,7 @@ import Documentation from "./pages/services/Documentation";
 import Careers from "./pages/Careers";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
+import Founders from "./pages/Founders";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App: React.FC = () => (
             <Route path="/careers" element={<Careers />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/founders" element={<Founders />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

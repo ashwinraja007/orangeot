@@ -86,6 +86,21 @@
     @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
   }
 
+  /* Gradient text */
+  .text-gradient {
+    @apply inline-block text-transparent bg-clip-text;
+  }
+
+  /* Glass button styles */
+  .glass-button {
+    @apply relative overflow-hidden shadow-lg before:absolute before:inset-0 before:bg-white/20 before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0 before:skew-x-45;
+  }
+
+  /* Glass card styles */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
   /* Animation utilities */
   .animate-on-scroll {
     opacity: 0;
@@ -197,6 +212,39 @@
   .video-overlay {
     @apply absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300;
   }
+
+  /* Modern card styles */
+  .modern-card {
+    @apply rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-none overflow-hidden hover:-translate-y-1;
+  }
+
+  /* New service card styles */
+  .service-card {
+    @apply rounded-2xl bg-gradient-to-br from-white to-gray-50/80 shadow-lg hover:shadow-xl transition-all duration-300 border-none overflow-hidden hover:-translate-y-1;
+  }
+
+  /* Gradient border utilities */
+  .gradient-border {
+    position: relative;
+    border-radius: 0.75rem;
+  }
+  
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(to right, #F58220, #FFC78E);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
 }
 
 @layer utilities {
@@ -230,6 +278,24 @@
 
   .to-silver {
     @apply to-[#9F9EA1];
+  }
+
+  /* Enhanced hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  /* Enhanced button hover effects */
+  .btn-hover-shine {
+    @apply relative overflow-hidden;
+  }
+  
+  .btn-hover-shine::after {
+    @apply content-[''] absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/30 skew-x-45 transition-all duration-700;
+  }
+  
+  .btn-hover-shine:hover::after {
+    @apply left-[100%];
   }
 }
 

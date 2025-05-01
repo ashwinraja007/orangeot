@@ -11,6 +11,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Documentation from "./pages/services/Documentation";
+import SalesSupport from "./pages/services/SalesSupport";
 import Careers from "./pages/Careers";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
@@ -31,6 +32,7 @@ const App: React.FC = () => (
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/documentation" element={<Documentation />} />
+            <Route path="/services/sales-support" element={<SalesSupport />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/contact" element={<Contact />} />

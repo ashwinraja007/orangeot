@@ -1,8 +1,11 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const AboutOfficeImages = () => {
   const [activeImage, setActiveImage] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
   
   const images = [
     {
@@ -27,18 +30,74 @@ export const AboutOfficeImages = () => {
     }
   ];
 
+  // Auto-rotate images every 5 seconds if not hovering
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+    
+    if (!isHovering) {
+      interval = setInterval(() => {
+        setActiveImage((prev) => (prev + 1) % images.length);
+      }, 5000);
+    }
+    
+    return () => clearInterval(interval);
+  }, [isHovering, images.length]);
+
+  const nextImage = () => {
+    setActiveImage((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setActiveImage((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
-    <div className="relative w-full">
+    <div 
+      className="relative w-full" 
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
       <div className="relative aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl">
-        <img
-          src={images[activeImage].src}
-          alt={images[activeImage].alt}
-          className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-        <div className="absolute bottom-6 left-6 text-white">
+        <motion.div
+          key={activeImage}
+          initial={{ opacity: 0.5, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="h-full w-full"
+        >
+          <img
+            src={images[activeImage].src}
+            alt={images[activeImage].alt}
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        </motion.div>
+        
+        {/* Navigation arrows */}
+        <button 
+          onClick={prevImage}
+          className="absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-110"
+          aria-label="Previous image"
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+        
+        <button 
+          onClick={nextImage}
+          className="absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-110"
+          aria-label="Next image"
+        >
+          <ChevronRight className="h-6 w-6" />
+        </button>
+        
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="absolute bottom-6 left-6 text-white"
+        >
           <h3 className="text-2xl font-bold">{images[activeImage].caption}</h3>
-        </div>
+        </motion.div>
       </div>
       
       <div className="mt-4 grid grid-cols-4 gap-2">
@@ -46,7 +105,7 @@ export const AboutOfficeImages = () => {
           <button
             key={index}
             className={`overflow-hidden rounded-lg border-2 ${
-              activeImage === index ? 'border-orange-500' : 'border-transparent'
+              activeImage === index ? 'border-orange-500 scale-105' : 'border-transparent'
             } transition-all duration-300 hover:opacity-90`}
             onClick={() => setActiveImage(index)}
           >

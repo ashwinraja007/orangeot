@@ -7,11 +7,10 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { motion } from "framer-motion";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,12 +34,17 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-md py-3' 
-          : 'bg-gradient-to-r from-black/50 to-transparent backdrop-blur-sm py-5'
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -62,119 +66,129 @@ export const Header = () => {
           
           {/* Desktop navigation with dropdown */}
           <div className="hidden md:block">
-            <NavigationMenu>
-              <NavigationMenuList className="gap-1">
-                <NavigationMenuItem>
-                  <Link 
-                    to="/"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Home
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/about"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/about" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    About Us
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger 
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname.includes("/services") 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Services
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid gap-2 p-4 w-[200px] bg-white rounded-md shadow-lg">
-                      <Link 
-                        to="/services"
-                        className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-orange-500 hover:bg-orange-50"
-                      >
-                        All Services
-                      </Link>
-                      <Link 
-                        to="/services/documentation"
-                        className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-orange-500 hover:bg-orange-50"
-                      >
-                        Documentation
-                      </Link>
-                      <Link 
-                        to="/services/sales-support"
-                        className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-orange-500 hover:bg-orange-50"
-                      >
-                        Sales Support
-                      </Link>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/founders"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/founders" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Founders
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/careers"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/careers" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Careers
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/clients"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/clients" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Clients
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            <motion.div variants={navVariants} initial="hidden" animate="visible">
+              <NavigationMenu>
+                <NavigationMenuList className="gap-1">
+                  <NavigationMenuItem>
+                    <Link 
+                      to="/"
+                      className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                        location.pathname === "/" 
+                          ? 'text-orange-500 bg-orange-50/10' 
+                          : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
+                      }`}
+                    >
+                      Home
+                    </Link>
+                  </NavigationMenuItem>
+                  
+                  <NavigationMenuItem>
+                    <Link 
+                      to="/about"
+                      className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                        location.pathname === "/about" 
+                          ? 'text-orange-500 bg-orange-50/10' 
+                          : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
+                      }`}
+                    >
+                      About Us
+                    </Link>
+                  </NavigationMenuItem>
+                  
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger 
+                      className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                        location.pathname.includes("/services") 
+                          ? 'text-orange-500 bg-orange-50/10' 
+                          : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
+                      }`}
+                    >
+                      Services
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid gap-2 p-4 w-[200px] bg-white rounded-md shadow-lg">
+                        <Link 
+                          to="/services"
+                          className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-orange-500 hover:bg-orange-50"
+                        >
+                          All Services
+                        </Link>
+                        <Link 
+                          to="/services/documentation"
+                          className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-orange-500 hover:bg-orange-50"
+                        >
+                          Documentation
+                        </Link>
+                        <Link 
+                          to="/services/sales-support"
+                          className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-orange-500 hover:bg-orange-50"
+                        >
+                          Sales Support
+                        </Link>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  
+                  <NavigationMenuItem>
+                    <Link 
+                      to="/founders"
+                      className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                        location.pathname === "/founders" 
+                          ? 'text-orange-500 bg-orange-50/10' 
+                          : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
+                      }`}
+                    >
+                      Founders
+                    </Link>
+                  </NavigationMenuItem>
+                  
+                  <NavigationMenuItem>
+                    <Link 
+                      to="/careers"
+                      className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                        location.pathname === "/careers" 
+                          ? 'text-orange-500 bg-orange-50/10' 
+                          : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
+                      }`}
+                    >
+                      Careers
+                    </Link>
+                  </NavigationMenuItem>
+                  
+                  <NavigationMenuItem>
+                    <Link 
+                      to="/clients"
+                      className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                        location.pathname === "/clients" 
+                          ? 'text-orange-500 bg-orange-50/10' 
+                          : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
+                      }`}
+                    >
+                      Clients
+                    </Link>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            </motion.div>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <motion.div
+            className="flex items-center space-x-4"
+            variants={navVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <Button 
               className={`${
                 scrolled 
                   ? 'bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white' 
-                  : 'bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/30'
-              } shadow-md hover:shadow-lg transition-all duration-300 btn-hover-shine rounded-xl`}
+                  : 'bg-white hover:bg-white/80 text-orange-600'
+              } shadow-md hover:shadow-lg transition-all duration-300 rounded-xl`}
             >
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact" className="flex items-center gap-2">
+                Contact Us
+                <span className="sr-only md:not-sr-only">Today</span>
+              </Link>
             </Button>
             
             <button 
@@ -187,12 +201,18 @@ export const Header = () => {
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
       
       {isMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-b animate-fade-in">
+        <motion.div 
+          className="md:hidden bg-white/95 backdrop-blur-md border-b"
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3 }}
+        >
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {[
               { to: "/", label: "Home" },
@@ -215,11 +235,11 @@ export const Header = () => {
             ))}
             <Button className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-xl">
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                Contact Us
+                Contact Us Today
               </Link>
             </Button>
           </nav>
-        </div>
+        </motion.div>
       )}
     </header>
   );

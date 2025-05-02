@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -13,21 +12,43 @@ import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { VideoPlayer } from "@/components/ui/video-player";
 
 // Client logos data
-const clientLogos = [
-  { src: "/62fb7958e1cf7.png", alt: "OECL" },
-  { src: "/62fb78ee5cd45.png", alt: "GC" },
-  { src: "/62fb77880f0df.png", alt: "amass" },
-  { src: "/62fb79231e921.png", alt: "oneglobal" },
-  { src: "/62fb77c2d5890.png", alt: "citygen" },
-  { src: "/62fb783408cd1.png", alt: "futurenet" },
-  { src: "/62fb7890bc643.png", alt: "ggl" },
-  { src: "/62fb79b61d0c8.png", alt: "primeshiping" },
-  { src: "/62fb79faa960d.png", alt: "shipsoft" },
-  { src: "/62fb7adfb0edb.png", alt: "haixun" },
-  { src: "/63048b56bd44e.png", alt: "moltech" },
-  { src: "/63048c170f81a.png", alt: "aerofreight" }
-];
-
+const clientLogos = [{
+  src: "/62fb7958e1cf7.png",
+  alt: "OECL"
+}, {
+  src: "/62fb78ee5cd45.png",
+  alt: "GC"
+}, {
+  src: "/62fb77880f0df.png",
+  alt: "amass"
+}, {
+  src: "/62fb79231e921.png",
+  alt: "oneglobal"
+}, {
+  src: "/62fb77c2d5890.png",
+  alt: "citygen"
+}, {
+  src: "/62fb783408cd1.png",
+  alt: "futurenet"
+}, {
+  src: "/62fb7890bc643.png",
+  alt: "ggl"
+}, {
+  src: "/62fb79b61d0c8.png",
+  alt: "primeshiping"
+}, {
+  src: "/62fb79faa960d.png",
+  alt: "shipsoft"
+}, {
+  src: "/62fb7adfb0edb.png",
+  alt: "haixun"
+}, {
+  src: "/63048b56bd44e.png",
+  alt: "moltech"
+}, {
+  src: "/63048c170f81a.png",
+  alt: "aerofreight"
+}];
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -77,9 +98,7 @@ const Index = () => {
       }
     };
   }, []);
-  
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section with Video and Auto-scrolling Logos */}
@@ -90,7 +109,9 @@ const Index = () => {
             <div className="w-full h-full bg-gradient-to-br from-orange-400/20 to-amber-300/20 transform rotate-45 rounded-[40%] animate-float"></div>
           </div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] transform -translate-x-1/3 translate-y-1/4">
-            <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 transform -rotate-45 rounded-[40%] animate-float" style={{ animationDelay: "2s" }}></div>
+            <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 transform -rotate-45 rounded-[40%] animate-float" style={{
+            animationDelay: "2s"
+          }}></div>
           </div>
         </div>
 
@@ -125,15 +146,13 @@ const Index = () => {
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
               {/* Hero Images Carousel */}
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
-                <Carousel className="w-full h-full" opts={{ loop: true }}>
+                <Carousel className="w-full h-full" opts={{
+                loop: true
+              }}>
                   <CarouselContent>
                     <CarouselItem>
                       <div className="relative w-full h-full overflow-hidden">
-                        <img 
-                          src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80" 
-                          alt="Tech Innovation" 
-                          className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
-                        />
+                        <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80" alt="Tech Innovation" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
                         <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent"></div>
                         <div className="absolute bottom-6 left-6 text-white">
                           <h3 className="text-lg md:text-xl font-bold mb-1">Tech Innovation</h3>
@@ -143,11 +162,7 @@ const Index = () => {
                     </CarouselItem>
                     <CarouselItem>
                       <div className="relative w-full h-full overflow-hidden">
-                        <img 
-                          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" 
-                          alt="Team Collaboration" 
-                          className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
-                        />
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Team Collaboration" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
                         <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent"></div>
                         <div className="absolute bottom-6 left-6 text-white">
                           <h3 className="text-lg md:text-xl font-bold mb-1">Team Collaboration</h3>
@@ -157,11 +172,7 @@ const Index = () => {
                     </CarouselItem>
                     <CarouselItem>
                       <div className="relative w-full h-full overflow-hidden">
-                        <img 
-                          src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80" 
-                          alt="Modern Workspace" 
-                          className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
-                        />
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80" alt="Modern Workspace" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
                         <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent"></div>
                         <div className="absolute bottom-6 left-6 text-white">
                           <h3 className="text-lg md:text-xl font-bold mb-1">Modern Workspace</h3>
@@ -218,11 +229,7 @@ const Index = () => {
             <Card className="border-none rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden bg-white">
               <CardContent className="p-0 relative">
                 <div className="h-56 md:h-64 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" 
-                    alt="Our Mission" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Our Mission" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 </div>
                 <div className="relative">
@@ -242,11 +249,7 @@ const Index = () => {
             <Card className="border-none rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden bg-white">
               <CardContent className="p-0 relative">
                 <div className="h-56 md:h-64 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80" 
-                    alt="Our Vision" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80" alt="Our Vision" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 </div>
                 <div className="relative">
@@ -270,7 +273,9 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
         
-        <svg className="absolute top-0 left-0 w-full text-white" style={{transform: "translateY(-1px)"}} fill="currentColor" viewBox="0 0 1440 40">
+        <svg className="absolute top-0 left-0 w-full text-white" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L60,4C120,8,240,16,360,18.7C480,21,600,19,720,13.3C840,8,960,0,1080,0C1200,0,1320,8,1380,12L1440,16L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         
@@ -288,55 +293,46 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[{
-              icon: FileCheck,
-              title: "Documentation",
-              description: "Expert documentation services including invoices, credit notes, and job profit statements.",
-              image: "/1.png",
-              color: "from-blue-500 to-cyan-400"
-            }, {
-              icon: Users,
-              title: "Sales Support",
-              description: "Centralized sales support desk for lead management and customer relationships.",
-              image: "/2.png",
-              color: "from-amber-500 to-orange-400"
-            }, {
-              icon: Globe,
-              title: "Digital Marketing",
-              description: "Comprehensive digital marketing solutions to boost your online presence.",
-              image: "/3.png",
-              color: "from-green-500 to-emerald-400"
-            }, {
-              icon: Building2,
-              title: "Accounts Management",
-              description: "Professional accounting services for trade and non-trade transactions.",
-              image: "/4.png",
-              color: "from-purple-500 to-violet-400"
-            }, {
-              icon: Headset,
-              title: "Customer Service",
-              description: "Dedicated customer service team for bookings and nominations.",
-              image: "/5.png",
-              color: "from-pink-500 to-rose-400"
-            }, {
-              icon: Shield,
-              title: "Software Solutions",
-              description: "Custom software development following industry best practices.",
-              image: "/6.png",
-              color: "from-cyan-500 to-blue-400"
-            }].map((service, index) => (
-              <Card 
-                key={index} 
-                className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" 
-                style={{
-                  animationDelay: `${index * 100}ms`
-                }}
-              >
+            icon: FileCheck,
+            title: "Documentation",
+            description: "Expert documentation services including invoices, credit notes, and job profit statements.",
+            image: "/1.png",
+            color: "from-blue-500 to-cyan-400"
+          }, {
+            icon: Users,
+            title: "Sales Support",
+            description: "Centralized sales support desk for lead management and customer relationships.",
+            image: "/2.png",
+            color: "from-amber-500 to-orange-400"
+          }, {
+            icon: Globe,
+            title: "Digital Marketing",
+            description: "Comprehensive digital marketing solutions to boost your online presence.",
+            image: "/3.png",
+            color: "from-green-500 to-emerald-400"
+          }, {
+            icon: Building2,
+            title: "Accounts Management",
+            description: "Professional accounting services for trade and non-trade transactions.",
+            image: "/4.png",
+            color: "from-purple-500 to-violet-400"
+          }, {
+            icon: Headset,
+            title: "Customer Service",
+            description: "Dedicated customer service team for bookings and nominations.",
+            image: "/5.png",
+            color: "from-pink-500 to-rose-400"
+          }, {
+            icon: Shield,
+            title: "Software Solutions",
+            description: "Custom software development following industry best practices.",
+            image: "/6.png",
+            color: "from-cyan-500 to-blue-400"
+          }].map((service, index) => <Card key={index} className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="h-44 relative overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                  />
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
                   <div className="absolute top-0 right-0 m-4">
                     <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}>
@@ -347,25 +343,23 @@ const Index = () => {
                 <CardContent className="p-6">
                   <h3 className="font-heading font-bold text-xl mb-3 group-hover:text-gray-700 transition-colors">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Link 
-                    to="/services" 
-                    className="inline-flex items-center text-orange-500 font-medium group"
-                  >
+                  <Link to="/services" className="inline-flex items-center text-orange-500 font-medium group">
                     <span className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-orange-500 after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                       Learn more
                     </span>
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
 
       {/* New Founders Preview Section */}
       <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full text-white" style={{transform: "translateY(-1px)"}} fill="currentColor" viewBox="0 0 1440 40">
+        <svg className="absolute top-0 left-0 w-full text-white" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,32L120,26.7C240,21,480,11,720,10.7C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
         </svg>
         
@@ -388,38 +382,33 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[{
-              image: "/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png",
-              name: "Mr. Sudhir KU",
-              position: "CEO & Co-Founder"
-            }, {
-              image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
-              name: "Sarah Johnson",
-              position: "CTO & Co-Founder"
-            }].map((founder, index) => (
-              <Card key={index} className="border-none rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white group hover:-translate-y-2">
+            image: "/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png",
+            name: "Mr. Sudhir KU",
+            position: "CEO & Co-Founder"
+          }, {
+            image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
+            name: "Sarah Johnson",
+            position: "CTO & Co-Founder"
+          }].map((founder, index) => <Card key={index} className="border-none rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white group hover:-translate-y-2">
                 <CardContent className="p-0">
                   <div className="aspect-[4/3] relative overflow-hidden">
-                    <img
-                      src={founder.image}
-                      alt={founder.name}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                    />
+                    <img src={founder.image} alt={founder.name} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
                     <div className="absolute bottom-0 left-0 p-6 text-white">
-                      <h3 className="text-2xl font-bold mb-1 animate-on-scroll" style={{ animationDelay: `${index * 200}ms` }}>{founder.name}</h3>
-                      <p className="text-white/90 animate-on-scroll" style={{ animationDelay: `${index * 200 + 100}ms` }}>{founder.position}</p>
-                      <Link
-                        to="/founders"
-                        className="mt-4 inline-flex items-center bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-4 py-2 rounded-full gap-2 text-sm transition-all duration-300"
-                      >
+                      <h3 className="text-2xl font-bold mb-1 animate-on-scroll" style={{
+                    animationDelay: `${index * 200}ms`
+                  }}>{founder.name}</h3>
+                      <p className="text-white/90 animate-on-scroll" style={{
+                    animationDelay: `${index * 200 + 100}ms`
+                  }}>{founder.position}</p>
+                      <Link to="/founders" className="mt-4 inline-flex items-center bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-4 py-2 rounded-full gap-2 text-sm transition-all duration-300">
                         <span>View Profile</span>
                         <ArrowRight className="h-4 w-4" />
                       </Link>
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
           
           <div className="text-center mt-12">
@@ -435,7 +424,9 @@ const Index = () => {
 
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full text-orange-50" style={{transform: "translateY(-1px)"}} fill="currentColor" viewBox="0 0 1440 40">
+        <svg className="absolute top-0 left-0 w-full text-orange-50" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L40,4C80,8,160,16,240,18.7C320,21,400,19,480,13.3C560,8,640,0,720,0C800,0,880,8,960,12C1040,16,1120,16,1200,12C1280,8,1360,0,1400,-4L1440,-8L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
         </svg>
         
@@ -444,11 +435,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-on-scroll">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-600 mb-4 text-sm font-medium">
-                <Building2 className="w-4 h-4" />
-                <span>ABOUT US</span>
-              </div>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-gradient bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500 bg-clip-text text-transparent">Orange Office Technologies</h2>
+              
+              <h2 className="font-heading font-bold md:text-4xl lg:text-5xl mb-6 text-gradient bg-gradient-to-r from-orange-700 via-orange-600 to-cyan-500 bg-clip-text text-transparent text-2xl">Orange Office Technologies</h2>
               <p className="text-gray-600 mb-6 text-lg">
                 Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider who offers the shipping & logistics players worldwide, the competitive edge in the market.
               </p>
@@ -511,7 +499,9 @@ const Index = () => {
 
       {/* Enhanced Stats Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full text-white" style={{transform: "translateY(-1px)"}} fill="currentColor" viewBox="0 0 1440 40">
+        <svg className="absolute top-0 left-0 w-full text-white" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
         
@@ -531,38 +521,34 @@ const Index = () => {
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {[{
-              number: "10+",
-              label: "Years Experience",
-              icon: Building2,
-              color: "from-blue-600 to-cyan-500"
-            }, {
-              number: "100+",
-              label: "Happy Employees",
-              icon: Users,
-              color: "from-green-600 to-emerald-500"
-            }, {
-              number: "50+",
-              label: "Satisfied Clients",
-              icon: Headset,
-              color: "from-amber-500 to-orange-400"
-            }, {
-              number: "200+",
-              label: "Projects Completed",
-              icon: FileCheck,
-              color: "from-purple-600 to-violet-500"
-            }].map((stat, index) => (
-              <div 
-                key={index} 
-                style={{animationDelay: `${index * 100}ms`}} 
-                className="text-center p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll border-none group hover:-translate-y-1 bg-white glassmorphism"
-              >
+            number: "10+",
+            label: "Years Experience",
+            icon: Building2,
+            color: "from-blue-600 to-cyan-500"
+          }, {
+            number: "100+",
+            label: "Happy Employees",
+            icon: Users,
+            color: "from-green-600 to-emerald-500"
+          }, {
+            number: "50+",
+            label: "Satisfied Clients",
+            icon: Headset,
+            color: "from-amber-500 to-orange-400"
+          }, {
+            number: "200+",
+            label: "Projects Completed",
+            icon: FileCheck,
+            color: "from-purple-600 to-violet-500"
+          }].map((stat, index) => <div key={index} style={{
+            animationDelay: `${index * 100}ms`
+          }} className="text-center p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll border-none group hover:-translate-y-1 bg-white glassmorphism">
                 <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${stat.color} flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 transition-transform`}>
                   <stat.icon className="h-8 w-8 text-white" />
                 </div>
                 <div className="font-heading font-bold text-4xl text-gray-800 mb-2 animate-count-up">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -586,26 +572,26 @@ const Index = () => {
           
           <div className="max-w-5xl mx-auto">
             <AutoplayCarousel testimonials={[{
-              quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
-              author: "John Smith",
-              position: "CEO",
-              company: "Global Shipping Ltd"
-            }, {
-              quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
-              author: "Sarah Johnson",
-              position: "Operations Director",
-              company: "Pacific Logistics"
-            }, {
-              quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
-              author: "Michael Chang",
-              position: "Managing Director",
-              company: "EastWest Freight Services"
-            }, {
-              quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
-              author: "Anna Martinez",
-              position: "Marketing Head",
-              company: "Express Cargo Systems"
-            }]} />
+            quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
+            author: "John Smith",
+            position: "CEO",
+            company: "Global Shipping Ltd"
+          }, {
+            quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
+            author: "Sarah Johnson",
+            position: "Operations Director",
+            company: "Pacific Logistics"
+          }, {
+            quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
+            author: "Michael Chang",
+            position: "Managing Director",
+            company: "EastWest Freight Services"
+          }, {
+            quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
+            author: "Anna Martinez",
+            position: "Marketing Head",
+            company: "Express Cargo Systems"
+          }]} />
           </div>
         </div>
       </section>
@@ -654,8 +640,7 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
 
 // Auto-scrolling testimonial carousel component
@@ -664,7 +649,6 @@ const AutoplayCarousel = ({
 }) => {
   const [api, setApi] = useState(null);
   const isMobile = useIsMobile();
-  
   useEffect(() => {
     if (!api) return;
 
@@ -674,15 +658,12 @@ const AutoplayCarousel = ({
     }, 5000);
     return () => clearInterval(interval);
   }, [api]);
-  
-  return (
-    <Carousel className="w-full" setApi={setApi} opts={{
-      align: "start",
-      loop: true
-    }}>
+  return <Carousel className="w-full" setApi={setApi} opts={{
+    align: "start",
+    loop: true
+  }}>
       <CarouselContent>
-        {testimonials.map((testimonial, index) => (
-          <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+        {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
             <div className="p-4">
               <Card className="border-none rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-full bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-8 flex flex-col h-full">
@@ -700,15 +681,12 @@ const AutoplayCarousel = ({
                 </CardContent>
               </Card>
             </div>
-          </CarouselItem>
-        ))}
+          </CarouselItem>)}
       </CarouselContent>
       <div className="flex justify-center gap-2 mt-6">
         <CarouselPrevious className="static relative transform-none bg-white hover:bg-gray-100 border-orange-200 text-orange-500 mx-2" />
         <CarouselNext className="static relative transform-none bg-white hover:bg-gray-100 border-orange-200 text-orange-500 mx-2" />
       </div>
-    </Carousel>
-  );
+    </Carousel>;
 };
-
 export default Index;

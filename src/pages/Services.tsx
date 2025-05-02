@@ -105,17 +105,17 @@ const Services = () => {
         </div>
       </GradientBackground>
 
-      {/* Services Grid with Enhanced Design */}
+      {/* Services Grid with Box Design */}
       <section className="py-20 -mt-10 bg-white relative z-10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-2xl transition-all duration-500 animate-fade-in overflow-hidden border-none"
+                className="group hover:shadow-2xl transition-all duration-500 animate-fade-in overflow-hidden border-none rounded-2xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative aspect-square overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-70`}></div>
                   <img
                     src={service.image}
@@ -131,17 +131,17 @@ const Services = () => {
                       {service.badge}
                     </div>
                   )}
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="font-heading font-bold text-2xl mb-2">{service.title}</h3>
+                    <p className="text-white/90 line-clamp-2 mb-4">{service.description}</p>
+                    <Button variant="outline" className="bg-white/20 hover:bg-white/30 text-white border-white/40 w-full group" asChild>
+                      <Link to={service.link} className="flex items-center justify-between">
+                        <span>Learn More</span>
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
-                <CardContent className="p-6 bg-white">
-                  <h3 className="font-heading font-bold text-xl mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  <Button variant="outline" className="w-full group" asChild>
-                    <Link to={service.link} className="flex items-center justify-between">
-                      <span>Learn More</span>
-                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
-                </CardContent>
               </Card>
             ))}
           </div>
@@ -225,7 +225,7 @@ const Services = () => {
               Let us show you how we can help streamline your processes and boost your business growth.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="shadow-lg" asChild>
+              <Button size="lg" className="shadow-lg bg-gradient-to-r from-orange-500 to-amber-500" asChild>
                 <Link to="/contact" className="flex items-center gap-2">
                   Get Started Today
                   <ArrowRight className="h-5 w-5" />

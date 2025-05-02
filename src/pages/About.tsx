@@ -1,235 +1,250 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Activity, BarChart, Building2, Shield, Target, Users, FileCheck, Globe, Headset } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ArrowRight, Calendar, Globe, Home, MapPin, Target, Users } from "lucide-react";
+import { GradientBackground } from "@/components/GradientBackground";
+import { AboutOfficeImages } from "@/components/about/AboutOfficeImages";
 
 const About = () => {
   const values = [
     {
-      icon: Shield,
-      title: "Quality",
-      description: "Delivering excellence in every solution and service"
+      icon: Target,
+      title: "Client-Centricity",
+      description: "We prioritize our clients' needs, delivering tailored solutions that drive their success."
     },
     {
-      icon: Target,
+      icon: Globe,
+      title: "Global Perspective",
+      description: "We embrace diversity and operate with a global mindset, serving clients worldwide."
+    },
+    {
+      icon: Home,
       title: "Innovation",
-      description: "Embracing cutting-edge technology for optimal solutions"
+      description: "We foster a culture of innovation, continuously seeking new ways to improve and excel."
     },
     {
       icon: Users,
-      title: "Agility",
-      description: "Adapting quickly to meet evolving industry demands"
+      title: "Teamwork",
+      description: "We believe in the power of collaboration, working together to achieve common goals."
     }
   ];
 
-  const expertise = [
-    { title: "Warehouse Management Systems (WMS)" },
-    { title: "Transportation & Fleet Management" },
-    { title: "Supply Chain Automation & Optimization" },
-    { title: "ERP Integration & Enterprise Software" },
-    { title: "Business Intelligence & Analytics" },
-    { title: "Infrastructure Support & Security Management" }
+  const milestones = [
+    {
+      year: 2012,
+      event: "Founded Orange Office Technologies with a vision to transform logistics operations."
+    },
+    {
+      year: 2015,
+      event: "Expanded service offerings to include digital marketing and IT solutions."
+    },
+    {
+      year: 2018,
+      event: "Reached 100+ clients globally, establishing a strong international presence."
+    },
+    {
+      year: 2020,
+      event: "Launched a proprietary software platform to streamline back-office processes."
+    },
+    {
+      year: 2023,
+      event: "Celebrated a decade of innovation and client success in the logistics industry."
+    }
   ];
 
-  const metrics = [
-    { number: "35+", label: "Years Experience" },
-    { number: "100+", label: "Happy Employees" },
-    { number: "50+", label: "Satisfied Clients" },
-    { number: "200+", label: "Projects Completed" }
+  const teamMembers = [
+    {
+      name: "Sudhir KU",
+      position: "Director & Founder",
+      image: "/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png",
+      bio: "Visionary leader with 35+ years of experience in logistics and technology."
+    },
+    {
+      name: "Anil Kumar",
+      position: "Chief Technology Officer",
+      image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200",
+      bio: "Expert in software development and IT infrastructure, driving our technological advancements."
+    },
+    {
+      name: "Priya Sharma",
+      position: "Head of Operations",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200",
+      bio: "Experienced operations manager ensuring seamless service delivery and client satisfaction."
+    }
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-accent/10">
+      {/* Hero Section with enhanced background */}
+      <GradientBackground 
+        className="pt-32 pb-20 min-h-[50vh] flex items-center" 
+        variant="primary" 
+        intensity="medium"
+        animated={true}
+      >
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
-              Driving Innovation in IT, Logistics Support, and Digital Services
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6">
+              About <span className="text-gradient bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Orange Office Technologies</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 animate-fade-in">
-              Setting the industry benchmark in services for freight forwarding and logistics
+            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+              Pioneering specialized back-office solutions for the logistics and freight forwarding industry since 2012
             </p>
+          </div>
+        </div>
+      </GradientBackground>
+      
+      {/* Office Building Images Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Our Facilities</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Modern workspaces designed to foster innovation and excellence in service delivery
+              </p>
+            </div>
+            
+            <AboutOfficeImages />
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Company Story Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Our Story</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                From a humble beginning to a global leader in logistics KPO services
+              </p>
+            </div>
+            
+            <div className="space-y-6 text-lg text-gray-700">
+              <p>
+                Founded in 2012, Orange Office Technologies started as a small team of logistics experts with a shared vision: to revolutionize back-office operations for freight forwarders.
+              </p>
+              <p>
+                We recognized the challenges faced by logistics companies in managing complex documentation, sales support, and customer service. With a commitment to innovation, we set out to create comprehensive solutions that would streamline processes and drive growth.
+              </p>
+              <p>
+                Over the years, we have expanded our service offerings, embraced cutting-edge technologies, and built a global presence. Today, we are proud to be a trusted partner to leading logistics companies worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="prose max-w-none">
-              <h2 className="font-heading text-3xl font-bold mb-6">Who We Are</h2>
-              <p className="text-gray-600 mb-4">
-                Orange Office Technologies (OOT Pvt. Ltd.) is a Global Capability Centre (GCC) supporting a group of companies 
-                engaged in shipping, logistics, and third-party warehousing (3PL) services. As a centralized technology hub, 
-                OOT delivers advanced digital solutions and operational support that drive innovation and efficiency across 
-                the logistics value chain.
-              </p>
-              <p className="text-gray-600 mb-4">
-                With a strong foundation built on logistics domain expertise and technology-driven innovation, we specialize 
-                in delivering real-time, integrated IT solutions that drive productivity and digital transformation. Our IT 
-                division develops and implements customized software solutions that enable clients to stay ahead in today's 
-                fast-paced logistics environment.
-              </p>
-              <p className="text-gray-600">
-                With a skilled team of professionals and deep industry experience, OOT ensures high-performance standards 
-                and continuous process improvements. We align closely with our group companies to deliver agile, scalable, 
-                and forward-thinking solutions that power global logistics operations.
-              </p>
-            </div>
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-8 flex items-center justify-center">
-                <Building2 className="w-32 h-32 text-primary" />
-              </div>
-            </div>
-          </div>
-
-          {/* Mission & Vision Section */}
-          <div className="mb-16 bg-gray-50 rounded-xl p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-heading text-2xl font-bold mb-4 text-[#ff6a00]">Our Mission</h3>
-                <p className="text-gray-600">
-                  "Delivering comprehensive back-office, IT, digital marketing, and telesales solutions tailored for 
-                  freight forwarders, helping them streamline operations, boost visibility, and scale efficiently."
-                </p>
-              </div>
-              <div>
-                <h3 className="font-heading text-2xl font-bold mb-4 text-[#ff6a00]">Our Vision</h3>
-                <p className="text-gray-600">
-                  "To set the industry benchmark in KPO services for freight forwarding and logistics, enabling our 
-                  partners to focus on growth while we manage the rest."
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Core Expertise */}
-          <div className="mb-16">
-            <h2 className="font-heading text-3xl font-bold text-center mb-12">Core Areas of Expertise</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {expertise.map((item, index) => (
-                <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6 flex items-center">
-                    <Target className="w-6 h-6 text-[#ff6a00] mr-3 flex-shrink-0" />
-                    <p className="font-medium text-gray-700">{item.title}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Values Section */}
-          <div className="mb-16">
-            <h2 className="font-heading text-3xl font-bold text-center mb-12">Our Core Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((value, index) => (
-                <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
-                    <value.icon className="w-12 h-12 text-primary mb-4" />
-                    <h3 className="font-heading font-bold text-xl mb-2">{value.title}</h3>
-                    <p className="text-gray-600">{value.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Value Proposition */}
-          <div className="mb-16 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-8">
-            <h2 className="font-heading text-3xl font-bold mb-6">Our Value Proposition</h2>
-            <p className="text-gray-600 text-lg">
-              At OOT, we believe in delivering technology with purpose. Through our GCC model, we provide our 
-              group companies with the tools and expertise needed to stay competitive in a digitally evolving 
-              logistics landscape.
-            </p>
-            <p className="text-gray-600 mt-4">
-              As we continue to scale across industries, our commitment remains rooted in quality, agility, 
-              and continuous innovation — delivering measurable value to our partners worldwide.
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Our Core Values</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Guiding principles that shape our culture and drive our success
             </p>
           </div>
-
-          {/* Metrics Section */}
-          <div className="bg-gradient-to-r from-primary to-primary/80 text-white rounded-lg p-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {metrics.map((metric, index) => (
-                <div key={index} className="text-center">
-                  <div className="font-heading font-bold text-4xl mb-2">{metric.number}</div>
-                  <div className="text-white/90">{metric.label}</div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-100 text-orange-600 mb-4 mx-auto">
+                    <value.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="font-heading font-bold text-xl mb-2">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Milestones Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Key Milestones</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Significant moments in our journey of growth and innovation
+            </p>
+          </div>
+          
+          <div className="relative">
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 -ml-0.5"></div>
+            <div className="space-y-8">
+              {milestones.map((milestone, index) => (
+                <div key={index} className="flex items-center">
+                  <div className="w-1/2 text-right pr-4">
+                    <div className="font-bold text-xl text-gray-800">{milestone.year}</div>
+                  </div>
+                  <div className="w-1/2 text-left pl-4">
+                    <div className="text-gray-700">{milestone.event}</div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </section>
-
-      {/* Services Preview Section */}
-      <section className="py-16 bg-gray-50">
+      
+      {/* Team Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-3xl font-bold text-center mb-12">Our Services</h2>
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Meet Our Team</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Dedicated professionals driving our success and delivering exceptional service
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-            {[
-              {
-                icon: FileCheck,
-                title: "Documentation Services",
-                description: "Accurate and timely preparation of essential shipping documents"
-              },
-              {
-                icon: Users,
-                title: "Sales Support Desk",
-                description: "Centralized support to manage leads and client inquiries"
-              },
-              {
-                icon: Headset,
-                title: "Customer Service",
-                description: "Professional management of inquiries and shipment updates"
-              }
-            ].map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6">
-                  <service.icon className="w-12 h-12 text-[#ff6a00] mb-4" />
-                  <h3 className="font-heading font-bold text-xl mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="relative overflow-hidden rounded-full h-32 w-32 mx-auto mb-4">
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-heading font-bold text-xl mb-2 text-center">{member.name}</h3>
+                  <p className="text-gray-600 text-center mb-2">{member.position}</p>
+                  <p className="text-gray-700 text-center">{member.bio}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-          
-          <div className="text-center">
-            <Button variant="default" className="bg-[#ff6a00] hover:bg-[#ff6a00]/90" asChild>
-              <Link to="/services">View All Services</Link>
-            </Button>
-          </div>
         </div>
       </section>
-
+      
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-r from-orange-500 to-amber-500 text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading font-bold text-3xl mb-6">Ready to Transform Your Operations?</h2>
-            <p className="text-gray-600 mb-8">
-              Let us show you how we can help streamline your logistics processes and boost your business growth.
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">Join Our Journey</h2>
+            <p className="text-white/90 text-lg mb-8 max-w-3xl mx-auto">
+              Partner with Orange Office Technologies and experience the difference our specialized services can make for your logistics operations.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button variant="outline" asChild>
-                <Link to="/services">Explore Services</Link>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100" asChild>
+                <Link to="/contact">Get in Touch</Link>
               </Button>
-              <Button className="bg-primary hover:bg-primary/90" asChild>
-                <Link to="/contact">Contact Us</Link>
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10" asChild>
+                <Link to="/services">Explore Our Services</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
-
+      
       <Footer />
     </div>
   );

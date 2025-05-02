@@ -162,26 +162,13 @@ export const Header = () => {
                     Clients
                   </Link>
                 </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/contact"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/contact" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Contact
-                  </Link>
-                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
 
           <div className="flex items-center space-x-4">
             <Button 
-              className={`hidden md:flex ${
+              className={`${
                 scrolled 
                   ? 'bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white' 
                   : 'bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/30'
@@ -213,8 +200,7 @@ export const Header = () => {
               { to: "/services", label: "Services" },
               { to: "/founders", label: "Founders" },
               { to: "/careers", label: "Careers" },
-              { to: "/clients", label: "Clients" },
-              { to: "/contact", label: "Contact" }
+              { to: "/clients", label: "Clients" }
             ].map(item => (
               <Link 
                 key={item.label} 

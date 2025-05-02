@@ -13,7 +13,7 @@ const Services = () => {
       icon: FileCheck,
       title: "Documentation Services",
       description: "Expert documentation handling including invoices, credit notes, and job profit statements.",
-      image: "/1.png",
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80",
       link: "/services/documentation",
       color: "from-blue-500/20 to-blue-600/20",
       badge: "Popular"
@@ -22,7 +22,7 @@ const Services = () => {
       icon: Users,
       title: "Sales Support",
       description: "Centralized sales support for lead management and customer relationships.",
-      image: "/2.png",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
       link: "/services/sales-support",
       color: "from-amber-500/20 to-amber-600/20"
     },
@@ -30,7 +30,7 @@ const Services = () => {
       icon: Globe,
       title: "Digital Marketing",
       description: "Comprehensive digital marketing solutions to boost your online presence.",
-      image: "/3.png",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
       link: "/services/digital-marketing",
       color: "from-green-500/20 to-green-600/20"
     },
@@ -38,7 +38,7 @@ const Services = () => {
       icon: Building2,
       title: "Accounts Management",
       description: "Professional accounting services for trade and non-trade transactions.",
-      image: "/4.png",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21ed6c?auto=format&fit=crop&w=800&q=80",
       link: "/services/accounts",
       color: "from-purple-500/20 to-purple-600/20"
     },
@@ -46,7 +46,7 @@ const Services = () => {
       icon: Headset,
       title: "Customer Service",
       description: "Dedicated customer service team handling bookings and nominations.",
-      image: "/5.png",
+      image: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=800&q=80",
       link: "/services/customer-service",
       color: "from-pink-500/20 to-pink-600/20"
     },
@@ -54,7 +54,7 @@ const Services = () => {
       icon: Shield,
       title: "Software Solutions",
       description: "Custom software development following industry best practices.",
-      image: "/6.png",
+      image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=800&q=80",
       link: "/services/software",
       color: "from-cyan-500/20 to-cyan-600/20",
       badge: "New"
@@ -115,25 +115,28 @@ const Services = () => {
                 className="group hover:shadow-2xl transition-all duration-500 animate-fade-in overflow-hidden border-none"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative h-56 overflow-hidden">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-70`}></div>
+                <div className="relative h-64 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute top-4 right-4">
-                    <service.icon className="h-8 w-8 text-white" />
+                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <service.icon className="h-6 w-6 text-white" />
+                    </div>
                   </div>
                   {service.badge && (
                     <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded">
                       {service.badge}
                     </div>
                   )}
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="font-heading font-bold text-xl mb-1">{service.title}</h3>
+                  </div>
                 </div>
                 <CardContent className="p-6 bg-white">
-                  <h3 className="font-heading font-bold text-xl mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <Button variant="outline" className="w-full group" asChild>
                     <Link to={service.link} className="flex items-center justify-between">
@@ -195,12 +198,13 @@ const Services = () => {
                       <p className="text-gray-600">CEO, Global Shipping Partners</p>
                     </div>
                   </div>
-                  <div className="hidden lg:block bg-gradient-to-br from-primary/80 to-primary/100">
+                  <div className="hidden lg:block">
                     <img 
-                      src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=800&q=80" 
+                      src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
                       alt="Happy client" 
-                      className="w-full h-full object-cover mix-blend-overlay opacity-50"
+                      className="w-full h-full object-cover"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary/100 mix-blend-multiply"></div>
                   </div>
                 </div>
               </CardContent>

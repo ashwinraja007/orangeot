@@ -1,29 +1,55 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Building2, FileCheck, Globe, Headset, Shield, Users, Star, Sparkles, HeartHandshake, TrendingUp } from "lucide-react";
+import { ArrowRight, Building2, FileCheck, Globe, Headset, Play, Shield, Users, ArrowLeft, Star, Sparkles, HeartHandshake, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { HeroSection } from "@/components/home/HeroSection";
-import { TestimonialSection } from "@/components/home/TestimonialSection";
+import { LogoCarousel } from "@/components/ui/logo-carousel";
+import { VideoPlayer } from "@/components/ui/video-player";
 
 // Client logos data
-const clientLogos = [
-  { src: "/62fb7958e1cf7.png", alt: "OECL" },
-  { src: "/62fb78ee5cd45.png", alt: "GC" },
-  { src: "/62fb77880f0df.png", alt: "amass" },
-  { src: "/62fb79231e921.png", alt: "oneglobal" },
-  { src: "/62fb77c2d5890.png", alt: "citygen" },
-  { src: "/62fb783408cd1.png", alt: "futurenet" },
-  { src: "/62fb7890bc643.png", alt: "ggl" },
-  { src: "/62fb79b61d0c8.png", alt: "primeshiping" },
-  { src: "/62fb79faa960d.png", alt: "shipsoft" },
-  { src: "/62fb7adfb0edb.png", alt: "haixun" },
-  { src: "/63048b56bd44e.png", alt: "moltech" },
-  { src: "/63048c170f81a.png", alt: "aerofreight" }
-];
+const clientLogos = [{
+  src: "/62fb7958e1cf7.png",
+  alt: "OECL"
+}, {
+  src: "/62fb78ee5cd45.png",
+  alt: "GC"
+}, {
+  src: "/62fb77880f0df.png",
+  alt: "amass"
+}, {
+  src: "/62fb79231e921.png",
+  alt: "oneglobal"
+}, {
+  src: "/62fb77c2d5890.png",
+  alt: "citygen"
+}, {
+  src: "/62fb783408cd1.png",
+  alt: "futurenet"
+}, {
+  src: "/62fb7890bc643.png",
+  alt: "ggl"
+}, {
+  src: "/62fb79b61d0c8.png",
+  alt: "primeshiping"
+}, {
+  src: "/62fb79faa960d.png",
+  alt: "shipsoft"
+}, {
+  src: "/62fb7adfb0edb.png",
+  alt: "haixun"
+}, {
+  src: "/63048b56bd44e.png",
+  alt: "moltech"
+}, {
+  src: "/63048c170f81a.png",
+  alt: "aerofreight"
+}];
 
 const Index = () => {
   // Intersection Observer for scroll animations
@@ -79,11 +105,112 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Enhanced Hero Section with Office Image */}
-      <HeroSection clientLogos={clientLogos} />
-      
-      {/* Testimonials Section - New Addition */}
-      <TestimonialSection />
+      {/* Enhanced Hero Section with Video and Auto-scrolling Logos */}
+      <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-[#FDF7F3] to-white">
+        {/* Glass Geometric Pattern Overlays */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] transform translate-x-1/3 -translate-y-1/4">
+            <div className="w-full h-full bg-gradient-to-br from-orange-400/20 to-amber-300/20 transform rotate-45 rounded-[40%] animate-float"></div>
+          </div>
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] transform -translate-x-1/3 translate-y-1/4">
+            <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 transform -rotate-45 rounded-[40%] animate-float" style={{
+            animationDelay: "2s"
+          }}></div>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-600 mb-6 animate-fade-in text-sm font-medium">
+                <Sparkles className="w-4 h-4" />
+                <span>Logistics KPO Excellence</span>
+              </div>
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-[#2C2C2C] leading-tight tracking-tight">
+                Your <span className="text-gradient bg-gradient-to-r from-orange-500 via-amber-500 to-orange-400 bg-clip-text text-transparent font-extrabold">Preferred</span><br className="hidden md:block" /> IT Partner
+              </h1>
+              <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
+                We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <Button size="lg" className="glass-button bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
+                  <Link to="/contact" className="flex items-center gap-2">
+                    Get Started
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-orange-400 text-orange-600 hover:bg-orange-50 rounded-xl">
+                  <Link to="/services" className="flex items-center gap-2">
+                    Our Services
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
+              {/* Hero Images Carousel */}
+              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
+                <Carousel className="w-full h-full" opts={{
+                loop: true
+              }}>
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="relative w-full h-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80" alt="Tech Innovation" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent"></div>
+                        <div className="absolute bottom-6 left-6 text-white">
+                          <h3 className="text-lg md:text-xl font-bold mb-1">Tech Innovation</h3>
+                          <p className="text-sm md:text-base text-white/80">Powering logistics excellence</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative w-full h-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Team Collaboration" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent"></div>
+                        <div className="absolute bottom-6 left-6 text-white">
+                          <h3 className="text-lg md:text-xl font-bold mb-1">Team Collaboration</h3>
+                          <p className="text-sm md:text-base text-white/80">Expert solutions, together</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative w-full h-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80" alt="Modern Workspace" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent"></div>
+                        <div className="absolute bottom-6 left-6 text-white">
+                          <h3 className="text-lg md:text-xl font-bold mb-1">Modern Workspace</h3>
+                          <p className="text-sm md:text-base text-white/80">Where innovation happens</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <div className="absolute bottom-4 right-4 flex gap-2">
+                    <CarouselPrevious className="h-8 w-8 rounded-full bg-white/70 hover:bg-white text-gray-800 border-0" />
+                    <CarouselNext className="h-8 w-8 rounded-full bg-white/70 hover:bg-white text-gray-800 border-0" />
+                  </div>
+                </Carousel>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-amber-400/30 to-orange-300/30 rounded-full blur-3xl animate-pulse-slow"></div>
+              <div className="absolute -bottom-16 -left-10 w-40 h-40 bg-gradient-to-br from-orange-500/20 to-red-400/20 rounded-full blur-3xl animate-float"></div>
+            </div>
+          </div>
+          
+          {/* Client logos - Auto-scrolling */}
+          <div className="mt-16 animate-fade-in delay-200">
+            <p className="text-gray-800 text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
+              <span className="h-px w-8 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></span>
+              Trusted by leading companies
+              <span className="h-px w-8 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></span>
+            </p>
+            <div className="p-4 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/30 shadow-lg">
+              <LogoCarousel logos={clientLogos} className="py-4" />
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* Mission & Vision Section with Enhanced Design */}
       <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden py-20">
@@ -92,6 +219,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
+            
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 bg-clip-text text-transparent">Mission & Vision</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Revolutionizing logistics operations through innovation and expertise
@@ -146,12 +274,15 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
         
-        <svg className="absolute top-0 left-0 w-full text-white" style={{ transform: "translateY(-1px)" }} fill="currentColor" viewBox="0 0 1440 40">
+        <svg className="absolute top-0 left-0 w-full text-white" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L60,4C120,8,240,16,360,18.7C480,21,600,19,720,13.3C840,8,960,0,1080,0C1200,0,1320,8,1380,12L1440,16L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
+            
             <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">Our Services</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We offer comprehensive solutions tailored for the freight forwarding and logistics industry.
@@ -224,7 +355,9 @@ const Index = () => {
 
       {/* Enhanced Founder Preview Section */}
       <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full text-white" style={{ transform: "translateY(-1px)" }} fill="currentColor" viewBox="0 0 1440 40">
+        <svg className="absolute top-0 left-0 w-full text-white" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,32L120,26.7C240,21,480,11,720,10.7C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
         </svg>
         
@@ -328,9 +461,11 @@ const Index = () => {
         </div>
       </section>
       
-      {/* About Us Section with Enhanced Layout and Office Building Image */}
+      {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full text-orange-50" style={{ transform: "translateY(-1px)" }} fill="currentColor" viewBox="0 0 1440 40">
+        <svg className="absolute top-0 left-0 w-full text-orange-50" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L40,4C80,8,160,16,240,18.7C320,21,400,19,480,13.3C560,8,640,0,720,0C800,0,880,8,960,12C1040,16,1120,16,1200,12C1280,8,1360,0,1400,-4L1440,-8L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
         </svg>
         
@@ -339,6 +474,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-on-scroll">
+              
               <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">About Us</h2>
               
               <p className="text-gray-600 mb-6 text-lg">
@@ -395,34 +531,39 @@ const Index = () => {
             
             <div className="order-1 lg:order-2 animate-on-scroll">
               <div className="relative">
-                {/* Office building image */}
-                <div className="rounded-2xl overflow-hidden shadow-2xl mb-4">
-                  <img 
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" 
-                    alt="Our Office Building" 
-                    className="w-full h-80 object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-xl font-bold mb-1">Our Headquarters</h3>
-                    <p className="text-white/80">Where innovation meets logistics excellence</p>
-                  </div>
-                </div>
-                
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
-                    <img 
-                      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
-                      alt="Team meeting" 
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="space-y-4">
+                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
+                      <img 
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
+                        alt="Team meeting" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500 translate-y-8">
+                      <img 
+                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
+                        alt="Office space" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                  <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
-                    <img 
-                      src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
-                      alt="Technology solutions" 
-                      className="w-full h-full object-cover"
-                    />
+                  
+                  <div className="space-y-4 translate-y-12">
+                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
+                      <img 
+                        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
+                        alt="Technology solutions" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
+                      <img 
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
+                        alt="Team collaboration" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
                 
@@ -461,40 +602,6 @@ const Index = () => {
       </section>
       
       <Footer />
-
-      {/* Custom CSS for animations */}
-      <style>
-        {`
-          .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-          }
-          
-          .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-          }
-          
-          @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-          }
-          
-          @keyframes pulse-slow {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 0.8; }
-          }
-          
-          .animate-float {
-            animation: float 6s infinite ease-in-out;
-          }
-          
-          .animate-pulse-slow {
-            animation: pulse-slow 4s infinite ease-in-out;
-          }
-        `}
-      </style>
     </div>
   );
 };

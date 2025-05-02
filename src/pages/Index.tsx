@@ -215,10 +215,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-600 mb-4 text-sm font-medium">
-              <Star className="w-4 h-4" />
-              <span>Our Purpose</span>
-            </div>
+            
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 bg-clip-text text-transparent">Mission & Vision</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Revolutionizing logistics operations through innovation and expertise
@@ -281,10 +278,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-600 mb-4 text-sm font-medium">
-              <Sparkles className="w-4 h-4" />
-              <span>What We Do</span>
-            </div>
+            
             <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">Our Services</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We offer comprehensive solutions tailored for the freight forwarding and logistics industry.
@@ -368,10 +362,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-600 mb-4 text-sm font-medium">
-              <Users className="w-4 h-4" />
-              <span>Leadership</span>
-            </div>
+            
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
               Meet Our Founders
             </h2>
@@ -509,10 +500,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12 animate-on-scroll">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-600 mb-4 text-sm font-medium">
-              <Star className="w-4 h-4" />
-              <span>Our Results</span>
-            </div>
+            
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient bg-gradient-to-r from-purple-700 via-violet-500 to-purple-600 bg-clip-text text-transparent">Our Impact</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We've built a strong track record of success over the years.
@@ -560,10 +548,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-600 mb-4 text-sm font-medium">
-              <Star className="w-4 h-4" />
-              <span>TESTIMONIALS</span>
-            </div>
+            
             <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient bg-gradient-to-r from-green-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">What Our Clients Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Don't just take our word for it. Here's what our clients have to say about our services.

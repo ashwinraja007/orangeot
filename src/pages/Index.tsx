@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -50,7 +49,6 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
-
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -100,9 +98,7 @@ const Index = () => {
       }
     };
   }, []);
-  
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section with Video and Auto-scrolling Logos */}
@@ -353,7 +349,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Founder Preview Section */}
+      {/* New Founders Preview Section */}
       <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
         transform: "translateY(-1px)"
@@ -366,101 +362,57 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
+            
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
-              Meet Our Founder
+              Meet Our Founders
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Visionary leadership driving innovation in logistics technology
+              Visionary leaders driving innovation in logistics technology
             </p>
           </div>
 
-          {/* Enhanced Founder Card */}
-          <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden border-none shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] transition-all duration-500 group">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="relative overflow-hidden bg-gradient-to-br from-orange-600 to-orange-400 h-full">
-                    {/* Image with overlay and effects */}
-                    <div className="absolute inset-0 mix-blend-multiply opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-300 via-transparent to-transparent"></div>
-                    
-                    <div className="h-full relative overflow-hidden transform group-hover:scale-105 transition-transform duration-700">
-                      <img 
-                        src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" 
-                        alt="Mr. Sudhir KU" 
-                        className="w-full h-full object-cover object-center"
-                      />
-                      
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                      
-                      {/* Content overlay */}
-                      <div className="absolute bottom-0 left-0 p-6 md:p-8 text-white">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-1">Mr. Sudhir KU</h3>
-                        <p className="text-orange-100 text-lg mb-4">Director & Founder</p>
-                        
-                        {/* Experience badge */}
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm mb-4">
-                          <span className="font-semibold">35+ Years</span> of Industry Experience
-                        </div>
-                        
-                        <Link to="/founders" className="mt-2 inline-flex items-center bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-4 py-2 rounded-full gap-2 text-sm transition-all duration-300 border border-white/20">
-                          <span>View Full Profile</span>
-                          <ArrowRight className="h-4 w-4" />
-                        </Link>
-                      </div>
-                    </div>
-                    
-                    {/* Decorative elements */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400 opacity-20 rounded-full blur-2xl"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-700 opacity-30 rounded-full blur-2xl"></div>
-                  </div>
-                  
-                  <div className="p-6 md:p-8 bg-gradient-to-br from-white to-orange-50 flex flex-col">
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Visionary Leadership</h4>
-                    
-                    <p className="text-gray-600 mb-4">
-                      With over 35 years of industry experience, Mr. Sudhir KU has transformed the landscape of logistics operations through innovative solutions and strategic foresight.
-                    </p>
-                    
-                    <div className="space-y-4 mb-6 text-sm">
-                      <div className="flex items-start gap-2">
-                        <div className="h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0 mt-0.5">
-                          <Star className="h-3.5 w-3.5" />
-                        </div>
-                        <span className="text-gray-600">Pioneered specialized back-office services for freight forwarding</span>
-                      </div>
-                      
-                      <div className="flex items-start gap-2">
-                        <div className="h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0 mt-0.5">
-                          <Star className="h-3.5 w-3.5" />
-                        </div>
-                        <span className="text-gray-600">Founded Orange Office Technologies in 2012</span>
-                      </div>
-                      
-                      <div className="flex items-start gap-2">
-                        <div className="h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0 mt-0.5">
-                          <Star className="h-3.5 w-3.5" />
-                        </div>
-                        <span className="text-gray-600">Led digital transformation initiatives in the logistics sector</span>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-auto">
-                      <Button className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-md hover:shadow-lg transition-all duration-300 rounded-xl">
-                        <Link to="/founders" className="flex items-center gap-2 justify-center">
-                          Learn More About Our Leadership
-                          <ArrowRight className="h-5 w-5" />
-                        </Link>
-                      </Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[{
+            image: "/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png",
+            name: "Mr. Sudhir KU",
+            position: "CEO & Co-Founder"
+          }, {
+            image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
+            name: "Sarah Johnson",
+            position: "CTO & Co-Founder"
+          }].map((founder, index) => <Card key={index} className="border-none rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white group hover:-translate-y-2">
+                <CardContent className="p-0">
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <img src={founder.image} alt={founder.name} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+                    <div className="absolute bottom-0 left-0 p-6 text-white">
+                      <h3 className="text-2xl font-bold mb-1 animate-on-scroll" style={{
+                    animationDelay: `${index * 200}ms`
+                  }}>{founder.name}</h3>
+                      <p className="text-white/90 animate-on-scroll" style={{
+                    animationDelay: `${index * 200 + 100}ms`
+                  }}>{founder.position}</p>
+                      <Link to="/founders" className="mt-4 inline-flex items-center bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-4 py-2 rounded-full gap-2 text-sm transition-all duration-300">
+                        <span>View Profile</span>
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>)}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
+              <Link to="/founders" className="flex items-center gap-2">
+                Meet Our Team
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
-      
+
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-orange-50" style={{
@@ -475,135 +427,251 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-on-scroll">
               
-              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">About Us</h2>
-              
+              <h2 className="font-heading font-bold md:text-4xl mb-6 text-gradient bg-gradient-to-r from-orange-700 via-orange-600 to-orange-500 bg-clip-text text-transparent text-2xl lg:text-3xl">Orange Office Technologies</h2>
               <p className="text-gray-600 mb-6 text-lg">
-                Orange Office Technologies is a leading provider of specialized back-office solutions for the logistics and freight forwarding industry.
+                Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider who offers the shipping & logistics players worldwide, the competitive edge in the market.
+              </p>
+              <p className="text-gray-600 mb-8">
+                We provide expert service in all the core segments of day-to-day operations starting from Documentation & Operation, sales support, Customer service & Accounting activity.
               </p>
               
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-100 p-3 rounded-2xl text-orange-600">
-                    <Globe className="h-6 w-6" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <div className="flex items-start">
+                  <div className="mr-4 bg-blue-100 rounded-full p-3">
+                    <Shield className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl mb-2 text-gray-800">Global Reach</h3>
-                    <p className="text-gray-600">
-                      With clients across the globe, we deliver seamless operations support internationally.
-                    </p>
+                    <h4 className="font-medium text-gray-900 mb-1">Top Security</h4>
+                    <p className="text-gray-600 text-sm">Enterprise-grade security for all data</p>
                   </div>
                 </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-100 p-3 rounded-2xl text-orange-600">
-                    <Users className="h-6 w-6" />
+                <div className="flex items-start">
+                  <div className="mr-4 bg-orange-100 rounded-full p-3">
+                    <Users className="h-6 w-6 text-orange-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl mb-2 text-gray-800">Expert Team</h3>
-                    <p className="text-gray-600">
-                      Our team of industry veterans brings decades of combined experience in logistics and technology.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-100 p-3 rounded-2xl text-orange-600">
-                    <Shield className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-2 text-gray-800">Trusted Solutions</h3>
-                    <p className="text-gray-600">
-                      We've built our reputation on reliability, security, and exceptional service delivery.
-                    </p>
+                    <h4 className="font-medium text-gray-900 mb-1">Expert Team</h4>
+                    <p className="text-gray-600 text-sm">Qualified professionals in logistics</p>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-8">
-                <Button asChild className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl">
-                  <Link to="/about" className="flex items-center gap-2">
-                    Learn More About Us
-                    <ArrowRight className="h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
+                <Link to="/about" className="flex items-center gap-2">
+                  Learn More About Us
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
             </div>
-            
             <div className="order-1 lg:order-2 animate-on-scroll">
               <div className="relative">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4">
-                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
-                      <img 
-                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
-                        alt="Team meeting" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500 translate-y-8">
-                      <img 
-                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
-                        alt="Office space" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                  <img src="/office.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent"></div>
+                </div>
+                
+                {/* Floating card */}
+                <div className="absolute -bottom-10 -right-10 bg-white rounded-xl shadow-xl p-6 max-w-xs animate-float glass-card">
+                  <div className="flex items-center mb-3">
+                    <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                    <p className="font-medium">Always Available</p>
                   </div>
-                  
-                  <div className="space-y-4 translate-y-12">
-                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
-                      <img 
-                        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
-                        alt="Technology solutions" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
-                      <img 
-                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
-                        alt="Team collaboration" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
+                  <p className="text-gray-600 text-sm">24/7 customer support for all your logistics needs</p>
                 </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-orange-400/30 to-amber-300/30 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-amber-300/20 to-orange-400/20 rounded-full blur-3xl"></div>
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-blue-300/30 to-cyan-300/20 rounded-full blur-xl animate-pulse-slow"></div>
+                <div className="absolute -bottom-16 -left-6 w-20 h-20 bg-gradient-to-br from-amber-300/30 to-orange-300/20 rounded-full blur-xl animate-float"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-amber-500 text-white relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-white opacity-5 rounded-full"></div>
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-white opacity-5 rounded-full"></div>
-        </div>
+      {/* Enhanced Stats Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <svg className="absolute top-0 left-0 w-full text-white" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
+          <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+        </svg>
+        
+        <div className="absolute inset-0 bg-pattern opacity-5"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">Ready to Transform Your Logistics Operations?</h2>
-            <p className="text-white/90 text-lg mb-8 max-w-3xl mx-auto">
-              Partner with Orange Office Technologies for comprehensive back-office solutions that will streamline your operations and drive growth.
+          <div className="text-center mb-12 animate-on-scroll">
+            
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient bg-gradient-to-r from-purple-700 via-violet-500 to-purple-600 bg-clip-text text-orange-500">Our Impact</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We've built a strong track record of success over the years.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100 rounded-xl border-0">
-                <Link to="/contact">Contact Us Today</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 rounded-xl">
-                <Link to="/services">Explore Our Services</Link>
-              </Button>
-            </div>
+          </div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+            {[{
+            number: "10+",
+            label: "Years Experience",
+            icon: Building2,
+            color: "from-blue-600 to-cyan-500"
+          }, {
+            number: "100+",
+            label: "Happy Employees",
+            icon: Users,
+            color: "from-green-600 to-emerald-500"
+          }, {
+            number: "50+",
+            label: "Satisfied Clients",
+            icon: Headset,
+            color: "from-amber-500 to-orange-400"
+          }, {
+            number: "200+",
+            label: "Projects Completed",
+            icon: FileCheck,
+            color: "from-purple-600 to-violet-500"
+          }].map((stat, index) => <div key={index} style={{
+            animationDelay: `${index * 100}ms`
+          }} className="text-center p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll border-none group hover:-translate-y-1 bg-white glassmorphism">
+                <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${stat.color} flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 transition-transform`}>
+                  <stat.icon className="h-8 w-8 text-white" />
+                </div>
+                <div className="font-heading font-bold text-4xl text-gray-800 mb-2 animate-count-up">{stat.number}</div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
+              </div>)}
           </div>
         </div>
       </section>
       
+      {/* Testimonials Section with Auto-scrolling Carousel */}
+      <section className="py-20 bg-white relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-orange-200/10 to-amber-300/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-blue-200/10 to-cyan-300/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 animate-on-scroll">
+            
+            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient bg-gradient-to-r from-green-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">What Our Clients Say</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about our services.
+            </p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <AutoplayCarousel testimonials={[{
+            quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
+            author: "John Smith",
+            position: "CEO",
+            company: "Global Shipping Ltd"
+          }, {
+            quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
+            author: "Sarah Johnson",
+            position: "Operations Director",
+            company: "Pacific Logistics"
+          }, {
+            quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
+            author: "Michael Chang",
+            position: "Managing Director",
+            company: "EastWest Freight Services"
+          }, {
+            quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
+            author: "Anna Martinez",
+            position: "Marketing Head",
+            company: "Express Cargo Systems"
+          }]} />
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced CTA Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-500"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight text-white">
+              Ready to Transform Your Logistics Operations?
+            </h2>
+            
+            <Card className="border-none rounded-2xl shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-white/10 hover:bg-white/15 transition-all duration-300">
+              <CardContent className="p-0 text-left">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                  <div className="col-span-2">
+                    <h3 className="text-2xl font-bold mb-2 text-white">Book a Free Consultation</h3>
+                    <p className="text-white/90">Get expert advice on how we can help optimize your operations</p>
+                  </div>
+                  <div className="text-right">
+                    <Button size="lg" className="bg-white text-orange-600 shadow-lg hover:shadow-xl w-full md:w-auto hover:bg-orange-50 rounded-xl border-0">
+                      <Link to="/contact" className="flex items-center justify-center gap-2">
+                        Schedule Now
+                        <ArrowRight className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
+              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-xl">
+                <Link to="/services">Explore Services</Link>
+              </Button>
+              <Button size="lg" className="bg-white/20 hover:bg-white/30 shadow-lg hover:shadow-xl text-white rounded-xl border-0">
+                <Link to="/contact">Contact Us</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
-    </div>
-  );
+    </div>;
 };
 
+// Auto-scrolling testimonial carousel component
+const AutoplayCarousel = ({
+  testimonials
+}) => {
+  const [api, setApi] = useState(null);
+  const isMobile = useIsMobile();
+  useEffect(() => {
+    if (!api) return;
+
+    // Set up autoplay
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [api]);
+  return <Carousel className="w-full" setApi={setApi} opts={{
+    align: "start",
+    loop: true
+  }}>
+      <CarouselContent>
+        {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+            <div className="p-4">
+              <Card className="border-none rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-full bg-white/80 backdrop-blur-sm">
+                <CardContent className="p-8 flex flex-col h-full">
+                  <div className="flex justify-center mb-6">
+                    <div className="text-6xl text-orange-300 opacity-50">"</div>
+                  </div>
+                  <blockquote className="text-lg text-center italic mb-8 flex-grow text-gray-700">
+                    {testimonial.quote}
+                  </blockquote>
+                  <div className="text-center mt-auto">
+                    <p className="font-heading font-bold text-lg text-gray-900">{testimonial.author}</p>
+                    <p className="text-gray-600">{testimonial.position}</p>
+                    <p className="text-orange-500 font-medium">{testimonial.company}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>)}
+      </CarouselContent>
+      <div className="flex justify-center gap-2 mt-6">
+        <CarouselPrevious className="static relative transform-none bg-white hover:bg-gray-100 border-orange-200 text-orange-500 mx-2" />
+        <CarouselNext className="static relative transform-none bg-white hover:bg-gray-100 border-orange-200 text-orange-500 mx-2" />
+      </div>
+    </Carousel>;
+};
 export default Index;

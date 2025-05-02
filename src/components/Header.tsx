@@ -2,16 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import { Menu, X } from "lucide-react";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,150 +31,51 @@ export const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-md py-3' 
-          : 'bg-gradient-to-r from-black/50 to-transparent backdrop-blur-sm py-5'
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 group" aria-label="Home">
-            <div className="relative overflow-hidden rounded-full h-10 w-10">
-              <img 
-                src="/lovable-uploads/c80361a7-f9e6-4b5d-a689-95904676a926.png" 
-                alt="Orange Office Technologies" 
-                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
-              />
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-amber-500/20 animate-pulse-slow rounded-full"></div>
-            </div>
-            <span className={`font-heading text-lg md:text-xl font-semibold transition-colors duration-300 ${scrolled || isMenuOpen ? 'text-orange-600' : 'text-white text-shadow'}`}>
+            <img 
+              src="/lovable-uploads/c80361a7-f9e6-4b5d-a689-95904676a926.png" 
+              alt="Orange Office Technologies" 
+              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
+            />
+            <span className={`font-heading text-lg md:text-xl font-semibold transition-colors duration-300 ${scrolled || isMenuOpen ? 'text-gray-800' : 'text-white text-shadow'}`}>
               Orange Office Technologies
             </span>
           </Link>
           
-          {/* Desktop navigation with dropdown */}
-          <div className="hidden md:block">
-            <NavigationMenu>
-              <NavigationMenuList className="gap-1">
-                <NavigationMenuItem>
-                  <Link 
-                    to="/"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Home
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/about"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/about" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    About Us
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger 
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname.includes("/services") 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Services
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid gap-2 p-4 w-[200px] bg-white rounded-md shadow-lg">
-                      <Link 
-                        to="/services"
-                        className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-orange-500 hover:bg-orange-50"
-                      >
-                        All Services
-                      </Link>
-                      <Link 
-                        to="/services/documentation"
-                        className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-orange-500 hover:bg-orange-50"
-                      >
-                        Documentation
-                      </Link>
-                      <Link 
-                        to="/services/sales-support"
-                        className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-orange-500 hover:bg-orange-50"
-                      >
-                        Sales Support
-                      </Link>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/founders"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/founders" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Founders
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/careers"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/careers" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Careers
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/clients"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/clients" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Clients
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link 
-                    to="/contact"
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === "/contact" 
-                        ? 'text-orange-500 bg-orange-50/10' 
-                        : `${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50/10' : 'text-white hover:text-orange-100 hover:bg-white/10'}`
-                    }`}
-                  >
-                    Contact
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
+          <nav className="hidden md:flex items-center space-x-8">
+            {[
+              { to: "/", label: "Home" },
+              { to: "/about", label: "About Us" },
+              { to: "/services", label: "Services" },
+              { to: "/founders", label: "Founders" },
+              { to: "/careers", label: "Careers" },
+              { to: "/clients", label: "Clients" },
+              { to: "/contact", label: "Contact" }
+            ].map(item => (
+              <Link 
+                key={item.label} 
+                to={item.to} 
+                className={`font-medium transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
+                  location.pathname === item.to 
+                    ? 'text-orange-500 after:scale-x-100 after:bg-orange-500' 
+                    : `${scrolled ? 'text-gray-700 hover:text-orange-500 after:bg-orange-500' : 'text-white hover:text-orange-100 after:bg-orange-200'}`
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
           <div className="flex items-center space-x-4">
             <Button 
               className={`hidden md:flex ${
                 scrolled 
-                  ? 'bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white' 
+                  ? 'bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600' 
                   : 'bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/30'
               } shadow-md hover:shadow-lg transition-all duration-300 btn-hover-shine rounded-xl`}
             >
@@ -227,7 +119,7 @@ export const Header = () => {
                 {item.label}
               </Link>
             ))}
-            <Button className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-xl">
+            <Button className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-xl">
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                 Contact Us
               </Link>

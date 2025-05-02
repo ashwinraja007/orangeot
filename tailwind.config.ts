@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -137,6 +138,18 @@ export default {
           "0%": { backgroundPosition: "-1000px 0" },
           "100%": { backgroundPosition: "1000px 0" },
         },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "ripple": {
+          "0%": { transform: "scale(0.8)", opacity: "1" },
+          "100%": { transform: "scale(2)", opacity: "0" },
+        },
+        "bounce-mini": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -152,12 +165,18 @@ export default {
         "count-up": "count-up 2s ease-out forwards",
         tilt: "tilt 10s ease-in-out infinite",
         shimmer: "shimmer 2s infinite linear",
+        "spin-slow": "spin-slow 15s linear infinite",
+        "ripple": "ripple 1.5s ease-out infinite",
+        "bounce-mini": "bounce-mini 2s infinite ease-in-out",
       },
       boxShadow: {
         glass: "0 4px 30px rgba(0, 0, 0, 0.1)",
         hover: "0 10px 40px -15px rgba(0, 0, 0, 0.15)",
         card: "0 7px 20px rgba(0, 0, 0, 0.05)",
         "silver-glow": "0 0 15px rgba(159, 158, 161, 0.7)",
+        "color-glow": "0 0 20px rgba(245, 130, 32, 0.4)",
+        "neon": "0 0 5px theme('colors.blue.400'), 0 0 20px theme('colors.blue.600')",
+        "inner-glow": "inset 0 0 20px rgba(255, 255, 255, 0.3)",
       },
       backdropBlur: {
         glass: "blur(10px)",
@@ -167,10 +186,19 @@ export default {
         "hero-gradient": "linear-gradient(135deg, #303030 0%, #505050 100%)",
         "card-gradient": "linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05))",
         "silver-shine": "linear-gradient(90deg, transparent, rgba(159, 158, 161, 0.3), transparent)",
+        "glass-gradient": "linear-gradient(120deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1))",
+        "orange-shine": "linear-gradient(90deg, transparent, rgba(245, 130, 32, 0.3), transparent)",
       },
       // Add custom skew transform
       skew: {
         '45': '45deg',
+      },
+      transitionDelay: {
+        '250': '250ms',
+        '350': '350ms',
+        '450': '450ms',
+        '550': '550ms',
+        '600': '600ms',
       },
     },
   },

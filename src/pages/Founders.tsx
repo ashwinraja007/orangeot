@@ -281,7 +281,8 @@ const Founders = () => {
       <Footer />
       
       {/* Custom CSS for animations */}
-      <style jsx="true">{`
+      <style>
+        {`
         .animate-on-scroll {
           opacity: 0;
           transform: translateY(20px);
@@ -322,7 +323,8 @@ const Founders = () => {
         .animate-pulse-slow {
           animation: pulse-slow 4s ease-in-out infinite;
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };

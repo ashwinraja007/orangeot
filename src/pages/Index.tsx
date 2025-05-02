@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -49,6 +50,7 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
+
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -99,7 +101,8 @@ const Index = () => {
     };
   }, []);
   
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section with Video and Auto-scrolling Logos */}
@@ -472,4 +475,135 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-on-scroll">
               
-              <h2 className="font-heading font-bold md
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">About Us</h2>
+              
+              <p className="text-gray-600 mb-6 text-lg">
+                Orange Office Technologies is a leading provider of specialized back-office solutions for the logistics and freight forwarding industry.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-orange-100 p-3 rounded-2xl text-orange-600">
+                    <Globe className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-2 text-gray-800">Global Reach</h3>
+                    <p className="text-gray-600">
+                      With clients across the globe, we deliver seamless operations support internationally.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="bg-orange-100 p-3 rounded-2xl text-orange-600">
+                    <Users className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-2 text-gray-800">Expert Team</h3>
+                    <p className="text-gray-600">
+                      Our team of industry veterans brings decades of combined experience in logistics and technology.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="bg-orange-100 p-3 rounded-2xl text-orange-600">
+                    <Shield className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-2 text-gray-800">Trusted Solutions</h3>
+                    <p className="text-gray-600">
+                      We've built our reputation on reliability, security, and exceptional service delivery.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8">
+                <Button asChild className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl">
+                  <Link to="/about" className="flex items-center gap-2">
+                    Learn More About Us
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            
+            <div className="order-1 lg:order-2 animate-on-scroll">
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-4">
+                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
+                      <img 
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
+                        alt="Team meeting" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500 translate-y-8">
+                      <img 
+                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
+                        alt="Office space" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4 translate-y-12">
+                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
+                      <img 
+                        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
+                        alt="Technology solutions" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500">
+                      <img 
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
+                        alt="Team collaboration" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-orange-400/30 to-amber-300/30 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-amber-300/20 to-orange-400/20 rounded-full blur-3xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-gradient-to-r from-orange-500 to-amber-500 text-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-white opacity-5 rounded-full"></div>
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-white opacity-5 rounded-full"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">Ready to Transform Your Logistics Operations?</h2>
+            <p className="text-white/90 text-lg mb-8 max-w-3xl mx-auto">
+              Partner with Orange Office Technologies for comprehensive back-office solutions that will streamline your operations and drive growth.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100 rounded-xl border-0">
+                <Link to="/contact">Contact Us Today</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 rounded-xl">
+                <Link to="/services">Explore Our Services</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default Index;

@@ -555,14 +555,14 @@ const Index = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden bg-slate-100">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-500"></div>
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight text-white">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight text-zinc-950">
               Ready to Transform Your Logistics Operations?
             </h2>
             

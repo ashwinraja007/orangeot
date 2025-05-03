@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -419,4 +420,77 @@ const Index = () => {
               <div className="relative w-full h-full flex items-center justify-center">
                 <div className="absolute inset-0 opacity-20">
                   <svg viewBox="0 0 1026 626" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M1025.53 620.536C1017.53 618.059 1009.12 615.091 999.272 610.864C984.421 604.563 968.15 599.236 951.808 593.892C850.733 559.965 744.941 533.436 641.504 535.187C624.533 535.54 607.491 527.022 590.586 517.533C572.875 507.572 558.25 491.338 546.6 473.223C530.065 447.99 519.436 417.987 516.649 387.224C511.761 337.098 530.784 286.212 529.246 235.853C528.33 205.721 513.998 173.939 491.258 156.543C470.104 140.377 440.518 138.253 414.091 145.184C351.964 160.189 298.664 206.47 279.23 268.974C270.465 296.397 267.498 326.403 255.329 352.708C239.81 386.167 209.238 405.734 179.973 424.119C151.81 441.801 122.491 458.255 99.0879 482.359C77.3357 504.75 60.8865 532.559 50.5402 562.671C40.1938 592.783 36.4024 624.925 40.3058 625.459C73.9050 629.988 118.39 608.537 151.913 590.196C179.233 575.263 207.193 561.404 235.704 548.653C301.788 520.285 371.038 498.026 442.083 485.081C490.754 476.453 545.584 472.466 593.914 458.09C607.256 453.676 619.263 444.994 633.075 440.76C650.112 43
+                    <path fillRule="evenodd" clipRule="evenodd" d="M1025.53 620.536C1017.53 618.059 1009.12 615.091 999.272 610.864C984.421 604.563 968.15 599.236 951.808 593.892C850.733 559.965 744.941 533.436 641.504 535.187C624.533 535.54 607.491 527.022 590.586 517.533C572.875 507.572 558.25 491.338 546.6 473.223C530.065 447.99 519.436 417.987 516.649 387.224C511.761 337.098 530.784 286.212 529.246 235.853C528.33 205.721 513.998 173.939 491.258 156.543C470.104 140.377 440.518 138.253 414.091 145.184C351.964 160.189 298.664 206.47 279.23 268.974C270.465 296.397 267.498 326.403 255.329 352.708C239.81 386.167 209.238 405.734 179.973 424.119C151.81 441.801 122.491 458.255 99.0879 482.359C77.3357 504.75 60.8865 532.559 50.5402 562.671C40.1938 592.783 36.4024 624.925 40.3058 625.459C73.9050 629.988 118.39 608.537 151.913 590.196C179.233 575.263 207.193 561.404 235.704 548.653C301.788 520.285 371.038 498.026 442.083 485.081C490.754 476.453 545.584 472.466 593.914 458.09C607.256 453.676 619.263 444.994 633.075 440.76" />
+                  </svg>
+                </div>
+
+                {/* World locations */}
+                <div className="relative z-10 w-full h-full flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4">Global Presence</h3>
+                    <p className="text-lg text-white/70 max-w-xl">
+                      Our solutions empower logistics companies across North America, Europe, 
+                      Asia, and Australia - creating a seamless global network.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Testimonials with fixed map section */}
+          <div className="text-center mb-12">
+            <h3 className="font-heading font-bold text-3xl md:text-4xl mb-2 text-gradient bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 bg-clip-text text-transparent">
+              Client Testimonials
+            </h3>
+            <p className="text-gray-600 max-w-xl mx-auto">
+              Hear what our clients have to say about working with us
+            </p>
+          </div>
+          
+          <div className="pt-4">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-4">
+                    <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-500 h-full">
+                      <CardContent className="pt-6">
+                        <div className="text-center mb-4">
+                          <Quote className="h-8 w-8 text-orange-400 mx-auto mb-4" />
+                          <p className="text-gray-700 mb-6">
+                            "{testimonial.content}"
+                          </p>
+                          <div className="flex items-center justify-center mb-2">
+                            <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
+                              <img
+                                src={testimonial.avatar}
+                                alt={testimonial.author}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                            <div className="text-left">
+                              <p className="font-medium text-gray-900">{testimonial.author}</p>
+                              <p className="text-sm text-gray-500">{testimonial.position}, {testimonial.company}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center mt-6 gap-2">
+                <CarouselPrevious className="relative inset-0 translate-x-0 translate-y-0 bg-white/80 backdrop-blur-sm hover:bg-white/90" />
+                <CarouselNext className="relative inset-0 translate-x-0 translate-y-0 bg-white/80 backdrop-blur-sm hover:bg-white/90" />
+              </div>
+            </Carousel>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Index;

@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -67,7 +68,16 @@ const Founders = () => {
                         }, {
                           icon: Twitter,
                           label: "Twitter"
-                        }].map((social, index) => {})}
+                        }].map((social, index) => (
+                          <a 
+                            key={index}
+                            href="#" 
+                            className="w-8 h-8 flex items-center justify-center bg-white/20 hover:bg-white/40 rounded-full transition-colors"
+                            aria-label={social.label}
+                          >
+                            <social.icon className="h-4 w-4 text-white" />
+                          </a>
+                        ))}
                         </div>
                       </div>
                     </div>

@@ -13,102 +13,96 @@ const SalesSupport = () => {
       <Header />
       
       {/* Hero Section */}
-      <GradientBackground 
-        className="pt-32 pb-16 min-h-[50vh] flex items-center" 
-        variant="secondary" 
-        intensity="medium"
-        animated={true}
-      >
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-1">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
-                  <Users className="h-5 w-5" />
-                  <span className="font-medium">Sales Support</span>
-                </div>
-                <h1 className="font-heading font-bold text-3xl md:text-5xl mb-6 animate-fade-in">
-                  Boost Your Sales Performance
-                </h1>
-                <p className="text-lg text-gray-600 mb-8">
-                  Our Sales Support Desk functions as an extension of your team, offering centralized support to manage leads, client inquiries, and CRM tasks.
-                </p>
-                <Button className="mt-2" asChild>
-                  <Link to="/contact">Get Started</Link>
-                </Button>
-              </div>
-              <div className="flex-1">
-                <img 
-                  src="/2.png" 
-                  alt="Sales Support Services" 
-                  className="rounded-lg shadow-2xl object-cover w-full transform hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            </div>
+<GradientBackground 
+  className="pt-32 pb-16 min-h-[50vh] flex items-center justify-center" 
+  variant="secondary" 
+  intensity="medium"
+  animated={true}
+>
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      <div className="flex flex-col items-center gap-8">
+        <div className="flex-1 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
+            <Users className="h-5 w-5" />
+            <span className="font-medium">Sales Support</span>
           </div>
+          <h1 className="font-heading font-bold text-3xl md:text-5xl mb-6 animate-fade-in">
+            Boost Your Sales Performance
+          </h1>
+          <p className="text-lg text-gray-600 mb-8">
+            Our Sales Support Desk functions as an extension of your team, offering centralized support to manage leads, client inquiries, and CRM tasks.
+          </p>
+          <Button className="mt-2" asChild>
+            <Link to="/contact">Get Started</Link>
+          </Button>
         </div>
-      </GradientBackground>
+      </div>
+    </div>
+  </div>
+</GradientBackground>
 
-      {/* Key Benefits Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Key Benefits</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              How our sales support services can transform your business operations
+{/* Key Benefits Section */}
+<section className="py-20">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Key Benefits</h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        How our sales support services can transform your business operations
+      </p>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        {
+          icon: <Target className="h-12 w-12 text-primary" />,
+          title: "Targeted Lead Generation",
+          description: "Identify and qualify potential customers based on your specific business criteria and industry focus."
+        },
+        {
+          icon: <MessageSquare className="h-12 w-12 text-primary" />,
+          title: "Consistent Communication",
+          description: "Maintain regular contact with prospects and customers through multiple channels to build relationships."
+        },
+        {
+          icon: <CheckCircle className="h-12 w-12 text-primary" />,
+          title: "Qualified Pipeline",
+          description: "Focus your sales team on high-quality leads that are more likely to convert into paying customers."
+        },
+        {
+          icon: <Globe className="h-12 w-12 text-primary" />,
+          title: "Global Coverage",
+          description: "Support across different time zones to ensure continuous engagement with your international clients."
+        },
+        {
+          icon: <BarChart className="h-12 w-12 text-primary" />,
+          title: "Performance Analytics",
+          description: "Detailed reporting and analytics to track progress and optimize your sales strategy."
+        },
+        {
+          icon: <Users className="h-12 w-12 text-primary" />,
+          title: "Cost Efficiency",
+          description: "Reduce operational costs while maintaining high-quality sales support functions."
+        },
+      ].map((benefit, index) => (
+        <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+          <CardContent className="p-8">
+            <div className="mb-6 inline-block p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+              {benefit.icon}
+            </div>
+            <h3 className="font-heading font-bold text-xl mb-4 group-hover:text-primary transition-colors">
+              {benefit.title}
+            </h3>
+            <p className="text-gray-600">
+              {benefit.description}
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Target className="h-12 w-12 text-primary" />,
-                title: "Targeted Lead Generation",
-                description: "Identify and qualify potential customers based on your specific business criteria and industry focus."
-              },
-              {
-                icon: <MessageSquare className="h-12 w-12 text-primary" />,
-                title: "Consistent Communication",
-                description: "Maintain regular contact with prospects and customers through multiple channels to build relationships."
-              },
-              {
-                icon: <CheckCircle className="h-12 w-12 text-primary" />,
-                title: "Qualified Pipeline",
-                description: "Focus your sales team on high-quality leads that are more likely to convert into paying customers."
-              },
-              {
-                icon: <Globe className="h-12 w-12 text-primary" />,
-                title: "Global Coverage",
-                description: "Support across different time zones to ensure continuous engagement with your international clients."
-              },
-              {
-                icon: <BarChart className="h-12 w-12 text-primary" />,
-                title: "Performance Analytics",
-                description: "Detailed reporting and analytics to track progress and optimize your sales strategy."
-              },
-              {
-                icon: <Users className="h-12 w-12 text-primary" />,
-                title: "Cost Efficiency",
-                description: "Reduce operational costs while maintaining high-quality sales support functions."
-              },
-            ].map((benefit, index) => (
-              <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
-                <CardContent className="p-8">
-                  <div className="mb-6 inline-block p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="font-heading font-bold text-xl mb-4 group-hover:text-primary transition-colors">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Process Section */}
       <section className="py-20 bg-gradient-to-br from-accent/10 to-background">

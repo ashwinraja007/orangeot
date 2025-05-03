@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -50,7 +49,6 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
-
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -100,9 +98,7 @@ const Index = () => {
       }
     };
   }, []);
-  
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section - Updated with a single office building image */}
@@ -114,8 +110,8 @@ const Index = () => {
           </div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] transform -translate-x-1/3 translate-y-1/4">
             <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 transform -rotate-45 rounded-[40%] animate-float" style={{
-              animationDelay: "2s"
-            }}></div>
+            animationDelay: "2s"
+          }}></div>
           </div>
         </div>
 
@@ -150,14 +146,10 @@ const Index = () => {
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
               {/* Hero Image - Single office building image */}
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
-                <img 
-                  src="/office.png" 
-                  alt="Orange Office Technologies Building" 
-                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
-                />
+                <img src="/office.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/30 to-transparent mix-blend-multiply"></div>
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-lg md:text-xl font-bold mb-1">Our Headquarters</h3>
+                  
                   <p className="text-sm md:text-base text-white/80">Where innovation meets expertise</p>
                 </div>
               </div>
@@ -245,8 +237,8 @@ const Index = () => {
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
         
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L60,4C120,8,240,16,360,18.7C480,21,600,19,720,13.3C840,8,960,0,1080,0C1200,0,1320,8,1380,12L1440,16L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         
@@ -261,57 +253,52 @@ const Index = () => {
           {/* Services grid with box layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[{
-              icon: FileCheck,
-              title: "Documentation",
-              description: "Expert documentation services including invoices, credit notes, and job profit statements.",
-              image: "/1.png",
-              color: "from-blue-500 to-cyan-400",
-              link: "/services/documentation"
-            }, {
-              icon: Users,
-              title: "Sales Support",
-              description: "Centralized sales support desk for lead management and customer relationships.",
-              image: "/2.png",
-              color: "from-amber-500 to-orange-400",
-              link: "/services/sales-support"
-            }, {
-              icon: Globe,
-              title: "Digital Marketing",
-              description: "Comprehensive digital marketing solutions to boost your online presence.",
-              image: "/3.png",
-              color: "from-green-500 to-emerald-400",
-              link: "/services/digital-marketing"
-            }, {
-              icon: Building2,
-              title: "Accounts Management",
-              description: "Professional accounting services for trade and non-trade transactions.",
-              image: "/4.png",
-              color: "from-purple-500 to-violet-400",
-              link: "/services/accounts"
-            }, {
-              icon: Headset,
-              title: "Customer Service",
-              description: "Dedicated customer service team for bookings and nominations.",
-              image: "/5.png",
-              color: "from-pink-500 to-rose-400",
-              link: "/services/customer-service"
-            }, {
-              icon: Shield,
-              title: "Software Solutions",
-              description: "Custom software development following industry best practices.",
-              image: "/6.png",
-              color: "from-cyan-500 to-blue-400",
-              link: "/services/software"
-            }].map((service, index) => (
-              <Card key={index} className="group border-none rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white h-full" style={{
-                animationDelay: `${index * 100}ms`
-              }}>
+            icon: FileCheck,
+            title: "Documentation",
+            description: "Expert documentation services including invoices, credit notes, and job profit statements.",
+            image: "/1.png",
+            color: "from-blue-500 to-cyan-400",
+            link: "/services/documentation"
+          }, {
+            icon: Users,
+            title: "Sales Support",
+            description: "Centralized sales support desk for lead management and customer relationships.",
+            image: "/2.png",
+            color: "from-amber-500 to-orange-400",
+            link: "/services/sales-support"
+          }, {
+            icon: Globe,
+            title: "Digital Marketing",
+            description: "Comprehensive digital marketing solutions to boost your online presence.",
+            image: "/3.png",
+            color: "from-green-500 to-emerald-400",
+            link: "/services/digital-marketing"
+          }, {
+            icon: Building2,
+            title: "Accounts Management",
+            description: "Professional accounting services for trade and non-trade transactions.",
+            image: "/4.png",
+            color: "from-purple-500 to-violet-400",
+            link: "/services/accounts"
+          }, {
+            icon: Headset,
+            title: "Customer Service",
+            description: "Dedicated customer service team for bookings and nominations.",
+            image: "/5.png",
+            color: "from-pink-500 to-rose-400",
+            link: "/services/customer-service"
+          }, {
+            icon: Shield,
+            title: "Software Solutions",
+            description: "Custom software development following industry best practices.",
+            image: "/6.png",
+            color: "from-cyan-500 to-blue-400",
+            link: "/services/software"
+          }].map((service, index) => <Card key={index} className="group border-none rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white h-full" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="relative aspect-square overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10"></div>
                   <div className="absolute top-4 right-4">
                     <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}>
@@ -327,8 +314,7 @@ const Index = () => {
                     </Link>
                   </div>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -336,8 +322,8 @@ const Index = () => {
       {/* Founder Section - Updated to be more attractive */}
       <section className="py-20 bg-gradient-to-br from-amber-50 to-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,32L120,26.7C240,21,480,11,720,10.7C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
         </svg>
         
@@ -361,11 +347,7 @@ const Index = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2">
                   {/* Founder image */}
                   <div className="relative overflow-hidden aspect-square md:aspect-auto">
-                    <img 
-                      src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" 
-                      alt="Mr. Sudhir KU" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-6 text-white">
                       <h3 className="text-2xl font-bold mb-1">Mr. Sudhir KU</h3>
@@ -390,11 +372,9 @@ const Index = () => {
                     </p>
                     
                     <div className="flex flex-wrap gap-3 mb-6">
-                      {["Visionary Leader", "Industry Pioneer", "Global Expertise", "Tech Innovation"].map((tag, index) => (
-                        <span key={index} className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">
+                      {["Visionary Leader", "Industry Pioneer", "Global Expertise", "Tech Innovation"].map((tag, index) => <span key={index} className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">
                           {tag}
-                        </span>
-                      ))}
+                        </span>)}
                     </div>
                     
                     <Button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-xl shadow-md">
@@ -414,8 +394,8 @@ const Index = () => {
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-orange-50" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L40,4C80,8,160,16,240,18.7C320,21,400,19,480,13.3C560,8,640,0,720,0C800,0,880,8,960,12C1040,16,1120,16,1200,12C1280,8,1360,0,1400,-4L1440,-8L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
         </svg>
         
@@ -489,8 +469,8 @@ const Index = () => {
       {/* Enhanced Stats Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
         
@@ -505,24 +485,27 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-on-scroll">
-            {[
-              { value: "10+", label: "Years of Excellence" },
-              { value: "200+", label: "Satisfied Clients" },
-              { value: "5", label: "Global Locations" },
-              { value: "24/7", label: "Customer Support" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            {[{
+            value: "10+",
+            label: "Years of Excellence"
+          }, {
+            value: "200+",
+            label: "Satisfied Clients"
+          }, {
+            value: "5",
+            label: "Global Locations"
+          }, {
+            value: "24/7",
+            label: "Customer Support"
+          }].map((stat, index) => <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="text-3xl md:text-4xl font-bold mb-2 text-gradient bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">{stat.value}</div>
                 <p className="text-gray-600">{stat.label}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

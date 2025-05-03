@@ -104,12 +104,8 @@ export const Footer = () => {
               © {new Date().getFullYear()} Orange Office Technologies Pvt Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <Link to="/privacy-policy" className="text-sm text-gray-500 hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-sm text-gray-500 hover:text-white transition-colors">
-                Terms of Service
-              </Link>
+              
+              
             </div>
           </div>
         </div>

@@ -70,7 +70,7 @@ const SalesSupport = () => {
             title: "Cost Efficiency",
             description: "Reduce operational costs while maintaining high-quality sales support functions."
           }].map((benefit, index) => <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
-          <CardContent className="p-8 bg-slate-200">
+          <CardContent className="p-8 bg-slate-50">
             <div className="mb-6 inline-block p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
               {benefit.icon}
             </div>

@@ -266,28 +266,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-orange-50/50">
-        <div className="container mx-auto px-4">
-          <div className={cn("max-w-4xl mx-auto transform transition-all duration-700 delay-400", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
-            <div className="text-center mb-12">
-              <h2 className="font-heading font-bold text-3xl mb-4 text-gray-800">Frequently Asked Questions</h2>
-              <p className="text-gray-600">Find answers to common questions about our services</p>
-            </div>
-            
-            <div className="space-y-4">
-              {faqs.map((faq, index) => <Card key={index} className="border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
-                  <CardContent className="p-6">
-                    <h3 className="font-medium text-lg mb-2 text-gray-800 flex items-start">
-                      <ChevronRight className="h-5 w-5 mr-2 text-orange-500 flex-shrink-0" />
-                      {faq.question}
-                    </h3>
-                    <p className="text-gray-600 pl-7">{faq.answer}</p>
-                  </CardContent>
-                </Card>)}
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer />
     </div>;

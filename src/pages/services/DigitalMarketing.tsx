@@ -43,38 +43,39 @@ const DigitalMarketing = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
-      <GradientBackground 
-        className="pt-32 pb-20 min-h-[60vh] flex items-center" 
-        variant="secondary" 
-        intensity="medium"
-        animated={true}
+     {/* Hero Section */}
+<GradientBackground 
+  className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
+  variant="secondary" 
+  intensity="medium"
+  animated={true}
+>
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto text-center">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-600 mb-6">
+        <Globe className="h-4 w-4" />
+        <span className="font-medium">Digital Marketing</span>
+      </div>
+      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
+        Boost Your Online Presence
+      </h1>
+      <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
+        Comprehensive digital marketing solutions designed specifically for freight forwarding and logistics businesses
+      </p>
+      <Button 
+        size="lg" 
+        className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" 
+        asChild
       >
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-600 mb-6">
-              <Globe className="h-4 w-4" />
-              <span className="font-medium">Digital Marketing</span>
-            </div>
-            <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
-              Boost Your Online Presence
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
-              Comprehensive digital marketing solutions designed specifically for freight forwarding and logistics businesses
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl" 
-              asChild
-            >
-              <Link to="/contact" className="flex items-center gap-2">
-                Get Started
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </GradientBackground>
+        <Link to="/contact" className="flex items-center gap-2">
+          Get Started
+          <ArrowRight className="h-5 w-5" />
+        </Link>
+      </Button>
+    </div>
+  </div>
+</GradientBackground>
+
 
       {/* Service Overview */}
       <section className="py-20 bg-white">

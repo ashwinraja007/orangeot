@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -99,6 +100,7 @@ const Index = () => {
       }
     };
   }, []);
+  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -484,4 +486,24 @@ const Index = () => {
                 </Link>
               </Button>
             </div>
-            <div className="order-1 lg:order-2 animate-on-scroll
+            <div className="order-1 lg:order-2 animate-on-scroll">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
+                  alt="Office Environment" 
+                  className="w-full h-96 object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6 text-white">
+                  <h3 className="text-xl font-bold mb-2">Modern Work Environment</h3>
+                  <p className="text-white/80">State-of-the-art facilities for our global operations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>;
+};
+
+export default Index;

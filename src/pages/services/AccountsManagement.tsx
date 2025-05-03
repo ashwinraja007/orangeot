@@ -44,38 +44,38 @@ const AccountsManagement = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
-      <GradientBackground 
-        className="pt-32 pb-20 min-h-[60vh] flex items-center" 
-        variant="primary" 
-        intensity="medium"
-        animated={true}
+{/* Hero Section */}
+<GradientBackground 
+  className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
+  variant="primary" 
+  intensity="medium"
+  animated={true}
+>
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto text-center">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-600 mb-6">
+        <Building2 className="h-4 w-4" />
+        <span className="font-medium">Accounts Management</span>
+      </div>
+      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
+        Professional Accounting Services
+      </h1>
+      <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
+        Streamline your financial operations with our comprehensive accounting services
+      </p>
+      <Button 
+        size="lg" 
+        className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" 
+        asChild
       >
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-600 mb-6">
-              <Building2 className="h-4 w-4" />
-              <span className="font-medium">Accounts Management</span>
-            </div>
-            <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
-              Professional Accounting Services
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
-              Streamline your financial operations with our comprehensive accounting services
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl" 
-              asChild
-            >
-              <Link to="/contact" className="flex items-center gap-2">
-                Consult Our Experts
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </GradientBackground>
+        <Link to="/contact" className="flex items-center gap-2">
+          Consult Our Experts
+          <ArrowRight className="h-5 w-5" />
+        </Link>
+      </Button>
+    </div>
+  </div>
+</GradientBackground>
 
       {/* Service Overview */}
       <section className="py-20 bg-white">

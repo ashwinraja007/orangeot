@@ -75,6 +75,13 @@ export const Footer = () => {
                   Chennai: 600102
                 </span>
               </li>
+              <li className="flex items-start space-x-3 text-sm text-gray-400 mt-3">
+                <MapPin size={20} className="text-primary flex-shrink-0 mt-1" />
+                <span>
+                  "New Wing" 453, 100 Feet Road, Velachery,
+                  Chennai: 600042
+                </span>
+              </li>
               <li className="flex items-center space-x-3 text-sm text-gray-400">
                 <Phone size={20} className="text-primary flex-shrink-0" />
                 <span>+91 44 4796 5437</span>
@@ -101,6 +108,21 @@ export const Footer = () => {
               <Button className="w-full">Subscribe</Button>
             </div>
           </div>
+        </div>
+        
+        {/* Google Map */}
+        <div className="w-full mb-12 rounded-xl overflow-hidden shadow-lg">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1545266236967!2d80.2226762757666!3d13.089391387236867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52642e68adc059%3A0x44809bfe043deede!2sOrange%20Office%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1746264921346!5m2!1sen!2sin" 
+            width="100%" 
+            height="400" 
+            style={{border: 0}} 
+            allowFullScreen={true} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Orange Office Technologies Location"
+            className="rounded-xl"
+          />
         </div>
 
         {/* Bottom Bar */}

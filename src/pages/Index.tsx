@@ -101,7 +101,7 @@ const Index = () => {
   return <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Enhanced Hero Section - Updated with a single office building image */}
+      {/* Enhanced Hero Section - Updated with a properly visible office building image */}
       <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-to-br from-[#FDF7F3] to-white">
         {/* Glass Geometric Pattern Overlays */}
         <div className="absolute inset-0 overflow-hidden">
@@ -144,12 +144,15 @@ const Index = () => {
               </div>
             </div>
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
-              {/* Hero Image - Single office building image */}
+              {/* Hero Image - Single office building image with improved visibility */}
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
-                <img src="/office.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
+                <img 
+                  src="/office.png" 
+                  alt="Orange Office Technologies Building" 
+                  className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" 
+                />
                 <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/30 to-transparent mix-blend-multiply"></div>
                 <div className="absolute bottom-6 left-6 text-white">
-                  
                   <p className="text-sm md:text-base text-white/80">Where innovation meets expertise</p>
                 </div>
               </div>
@@ -466,7 +469,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Stats Section */}
+      {/* Enhanced Stats Section with Testimonials */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
         transform: "translateY(-1px)"
@@ -478,34 +481,4 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 bg-clip-text text-transparent">Our Global Impact</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Delivering excellence in logistics services across continents
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-on-scroll">
-            {[{
-            value: "10+",
-            label: "Years of Excellence"
-          }, {
-            value: "200+",
-            label: "Satisfied Clients"
-          }, {
-            value: "5",
-            label: "Global Locations"
-          }, {
-            value: "24/7",
-            label: "Customer Support"
-          }].map((stat, index) => <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="text-3xl md:text-4xl font-bold mb-2 text-gradient bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">{stat.value}</div>
-                <p className="text-gray-600">{stat.label}</p>
-              </div>)}
-          </div>
-        </div>
-      </section>
-      
-      <Footer />
-    </div>;
-};
-export default Index;
+            <h2 className="font-

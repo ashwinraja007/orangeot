@@ -1,279 +1,281 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { GradientBackground } from "@/components/GradientBackground";
-import { FileCheck, ArrowRight, CheckCircle, Shield, Clock } from "lucide-react";
+import { ArrowRight, CheckCircle, FileCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+import { GradientBackground } from "@/components/GradientBackground";
 
 const Documentation = () => {
-  const documentTypes = [
-    "Bill of Lading",
-    "Commercial Invoices",
-    "Packing Lists",
-    "Certificates of Origin",
-    "Shipping Instructions",
-    "Customs Documentation",
-    "Export/Import Licenses",
-    "Insurance Certificates"
-  ];
-
-  const benefits = [
-    {
-      icon: <CheckCircle className="h-10 w-10 text-primary" />,
-      title: "Accuracy & Compliance",
-      description: "Our expert team ensures all documentation meets international regulations and standards."
-    },
-    {
-      icon: <Clock className="h-10 w-10 text-primary" />,
-      title: "Time Efficiency",
-      description: "Reduce processing time by up to 40% with our streamlined document handling processes."
-    },
-    {
-      icon: <Shield className="h-10 w-10 text-primary" />,
-      title: "Risk Mitigation",
-      description: "Minimize compliance risks and potential penalties with professionally prepared documentation."
-    }
-  ];
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section with centered content */}
       <GradientBackground 
-        className="pt-32 pb-16 min-h-[50vh] flex items-center" 
+        className="pt-28 pb-16 min-h-[60vh] flex items-center" 
         variant="primary" 
-        intensity="medium"
+        intensity="medium" 
         animated={true}
       >
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-1">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
-                  <FileCheck className="h-5 w-5" />
-                  <span className="font-medium">Documentation</span>
-                </div>
-                <h1 className="font-heading font-bold text-3xl md:text-5xl mb-6 animate-fade-in">
-                  Expert Documentation Services
-                </h1>
-                <p className="text-lg text-gray-600 mb-8">
-                  Our skilled team ensures accurate and timely preparation of all essential shipping and logistics documents, helping you reduce compliance risks.
-                </p>
-                <Button className="mt-2" asChild>
-                  <Link to="/contact">Get Started</Link>
-                </Button>
-              </div>
-              <div className="flex-1">
-                <img 
-                  src="/1.png" 
-                  alt="Documentation Services" 
-                  className="rounded-lg shadow-2xl object-cover w-full transform hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
+              <FileCheck className="w-5 h-5" />
+              <span className="font-medium">Documentation Services</span>
             </div>
+            <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
+              Expert Documentation Services
+            </h1>
+            <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
+              Accurate and timely preparation of all essential shipping and logistics documents
+            </p>
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Link to="/contact" className="flex items-center gap-2">
+                Get Started
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </GradientBackground>
 
-      {/* Document Types Section */}
-      <section className="py-20">
+      {/* Main Content Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Documentation We Handle</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Comprehensive document processing for all your freight forwarding and logistics needs
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="font-heading text-3xl font-bold mb-6">Streamline Your Documentation Process</h2>
+              <p className="text-gray-600 mb-4">
+                Our documentation services ensure accurate and timely preparation of all essential shipping documents, 
+                helping freight forwarders and logistics companies maintain smooth operations and regulatory compliance.
               </p>
+              <p className="text-gray-600 mb-6">
+                With our expert team handling your documentation needs, you can focus on core business activities 
+                while ensuring all paperwork is processed efficiently and accurately.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Reduce documentation errors and delays",
+                  "Ensure compliance with international regulations",
+                  "Improve operational efficiency",
+                  "Decrease administrative burden on your team"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button className="bg-primary hover:bg-primary/90">
+                <Link to="/contact" className="flex items-center gap-2">
+                  Request a Consultation
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
             </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {documentTypes.map((doc, index) => (
-                <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 bg-white overflow-hidden">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <FileCheck className="h-8 w-8 text-primary" />
-                    </div>
-                    <h3 className="font-medium text-lg">{doc}</h3>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="relative">
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=800&q=80" 
+                  alt="Documentation Services" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-multiply"></div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Features */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="font-heading text-3xl font-bold text-center mb-12">Our Documentation Services Include</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Bill of Lading Preparation",
+                description: "Accurate preparation and processing of Bills of Lading for all shipments."
+              },
+              {
+                title: "Commercial Invoices",
+                description: "Creation of detailed commercial invoices meeting international standards."
+              },
+              {
+                title: "Packing Lists",
+                description: "Comprehensive packing lists documenting all shipped items."
+              },
+              {
+                title: "Customs Documentation",
+                description: "Preparation of all required customs documentation for smooth clearance."
+              },
+              {
+                title: "Certificate of Origin",
+                description: "Processing certificates of origin and other trade documents."
+              },
+              {
+                title: "Dangerous Goods Documentation",
+                description: "Specialized documentation for hazardous materials and dangerous goods."
+              }
+            ].map((feature, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6">
+                  <h3 className="font-heading font-bold text-xl mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-br from-accent/10 to-background">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Our Documentation Process</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                A systematic approach to ensure accuracy and efficiency
-              </p>
-            </div>
-            
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20 hidden md:block"></div>
-              
-              {[
-                {
-                  stage: "01",
-                  title: "Information Collection",
-                  description: "We gather all necessary shipment details and requirements from clients and partners.",
-                  align: "right"
-                },
-                {
-                  stage: "02",
-                  title: "Document Preparation",
-                  description: "Our experts prepare all required documentation according to international standards and regulations.",
-                  align: "left"
-                },
-                {
-                  stage: "03",
-                  title: "Quality Check",
-                  description: "Rigorous verification process to ensure accuracy and compliance with all requirements.",
-                  align: "right"
-                },
-                {
-                  stage: "04",
-                  title: "Secure Delivery",
-                  description: "Timely and secure transmission of documents to all relevant parties.",
-                  align: "left"
-                }
-              ].map((step, index) => (
-                <div key={index} className={`flex mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col`}>
-                  <div className="md:w-1/2 p-4 relative">
-                    <div className={`bg-white shadow-xl p-8 rounded-xl ${step.align === 'left' ? 'md:mr-8' : 'md:ml-8'}`}>
-                      <div className="inline-block bg-primary text-white text-2xl font-bold px-4 py-2 rounded-lg mb-4">
-                        {step.stage}
-                      </div>
-                      <h3 className="font-heading font-bold text-xl mb-3">{step.title}</h3>
-                      <p className="text-gray-600">{step.description}</p>
-                    </div>
-                    {/* Timeline dot */}
-                    <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-white hidden md:block"></div>
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl font-bold mb-4">Our Documentation Process</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We follow a streamlined process to ensure accuracy and efficiency in all documentation services
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            {[
+              {
+                step: "1",
+                title: "Information Collection",
+                description: "We gather all necessary shipment details from your team or systems."
+              },
+              {
+                step: "2",
+                title: "Document Preparation",
+                description: "Our experts prepare all required documentation according to regulations."
+              },
+              {
+                step: "3",
+                title: "Quality Check",
+                description: "Multiple verification steps ensure accuracy and compliance."
+              },
+              {
+                step: "4",
+                title: "Delivery & Filing",
+                description: "Documents are delivered to relevant parties and properly filed."
+              }
+            ].map((step, index) => (
+              <div key={index} className="flex mb-8 last:mb-0">
+                <div className="mr-6">
+                  <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl">
+                    {step.step}
                   </div>
-                  <div className="md:w-1/2"></div>
+                  {index < 3 && <div className="h-full w-0.5 bg-gray-200 mx-auto mt-2"></div>}
                 </div>
-              ))}
-            </div>
+                <div className="bg-gray-50 rounded-xl p-6 flex-1 shadow-sm">
+                  <h3 className="font-heading font-bold text-xl mb-2">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20">
+      {/* Pricing Section */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Key Benefits</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                How our documentation services create value for your business
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
-                  <CardContent className="p-8 text-center">
-                    <div className="inline-block p-4 rounded-full bg-primary/10 mb-6 group-hover:bg-primary/20 transition-colors">
-                      {benefit.icon}
-                    </div>
-                    <h3 className="font-heading font-bold text-xl mb-4">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl font-bold mb-4">Flexible Pricing Options</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Choose the documentation service package that best fits your business needs
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* Case Study */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <Card className="border-none shadow-2xl overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="p-10 md:p-12">
-                    <div className="inline-block px-3 py-1 bg-primary/10 text-primary font-medium text-sm rounded mb-6">
-                      CASE STUDY
-                    </div>
-                    <h3 className="font-heading font-bold text-2xl mb-4">40% Faster Documentation Processing</h3>
-                    <p className="text-gray-600 mb-6">
-                      A global freight forwarding company struggling with documentation errors and delays partnered with us to overhaul their process.
-                    </p>
-                    <div className="space-y-4 mb-6">
-                      <div className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                        <p>Reduced documentation errors by 95%</p>
-                      </div>
-                      <div className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                        <p>Improved customer satisfaction scores by 42%</p>
-                      </div>
-                      <div className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                        <p>Eliminated costly customs delays and penalties</p>
-                      </div>
-                    </div>
-                    <Button variant="outline" size="sm" asChild>
-                      <Link to="/contact" className="flex items-center gap-2">
-                        Learn How We Can Help
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </div>
-                  <div className="hidden md:block">
-                    <img 
-                      src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" 
-                      alt="Documentation case study" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                name: "Basic",
+                price: "$X per document",
+                features: [
+                  "Standard documentation",
+                  "24-hour turnaround",
+                  "Email support",
+                  "Basic quality checks"
+                ]
+              },
+              {
+                name: "Professional",
+                price: "$Y per document",
+                features: [
+                  "All Basic features",
+                  "12-hour turnaround",
+                  "Priority support",
+                  "Advanced quality checks",
+                  "Document storage"
+                ],
+                highlighted: true
+              },
+              {
+                name: "Enterprise",
+                price: "Custom pricing",
+                features: [
+                  "All Professional features",
+                  "Custom turnaround times",
+                  "Dedicated account manager",
+                  "System integration",
+                  "Custom reporting"
+                ]
+              }
+            ].map((plan, index) => (
+              <Card 
+                key={index} 
+                className={`border-none ${plan.highlighted ? 'shadow-2xl ring-2 ring-primary' : 'shadow-lg'} hover:shadow-xl transition-all duration-300`}
+              >
+                <CardContent className="p-6">
+                  <h3 className="font-heading font-bold text-xl mb-2">{plan.name}</h3>
+                  <div className="text-2xl font-bold mb-4">{plan.price}</div>
+                  <ul className="space-y-3 mb-6">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button 
+                    className={plan.highlighted ? "bg-primary hover:bg-primary/90 w-full" : "bg-gray-800 hover:bg-gray-700 w-full"}
+                  >
+                    <Link to="/contact">Get Started</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <GradientBackground 
-        className="py-20" 
-        variant="primary" 
-        intensity="strong"
-        animated={true}
-      >
+      <section className="py-16 bg-gradient-to-r from-primary to-orange-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6">
-              Ready to Streamline Your Documentation Process?
-            </h2>
-            <p className="text-gray-600 mb-8 text-lg">
-              Our expert team is ready to help you reduce errors, ensure compliance, and save valuable time.
+            <h2 className="font-heading font-bold text-3xl mb-6">Ready to Streamline Your Documentation Process?</h2>
+            <p className="text-white/90 mb-8">
+              Contact us today to learn how our documentation services can help your business operate more efficiently.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="shadow-lg" asChild>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" asChild>
+                <Link to="/services">Explore Other Services</Link>
+              </Button>
+              <Button className="bg-white text-primary hover:bg-gray-100" asChild>
                 <Link to="/contact" className="flex items-center gap-2">
-                  Contact Us Today
+                  Contact Us Now
                   <ArrowRight className="h-5 w-5" />
                 </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/services">Explore Other Services</Link>
               </Button>
             </div>
           </div>
         </div>
-      </GradientBackground>
-
+      </section>
+      
       <Footer />
     </div>
   );

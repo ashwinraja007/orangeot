@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,9 +10,10 @@ import MapComponent from "@/components/MapComponent";
 import { useState, useEffect } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -22,25 +22,25 @@ const Contact = () => {
     subject: "",
     message: ""
   });
-  
+
   // Animation states
   const [isPageLoaded, setIsPageLoaded] = useState(false);
-  
   useEffect(() => {
     setIsPageLoaded(true);
-    
+
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form data submitted:", formData);
@@ -49,7 +49,7 @@ const Contact = () => {
     toast({
       title: "Message Sent Successfully!",
       description: "We'll get back to you as soon as possible.",
-      duration: 5000,
+      duration: 5000
     });
 
     // Reset form
@@ -64,57 +64,38 @@ const Contact = () => {
   };
 
   // Map locations for Chennai and Kochi offices - properly typed as [number, number] tuples
-  const officeLocations = [
-    {
-      title: "Chennai - Headquarters",
-      description: "KAIZEN, 2nd & 3rd Floor, Anna Nagar East",
-      coordinates: [80.2707, 13.0827] as [number, number],
-      timing: "Mon - Fri: 9:00 AM - 6:00 PM",
-      phone: "+91 44 4796 5437",
-      email: "info@orangeot.com"
-    }, 
-    {
-      title: "Kochi Office",
-      description: "No 34/656, Neelima, Toll Jn, Edappally",
-      coordinates: [76.3219, 9.9816] as [number, number],
-      timing: "Mon - Fri: 9:00 AM - 6:00 PM",
-      phone: "+91 484 400 9651",
-      email: "kochi@orangeot.com"
-    }
-  ];
-  
-  return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white to-orange-50">
+  const officeLocations = [{
+    title: "Chennai - Headquarters",
+    description: "KAIZEN, 2nd & 3rd Floor, Anna Nagar East",
+    coordinates: [80.2707, 13.0827] as [number, number],
+    timing: "Mon - Fri: 9:00 AM - 6:00 PM",
+    phone: "+91 44 4796 5437",
+    email: "info@orangeot.com"
+  }, {
+    title: "Kochi Office",
+    description: "No 34/656, Neelima, Toll Jn, Edappally",
+    coordinates: [76.3219, 9.9816] as [number, number],
+    timing: "Mon - Fri: 9:00 AM - 6:00 PM",
+    phone: "+91 484 400 9651",
+    email: "kochi@orangeot.com"
+  }];
+  return <div className="min-h-screen flex flex-col bg-gradient-to-b from-white to-orange-50">
       <Header />
       
       {/* Enhanced Hero Section with Gradient */}
-      <GradientBackground 
-        variant="primary" 
-        intensity="medium" 
-        animated={true}
-        className="pt-32 pb-20"
-      >
+      <GradientBackground variant="primary" intensity="medium" animated={true} className="pt-32 pb-20">
         <section className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className={cn(
-              "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6 transform transition-all duration-700",
-              isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            )}>
+            <div className={cn("inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6 transform transition-all duration-700", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
               <ContactIcon size={16} />
               <span className="font-medium">Get in Touch</span>
             </div>
             
-            <h1 className={cn(
-              "font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 bg-clip-text text-transparent transform transition-all duration-700",
-              isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            )}>
+            <h1 className={cn("font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 bg-clip-text text-transparent transform transition-all duration-700", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
               Let's Start a Conversation
             </h1>
             
-            <p className={cn(
-              "text-xl mb-8 text-gray-700 max-w-2xl mx-auto transform transition-all duration-700 delay-100",
-              isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            )}>
+            <p className={cn("text-xl mb-8 text-gray-700 max-w-2xl mx-auto transform transition-all duration-700 delay-100", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
               Discover how our innovative solutions can transform your logistics operations 
               and drive business growth
             </p>
@@ -127,10 +108,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Contact Form - Wider */}
-            <div className={cn(
-              "lg:col-span-3 transform transition-all duration-700 delay-200",
-              isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            )}>
+            <div className={cn("lg:col-span-3 transform transition-all duration-700 delay-200", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
               <Card className="overflow-hidden border-none rounded-2xl shadow-2xl backdrop-blur-lg bg-white/90 hover:shadow-orange-200/20 hover:shadow-2xl transition-all duration-500">
                 <div className="bg-gradient-to-r from-orange-500 to-orange-600 h-2"></div>
                 <CardContent className="p-8 md:p-10">
@@ -143,15 +121,7 @@ const Contact = () => {
                           First Name
                         </label>
                         <div className="relative">
-                          <Input 
-                            id="firstName" 
-                            name="firstName" 
-                            placeholder="John" 
-                            className="pl-10 bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" 
-                            value={formData.firstName} 
-                            onChange={handleInputChange} 
-                            required 
-                          />
+                          <Input id="firstName" name="firstName" placeholder="John" className="pl-10 bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" value={formData.firstName} onChange={handleInputChange} required />
                           <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                         </div>
                       </div>
@@ -161,15 +131,7 @@ const Contact = () => {
                           Last Name
                         </label>
                         <div className="relative">
-                          <Input 
-                            id="lastName" 
-                            name="lastName" 
-                            placeholder="Doe" 
-                            className="pl-10 bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" 
-                            value={formData.lastName} 
-                            onChange={handleInputChange} 
-                            required 
-                          />
+                          <Input id="lastName" name="lastName" placeholder="Doe" className="pl-10 bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" value={formData.lastName} onChange={handleInputChange} required />
                           <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                         </div>
                       </div>
@@ -180,16 +142,7 @@ const Contact = () => {
                         Email Address
                       </label>
                       <div className="relative">
-                        <Input 
-                          id="email" 
-                          name="email" 
-                          placeholder="you@example.com" 
-                          type="email" 
-                          className="pl-10 bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" 
-                          value={formData.email} 
-                          onChange={handleInputChange} 
-                          required 
-                        />
+                        <Input id="email" name="email" placeholder="you@example.com" type="email" className="pl-10 bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" value={formData.email} onChange={handleInputChange} required />
                         <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                       </div>
                     </div>
@@ -199,15 +152,7 @@ const Contact = () => {
                         Phone Number
                       </label>
                       <div className="relative">
-                        <Input 
-                          id="phone" 
-                          name="phone" 
-                          placeholder="+91 98765 43210" 
-                          type="tel" 
-                          className="pl-10 bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" 
-                          value={formData.phone} 
-                          onChange={handleInputChange} 
-                        />
+                        <Input id="phone" name="phone" placeholder="+91 98765 43210" type="tel" className="pl-10 bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" value={formData.phone} onChange={handleInputChange} />
                         <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                       </div>
                     </div>
@@ -216,36 +161,17 @@ const Contact = () => {
                       <label htmlFor="subject" className="text-sm font-medium text-gray-700">
                         Subject
                       </label>
-                      <Input 
-                        id="subject" 
-                        name="subject" 
-                        placeholder="How can we help you?" 
-                        className="bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" 
-                        value={formData.subject} 
-                        onChange={handleInputChange} 
-                        required 
-                      />
+                      <Input id="subject" name="subject" placeholder="How can we help you?" className="bg-gray-50/50 border-gray-200 focus:border-primary transition-all h-12" value={formData.subject} onChange={handleInputChange} required />
                     </div>
                     
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium text-gray-700">
                         Your Message
                       </label>
-                      <Textarea 
-                        id="message" 
-                        name="message" 
-                        placeholder="Please provide details about your inquiry..." 
-                        className="bg-gray-50/50 border-gray-200 focus:border-primary transition-all min-h-[150px] resize-none" 
-                        value={formData.message} 
-                        onChange={handleInputChange} 
-                        required 
-                      />
+                      <Textarea id="message" name="message" placeholder="Please provide details about your inquiry..." className="bg-gray-50/50 border-gray-200 focus:border-primary transition-all min-h-[150px] resize-none" value={formData.message} onChange={handleInputChange} required />
                     </div>
                     
-                    <Button 
-                      type="submit" 
-                      className="w-full h-12 text-base group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-                    >
+                    <Button type="submit" className="w-full h-12 text-base group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
                       <span className="relative z-10 flex items-center gap-2">
                         Send Message
                         <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -257,19 +183,12 @@ const Contact = () => {
             </div>
 
             {/* Contact Information - Narrower */}
-            <div className={cn(
-              "lg:col-span-2 space-y-8",
-              isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            )}>
+            <div className={cn("lg:col-span-2 space-y-8", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
               <div>
                 <h2 className="font-heading font-bold text-2xl mb-6 text-gray-800">Our Offices</h2>
                 
                 <div className="space-y-6 mb-8">
-                  {officeLocations.map((office, index) => (
-                    <Card 
-                      key={index}
-                      className="border-none shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden group"
-                    >
+                  {officeLocations.map((office, index) => <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden group">
                       <div className="h-1 bg-gradient-to-r from-orange-500 to-orange-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                       <CardContent className="p-6">
                         <h3 className="font-bold text-lg mb-3 flex items-center text-gray-800 group-hover:text-orange-500 transition-colors">
@@ -294,26 +213,18 @@ const Contact = () => {
                           </div>
                         </div>
                       </CardContent>
-                    </Card>
-                  ))}
+                    </Card>)}
                 </div>
 
                 {/* Connect With Us */}
                 <div className="mb-8">
                   <h3 className="font-heading font-semibold text-xl mb-4 text-gray-800">Connect With Us</h3>
                   <div className="flex flex-wrap gap-3">
-                    {["facebook", "twitter", "linkedin", "instagram"].map((social, idx) => (
-                      <a 
-                        key={idx} 
-                        href="#" 
-                        aria-label={`Follow us on ${social}`}
-                        className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300"
-                      >
+                    {["facebook", "twitter", "linkedin", "instagram"].map((social, idx) => <a key={idx} href="#" aria-label={`Follow us on ${social}`} className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300">
                         <span className="sr-only">Follow us on {social}</span>
                         {/* Icons would go here */}
                         {socialIcons[social]}
-                      </a>
-                    ))}
+                      </a>)}
                   </div>
                 </div>
               </div>
@@ -341,54 +252,15 @@ const Contact = () => {
       </section>
 
       {/* Map Section - Full Width */}
-      <section className="py-10">
-        <div className="container mx-auto px-4">
-          <div className={cn(
-            "transform transition-all duration-700 delay-300",
-            isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          )}>
-            <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6 text-center">Our Locations</h2>
-            <Card className="border-none shadow-xl overflow-hidden rounded-2xl">
-              <CardContent className="p-0">
-                <MapComponent locations={officeLocations} className="h-[500px]" />
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      
 
       {/* FAQ Section */}
       <section className="py-16 bg-orange-50/50">
-        <div className="container mx-auto px-4">
-          <div className={cn(
-            "max-w-4xl mx-auto transform transition-all duration-700 delay-400",
-            isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          )}>
-            <div className="text-center mb-12">
-              <h2 className="font-heading font-bold text-3xl mb-4 text-gray-800">Frequently Asked Questions</h2>
-              <p className="text-gray-600">Find answers to common questions about our services</p>
-            </div>
-            
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <Card key={index} className="border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
-                  <CardContent className="p-6">
-                    <h3 className="font-medium text-lg mb-2 text-gray-800 flex items-start">
-                      <ChevronRight className="h-5 w-5 mr-2 text-orange-500 flex-shrink-0" />
-                      {faq.question}
-                    </h3>
-                    <p className="text-gray-600 pl-7">{faq.answer}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
 
 // Social media icons
@@ -400,23 +272,17 @@ const socialIcons = {
 };
 
 // FAQ data
-const faqs = [
-  {
-    question: "What logistics services do you support?",
-    answer: "We provide support for a wide range of logistics services including freight forwarding, warehousing, documentation, customer service, and more."
-  },
-  {
-    question: "How quickly can you respond to our inquiries?",
-    answer: "We typically respond to all inquiries within 4-6 business hours, with urgent matters being addressed even faster."
-  },
-  {
-    question: "Do you have experience with international logistics?",
-    answer: "Yes, we have extensive experience supporting global logistics operations across various regions including Asia, Europe, North America, and Australia."
-  },
-  {
-    question: "Can you customize your services to match our specific needs?",
-    answer: "Absolutely! We offer tailored solutions based on your specific requirements and operational processes."
-  }
-];
-
+const faqs = [{
+  question: "What logistics services do you support?",
+  answer: "We provide support for a wide range of logistics services including freight forwarding, warehousing, documentation, customer service, and more."
+}, {
+  question: "How quickly can you respond to our inquiries?",
+  answer: "We typically respond to all inquiries within 4-6 business hours, with urgent matters being addressed even faster."
+}, {
+  question: "Do you have experience with international logistics?",
+  answer: "Yes, we have extensive experience supporting global logistics operations across various regions including Asia, Europe, North America, and Australia."
+}, {
+  question: "Can you customize your services to match our specific needs?",
+  answer: "Absolutely! We offer tailored solutions based on your specific requirements and operational processes."
+}];
 export default Contact;

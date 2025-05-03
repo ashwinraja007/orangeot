@@ -101,8 +101,8 @@ const Index = () => {
   return <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Enhanced Hero Section with Video and Auto-scrolling Logos */}
-      <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-[#FDF7F3] to-white">
+      {/* Enhanced Hero Section - Updated with a single office building image */}
+      <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-to-br from-[#FDF7F3] to-white">
         {/* Glass Geometric Pattern Overlays */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] transform translate-x-1/3 -translate-y-1/4">
@@ -144,48 +144,13 @@ const Index = () => {
               </div>
             </div>
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
-              {/* Hero Images Carousel */}
-              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
-                <Carousel className="w-full h-full" opts={{
-                loop: true
-              }}>
-                  <CarouselContent>
-                    <CarouselItem>
-                      <div className="relative w-full h-full overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80" alt="Tech Innovation" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
-                        <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent"></div>
-                        <div className="absolute bottom-6 left-6 text-white">
-                          <h3 className="text-lg md:text-xl font-bold mb-1">Tech Innovation</h3>
-                          <p className="text-sm md:text-base text-white/80">Powering logistics excellence</p>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                      <div className="relative w-full h-full overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Team Collaboration" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
-                        <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent"></div>
-                        <div className="absolute bottom-6 left-6 text-white">
-                          <h3 className="text-lg md:text-xl font-bold mb-1">Team Collaboration</h3>
-                          <p className="text-sm md:text-base text-white/80">Expert solutions, together</p>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                      <div className="relative w-full h-full overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80" alt="Modern Workspace" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" />
-                        <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent"></div>
-                        <div className="absolute bottom-6 left-6 text-white">
-                          <h3 className="text-lg md:text-xl font-bold mb-1">Modern Workspace</h3>
-                          <p className="text-sm md:text-base text-white/80">Where innovation happens</p>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                  </CarouselContent>
-                  <div className="absolute bottom-4 right-4 flex gap-2">
-                    <CarouselPrevious className="h-8 w-8 rounded-full bg-white/70 hover:bg-white text-gray-800 border-0" />
-                    <CarouselNext className="h-8 w-8 rounded-full bg-white/70 hover:bg-white text-gray-800 border-0" />
-                  </div>
-                </Carousel>
+              {/* Hero Image - Single office building image */}
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
+                <img src="/office.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/30 to-transparent mix-blend-multiply"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <p className="text-sm md:text-base text-white/80">Where innovation meets expertise</p>
+                </div>
               </div>
               
               {/* Decorative elements */}

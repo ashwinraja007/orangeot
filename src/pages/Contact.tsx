@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,10 +11,9 @@ import MapComponent from "@/components/MapComponent";
 import { useState, useEffect } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
+
 const Contact = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -31,6 +31,7 @@ const Contact = () => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
+  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -41,6 +42,7 @@ const Contact = () => {
       [name]: value
     }));
   };
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form data submitted:", formData);
@@ -64,21 +66,33 @@ const Contact = () => {
   };
 
   // Map locations for Chennai and Kochi offices - properly typed as [number, number] tuples
-  const officeLocations = [{
-    title: "Chennai - Headquarters",
-    description: "KAIZEN, 2nd & 3rd Floor, Anna Nagar East",
-    coordinates: [80.2707, 13.0827] as [number, number],
-    timing: "Mon - Fri: 9:00 AM - 6:00 PM",
-    phone: "+91 44 4796 5437",
-    email: "info@orangeot.com"
-  }, {
-    title: "Kochi Office",
-    description: "No 34/656, Neelima, Toll Jn, Edappally",
-    coordinates: [76.3219, 9.9816] as [number, number],
-    timing: "Mon - Fri: 9:00 AM - 6:00 PM",
-    phone: "+91 484 400 9651",
-    email: "kochi@orangeot.com"
-  }];
+  const officeLocations = [
+    {
+      title: "Chennai - Anna Nagar",
+      description: "KAIZEN, 2nd & 3rd Floor, Anna Nagar East",
+      coordinates: [80.2227, 13.0894] as [number, number],
+      timing: "Mon - Fri: 9:00 AM - 6:00 PM",
+      phone: "+91 44 4796 5437",
+      email: "info@orangeot.com"
+    },
+    {
+      title: "Chennai - Velachery",
+      description: "New Wing, 453, 100 Feet Road, Velachery",
+      coordinates: [80.2235, 12.9815] as [number, number],
+      timing: "Mon - Fri: 9:00 AM - 6:00 PM",
+      phone: "+91 44 4796 5438",
+      email: "velachery@orangeot.com"
+    },
+    {
+      title: "Kochi Office",
+      description: "No 34/656, Neelima, Toll Jn, Edappally",
+      coordinates: [76.3219, 9.9816] as [number, number],
+      timing: "Mon - Fri: 9:00 AM - 6:00 PM",
+      phone: "+91 484 400 9651",
+      email: "kochi@orangeot.com"
+    }
+  ];
+  
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-white to-orange-50">
       <Header />
       
@@ -103,8 +117,34 @@ const Contact = () => {
         </section>
       </GradientBackground>
 
+      {/* Map Section - Full Width */}
+      <section className="py-10 -mt-10 relative z-10">
+        <div className="container mx-auto px-4">
+          <div className={cn("transform transition-all duration-700 delay-300", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
+            <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6 text-center">Our Locations</h2>
+            <Card className="border-none shadow-xl overflow-hidden rounded-2xl">
+              <CardContent className="p-0">
+                <div className="h-[500px] w-full">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1545266236967!2d80.2226762757666!3d13.089391387236867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52642e68adc059%3A0x44809bfe043deede!2sOrange%20Office%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1746264921346!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Orange Office Technologies Location"
+                    className="rounded-xl"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form & Info Section */}
-      <section className="py-20 -mt-10 relative z-10">
+      <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Contact Form - Wider */}
@@ -222,7 +262,6 @@ const Contact = () => {
                   <div className="flex flex-wrap gap-3">
                     {["facebook", "twitter", "linkedin", "instagram"].map((social, idx) => <a key={idx} href="#" aria-label={`Follow us on ${social}`} className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300">
                         <span className="sr-only">Follow us on {social}</span>
-                        {/* Icons would go here */}
                         {socialIcons[social]}
                       </a>)}
                   </div>
@@ -236,7 +275,7 @@ const Contact = () => {
                   <p className="text-white/90 mb-4 text-sm">Our team is ready to answer your questions and provide support.</p>
                   <div className="space-y-3">
                     <div className="flex items-center">
-                      <Phone className="h-5 w-5 mr-3 bg-orange-500" />
+                      <Phone className="h-5 w-5 mr-3" />
                       <span>+91 44 4796 5437</span>
                     </div>
                     <div className="flex items-center">
@@ -247,20 +286,6 @@ const Contact = () => {
                 </CardContent>
               </Card>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section - Full Width */}
-      <section className="py-10">
-        <div className="container mx-auto px-4">
-          <div className={cn("transform transition-all duration-700 delay-300", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
-            <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6 text-center">Our Locations</h2>
-            <Card className="border-none shadow-xl overflow-hidden rounded-2xl">
-              <CardContent className="p-0">
-                <MapComponent locations={officeLocations} className="h-[500px]" />
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -294,4 +319,5 @@ const faqs = [{
   question: "Can you customize your services to match our specific needs?",
   answer: "Absolutely! We offer tailored solutions based on your specific requirements and operational processes."
 }];
+
 export default Contact;

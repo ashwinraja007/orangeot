@@ -8,73 +8,85 @@ import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
 
 const Services = () => {
-  const services = [{
-    icon: FileCheck,
-    title: "Documentation Services",
-    description: "Expert documentation handling including invoices, credit notes, and job profit statements.",
-    image: "/1.png",
-    link: "/services/documentation",
-    color: "from-blue-500/80 to-blue-600/80",
-    badge: "Popular",
-    bgColor: "bg-blue-50"
-  }, {
-    icon: Users,
-    title: "Sales Support",
-    description: "Centralized sales support for lead management and customer relationships.",
-    image: "/2.png",
-    link: "/services/sales-support",
-    color: "from-amber-500/80 to-amber-600/80",
-    bgColor: "bg-amber-50"
-  }, {
-    icon: Globe,
-    title: "Digital Marketing",
-    description: "Comprehensive digital marketing solutions to boost your online presence.",
-    image: "/3.png",
-    link: "/services/digital-marketing",
-    color: "from-green-500/80 to-green-600/80",
-    bgColor: "bg-green-50"
-  }, {
-    icon: Building2,
-    title: "Accounts Management",
-    description: "Professional accounting services for trade and non-trade transactions.",
-    image: "/4.png",
-    link: "/services/accounts",
-    color: "from-purple-500/80 to-purple-600/80",
-    bgColor: "bg-purple-50"
-  }, {
-    icon: Headset,
-    title: "Customer Service",
-    description: "Dedicated customer service team handling bookings and nominations.",
-    image: "/5.png",
-    link: "/services/customer-service",
-    color: "from-pink-500/80 to-pink-600/80",
-    bgColor: "bg-pink-50"
-  }, {
-    icon: Shield,
-    title: "Software Solutions",
-    description: "Custom software development following industry best practices.",
-    image: "/6.png",
-    link: "/services/software",
-    color: "from-cyan-500/80 to-cyan-600/80",
-    badge: "New",
-    bgColor: "bg-cyan-50"
-  }];
+  const services = [
+    {
+      icon: FileCheck,
+      title: "Documentation Services",
+      description: "Expert documentation handling including invoices, credit notes, and job profit statements.",
+      image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=800&h=600&q=80",
+      link: "/services/documentation",
+      color: "from-blue-500/80 to-blue-600/80",
+      badge: "Popular",
+      bgColor: "bg-blue-50"
+    }, 
+    {
+      icon: Users,
+      title: "Sales Support",
+      description: "Centralized sales support for lead management and customer relationships.",
+      image: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=800&h=600&q=80",
+      link: "/services/sales-support",
+      color: "from-amber-500/80 to-amber-600/80",
+      bgColor: "bg-amber-50"
+    }, 
+    {
+      icon: Globe,
+      title: "Digital Marketing",
+      description: "Comprehensive digital marketing solutions to boost your online presence.",
+      image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f5a70d?auto=format&fit=crop&w=800&h=600&q=80",
+      link: "/services/digital-marketing",
+      color: "from-green-500/80 to-green-600/80",
+      bgColor: "bg-green-50"
+    }, 
+    {
+      icon: Building2,
+      title: "Accounts Management",
+      description: "Professional accounting services for trade and non-trade transactions.",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&h=600&q=80",
+      link: "/services/accounts",
+      color: "from-purple-500/80 to-purple-600/80",
+      bgColor: "bg-purple-50"
+    }, 
+    {
+      icon: Headset,
+      title: "Customer Service",
+      description: "Dedicated customer service team handling bookings and nominations.",
+      image: "https://images.unsplash.com/photo-1566753323558-f4e0952af115?auto=format&fit=crop&w=800&h=600&q=80",
+      link: "/services/customer-service",
+      color: "from-pink-500/80 to-pink-600/80",
+      bgColor: "bg-pink-50"
+    }, 
+    {
+      icon: Shield,
+      title: "Software Solutions",
+      description: "Custom software development following industry best practices.",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&h=600&q=80",
+      link: "/services/software",
+      badge: "New",
+      bgColor: "bg-cyan-50",
+      color: "from-cyan-500/80 to-cyan-600/80"
+    }
+  ];
   
-  const benefitsList = [{
-    icon: <MessageSquare className="h-10 w-10 text-primary" />,
-    title: "Streamlined Communication",
-    description: "Efficient information flow between all stakeholders"
-  }, {
-    icon: <Shield className="h-10 w-10 text-primary" />,
-    title: "Data Security",
-    description: "Enterprise-grade protection for sensitive information"
-  }, {
-    icon: <BarChart className="h-10 w-10 text-primary" />,
-    title: "Performance Analytics",
-    description: "Real-time insights and operational metrics"
-  }];
+  const benefitsList = [
+    {
+      icon: <MessageSquare className="h-10 w-10 text-primary" />,
+      title: "Streamlined Communication",
+      description: "Efficient information flow between all stakeholders"
+    }, 
+    {
+      icon: <Shield className="h-10 w-10 text-primary" />,
+      title: "Data Security",
+      description: "Enterprise-grade protection for sensitive information"
+    }, 
+    {
+      icon: <BarChart className="h-10 w-10 text-primary" />,
+      title: "Performance Analytics",
+      description: "Real-time insights and operational metrics"
+    }
+  ];
   
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section with Gradient Background */}
@@ -198,7 +210,8 @@ const Services = () => {
       </GradientBackground>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 export default Services;

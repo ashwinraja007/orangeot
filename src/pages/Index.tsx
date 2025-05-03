@@ -1,9 +1,8 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Building2, FileCheck, Globe, Headset, Play, Shield, Users, ArrowLeft, Star, Sparkles, HeartHandshake, TrendingUp } from "lucide-react";
+import { ArrowRight, Building2, FileCheck, Globe, Headset, Play, Shield, Users, ArrowLeft, Star, Sparkles, HeartHandshake, TrendingUp, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
@@ -50,6 +49,46 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
+
+// Testimonials data
+const testimonials = [
+  {
+    content: "Orange Office Technologies has transformed our document management process. Their team is responsive, detail-oriented, and delivers exceptional quality every time.",
+    author: "James Wilson",
+    position: "Operations Manager",
+    company: "Global Freight Solutions",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"
+  },
+  {
+    content: "The customer service team at Orange Office Technologies is remarkable. They've significantly improved our client satisfaction ratings with their prompt and efficient support.",
+    author: "Sarah Chen",
+    position: "Customer Relations Head",
+    company: "Oceanic Shipping Co.",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"
+  },
+  {
+    content: "Their digital marketing services have dramatically increased our online visibility. We've seen a 65% growth in leads since partnering with Orange Office Technologies.",
+    author: "David Mehta",
+    position: "Marketing Director",
+    company: "Express Logistics International",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"
+  },
+  {
+    content: "The software solutions provided by Orange Office Technologies have streamlined our operations and saved us countless hours of manual work. Their team is innovative and reliable.",
+    author: "Emma Rodriguez",
+    position: "IT Manager",
+    company: "Global Cargo Systems",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"
+  }
+];
+
+// Global impact statistics
+const impactStats = [
+  { value: "15+", label: "Years of Excellence", icon: Star },
+  { value: "250+", label: "Global Clients", icon: Globe },
+  { value: "500+", label: "Completed Projects", icon: FileCheck },
+  { value: "30+", label: "Countries Reached", icon: Building2 }
+];
 
 const Index = () => {
   // Intersection Observer for scroll animations
@@ -105,7 +144,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Enhanced Hero Section - Updated with a single office building image */}
+      {/* Enhanced Hero Section - Updated with a properly visible office building image */}
       <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-to-br from-[#FDF7F3] to-white">
         {/* Glass Geometric Pattern Overlays */}
         <div className="absolute inset-0 overflow-hidden">
@@ -148,7 +187,7 @@ const Index = () => {
               </div>
             </div>
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
-              {/* Hero Image - Single office building image */}
+              {/* Hero Image with improved visibility */}
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
                 <img 
                   src="/office.png" 
@@ -331,7 +370,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Founder Section - Updated to be more attractive */}
+      {/* Global Impact Section - NEW */}
       <section className="py-20 bg-gradient-to-br from-amber-50 to-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
           transform: "translateY(-1px)"
@@ -339,176 +378,45 @@ const Index = () => {
           <path d="M0,32L120,26.7C240,21,480,11,720,10.7C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
         </svg>
         
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-orange-300/20 to-amber-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-amber-200/20 to-orange-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 opacity-10">
+          <svg width="400" height="400" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(300,300)">
+              <path d="M131.1,-191.3C167.3,-163.4,192.3,-119.2,204.6,-73.2C217,-27.1,216.8,20.8,201.6,62.9C186.3,105,156,141.2,119.2,165.5C82.3,189.8,38.9,202.1,-6.4,210.9C-51.8,219.7,-99.1,224.9,-139.2,208C-179.3,191,-212.2,152,-226.9,107.9C-241.6,63.8,-238,14.7,-222.3,-27.8C-206.5,-70.3,-178.5,-106.2,-144.4,-134.9C-110.4,-163.7,-70.2,-185.3,-27.5,-191.2C15.3,-197,82.7,-186.9,131.1,-191.3Z" fill="#FFA94D" />
+            </g>
+          </svg>
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-5 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
-              Meet Our Visionary Founder
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
+              Our Global Impact
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              The driving force behind Orange Office Technologies' success and innovation
-            </p>
-          </div>
-
-          {/* Founder card with better layout and description */}
-          <div className="max-w-5xl mx-auto">
-            <Card className="border-none rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden bg-white">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                  {/* Founder image */}
-                  <div className="relative overflow-hidden aspect-square md:aspect-auto">
-                    <img 
-                      src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" 
-                      alt="Mr. Sudhir KU" 
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 p-6 text-white">
-                      <h3 className="text-2xl font-bold mb-1">Mr. Sudhir KU</h3>
-                      <p className="text-white/90">CEO & Founder</p>
-                    </div>
-                  </div>
-                  
-                  {/* Founder bio */}
-                  <div className="p-6 md:p-8">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="h-1 w-10 bg-orange-500"></div>
-                      <span className="text-orange-500 font-medium">Our Leadership</span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-800">35+ Years of Industry Excellence</h3>
-                    <p className="text-gray-600 mb-4">
-                      With over three decades of experience in the logistics industry, Mr. Sudhir KU has pioneered specialized back-office services 
-                      that have transformed how freight forwarding companies operate globally.
-                    </p>
-                    <p className="text-gray-600 mb-6">
-                      His vision has guided Orange Office Technologies to become a leading KPO service provider, 
-                      serving clients across multiple continents with innovative solutions tailored to the logistics industry.
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-3 mb-6">
-                      {["Visionary Leader", "Industry Pioneer", "Global Expertise", "Tech Innovation"].map((tag, index) => (
-                        <span key={index} className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <Button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-xl shadow-md">
-                      <Link to="/founders" className="flex items-center gap-2">
-                        Learn More About Our Founder
-                        <ArrowRight className="h-5 w-5" />
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* About Us Section with Enhanced Layout */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full text-orange-50" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
-          <path d="M0,0L40,4C80,8,160,16,240,18.7C320,21,400,19,480,13.3C560,8,640,0,720,0C800,0,880,8,960,12C1040,16,1120,16,1200,12C1280,8,1360,0,1400,-4L1440,-8L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
-        </svg>
-        
-        <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-gradient-to-br from-amber-200/10 to-orange-300/10 blur-3xl"></div>
-        
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 animate-on-scroll">
-              
-              <h2 className="font-heading font-bold md:text-4xl mb-6 text-gradient bg-gradient-to-r from-orange-700 via-orange-600 to-orange-500 bg-clip-text text-transparent text-2xl lg:text-3xl">Orange Office Technologies</h2>
-              <p className="text-gray-600 mb-6 text-lg">
-                Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider who offers the shipping & logistics players worldwide, the competitive edge in the market.
-              </p>
-              <p className="text-gray-600 mb-8">
-                We provide expert service in all the core segments of day-to-day operations starting from Documentation & Operation, sales support, Customer service & Accounting activity.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div className="flex items-start">
-                  <div className="mr-4 bg-blue-100 rounded-full p-3">
-                    <Shield className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Top Security</h4>
-                    <p className="text-gray-600 text-sm">Enterprise-grade security for all data</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="mr-4 bg-orange-100 rounded-full p-3">
-                    <Users className="h-6 w-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Expert Team</h4>
-                    <p className="text-gray-600 text-sm">Qualified professionals in logistics</p>
-                  </div>
-                </div>
-              </div>
-              
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
-                <Link to="/about" className="flex items-center gap-2">
-                  Learn More About Us
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-            <div className="order-1 lg:order-2 animate-on-scroll">
-              <div className="relative">
-                <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                  <img src="/office.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent"></div>
-                </div>
-                
-                {/* Floating card */}
-                <div className="absolute -bottom-10 -right-10 bg-white rounded-xl shadow-xl p-6 max-w-xs animate-float glass-card">
-                  <div className="flex items-center mb-3">
-                    <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-                    <p className="font-medium">Always Available</p>
-                  </div>
-                  <p className="text-gray-600 text-sm">24/7 customer support for all your logistics needs</p>
-                </div>
-                
-                {/* Decorative elements */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-blue-300/30 to-cyan-300/20 rounded-full blur-xl animate-pulse-slow"></div>
-                <div className="absolute -bottom-16 -left-6 w-20 h-20 bg-gradient-to-br from-amber-300/30 to-orange-300/20 rounded-full blur-xl animate-float"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced Stats Section with Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full text-white" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
-          <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-        </svg>
-        
-        <div className="absolute inset-0 bg-pattern opacity-5"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 bg-clip-text text-transparent">Our Global Impact</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Transforming logistics operations and delivering exceptional value across continents
+              Transforming logistics operations across continents with innovative solutions
             </p>
           </div>
           
-          {/* Add remaining content here */}
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default Index;
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+            {impactStats.map((stat, index) => (
+              <div 
+                key={index} 
+                className="bg-white rounded-2xl p-6 shadow-lg border border-amber-100 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 text-center"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-orange-500/20 to-amber-400/20 mx-auto">
+                  <stat.icon className="h-8 w-8 text-orange-500" />
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.value}</h3>
+                <p className="text-gray-600">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+          
+          {/* World Map Visualization */}
+          <div className="mb-16 relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="aspect-[16/9] bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
+              {/* World map illustration - using a gradient layered effect */}
+              <div className="relative w-full h-full flex items-center justify-center">
+                <div className="absolute inset-0 opacity-20">
+                  <svg viewBox="0 0 1026 626" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M1025.53 620.536C1017.53 618.059 1009.12 615.091 999.272 610.864C984.421 604.563 968.15 599.236 951.808 593.892C850.733 559.965 744.941 533.436 641.504 535.187C624.533 535.54 607.491 527.022 590.586 517.533C572.875 507.572 558.25 491.338 546.6 473.223C530.065 447.99 519.436 417.987 516.649 387.224C511.761 337.098 530.784 286.212 529.246 235.853C528.33 205.721 513.998 173.939 491.258 156.543C470.104 140.377 440.518 138.253 414.091 145.184C351.964 160.189 298.664 206.47 279.23 268.974C270.465 296.397 267.498 326.403 255.329 352.708C239.81 386.167 209.238 405.734 179.973 424.119C151.81 441.801 122.491 458.255 99.0879 482.359C77.3357 504.75 60.8865 532.559 50.5402 562.671C40.1938 592.783 36.4024 624.925 40.3058 625.459C73.9050 629.988 118.39 608.537 151.913 590.196C179.233 575.263 207.193 561.404 235.704 548.653C301.788 520.285 371.038 498.026 442.083 485.081C490.754 476.453 545.584 472.466 593.914 458.09C607.256 453.676 619.263 444.994 633.075 440.76C650.112 43

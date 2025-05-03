@@ -1,7 +1,8 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -91,6 +92,10 @@ export const Header = () => {
         }].map(item => <Link key={item.label} to={item.to} className={`text-gray-800 hover:text-orange-500 font-medium py-2 transition-colors duration-300 ${location.pathname === item.to ? 'text-orange-500' : ''}`} onClick={() => setIsMenuOpen(false)}>
                 {item.label}
               </Link>)}
+            <Link to="/contact" className="bg-gradient-to-r from-orange-500 to-amber-500 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 font-medium" onClick={() => setIsMenuOpen(false)}>
+              <Phone size={18} />
+              Contact Us
+            </Link>
           </nav>
         </div>}
     </header>;

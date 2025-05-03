@@ -16,23 +16,7 @@ export const Footer = () => {
             <p className="text-sm text-gray-400">
               Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider offering expert services in logistics operations.
             </p>
-            <div className="flex space-x-4">
-              {[{
-              icon: Facebook,
-              href: "#",
-              label: "Facebook"
-            }, {
-              icon: Instagram,
-              href: "#",
-              label: "Instagram"
-            }, {
-              icon: Linkedin,
-              href: "#",
-              label: "LinkedIn"
-            }].map((social, index) => <a key={index} href={social.href} className="text-gray-400 hover:text-primary transition-colors p-2 hover:bg-white/5 rounded-full" aria-label={social.label}>
-                  <social.icon size={20} />
-                </a>)}
-            </div>
+            
           </div>
 
           {/* Quick Links */}

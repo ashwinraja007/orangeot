@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -6,19 +5,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { GradientBackground } from "@/components/GradientBackground";
 import { Users, ArrowRight, BarChart, CheckCircle, Target, Globe, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const SalesSupport = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
-<GradientBackground 
-  className="pt-32 pb-16 min-h-[50vh] flex items-center justify-center" 
-  variant="secondary" 
-  intensity="medium"
-  animated={true}
->
+    <GradientBackground className="pt-32 pb-16 min-h-[50vh] flex items-center justify-center" variant="secondary" intensity="medium" animated={true}>
   <div className="container mx-auto px-4">
     <div className="max-w-4xl mx-auto">
       <div className="flex flex-col items-center gap-8">
@@ -40,10 +32,10 @@ const SalesSupport = () => {
       </div>
     </div>
   </div>
-</GradientBackground>
+    </GradientBackground>
 
-{/* Key Benefits Section */}
-<section className="py-20">
+    {/* Key Benefits Section */}
+    <section className="py-20">
   <div className="container mx-auto px-4">
     <div className="text-center mb-16">
       <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Key Benefits</h2>
@@ -53,40 +45,32 @@ const SalesSupport = () => {
     </div>
     
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[
-        {
-          icon: <Target className="h-12 w-12 text-primary" />,
-          title: "Targeted Lead Generation",
-          description: "Identify and qualify potential customers based on your specific business criteria and industry focus."
-        },
-        {
-          icon: <MessageSquare className="h-12 w-12 text-primary" />,
-          title: "Consistent Communication",
-          description: "Maintain regular contact with prospects and customers through multiple channels to build relationships."
-        },
-        {
-          icon: <CheckCircle className="h-12 w-12 text-primary" />,
-          title: "Qualified Pipeline",
-          description: "Focus your sales team on high-quality leads that are more likely to convert into paying customers."
-        },
-        {
-          icon: <Globe className="h-12 w-12 text-primary" />,
-          title: "Global Coverage",
-          description: "Support across different time zones to ensure continuous engagement with your international clients."
-        },
-        {
-          icon: <BarChart className="h-12 w-12 text-primary" />,
-          title: "Performance Analytics",
-          description: "Detailed reporting and analytics to track progress and optimize your sales strategy."
-        },
-        {
-          icon: <Users className="h-12 w-12 text-primary" />,
-          title: "Cost Efficiency",
-          description: "Reduce operational costs while maintaining high-quality sales support functions."
-        },
-      ].map((benefit, index) => (
-        <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
-          <CardContent className="p-8">
+      {[{
+            icon: <Target className="h-12 w-12 text-primary" />,
+            title: "Targeted Lead Generation",
+            description: "Identify and qualify potential customers based on your specific business criteria and industry focus."
+          }, {
+            icon: <MessageSquare className="h-12 w-12 text-primary" />,
+            title: "Consistent Communication",
+            description: "Maintain regular contact with prospects and customers through multiple channels to build relationships."
+          }, {
+            icon: <CheckCircle className="h-12 w-12 text-primary" />,
+            title: "Qualified Pipeline",
+            description: "Focus your sales team on high-quality leads that are more likely to convert into paying customers."
+          }, {
+            icon: <Globe className="h-12 w-12 text-primary" />,
+            title: "Global Coverage",
+            description: "Support across different time zones to ensure continuous engagement with your international clients."
+          }, {
+            icon: <BarChart className="h-12 w-12 text-primary" />,
+            title: "Performance Analytics",
+            description: "Detailed reporting and analytics to track progress and optimize your sales strategy."
+          }, {
+            icon: <Users className="h-12 w-12 text-primary" />,
+            title: "Cost Efficiency",
+            description: "Reduce operational costs while maintaining high-quality sales support functions."
+          }].map((benefit, index) => <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+          <CardContent className="p-8 bg-slate-200">
             <div className="mb-6 inline-block p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
               {benefit.icon}
             </div>
@@ -97,11 +81,10 @@ const SalesSupport = () => {
               {benefit.description}
             </p>
           </CardContent>
-        </Card>
-      ))}
+        </Card>)}
     </div>
   </div>
-</section>
+    </section>
 
 
       {/* Process Section */}
@@ -119,29 +102,23 @@ const SalesSupport = () => {
               {/* Vertical line */}
               <div className="absolute left-[21px] top-0 bottom-0 w-1 bg-primary/20 hidden md:block"></div>
               
-              {[
-                {
-                  step: "01",
-                  title: "Initial Assessment",
-                  description: "We analyze your current sales process, goals, and target audience to develop a customized support strategy."
-                },
-                {
-                  step: "02",
-                  title: "Team Integration",
-                  description: "Our sales support specialists integrate with your existing systems, tools, and processes."
-                },
-                {
-                  step: "03",
-                  title: "Lead Management",
-                  description: "We handle lead qualification, nurturing, and tracking through your preferred CRM system."
-                },
-                {
-                  step: "04",
-                  title: "Continuous Improvement",
-                  description: "Regular performance reviews and strategy adjustments to ensure optimal results."
-                }
-              ].map((item, index) => (
-                <div key={index} className="flex gap-6 mb-12 items-start">
+              {[{
+              step: "01",
+              title: "Initial Assessment",
+              description: "We analyze your current sales process, goals, and target audience to develop a customized support strategy."
+            }, {
+              step: "02",
+              title: "Team Integration",
+              description: "Our sales support specialists integrate with your existing systems, tools, and processes."
+            }, {
+              step: "03",
+              title: "Lead Management",
+              description: "We handle lead qualification, nurturing, and tracking through your preferred CRM system."
+            }, {
+              step: "04",
+              title: "Continuous Improvement",
+              description: "Regular performance reviews and strategy adjustments to ensure optimal results."
+            }].map((item, index) => <div key={index} className="flex gap-6 mb-12 items-start">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg z-10">
                     {item.step}
                   </div>
@@ -149,8 +126,7 @@ const SalesSupport = () => {
                     <h3 className="font-heading font-bold text-xl mb-3">{item.title}</h3>
                     <p className="text-gray-600">{item.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -174,11 +150,7 @@ const SalesSupport = () => {
                     </div>
                   </div>
                   <div className="hidden md:block">
-                    <img 
-                      src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80" 
-                      alt="Team collaborating" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80" alt="Team collaborating" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </CardContent>
@@ -188,12 +160,7 @@ const SalesSupport = () => {
       </section>
 
       {/* CTA Section */}
-      <GradientBackground 
-        className="py-20" 
-        variant="primary" 
-        intensity="strong"
-        animated={true}
-      >
+      <GradientBackground className="py-20" variant="primary" intensity="strong" animated={true}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6">
@@ -218,8 +185,6 @@ const SalesSupport = () => {
       </GradientBackground>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default SalesSupport;

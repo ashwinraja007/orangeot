@@ -26,7 +26,7 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 group" aria-label="Home">
-            <img alt="Orange Office Technologies" className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110" src="/lovable-uploads/e0753f11-cbf3-4ca5-a1c6-c3f7476550dd.png" />
+            <img alt="Orange Office Technologies" className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110" src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png" />
             <span className="font-heading text-lg md:text-xl font-semibold text-gray-800">
               Orange Office Technologies
             </span>

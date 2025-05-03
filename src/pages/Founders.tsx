@@ -189,19 +189,7 @@ const Founders = () => {
         </section>
         
         {/* Call to Action */}
-        <section className="py-12 md:py-16 bg-gradient-to-br from-amber-500 to-orange-500 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to connect with our leadership?</h3>
-              <p className="text-white/90 mb-6">
-                Schedule a personal consultation with our founder to discuss how we can help transform your logistics operations.
-              </p>
-              <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50" asChild>
-                <Link to="/contact">Request a Meeting</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+        
       </main>
       <Footer />
     </div>;

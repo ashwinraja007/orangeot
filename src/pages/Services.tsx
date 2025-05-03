@@ -19,35 +19,35 @@ const Services = () => {
     title: "Sales Support",
     description: "Centralized sales support for lead management and customer relationships.",
     image: "/2.png",
-    link: "/services/sales-support",
+    link: "/services/salessupport",
     color: "from-amber-500/20 to-amber-600/20"
   }, {
     icon: Globe,
     title: "Digital Marketing",
     description: "Comprehensive digital marketing solutions to boost your online presence.",
     image: "/3.png",
-    link: "/services/digital-marketing",
+    link: "/services/digitalmarketing",
     color: "from-green-500/20 to-green-600/20"
   }, {
     icon: Building2,
     title: "Accounts Management",
     description: "Professional accounting services for trade and non-trade transactions.",
     image: "/4.png",
-    link: "/services/accounts",
+    link: "/services/AccountsManagement",
     color: "from-purple-500/20 to-purple-600/20"
   }, {
     icon: Headset,
     title: "Customer Service",
     description: "Dedicated customer service team handling bookings and nominations.",
     image: "/5.png",
-    link: "/services/customer-service",
+    link: "/services/customerservice",
     color: "from-pink-500/20 to-pink-600/20"
   }, {
     icon: Shield,
     title: "Software Solutions",
     description: "Custom software development following industry best practices.",
     image: "/6.png",
-    link: "/services/software",
+    link: "/services/SoftwareSolutions",
     color: "from-cyan-500/20 to-cyan-600/20",
     badge: "New"
   }];

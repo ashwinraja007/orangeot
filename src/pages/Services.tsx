@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,7 +5,6 @@ import { FileCheck, Users, Globe, Building2, Headset, Shield, ArrowRight, Messag
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
-
 const Services = () => {
   const services = [{
     icon: FileCheck,
@@ -53,7 +51,6 @@ const Services = () => {
     color: "from-cyan-500/20 to-cyan-600/20",
     badge: "New"
   }];
-  
   const benefitsList = [{
     icon: <MessageSquare className="h-10 w-10 text-primary" />,
     title: "Streamlined Communication",
@@ -67,11 +64,10 @@ const Services = () => {
     title: "Performance Analytics",
     description: "Real-time insights and operational metrics"
   }];
-  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section with Gradient Background - Now Centered */}
+      {/* Hero Section with Gradient Background */}
       <GradientBackground className="pt-32 pb-20 min-h-[60vh] flex items-center" variant="primary" intensity="medium" animated={true}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -88,9 +84,9 @@ const Services = () => {
         </div>
       </GradientBackground>
 
-      {/* Services Grid with Enhanced Design - Now Centered */}
+      {/* Services Grid with Enhanced Design */}
       <section className="py-20 -mt-10 bg-white relative z-10">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 animate-fade-in overflow-hidden border-none" style={{
             animationDelay: `${index * 100}ms`
@@ -121,7 +117,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Benefits Section - Centered as well */}
+      {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -144,6 +140,9 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonial Section */}
+      
 
       {/* CTA Section */}
       <GradientBackground className="py-16" variant="accent" intensity="strong" animated={true}>

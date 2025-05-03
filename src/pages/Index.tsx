@@ -349,8 +349,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* New Founders Preview Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
+     {/* Founder Section - Updated to be more attractive */}
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
         transform: "translateY(-1px)"
       }} fill="currentColor" viewBox="0 0 1440 40">
@@ -361,54 +361,62 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-amber-200/20 to-orange-300/20 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 animate-on-scroll">
-            
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
-              Meet Our Founders
+          <div className="text-center mb-12 animate-on-scroll">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-5 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
+              Meet Our Visionary Founder
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Visionary leaders driving innovation in logistics technology
+              The driving force behind Orange Office Technologies' success and innovation
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[{
-            image: "/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png",
-            name: "Mr. Sudhir KU",
-            position: "CEO & Co-Founder"
-          }, {
-            image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
-            name: "Sarah Johnson",
-            position: "CTO & Co-Founder"
-          }].map((founder, index) => <Card key={index} className="border-none rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white group hover:-translate-y-2">
-                <CardContent className="p-0">
-                  <div className="aspect-[4/3] relative overflow-hidden">
-                    <img src={founder.image} alt={founder.name} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+          {/* Founder card with better layout and description */}
+          <div className="max-w-5xl mx-auto">
+            <Card className="border-none rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden bg-white">
+              <CardContent className="p-0">
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                  {/* Founder image */}
+                  <div className="relative overflow-hidden aspect-square md:aspect-auto">
+                    <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-6 text-white">
-                      <h3 className="text-2xl font-bold mb-1 animate-on-scroll" style={{
-                    animationDelay: `${index * 200}ms`
-                  }}>{founder.name}</h3>
-                      <p className="text-white/90 animate-on-scroll" style={{
-                    animationDelay: `${index * 200 + 100}ms`
-                  }}>{founder.position}</p>
-                      <Link to="/founders" className="mt-4 inline-flex items-center bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-4 py-2 rounded-full gap-2 text-sm transition-all duration-300">
-                        <span>View Profile</span>
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
+                      <h3 className="text-2xl font-bold mb-1">Mr. Sudhir KU</h3>
+                      <p className="text-white/90">CEO & Founder</p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>)}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
-              <Link to="/founders" className="flex items-center gap-2">
-                Meet Our Team
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+                  
+                  {/* Founder bio */}
+                  <div className="p-6 md:p-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="h-1 w-10 bg-orange-500"></div>
+                      <span className="text-orange-500 font-medium">Our Leadership</span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-800">35+ Years of Industry Excellence</h3>
+                    <p className="text-gray-600 mb-4">
+                      With over three decades of experience in the logistics industry, Mr. Sudhir KU has pioneered specialized back-office services 
+                      that have transformed how freight forwarding companies operate globally.
+                    </p>
+                    <p className="text-gray-600 mb-6">
+                      His vision has guided Orange Office Technologies to become a leading KPO service provider, 
+                      serving clients across multiple continents with innovative solutions tailored to the logistics industry.
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-3 mb-6">
+                      {["Visionary Leader", "Industry Pioneer", "Global Expertise", "Tech Innovation"].map((tag, index) => <span key={index} className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">
+                          {tag}
+                        </span>)}
+                    </div>
+                    
+                    <Button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-xl shadow-md">
+                      <Link to="/founders" className="flex items-center gap-2">
+                        Learn More About Our Founder
+                        <ArrowRight className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

@@ -68,21 +68,27 @@ const Services = () => {
       <Header />
       
       {/* Hero Section with Gradient Background */}
-      <GradientBackground className="pt-32 pb-20 min-h-[60vh] flex items-center" variant="primary" intensity="medium" animated={true}>
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
-              <span className="font-medium">Our Services</span>
-            </div>
-            <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
-              Comprehensive Solutions for Logistics Excellence
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
-              Innovative services designed specifically for the freight forwarding and logistics industry
-            </p>
-          </div>
-        </div>
-      </GradientBackground>
+<GradientBackground 
+  className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
+  variant="primary" 
+  intensity="medium" 
+  animated={true}
+>
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto text-center">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-100 text-cyan-600 mb-6">
+        <span className="font-medium">Our Services</span>
+      </div>
+      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
+        Comprehensive Solutions for Logistics Excellence
+      </h1>
+      <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
+        Innovative services designed specifically for the freight forwarding and logistics industry
+      </p>
+    </div>
+  </div>
+</GradientBackground>
+
 
       {/* Services Grid with Enhanced Design */}
       <section className="py-20 -mt-10 bg-white relative z-10">

@@ -82,6 +82,13 @@ export const Footer = () => {
                   Chennai: 600042
                 </span>
               </li>
+              <li className="flex items-start space-x-3 text-sm text-gray-400 mt-3">
+                <MapPin size={20} className="text-primary flex-shrink-0 mt-1" />
+                <span>
+                  3rd Floor, Plot No. 453, 100 Feet Road,
+                  Velachery, Chennai: 600042
+                </span>
+              </li>
               <li className="flex items-center space-x-3 text-sm text-gray-400">
                 <Phone size={20} className="text-primary flex-shrink-0" />
                 <span>+91 44 4796 5437</span>

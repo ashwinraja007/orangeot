@@ -102,7 +102,7 @@ const Services = () => {
                       {service.badge}
                     </div>}
                 </div>
-                <CardContent className="p-6 rounded-lg bg-slate-200">
+                <CardContent className="p-6 rounded-lg bg-slate-50">
                   <h3 className="font-heading font-bold text-xl mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <Button variant="outline" className="w-full group" asChild>

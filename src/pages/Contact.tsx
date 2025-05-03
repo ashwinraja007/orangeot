@@ -111,7 +111,7 @@ const Contact = () => {
             <div className={cn("lg:col-span-3 transform transition-all duration-700 delay-200", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
               <Card className="overflow-hidden border-none rounded-2xl shadow-2xl backdrop-blur-lg bg-white/90 hover:shadow-orange-200/20 hover:shadow-2xl transition-all duration-500">
                 <div className="bg-gradient-to-r from-orange-500 to-orange-600 h-2"></div>
-                <CardContent className="p-8 md:p-10">
+                <CardContent className="p-8 md:p-10 px-[25px]">
                   <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6 text-gray-800">Send Us a Message</h2>
                   
                   <form className="space-y-6" onSubmit={handleSubmit}>
@@ -214,34 +214,12 @@ const Contact = () => {
                 </div>
 
                 {/* Connect With Us */}
-                <div className="mb-8">
-                  <h3 className="font-heading font-semibold text-xl mb-4 text-gray-800">Connect With Us</h3>
-                  <div className="flex flex-wrap gap-3">
-                    {["facebook", "twitter", "linkedin", "instagram"].map((social, idx) => <a key={idx} href="#" aria-label={`Follow us on ${social}`} className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300">
-                        <span className="sr-only">Follow us on {social}</span>
-                        {/* Icons would go here */}
-                        {socialIcons[social]}
-                      </a>)}
-                  </div>
-                </div>
+                
               </div>
               
               {/* Quick Contact */}
               <Card className="border-none shadow-lg overflow-hidden bg-gradient-to-br from-orange-500 to-orange-600 text-white">
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-lg mb-4">Need Immediate Assistance?</h3>
-                  <p className="text-white/90 mb-4 text-sm">Our team is ready to answer your questions and provide support.</p>
-                  <div className="space-y-3">
-                    <div className="flex items-center">
-                      <Phone className="h-5 w-5 mr-3" />
-                      <span>+91 44 4796 5437</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Mail className="h-5 w-5 mr-3" />
-                      <span>support@orangeot.com</span>
-                    </div>
-                  </div>
-                </CardContent>
+                
               </Card>
             </div>
           </div>

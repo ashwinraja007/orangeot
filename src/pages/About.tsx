@@ -145,26 +145,7 @@ const About = () => {
           
 
           {/* Values Section - Enhanced */}
-          <div className="mb-16">
-            <h2 className="font-heading text-3xl font-bold text-center mb-12">Our Core Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((value, index) => <div key={index} className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-amber-400 rounded-2xl transform transition-transform group-hover:scale-[1.02] duration-300"></div>
-                  <Card className="border-none shadow-lg relative z-10 bg-white h-full m-1 rounded-xl overflow-hidden">
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <div className="mb-6 flex-shrink-0">
-                        <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center">
-                          <value.icon className="w-8 h-8 text-orange-600" />
-                        </div>
-                      </div>
-                      <h3 className="font-heading font-bold text-xl mb-3">{value.title}</h3>
-                      <p className="text-gray-600 flex-grow">{value.description}</p>
-                      <div className="w-10 h-1 bg-orange-500 mt-4"></div>
-                    </CardContent>
-                  </Card>
-                </div>)}
-            </div>
-          </div>
+          
 
           {/* Value Proposition - Enhanced */}
           <div className="mb-16 relative overflow-hidden rounded-2xl">

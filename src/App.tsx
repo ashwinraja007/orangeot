@@ -12,10 +12,6 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Documentation from "./pages/services/Documentation";
 import SalesSupport from "./pages/services/SalesSupport";
-import DigitalMarketing from "./pages/services/DigitalMarketing";
-import AccountsManagement from "./pages/services/AccountsManagement";
-import CustomerService from "./pages/services/CustomerService";
-import SoftwareSolutions from "./pages/services/SoftwareSolutions";
 import Careers from "./pages/Careers";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
@@ -37,10 +33,6 @@ const App: React.FC = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/services/documentation" element={<Documentation />} />
             <Route path="/services/sales-support" element={<SalesSupport />} />
-            <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-            <Route path="/services/accounts" element={<AccountsManagement />} />
-            <Route path="/services/customer-service" element={<CustomerService />} />
-            <Route path="/services/software" element={<SoftwareSolutions />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/contact" element={<Contact />} />

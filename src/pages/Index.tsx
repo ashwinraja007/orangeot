@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -49,6 +50,7 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
+
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -98,7 +100,9 @@ const Index = () => {
       }
     };
   }, []);
-  return <div className="min-h-screen flex flex-col">
+  
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section - Updated with a single office building image */}
@@ -110,8 +114,8 @@ const Index = () => {
           </div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] transform -translate-x-1/3 translate-y-1/4">
             <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 transform -rotate-45 rounded-[40%] animate-float" style={{
-            animationDelay: "2s"
-          }}></div>
+              animationDelay: "2s"
+            }}></div>
           </div>
         </div>
 
@@ -241,8 +245,8 @@ const Index = () => {
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
         
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
+          transform: "translateY(-1px)"
+        }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L60,4C120,8,240,16,360,18.7C480,21,600,19,720,13.3C840,8,960,0,1080,0C1200,0,1320,8,1380,12L1440,16L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         
@@ -257,48 +261,48 @@ const Index = () => {
           {/* Services grid with box layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[{
-            icon: FileCheck,
-            title: "Documentation",
-            description: "Expert documentation services including invoices, credit notes, and job profit statements.",
-            image: "/1.png",
-            color: "from-blue-500 to-cyan-400",
-            link: "/services/documentation"
-          }, {
-            icon: Users,
-            title: "Sales Support",
-            description: "Centralized sales support desk for lead management and customer relationships.",
-            image: "/2.png",
-            color: "from-amber-500 to-orange-400",
-            link: "/services/sales-support"
-          }, {
-            icon: Globe,
-            title: "Digital Marketing",
-            description: "Comprehensive digital marketing solutions to boost your online presence.",
-            image: "/3.png",
-            color: "from-green-500 to-emerald-400",
-            link: "/services/digital-marketing"
-          }, {
-            icon: Building2,
-            title: "Accounts Management",
-            description: "Professional accounting services for trade and non-trade transactions.",
-            image: "/4.png",
-            color: "from-purple-500 to-violet-400",
-            link: "/services/accounts"
-          }, {
-            icon: Headset,
-            title: "Customer Service",
-            description: "Dedicated customer service team for bookings and nominations.",
-            image: "/5.png",
-            color: "from-pink-500 to-rose-400",
-            link: "/services/customer-service"
-          }, {
-            icon: Shield,
-            title: "Software Solutions",
-            description: "Custom software development following industry best practices.",
-            image: "/6.png",
-            color: "from-cyan-500 to-blue-400",
-            link: "/services/software"
-          }].map((service, index) => (
+              icon: FileCheck,
+              title: "Documentation",
+              description: "Expert documentation services including invoices, credit notes, and job profit statements.",
+              image: "/1.png",
+              color: "from-blue-500 to-cyan-400",
+              link: "/services/documentation"
+            }, {
+              icon: Users,
+              title: "Sales Support",
+              description: "Centralized sales support desk for lead management and customer relationships.",
+              image: "/2.png",
+              color: "from-amber-500 to-orange-400",
+              link: "/services/sales-support"
+            }, {
+              icon: Globe,
+              title: "Digital Marketing",
+              description: "Comprehensive digital marketing solutions to boost your online presence.",
+              image: "/3.png",
+              color: "from-green-500 to-emerald-400",
+              link: "/services/digital-marketing"
+            }, {
+              icon: Building2,
+              title: "Accounts Management",
+              description: "Professional accounting services for trade and non-trade transactions.",
+              image: "/4.png",
+              color: "from-purple-500 to-violet-400",
+              link: "/services/accounts"
+            }, {
+              icon: Headset,
+              title: "Customer Service",
+              description: "Dedicated customer service team for bookings and nominations.",
+              image: "/5.png",
+              color: "from-pink-500 to-rose-400",
+              link: "/services/customer-service"
+            }, {
+              icon: Shield,
+              title: "Software Solutions",
+              description: "Custom software development following industry best practices.",
+              image: "/6.png",
+              color: "from-cyan-500 to-blue-400",
+              link: "/services/software"
+            }].map((service, index) => (
               <Card key={index} className="group border-none rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white h-full" style={{
                 animationDelay: `${index * 100}ms`
               }}>
@@ -332,8 +336,8 @@ const Index = () => {
       {/* Founder Section - Updated to be more attractive */}
       <section className="py-20 bg-gradient-to-br from-amber-50 to-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
+          transform: "translateY(-1px)"
+        }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,32L120,26.7C240,21,480,11,720,10.7C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
         </svg>
         
@@ -410,8 +414,8 @@ const Index = () => {
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-orange-50" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
+          transform: "translateY(-1px)"
+        }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L40,4C80,8,160,16,240,18.7C320,21,400,19,480,13.3C560,8,640,0,720,0C800,0,880,8,960,12C1040,16,1120,16,1200,12C1280,8,1360,0,1400,-4L1440,-8L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
         </svg>
         
@@ -485,9 +489,40 @@ const Index = () => {
       {/* Enhanced Stats Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
+          transform: "translateY(-1px)"
+        }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
         
-        <div className="absolute inset-0 bg-pattern opacity-5
+        <div className="absolute inset-0 bg-pattern opacity-5"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 bg-clip-text text-transparent">Our Global Impact</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Delivering excellence in logistics services across continents
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-on-scroll">
+            {[
+              { value: "10+", label: "Years of Excellence" },
+              { value: "200+", label: "Satisfied Clients" },
+              { value: "5", label: "Global Locations" },
+              { value: "24/7", label: "Customer Support" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-gradient bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">{stat.value}</div>
+                <p className="text-gray-600">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default Index;

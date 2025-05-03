@@ -72,7 +72,7 @@ const Contact = () => {
     }, 
     {
       title: "Kochi Office",
-      description: "No 34/656, Neelima, Toll Jn, Edappally",
+      description: "No 34/656, Neelima, Toll Jn,Edappally , Ernakulam , Kochi, Kerala 682024,(Landmark : OPP Metro Pillar 394",
       coordinates: [76.3219, 9.9816],
       timing: "Mon - Fri: 9:00 AM - 6:00 PM",
       phone: "+91 44 4796 5437",

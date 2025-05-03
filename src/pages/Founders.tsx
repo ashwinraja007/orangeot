@@ -1,48 +1,26 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Star, Calendar, Briefcase, MapPin, Globe, Mail, Phone, Linkedin, Twitter, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const Founders = () => {
-  const achievements = [
-    "35+ years of industry experience",
-    "Pioneered specialized back-office services for freight forwarding",
-    "Expanded operations across multiple global locations",
-    "Led digital transformation initiatives in logistics sector"
-  ];
-
-  const milestones = [
-    {
-      year: "1991",
-      event: "Started professional journey in the courier industry"
-    },
-    {
-      year: "1990s-2000s",
-      event: "Advanced into logistics and freight forwarding sector"
-    },
-    {
-      year: "2012",
-      event: "Founded Orange Office Technologies Pvt Ltd"
-    },
-    {
-      year: "Present",
-      event: "Leading global expansion and digital transformation initiatives"
-    }
-  ];
-
-  const expertises = [
-    "Back-office operations",
-    "Supply chain management",
-    "Digital transformation",
-    "Global logistics",
-    "Strategic partnerships"
-  ];
-
-  return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-white to-orange-50">
+  const achievements = ["35+ years of industry experience", "Pioneered specialized back-office services for freight forwarding", "Expanded operations across multiple global locations", "Led digital transformation initiatives in logistics sector"];
+  const milestones = [{
+    year: "1991",
+    event: "Started professional journey in the courier industry"
+  }, {
+    year: "1990s-2000s",
+    event: "Advanced into logistics and freight forwarding sector"
+  }, {
+    year: "2012",
+    event: "Founded Orange Office Technologies Pvt Ltd"
+  }, {
+    year: "Present",
+    event: "Leading global expansion and digital transformation initiatives"
+  }];
+  const expertises = ["Back-office operations", "Supply chain management", "Digital transformation", "Global logistics", "Strategic partnerships"];
+  return <div className="min-h-screen flex flex-col bg-gradient-to-br from-white to-orange-50">
       <Header />
       <main className="flex-grow pt-20">
         {/* Hero Section - Improved with better spacing and visual elements */}
@@ -69,11 +47,7 @@ const Founders = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     {/* Image Section */}
                     <div className="h-full relative overflow-hidden">
-                      <img
-                        src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png"
-                        alt="Mr. Sudhir KU"
-                        className="w-full h-full object-cover object-center"
-                      />
+                      <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover object-center" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                       <div className="absolute bottom-0 left-0 p-6 md:p-8 text-white">
                         <h3 className="text-3xl font-bold mb-1">Mr. Sudhir KU</h3>
@@ -81,16 +55,19 @@ const Founders = () => {
                         
                         {/* Social Links */}
                         <div className="flex gap-3 mt-4">
-                          {[
-                            { icon: Mail, label: "Email" },
-                            { icon: Phone, label: "Phone" },
-                            { icon: Linkedin, label: "LinkedIn" },
-                            { icon: Twitter, label: "Twitter" }
-                          ].map((social, index) => (
-                            <div key={index} className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer backdrop-blur-sm">
-                              <social.icon className="h-5 w-5 text-white" />
-                            </div>
-                          ))}
+                          {[{
+                          icon: Mail,
+                          label: "Email"
+                        }, {
+                          icon: Phone,
+                          label: "Phone"
+                        }, {
+                          icon: Linkedin,
+                          label: "LinkedIn"
+                        }, {
+                          icon: Twitter,
+                          label: "Twitter"
+                        }].map((social, index) => {})}
                         </div>
                       </div>
                     </div>
@@ -116,19 +93,12 @@ const Founders = () => {
                         
                         <h3 className="text-xl font-semibold mb-3 text-gray-800">Areas of Expertise</h3>
                         <div className="flex flex-wrap gap-2 mb-6">
-                          {expertises.map((expertise, index) => (
-                            <span key={index} className="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">
+                          {expertises.map((expertise, index) => <span key={index} className="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">
                               {expertise}
-                            </span>
-                          ))}
+                            </span>)}
                         </div>
                         
-                        <Button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-xl">
-                          <Link to="/contact" className="flex items-center gap-2">
-                            Connect with Mr. Sudhir
-                            <ArrowRight className="h-4 w-4" />
-                          </Link>
-                        </Button>
+                        
                       </div>
                     </div>
                   </div>
@@ -153,8 +123,8 @@ const Founders = () => {
             {/* Legacy and Impact */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
               {/* Key Achievements */}
-              <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white/80 backdrop-blur-sm hover:-translate-y-1 rounded-2xl">
-                <CardContent className="p-6 md:p-8">
+              <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden backdrop-blur-sm hover:-translate-y-1 rounded-2xl bg-slate-100">
+                <CardContent className="p-6 md:p-8 bg-slate-100">
                   <div className="space-y-4 md:space-y-6">
                     <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-orange-400 mb-4 shadow-lg">
                       <Award className="h-6 w-6 text-white" />
@@ -163,14 +133,12 @@ const Founders = () => {
                       Key Achievements
                     </h4>
                     <ul className="space-y-3">
-                      {achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-center gap-3">
+                      {achievements.map((achievement, i) => <li key={i} className="flex items-center gap-3">
                           <div className="min-w-6 min-h-6 rounded-full bg-amber-100 flex items-center justify-center">
                             <Star className="h-4 w-4 text-amber-500" />
                           </div>
                           <span className="text-gray-700">{achievement}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
                 </CardContent>
@@ -178,7 +146,7 @@ const Founders = () => {
 
               {/* Career Milestones */}
               <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white/80 backdrop-blur-sm hover:-translate-y-1 rounded-2xl">
-                <CardContent className="p-6 md:p-8">
+                <CardContent className="p-6 md:p-8 bg-slate-100">
                   <div className="space-y-4 md:space-y-6">
                     <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 mb-4 shadow-lg">
                       <Calendar className="h-6 w-6 text-white" />
@@ -187,8 +155,7 @@ const Founders = () => {
                       Career Milestones
                     </h4>
                     <div className="relative border-l-2 border-gray-200 pl-6 space-y-6">
-                      {milestones.map((milestone, i) => (
-                        <div key={i} className="relative">
+                      {milestones.map((milestone, i) => <div key={i} className="relative">
                           <div className="absolute -left-[30px] w-6 h-6 rounded-full bg-white border-2 border-orange-400 flex items-center justify-center">
                             <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                           </div>
@@ -198,8 +165,7 @@ const Founders = () => {
                             </div>
                             <p className="text-gray-700">{milestone.event}</p>
                           </div>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </div>
                 </CardContent>
@@ -255,8 +221,6 @@ const Founders = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Founders;

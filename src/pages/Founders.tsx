@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,10 +28,7 @@ const Founders = () => {
           <div className="absolute inset-0 bg-pattern opacity-5"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-600 mb-4 animate-fade-in">
-                <Star className="w-4 h-4" />
-                <span className="text-sm font-medium">Leadership Excellence</span>
-              </div>
+              
               <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-gradient bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent animate-fade-in">
                 Meet Our Visionary Founder
               </h1>
@@ -55,30 +51,7 @@ const Founders = () => {
                         <p className="text-white/90 text-xl">Director & Founder</p>
                         
                         {/* Social Links */}
-                        <div className="flex gap-3 mt-4">
-                          {[{
-                          icon: Mail,
-                          label: "Email"
-                        }, {
-                          icon: Phone,
-                          label: "Phone"
-                        }, {
-                          icon: Linkedin,
-                          label: "LinkedIn"
-                        }, {
-                          icon: Twitter,
-                          label: "Twitter"
-                        }].map((social, index) => (
-                          <a 
-                            key={index}
-                            href="#" 
-                            className="w-8 h-8 flex items-center justify-center bg-white/20 hover:bg-white/40 rounded-full transition-colors"
-                            aria-label={social.label}
-                          >
-                            <social.icon className="h-4 w-4 text-white" />
-                          </a>
-                        ))}
-                        </div>
+                        
                       </div>
                     </div>
                     

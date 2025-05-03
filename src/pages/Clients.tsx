@@ -236,7 +236,7 @@ const Clients = () => {
               Let us show you how we can transform your operations and help your business grow.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-white/50">
+              <Button variant="outline" className="border-white/30 hover:border-white/50 text-gray-950 bg-slate-300 hover:bg-slate-200">
                 <Link to="/services">Learn More</Link>
               </Button>
               <Button className="bg-[#F58220] hover:bg-[#F58220]/90 text-white shadow-lg hover:shadow-xl transition-all duration-300">

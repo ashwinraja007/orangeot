@@ -51,38 +51,39 @@ const CustomerService = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
-      <GradientBackground 
-        className="pt-32 pb-20 min-h-[60vh] flex items-center" 
-        variant="primary" 
-        intensity="medium"
-        animated={true}
+     {/* Hero Section */}
+<GradientBackground 
+  className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
+  variant="primary" 
+  intensity="medium"
+  animated={true}
+>
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto text-center">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 text-pink-600 mb-6">
+        <Headset className="h-4 w-4" />
+        <span className="font-medium">Customer Service</span>
+      </div>
+      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
+        Exceptional Customer Experience
+      </h1>
+      <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
+        Dedicated customer service team handling bookings, nominations, and inquiries for your logistics business
+      </p>
+      <Button 
+        size="lg" 
+        className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" 
+        asChild
       >
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 text-pink-600 mb-6">
-              <Headset className="h-4 w-4" />
-              <span className="font-medium">Customer Service</span>
-            </div>
-            <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
-              Exceptional Customer Experience
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
-              Dedicated customer service team handling bookings, nominations, and inquiries for your logistics business
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl" 
-              asChild
-            >
-              <Link to="/contact" className="flex items-center gap-2">
-                Explore Our Solutions
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </GradientBackground>
+        <Link to="/contact" className="flex items-center gap-2">
+          Explore Our Solutions
+          <ArrowRight className="h-5 w-5" />
+        </Link>
+      </Button>
+    </div>
+  </div>
+</GradientBackground>
+
 
       {/* Service Overview */}
       <section className="py-20 bg-white">

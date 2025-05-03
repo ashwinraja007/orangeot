@@ -1,11 +1,9 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Activity, BarChart, Building2, Shield, Target, Users, FileCheck, Globe, Headset, ArrowRight, Award, Briefcase, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const About = () => {
   const values = [{
     icon: Shield,
@@ -20,7 +18,6 @@ const About = () => {
     title: "Agility",
     description: "Adapting quickly to meet evolving industry demands"
   }];
-  
   const expertise = [{
     icon: Building2,
     title: "Warehouse Management Systems (WMS)"
@@ -40,7 +37,6 @@ const About = () => {
     icon: Shield,
     title: "Infrastructure Support & Security Management"
   }];
-  
   const metrics = [{
     number: "35+",
     label: "Years Experience"
@@ -54,7 +50,6 @@ const About = () => {
     number: "200+",
     label: "Projects Completed"
   }];
-  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -65,8 +60,8 @@ const About = () => {
         </div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] transform -translate-x-1/4 translate-y-1/4">
           <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 transform -rotate-45 rounded-[40%] animate-float" style={{
-            animationDelay: "2s"
-          }}></div>
+          animationDelay: "2s"
+        }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -89,12 +84,7 @@ const About = () => {
                 OOT delivers advanced digital solutions and operational support that drive innovation and efficiency across 
                 the logistics value chain.
               </p>
-              <p className="text-gray-600 mb-4">
-                With a strong foundation built on logistics domain expertise and technology-driven innovation, we specialize 
-                in delivering real-time, integrated IT solutions that drive productivity and digital transformation. Our IT 
-                division develops and implements customized software solutions that enable clients to stay ahead in today's 
-                fast-paced logistics environment.
-              </p>
+              
               <p className="text-gray-600">
                 With a skilled team of professionals and deep industry experience, OOT ensures high-performance standards 
                 and continuous process improvements. We align closely with our group companies to deliver agile, scalable, 
@@ -103,11 +93,7 @@ const About = () => {
             </div>
             <div className="relative">
               <div className="aspect-square overflow-hidden rounded-2xl shadow-2xl border-4 border-white">
-                <img 
-                  src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&h=800&q=80" 
-                  alt="Modern Office Space" 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-700"
-                />
+                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&h=800&q=80" alt="Modern Office Space" className="w-full h-full object-cover transition-transform hover:scale-105 duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-multiply"></div>
               </div>
               
@@ -156,35 +142,13 @@ const About = () => {
           </div>
 
           {/* Core Expertise - Enhanced with visual elements */}
-          <div className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="font-heading text-3xl font-bold mb-4">Core Areas of Expertise</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Specialized knowledge and capabilities that set us apart in the logistics technology sector
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {expertise.map((item, index) => (
-                <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-                  <CardContent className="p-6">
-                    <div className="mb-4 w-14 h-14 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center">
-                      <item.icon className="w-7 h-7 text-orange-600" />
-                    </div>
-                    <h3 className="font-heading font-bold text-xl mb-3">{item.title}</h3>
-                    <div className="w-10 h-1 bg-orange-500 mb-4"></div>
-                    <p className="text-gray-600">Specialized solutions and expertise to optimize your operations.</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+          
 
           {/* Values Section - Enhanced */}
           <div className="mb-16">
             <h2 className="font-heading text-3xl font-bold text-center mb-12">Our Core Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="relative group">
+              {values.map((value, index) => <div key={index} className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-amber-400 rounded-2xl transform transition-transform group-hover:scale-[1.02] duration-300"></div>
                   <Card className="border-none shadow-lg relative z-10 bg-white h-full m-1 rounded-xl overflow-hidden">
                     <CardContent className="p-6 flex flex-col h-full">
@@ -198,8 +162,7 @@ const About = () => {
                       <div className="w-10 h-1 bg-orange-500 mt-4"></div>
                     </CardContent>
                   </Card>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
 
@@ -221,11 +184,7 @@ const About = () => {
                   </p>
                 </div>
                 <div className="hidden md:block">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" 
-                    alt="Business Team" 
-                    className="rounded-xl shadow-lg w-full h-auto"
-                  />
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Business Team" className="rounded-xl shadow-lg w-full h-auto" />
                 </div>
               </div>
             </div>
@@ -234,56 +193,20 @@ const About = () => {
           {/* Metrics Section - Enhanced */}
           <div className="bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-2xl p-12 shadow-xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {metrics.map((metric, index) => (
-                <div key={index} className="text-center relative group">
+              {metrics.map((metric, index) => <div key={index} className="text-center relative group">
                   <div className="absolute inset-0 bg-white/10 rounded-xl transform scale-0 transition-transform group-hover:scale-100 duration-300"></div>
                   <div className="relative z-10 py-4">
                     <div className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-2">{metric.number}</div>
                     <div className="text-white/90">{metric.label}</div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="font-heading text-3xl font-bold text-center mb-12">Our Services</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-            {[{
-              icon: FileCheck,
-              title: "Documentation Services",
-              description: "Accurate and timely preparation of essential shipping documents"
-            }, {
-              icon: Users,
-              title: "Sales Support Desk",
-              description: "Centralized support to manage leads and client inquiries"
-            }, {
-              icon: Headset,
-              title: "Customer Service",
-              description: "Professional management of inquiries and shipment updates"
-            }].map((service, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
-                <CardContent className="p-6">
-                  <service.icon className="w-12 h-12 text-[#ff6a00] mb-4" />
-                  <h3 className="font-heading font-bold text-xl mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <Button variant="default" className="bg-[#ff6a00] hover:bg-[#ff6a00]/90" asChild>
-              <Link to="/services">View All Services</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-orange-100 to-amber-50 relative overflow-hidden">

@@ -42,41 +42,31 @@ const Documentation = () => {
       <Header />
       
       {/* Hero Section */}
-      <GradientBackground 
-        className="pt-32 pb-16 min-h-[50vh] flex items-center" 
-        variant="primary" 
-        intensity="medium"
-        animated={true}
-      >
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-1">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
-                  <FileCheck className="h-5 w-5" />
-                  <span className="font-medium">Documentation</span>
-                </div>
-                <h1 className="font-heading font-bold text-3xl md:text-5xl mb-6 animate-fade-in">
-                  Expert Documentation Services
-                </h1>
-                <p className="text-lg text-gray-600 mb-8">
-                  Our skilled team ensures accurate and timely preparation of all essential shipping and logistics documents, helping you reduce compliance risks.
-                </p>
-                <Button className="mt-2" asChild>
-                  <Link to="/contact">Get Started</Link>
-                </Button>
-              </div>
-              <div className="flex-1">
-                <img 
-                  src="/1.png" 
-                  alt="Documentation Services" 
-                  className="rounded-lg shadow-2xl object-cover w-full transform hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </GradientBackground>
+<GradientBackground 
+  className="pt-32 pb-16 min-h-[50vh] flex items-center justify-center" 
+  variant="primary" 
+  intensity="medium"
+  animated={true}
+>
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto text-center">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
+        <FileCheck className="h-5 w-5" />
+        <span className="font-medium">Documentation</span>
+      </div>
+      <h1 className="font-heading font-bold text-3xl md:text-5xl mb-6 animate-fade-in">
+        Expert Documentation Services
+      </h1>
+      <p className="text-lg text-gray-600 mb-8">
+        Our skilled team ensures accurate and timely preparation of all essential shipping and logistics documents, helping you reduce compliance risks.
+      </p>
+      <Button className="mt-2" asChild>
+        <Link to="/contact">Get Started</Link>
+      </Button>
+    </div>
+  </div>
+</GradientBackground>
+
 
       {/* Document Types Section */}
       <section className="py-20">

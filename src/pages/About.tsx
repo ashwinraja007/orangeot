@@ -191,17 +191,7 @@ const About = () => {
           </div>
 
           {/* Metrics Section - Enhanced */}
-          <div className="bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-2xl p-12 shadow-xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {metrics.map((metric, index) => <div key={index} className="text-center relative group">
-                  <div className="absolute inset-0 bg-white/10 rounded-xl transform scale-0 transition-transform group-hover:scale-100 duration-300"></div>
-                  <div className="relative z-10 py-4">
-                    <div className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-2">{metric.number}</div>
-                    <div className="text-white/90">{metric.label}</div>
-                  </div>
-                </div>)}
-            </div>
-          </div>
+          
         </div>
       </section>
 

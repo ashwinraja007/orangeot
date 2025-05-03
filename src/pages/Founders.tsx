@@ -2,7 +2,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Star, Calendar, Briefcase, MapPin, Globe, Mail, Phone, Linkedin, Twitter } from "lucide-react";
+import { Award, Star, Calendar, Briefcase, MapPin, Globe, Mail, Phone, Linkedin, Twitter, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 

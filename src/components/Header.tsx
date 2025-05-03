@@ -59,7 +59,7 @@ export const Header = () => {
               <Link 
                 key={item.label} 
                 to={item.to} 
-                className={`font-medium transition-colors duration-300 relative text-gray-700 hover:text-orange-500 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left after:bg-orange-500 ${
+                className={`font-medium transition-colors duration-300 relative text-gray-800 hover:text-orange-500 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left after:bg-orange-500 ${
                   location.pathname === item.to 
                     ? 'text-orange-500 after:scale-x-100 after:bg-orange-500' 
                     : ''
@@ -70,15 +70,15 @@ export const Header = () => {
             ))}
           </nav>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center">
             <Button 
-              className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-shine rounded-xl"
+              className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-shine rounded-xl text-white"
             >
               <Link to="/contact">Contact Us</Link>
             </Button>
             
             <button 
-              className="md:hidden p-2 hover:bg-gray-100/10 rounded-lg transition-colors text-gray-700" 
+              className="md:hidden ml-4 p-2 hover:bg-gray-100/10 rounded-lg transition-colors text-gray-800" 
               onClick={() => setIsMenuOpen(!isMenuOpen)} 
               aria-label="Toggle menu" 
               aria-expanded={isMenuOpen}
@@ -103,7 +103,7 @@ export const Header = () => {
               <Link 
                 key={item.label} 
                 to={item.to} 
-                className={`text-gray-700 hover:text-orange-500 font-medium py-2 transition-colors duration-300 ${
+                className={`text-gray-800 hover:text-orange-500 font-medium py-2 transition-colors duration-300 ${
                   location.pathname === item.to ? 'text-orange-500' : ''
                 }`} 
                 onClick={() => setIsMenuOpen(false)}
@@ -111,11 +111,6 @@ export const Header = () => {
                 {item.label}
               </Link>
             ))}
-            <Button className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-xl">
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                Contact Us
-              </Link>
-            </Button>
           </nav>
         </div>
       )}

@@ -85,7 +85,7 @@ const Services = () => {
       
       {/* Hero Section with Gradient Background */}
       <GradientBackground 
-        className="pt-32 pb-20 min-h-[60vh] flex items-center" 
+        className="pt-28 pb-16 min-h-[60vh] flex items-center" 
         variant="primary" 
         intensity="medium"
         animated={true}
@@ -105,14 +105,14 @@ const Services = () => {
         </div>
       </GradientBackground>
 
-      {/* Services Grid with Box Design */}
-      <section className="py-20 -mt-10 bg-white relative z-10">
+      {/* Services Grid with Box Design - Updated with square boxes */}
+      <section className="py-16 -mt-10 bg-white relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-2xl transition-all duration-500 animate-fade-in overflow-hidden border-none rounded-2xl"
+                className="group hover:shadow-2xl transition-all duration-500 animate-fade-in overflow-hidden border-none rounded-2xl h-full"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative aspect-square overflow-hidden">
@@ -148,11 +148,11 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Benefits Section - Enhanced with better visuals */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
               Why Choose Our Services
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
@@ -174,32 +174,32 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
+      {/* Testimonial Section - Updated with better contrast and readability */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <Card className="border-none shadow-2xl overflow-hidden">
               <CardContent className="p-0">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="p-10 lg:p-16 flex flex-col justify-center">
-                    <div className="mb-6">
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 16H8C13.6 16 16 19.2 16 24V40H0V16ZM24 16H32C37.6 16 40 19.2 40 24V40H24V16Z" fill="currentColor" fillOpacity="0.2"/>
+                  <div className="p-10 lg:p-16 flex flex-col justify-center bg-gradient-to-br from-white to-gray-50">
+                    <div className="mb-6 text-orange-500">
+                      <svg width="48" height="48" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 16H8C13.6 16 16 19.2 16 24V40H0V16ZM24 16H32C37.6 16 40 19.2 40 24V40H24V16Z" fillOpacity="0.8"/>
                       </svg>
                     </div>
-                    <p className="text-xl mb-8 leading-relaxed italic">
+                    <p className="text-xl mb-8 leading-relaxed italic text-gray-700">
                       "Orange Office Technologies has transformed our operations. Their comprehensive services have enabled us to focus on our core business while they handle our back-office functions with precision and expertise."
                     </p>
                     <div>
-                      <p className="font-heading font-bold text-xl">Michael Chen</p>
-                      <p className="text-gray-600">CEO, Global Shipping Partners</p>
+                      <p className="font-heading font-bold text-xl text-gray-900">Michael Chen</p>
+                      <p className="text-orange-500">CEO, Global Shipping Partners</p>
                     </div>
                   </div>
-                  <div className="hidden lg:block bg-gradient-to-br from-primary/80 to-primary/100">
+                  <div className="hidden lg:block bg-gradient-to-br from-amber-500 to-orange-500">
                     <img 
                       src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=800&q=80" 
                       alt="Happy client" 
-                      className="w-full h-full object-cover mix-blend-overlay opacity-50"
+                      className="w-full h-full object-cover mix-blend-overlay opacity-80"
                     />
                   </div>
                 </div>
@@ -209,7 +209,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Enhanced with stronger visual impact */}
       <GradientBackground 
         className="py-16" 
         variant="accent" 
@@ -218,20 +218,20 @@ const Services = () => {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl mb-6">
+            <h2 className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl mb-6 text-gradient bg-gradient-to-r from-white to-gray-100 bg-clip-text text-transparent">
               Ready to Transform Your Operations?
             </h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
               Let us show you how we can help streamline your processes and boost your business growth.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="shadow-lg bg-gradient-to-r from-orange-500 to-amber-500" asChild>
+              <Button size="lg" className="shadow-lg bg-white text-orange-600 hover:bg-gray-100" asChild>
                 <Link to="/contact" className="flex items-center gap-2">
                   Get Started Today
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
                 <Link to="/about">Learn About Us</Link>
               </Button>
             </div>

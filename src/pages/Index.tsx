@@ -555,47 +555,7 @@ const Index = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-20 relative overflow-hidden bg-slate-100">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-500"></div>
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6 animate-on-scroll leading-tight text-zinc-950">
-              Ready to Transform Your Logistics Operations?
-            </h2>
-            
-            <Card className="border-none rounded-2xl shadow-2xl backdrop-blur-md p-8 mb-10 animate-on-scroll bg-white/10 hover:bg-white/15 transition-all duration-300">
-              <CardContent className="p-0 text-left">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-                  <div className="col-span-2">
-                    <h3 className="text-2xl font-bold mb-2 text-white">Book a Free Consultation</h3>
-                    <p className="text-white/90">Get expert advice on how we can help optimize your operations</p>
-                  </div>
-                  <div className="text-right">
-                    <Button size="lg" className="bg-white text-orange-600 shadow-lg hover:shadow-xl w-full md:w-auto hover:bg-orange-50 rounded-xl border-0">
-                      <Link to="/contact" className="flex items-center justify-center gap-2">
-                        Schedule Now
-                        <ArrowRight className="h-5 w-5" />
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-xl">
-                <Link to="/services">Explore Services</Link>
-              </Button>
-              <Button size="lg" className="shadow-lg hover:shadow-xl rounded-xl border-0 text-slate-950 bg-amber-500 hover:bg-amber-400">
-                <Link to="/contact">Contact Us</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer />
     </div>;

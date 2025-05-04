@@ -146,7 +146,7 @@ const Index = () => {
             <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
               {/* Hero Image - Single office building image */}
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
-                <img src="/officebuild.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
+                <img src="/office2.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/30 to-transparent mix-blend-multiply"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <p className="text-sm md:text-base text-white/80">Where innovation meets expertise</p>

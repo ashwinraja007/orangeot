@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -49,6 +50,7 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
+
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -98,7 +100,9 @@ const Index = () => {
       }
     };
   }, []);
-  return <div className="min-h-screen flex flex-col">
+  
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section - Full screen cover image with overlay */}
@@ -241,8 +245,8 @@ const Index = () => {
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
         
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
+          transform: "translateY(-1px)"
+        }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L60,4C120,8,240,16,360,18.7C480,21,600,19,720,13.3C840,8,960,0,1080,0C1200,0,1320,8,1380,12L1440,16L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         
@@ -292,9 +296,10 @@ const Index = () => {
             description: "Custom software development following industry best practices.",
             image: "/6.png",
             color: "from-cyan-500 to-blue-400"
-          }].map((service, index) => <Card key={index} className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
-            animationDelay: `${index * 100}ms`
-          }}>
+          }].map((service, index) => (
+              <Card key={index} className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
+                animationDelay: `${index * 100}ms`
+              }}>
                 <div className="h-44 relative overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
@@ -314,12 +319,13 @@ const Index = () => {
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-     {/* Founder Section - Completely redesigned for visual appeal */}
+      {/* Founder Section - Completely redesigned for visual appeal */}
       <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white via-amber-50/50 to-white">
         {/* SVG wave divider at top */}
         <svg className="absolute top-0 left-0 w-full text-white" style={{transform: "translateY(-1px)"}} fill="currentColor" viewBox="0 0 1440 40">
@@ -449,8 +455,8 @@ const Index = () => {
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-orange-50" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
+          transform: "translateY(-1px)"
+        }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L40,4C80,8,160,16,240,18.7C320,21,400,19,480,13.3C560,8,640,0,720,0C800,0,880,8,960,12C1040,16,1120,16,1200,12C1280,8,1360,0,1400,-4L1440,-8L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
         </svg>
         
@@ -470,4 +476,42 @@ const Index = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                 <div className="flex items-start">
-                  <div className="mr-4 bg-blue-100 rounded-full p
+                  <div className="mr-4 bg-blue-100 rounded-full p-3">
+                    <Shield className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-1">Top Security</h4>
+                    <p className="text-gray-600 text-sm">Enterprise-grade security for all data</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-4 bg-orange-100 rounded-full p-3">
+                    <Users className="h-6 w-6 text-orange-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-1">Expert Team</h4>
+                    <p className="text-gray-600 text-sm">Qualified professionals in logistics</p>
+                  </div>
+                </div>
+              </div>
+              
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
+                <Link to="/about" className="flex items-center gap-2">
+                  Learn More About Us
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+            <div className="order-1 lg:order-2 animate-on-scroll">
+              <img src="/officebuild.png" alt="Orange Office Building" className="rounded-2xl shadow-2xl w-full object-cover hover:shadow-orange-200/20 transition-shadow duration-500" />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default Index;

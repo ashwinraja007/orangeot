@@ -111,7 +111,7 @@ const Index = () => {
 
   {/* Foreground Content */}
   <div className="container mx-auto px-4 relative z-10">
-    <div className="text-centre lg:text-left max-w-3xl mx-auto px-0 py-[38px]">
+    <div className="text-centre lg:text-left max-w-3xl px-0 my-0 py-0 mx-0">
       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-600 mb-6 animate-fade-in text-sm font-medium">
         <Sparkles className="w-4 h-4" />
         <span>Logistics KPO Excellence</span>

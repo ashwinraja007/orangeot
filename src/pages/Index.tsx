@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -50,7 +49,6 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
-
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -100,29 +98,29 @@ const Index = () => {
       }
     };
   }, []);
-  
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section - Full screen cover image with overlay */}
       <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
         {/* Full-screen background image with overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000" 
-            alt="Logistics Operations" 
-            className="w-full h-full object-cover object-center"
-          />
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000" alt="Logistics Operations" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
         </div>
         
         {/* Animated particles overlay */}
         <div className="absolute inset-0 z-10">
           <div className="absolute top-1/4 left-1/4 w-16 h-16 rounded-full bg-orange-500/20 animate-float"></div>
-          <div className="absolute top-3/4 left-1/5 w-8 h-8 rounded-full bg-blue-500/20 animate-float" style={{animationDelay: "1.5s"}}></div>
-          <div className="absolute top-1/3 right-1/4 w-12 h-12 rounded-full bg-amber-500/20 animate-float" style={{animationDelay: "2s"}}></div>
-          <div className="absolute bottom-1/4 right-1/5 w-10 h-10 rounded-full bg-cyan-500/20 animate-float" style={{animationDelay: "1s"}}></div>
+          <div className="absolute top-3/4 left-1/5 w-8 h-8 rounded-full bg-blue-500/20 animate-float" style={{
+          animationDelay: "1.5s"
+        }}></div>
+          <div className="absolute top-1/3 right-1/4 w-12 h-12 rounded-full bg-amber-500/20 animate-float" style={{
+          animationDelay: "2s"
+        }}></div>
+          <div className="absolute bottom-1/4 right-1/5 w-10 h-10 rounded-full bg-cyan-500/20 animate-float" style={{
+          animationDelay: "1s"
+        }}></div>
         </div>
         
         {/* Content overlay */}
@@ -148,7 +146,7 @@ const Index = () => {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white/40 text-white hover:bg-white/10 rounded-xl backdrop-blur-sm">
+              <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-slate-950">
                 <Link to="/services" className="flex items-center gap-2">
                   Explore Services
                   <ArrowRight className="h-5 w-5" />
@@ -160,14 +158,12 @@ const Index = () => {
         
         {/* Bottom wave svg */}
         <div className="absolute bottom-0 left-0 right-0 w-full z-20">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" fill="#ffffff" preserveAspectRatio="none">
-            <path d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
-          </svg>
+          
         </div>
       </section>
       
       {/* Client logos - Auto-scrolling */}
-      <div className="py-8 bg-white">
+      <div className="bg-white py-[14px]">
         <div className="container mx-auto px-4">
           <div className="animate-fade-in delay-200">
             <p className="text-gray-800 text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
@@ -245,8 +241,8 @@ const Index = () => {
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
         
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L60,4C120,8,240,16,360,18.7C480,21,600,19,720,13.3C840,8,960,0,1080,0C1200,0,1320,8,1380,12L1440,16L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         
@@ -296,10 +292,9 @@ const Index = () => {
             description: "Custom software development following industry best practices.",
             image: "/6.png",
             color: "from-cyan-500 to-blue-400"
-          }].map((service, index) => (
-              <Card key={index} className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
-                animationDelay: `${index * 100}ms`
-              }}>
+          }].map((service, index) => <Card key={index} className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="h-44 relative overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
@@ -319,8 +314,7 @@ const Index = () => {
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -328,7 +322,9 @@ const Index = () => {
       {/* Founder Section - Completely redesigned for visual appeal */}
       <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white via-amber-50/50 to-white">
         {/* SVG wave divider at top */}
-        <svg className="absolute top-0 left-0 w-full text-white" style={{transform: "translateY(-1px)"}} fill="currentColor" viewBox="0 0 1440 40">
+        <svg className="absolute top-0 left-0 w-full text-white" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,32L120,26.7C240,21,480,11,720,10.7C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
         </svg>
         
@@ -366,11 +362,7 @@ const Index = () => {
                   {/* Founder image with overlay effects */}
                   <div className="relative overflow-hidden lg:col-span-5 h-full">
                     <div className="absolute inset-0 bg-gradient-to-br from-amber-700/40 via-orange-600/30 to-amber-500/20 mix-blend-multiply z-10"></div>
-                    <img 
-                      src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" 
-                      alt="Mr. Sudhir KU" 
-                      className="w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-all duration-1000"
-                    />
+                    <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-all duration-1000" />
                     
                     {/* Glowing badge effect */}
                     <div className="absolute top-8 right-8 z-20">
@@ -422,17 +414,22 @@ const Index = () => {
                       </p>
                       
                       <div className="grid grid-cols-2 gap-4 mb-8">
-                        {[
-                          {title: "Global Reach", description: "Operations spanning across 3 continents"},
-                          {title: "Client Success", description: "50+ satisfied enterprise clients worldwide"},
-                          {title: "Industry Pioneer", description: "First to introduce specialized KPO services"},
-                          {title: "Digital Transformation", description: "Leading technological innovation"}
-                        ].map((achievement, index) => (
-                          <div key={index} className="bg-gradient-to-br from-orange-50 to-amber-50/50 p-4 rounded-xl border border-orange-100">
+                        {[{
+                        title: "Global Reach",
+                        description: "Operations spanning across 3 continents"
+                      }, {
+                        title: "Client Success",
+                        description: "50+ satisfied enterprise clients worldwide"
+                      }, {
+                        title: "Industry Pioneer",
+                        description: "First to introduce specialized KPO services"
+                      }, {
+                        title: "Digital Transformation",
+                        description: "Leading technological innovation"
+                      }].map((achievement, index) => <div key={index} className="bg-gradient-to-br from-orange-50 to-amber-50/50 p-4 rounded-xl border border-orange-100">
                             <h4 className="font-semibold text-orange-600 mb-1">{achievement.title}</h4>
                             <p className="text-sm text-gray-600">{achievement.description}</p>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                       
                       <div className="mt-auto">
@@ -455,8 +452,8 @@ const Index = () => {
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-orange-50" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L40,4C80,8,160,16,240,18.7C320,21,400,19,480,13.3C560,8,640,0,720,0C800,0,880,8,960,12C1040,16,1120,16,1200,12C1280,8,1360,0,1400,-4L1440,-8L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
         </svg>
         
@@ -510,8 +507,6 @@ const Index = () => {
       </section>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

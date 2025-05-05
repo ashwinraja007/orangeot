@@ -351,7 +351,7 @@ const Index = () => {
               </div>
               
               {/* Bio Section - Now more compact */}
-              <div className="p-6 lg:p-8 lg:col-span-7 flex flex-col justify-center py-[56px]">
+              <div className="p-6 lg:p-8 lg:col-span-7 flex flex-col justify-center py-[56px] px-[40px] mx-0 my-[35px]">
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-orange-200">
                   A Legacy of Excellence in Global Logistics
                 </h3>

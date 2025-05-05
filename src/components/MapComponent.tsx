@@ -6,14 +6,15 @@ import { cn } from "@/lib/utils";
 
 interface MapComponentProps {
   className?: string;
-  locations: {
+  locations?: {
     title: string;
     description: string;
     coordinates: [number, number];
   }[];
+  showPopup?: boolean;
 }
 
-const MapComponent = ({ className, locations }: MapComponentProps) => {
+export const MapComponent = ({ className, locations = [], showPopup }: MapComponentProps) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const [mapboxToken, setMapboxToken] = useState<string>('');
@@ -31,10 +32,26 @@ const MapComponent = ({ className, locations }: MapComponentProps) => {
     // Initialize map
     mapboxgl.accessToken = mapboxToken;
     
+    // Default locations if none provided
+    const defaultLocations = [
+      {
+        title: "MK Insignia, Kolkata",
+        description: "Our main headquarters",
+        coordinates: [88.4284, 22.5726] // Kolkata coords
+      },
+      {
+        title: "MK Tower, New Delhi", 
+        description: "Our northern India office",
+        coordinates: [77.2090, 28.6139] // Delhi coords
+      }
+    ];
+    
+    const mapLocations = locations.length > 0 ? locations : defaultLocations;
+    
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/light-v11',
-      center: locations[0]?.coordinates || [80.2707, 13.0827], // Chennai coordinates as default
+      center: mapLocations[0]?.coordinates || [80.2707, 13.0827], // Chennai coordinates as default
       zoom: 10,
       pitch: 45,
       bearing: 20,
@@ -47,7 +64,7 @@ const MapComponent = ({ className, locations }: MapComponentProps) => {
     );
 
     // Add markers for each location with enhanced styling
-    locations.forEach((location) => {
+    mapLocations.forEach((location) => {
       if (!map.current) return;
       
       // Create a custom marker element with better styling
@@ -211,12 +228,12 @@ const MapComponent = ({ className, locations }: MapComponentProps) => {
       <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
       
       {/* Interactive overlay with location info */}
-      <div className="absolute bottom-4 left-4 z-10 p-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-md max-w-sm">
-        <h3 className="font-bold text-gray-800 mb-1">Our Locations</h3>
-        <p className="text-sm text-gray-600">Explore our global presence. Click on markers to see location details.</p>
-      </div>
+      {showPopup && (
+        <div className="absolute bottom-4 left-4 z-10 p-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-md max-w-sm">
+          <h3 className="font-bold text-gray-800 mb-1">Our Locations</h3>
+          <p className="text-sm text-gray-600">Explore our global presence. Click on markers to see location details.</p>
+        </div>
+      )}
     </div>
   );
 };
-
-export default MapComponent;

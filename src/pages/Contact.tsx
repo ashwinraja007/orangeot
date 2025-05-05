@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -9,6 +8,7 @@ import { Building, Facebook, Globe, Instagram, Linkedin, Mail, MapPin, Phone, Se
 import { useState } from "react";
 import { MapComponent } from "@/components/MapComponent";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -319,4 +319,5 @@ const Contact = () => {
       <Footer />
     </div>;
 };
+
 export default Contact;

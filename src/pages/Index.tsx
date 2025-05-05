@@ -101,77 +101,82 @@ const Index = () => {
   return <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Enhanced Hero Section - Updated with a single office building image */}
-      <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-to-br from-[#FDF7F3] to-white">
-        {/* Glass Geometric Pattern Overlays */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] transform translate-x-1/3 -translate-y-1/4">
-            <div className="w-full h-full bg-gradient-to-br from-orange-400/20 to-amber-300/20 transform rotate-45 rounded-[40%] animate-float"></div>
-          </div>
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] transform -translate-x-1/3 translate-y-1/4">
-            <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 transform -rotate-45 rounded-[40%] animate-float" style={{
-            animationDelay: "2s"
-          }}></div>
+      {/* Enhanced Hero Section - Full screen cover image with overlay */}
+      <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
+        {/* Full-screen background image with overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000" 
+            alt="Logistics Operations" 
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
+        </div>
+        
+        {/* Animated particles overlay */}
+        <div className="absolute inset-0 z-10">
+          <div className="absolute top-1/4 left-1/4 w-16 h-16 rounded-full bg-orange-500/20 animate-float"></div>
+          <div className="absolute top-3/4 left-1/5 w-8 h-8 rounded-full bg-blue-500/20 animate-float" style={{animationDelay: "1.5s"}}></div>
+          <div className="absolute top-1/3 right-1/4 w-12 h-12 rounded-full bg-amber-500/20 animate-float" style={{animationDelay: "2s"}}></div>
+          <div className="absolute bottom-1/4 right-1/5 w-10 h-10 rounded-full bg-cyan-500/20 animate-float" style={{animationDelay: "1s"}}></div>
+        </div>
+        
+        {/* Content overlay */}
+        <div className="container mx-auto px-4 z-20 relative">
+          <div className="max-w-3xl mx-auto text-center text-white backdrop-blur-sm bg-black/10 p-8 rounded-3xl border border-white/10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/30 text-orange-200 mb-8 animate-fade-in text-sm font-medium backdrop-blur-sm border border-orange-400/30">
+              <Sparkles className="w-4 h-4" />
+              <span>Logistics Excellence Since 2012</span>
+            </div>
+            
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 animate-fade-in leading-tight tracking-tight">
+              Your <span className="text-gradient bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-extrabold">Strategic Partner</span> in Global Logistics
+            </h1>
+            
+            <p className="text-lg md:text-xl text-gray-200 mb-10 animate-fade-in delay-75">
+              Delivering comprehensive back-office solutions and innovation to transform how freight forwarders operate around the world.
+            </p>
+            
+            <div className="flex flex-wrap gap-6 justify-center">
+              <Button size="lg" className="glass-button bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
+                <Link to="/contact" className="flex items-center gap-2">
+                  Start Your Journey
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-2 border-white/40 text-white hover:bg-white/10 rounded-xl backdrop-blur-sm">
+                <Link to="/services" className="flex items-center gap-2">
+                  Explore Services
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-600 mb-6 animate-fade-in text-sm font-medium">
-                <Sparkles className="w-4 h-4" />
-                <span>Logistics KPO Excellence</span>
-              </div>
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-[#2C2C2C] leading-tight tracking-tight">
-                Your <span className="text-gradient bg-gradient-to-r from-orange-500 via-amber-500 to-orange-400 bg-clip-text text-transparent font-extrabold">Preferred</span><br className="hidden md:block" /> IT Partner
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
-                We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="glass-button bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
-                  <Link to="/contact" className="flex items-center gap-2">
-                    Get Started
-                    <ArrowRight className="h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" className="border-2 border-orange-400 text-orange-600 hover:bg-orange-50 rounded-xl">
-                  <Link to="/services" className="flex items-center gap-2">
-                    Our Services
-                    <ArrowRight className="h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-            <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
-              {/* Hero Image - Single office building image */}
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
-                <img src="/office2.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/30 to-transparent mix-blend-multiply"></div>
-                <div className="absolute bottom-6 left-6 text-white">
-                  <p className="text-sm md:text-base text-white/80">Where innovation meets expertise</p>
-                </div>
-              </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-amber-400/30 to-orange-300/30 rounded-full blur-3xl animate-pulse-slow"></div>
-              <div className="absolute -bottom-16 -left-10 w-40 h-40 bg-gradient-to-br from-orange-500/20 to-red-400/20 rounded-full blur-3xl animate-float"></div>
-            </div>
-          </div>
-          
-          {/* Client logos - Auto-scrolling */}
-          <div className="mt-16 animate-fade-in delay-200">
+        
+        {/* Bottom wave svg */}
+        <div className="absolute bottom-0 left-0 right-0 w-full z-20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" fill="#ffffff" preserveAspectRatio="none">
+            <path d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+          </svg>
+        </div>
+      </section>
+      
+      {/* Client logos - Auto-scrolling */}
+      <div className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="animate-fade-in delay-200">
             <p className="text-gray-800 text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
               <span className="h-px w-8 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></span>
               Trusted by leading companies
               <span className="h-px w-8 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></span>
             </p>
-            <div className="p-4 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/30 shadow-lg">
+            <div className="p-4 rounded-2xl bg-white/50 backdrop-blur-sm border border-gray-100 shadow-lg">
               <LogoCarousel logos={clientLogos} className="py-4" />
             </div>
           </div>
         </div>
-      </section>
+      </div>
       
       {/* Mission & Vision Section with Enhanced Design */}
       <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden py-20">
@@ -314,70 +319,125 @@ const Index = () => {
         </div>
       </section>
 
-     {/* Founder Section - Updated to be more attractive */}
-      <section className="py-20 bg-gradient-to-br from-amber-50 to-white relative overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full text-white" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
+     {/* Founder Section - Completely redesigned for visual appeal */}
+      <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white via-amber-50/50 to-white">
+        {/* SVG wave divider at top */}
+        <svg className="absolute top-0 left-0 w-full text-white" style={{transform: "translateY(-1px)"}} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,32L120,26.7C240,21,480,11,720,10.7C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
         </svg>
         
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-orange-300/20 to-amber-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-amber-200/20 to-orange-300/20 rounded-full blur-3xl"></div>
+        {/* Decorative elements */}
+        <div className="absolute top-40 left-0 w-full overflow-hidden opacity-20 pointer-events-none">
+          <div className="w-[600px] h-[600px] rounded-full bg-orange-300/30 blur-[100px] -translate-y-1/2"></div>
+        </div>
+        <div className="absolute bottom-40 right-0 w-full overflow-hidden opacity-20 pointer-events-none">
+          <div className="w-[600px] h-[600px] rounded-full bg-amber-400/30 blur-[100px] translate-x-1/2"></div>
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12 animate-on-scroll">
+            <div className="inline-flex items-center gap-4 mb-5">
+              <div className="h-px w-8 bg-gradient-to-r from-transparent to-orange-400"></div>
+              <span className="text-orange-500 font-medium text-sm uppercase tracking-wider bg-orange-50 px-4 py-1 rounded-full shadow-sm">
+                Visionary Leadership
+              </span>
+              <div className="h-px w-8 bg-gradient-to-r from-orange-400 to-transparent"></div>
+            </div>
+            
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-5 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
-              Meet Our Visionary Founder
+              Meet The Mind Behind Our Success
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              The driving force behind Orange Office Technologies' success and innovation
+              The innovative force transforming the logistics industry through expertise and vision
             </p>
           </div>
 
-          {/* Founder card with better layout and description */}
-          <div className="max-w-5xl mx-auto">
-            <Card className="border-none rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden bg-white">
+          {/* Founder showcase with premium design */}
+          <div className="max-w-6xl mx-auto">
+            <Card className="border-none rounded-[32px] shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden bg-white group">
               <CardContent className="p-0">
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                  {/* Founder image */}
-                  <div className="relative overflow-hidden aspect-square md:aspect-auto">
-                    <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 p-6 text-white">
-                      <h3 className="text-2xl font-bold mb-1">Mr. Sudhir KU</h3>
-                      <p className="text-white/90">Director</p>
+                <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[600px]">
+                  {/* Founder image with overlay effects */}
+                  <div className="relative overflow-hidden lg:col-span-5 h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-700/40 via-orange-600/30 to-amber-500/20 mix-blend-multiply z-10"></div>
+                    <img 
+                      src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" 
+                      alt="Mr. Sudhir KU" 
+                      className="w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-all duration-1000"
+                    />
+                    
+                    {/* Glowing badge effect */}
+                    <div className="absolute top-8 right-8 z-20">
+                      <div className="relative">
+                        <div className="absolute inset-0 rounded-full bg-orange-400 blur-md opacity-70 animate-pulse"></div>
+                        <div className="relative bg-gradient-to-br from-amber-400 to-orange-500 text-white px-4 py-2 rounded-full font-medium text-sm shadow-lg border border-white/20">
+                          35+ Years Experience
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Animated gradient overlay at bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black/90 via-black/60 to-transparent z-10"></div>
+                    
+                    {/* Name and position */}
+                    <div className="absolute bottom-8 left-8 text-white z-20 transform transition-transform duration-500 group-hover:translate-y-[-10px]">
+                      <h3 className="text-3xl md:text-4xl font-bold">Mr. Sudhir KU</h3>
+                      <div className="flex items-center gap-2 mt-2">
+                        <div className="h-0.5 w-10 bg-orange-400"></div>
+                        <p className="text-white/90 text-xl font-light">Founder & Director</p>
+                      </div>
                     </div>
                   </div>
                   
-                  {/* Founder bio */}
-                  <div className="p-6 md:p-8">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="h-1 w-10 bg-orange-500"></div>
-                      <span className="text-orange-500 font-medium">Our Leadership</span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-800">35+ Years of Industry Excellence</h3>
-                    <p className="text-gray-600 mb-4">
-                      With over three decades of experience in the logistics industry, Mr. Sudhir KU has pioneered specialized back-office services 
-                      that have transformed how freight forwarding companies operate globally.
-                    </p>
-                    <p className="text-gray-600 mb-6">
-                      His vision has guided Orange Office Technologies to become a leading KPO service provider, 
-                      serving clients across multiple continents with innovative solutions tailored to the logistics industry.
-                    </p>
+                  {/* Founder bio with premium styling */}
+                  <div className="p-8 md:p-12 lg:col-span-7 flex flex-col justify-center relative overflow-hidden">
+                    {/* Decorative elements */}
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-orange-100 rounded-full blur-3xl opacity-30"></div>
+                    <div className="absolute bottom-0 left-0 w-60 h-60 bg-amber-100 rounded-full blur-3xl opacity-20"></div>
                     
-                    <div className="flex flex-wrap gap-3 mb-6">
-                      {["Visionary Leader", "Industry Pioneer", "Global Expertise", "Tech Innovation"].map((tag, index) => <span key={index} className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">
-                          {tag}
-                        </span>)}
+                    <div className="relative">
+                      <div className="inline-block mb-6 relative">
+                        <span className="text-4xl text-orange-300 opacity-30 absolute -left-6 -top-6">"</span>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900 border-b border-orange-200 pb-4">
+                          A Legacy of Innovation & Excellence
+                        </h3>
+                      </div>
+                      
+                      <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                        With over three decades of pioneering expertise in the logistics industry, 
+                        Mr. Sudhir KU has revolutionized how freight forwarding companies operate globally through 
+                        specialized back-office services and technological innovation.
+                      </p>
+                      
+                      <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+                        His visionary leadership has guided Orange Office Technologies to become a 
+                        leading KPO service provider, serving clients across multiple continents with 
+                        tailored solutions that address the unique challenges of the modern logistics landscape.
+                      </p>
+                      
+                      <div className="grid grid-cols-2 gap-4 mb-8">
+                        {[
+                          {title: "Global Reach", description: "Operations spanning across 3 continents"},
+                          {title: "Client Success", description: "50+ satisfied enterprise clients worldwide"},
+                          {title: "Industry Pioneer", description: "First to introduce specialized KPO services"},
+                          {title: "Digital Transformation", description: "Leading technological innovation"}
+                        ].map((achievement, index) => (
+                          <div key={index} className="bg-gradient-to-br from-orange-50 to-amber-50/50 p-4 rounded-xl border border-orange-100">
+                            <h4 className="font-semibold text-orange-600 mb-1">{achievement.title}</h4>
+                            <p className="text-sm text-gray-600">{achievement.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      <div className="mt-auto">
+                        <Button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-xl shadow-md w-full md:w-auto group">
+                          <Link to="/founders" className="flex items-center gap-2 justify-center">
+                            Discover Our Founder's Journey
+                            <ArrowRight className="h-5 w-5 transform transition-transform group-hover:translate-x-1" />
+                          </Link>
+                        </Button>
+                      </div>
                     </div>
-                    
-                    <Button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-xl shadow-md">
-                      <Link to="/founders" className="flex items-center gap-2">
-                        Learn More About Our Founder
-                        <ArrowRight className="h-5 w-5" />
-                      </Link>
-                    </Button>
                   </div>
                 </div>
               </CardContent>
@@ -410,201 +470,4 @@ const Index = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                 <div className="flex items-start">
-                  <div className="mr-4 bg-blue-100 rounded-full p-3">
-                    <Shield className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Top Security</h4>
-                    <p className="text-gray-600 text-sm">Enterprise-grade security for all data</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="mr-4 bg-orange-100 rounded-full p-3">
-                    <Users className="h-6 w-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Expert Team</h4>
-                    <p className="text-gray-600 text-sm">Qualified professionals in logistics</p>
-                  </div>
-                </div>
-              </div>
-              
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
-                <Link to="/about" className="flex items-center gap-2">
-                  Learn More About Us
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-            <div className="order-1 lg:order-2 animate-on-scroll">
-              <div className="relative">
-                <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                  <img src="/office.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent"></div>
-                </div>
-                
-                {/* Floating card */}
-                <div className="absolute -bottom-10 -right-10 bg-white rounded-xl shadow-xl p-6 max-w-xs animate-float glass-card">
-                  <div className="flex items-center mb-3">
-                    <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-                    <p className="font-medium">Always Available</p>
-                  </div>
-                  <p className="text-gray-600 text-sm">24/7 customer support for all your logistics needs</p>
-                </div>
-                
-                {/* Decorative elements */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-blue-300/30 to-cyan-300/20 rounded-full blur-xl animate-pulse-slow"></div>
-                <div className="absolute -bottom-16 -left-6 w-20 h-20 bg-gradient-to-br from-amber-300/30 to-orange-300/20 rounded-full blur-xl animate-float"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full text-white" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
-          <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-        </svg>
-        
-        <div className="absolute inset-0 bg-pattern opacity-5"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12 animate-on-scroll">
-            
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient bg-gradient-to-r from-purple-700 via-violet-500 to-purple-600 bg-clip-text text-orange-500">Our Impact</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We've built a strong track record of success over the years.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-            {[{
-            number: "10+",
-            label: "Years Experience",
-            icon: Building2,
-            color: "from-blue-600 to-cyan-500"
-          }, {
-            number: "100+",
-            label: "Happy Employees",
-            icon: Users,
-            color: "from-green-600 to-emerald-500"
-          }, {
-            number: "50+",
-            label: "Satisfied Clients",
-            icon: Headset,
-            color: "from-amber-500 to-orange-400"
-          }, {
-            number: "200+",
-            label: "Projects Completed",
-            icon: FileCheck,
-            color: "from-purple-600 to-violet-500"
-          }].map((stat, index) => <div key={index} style={{
-            animationDelay: `${index * 100}ms`
-          }} className="text-center p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll border-none group hover:-translate-y-1 bg-white glassmorphism">
-                <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${stat.color} flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 transition-transform`}>
-                  <stat.icon className="h-8 w-8 text-white" />
-                </div>
-                <div className="font-heading font-bold text-4xl text-gray-800 mb-2 animate-count-up">{stat.number}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>)}
-          </div>
-        </div>
-      </section>
-      
-      {/* Testimonials Section with Auto-scrolling Carousel */}
-      <section className="py-20 bg-white relative">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-orange-200/10 to-amber-300/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-blue-200/10 to-cyan-300/10 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 animate-on-scroll">
-            
-            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-gradient bg-gradient-to-r from-green-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">What Our Clients Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Don't just take our word for it. Here's what our clients have to say about our services.
-            </p>
-          </div>
-          
-          <div className="max-w-5xl mx-auto">
-            <AutoplayCarousel testimonials={[{
-            quote: "Orange Office Technologies has transformed our operations. Their team is professional, responsive, and truly understands the freight forwarding industry.",
-            author: "John Smith",
-            position: "CEO",
-            company: "Global Shipping Ltd"
-          }, {
-            quote: "The documentation services provided by Orange Office have reduced our processing time by 40%. Their attention to detail is impeccable.",
-            author: "Sarah Johnson",
-            position: "Operations Director",
-            company: "Pacific Logistics"
-          }, {
-            quote: "We've been working with Orange Office for 5 years, and their consistent quality and innovation have helped us stay ahead in a competitive market.",
-            author: "Michael Chang",
-            position: "Managing Director",
-            company: "EastWest Freight Services"
-          }, {
-            quote: "Their digital marketing solutions have transformed our online presence. We've seen a 200% increase in qualified leads since partnering with them.",
-            author: "Anna Martinez",
-            position: "Marketing Head",
-            company: "Express Cargo Systems"
-          }]} />
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced CTA Section */}
-      
-
-      <Footer />
-    </div>;
-};
-
-// Auto-scrolling testimonial carousel component
-const AutoplayCarousel = ({
-  testimonials
-}) => {
-  const [api, setApi] = useState(null);
-  const isMobile = useIsMobile();
-  useEffect(() => {
-    if (!api) return;
-
-    // Set up autoplay
-    const interval = setInterval(() => {
-      api.scrollNext();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [api]);
-  return <Carousel className="w-full" setApi={setApi} opts={{
-    align: "start",
-    loop: true
-  }}>
-      <CarouselContent>
-        {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
-            <div className="p-4">
-              <Card className="border-none rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-full bg-white/80 backdrop-blur-sm">
-                <CardContent className="p-8 flex flex-col h-full">
-                  <div className="flex justify-center mb-6">
-                    <div className="text-6xl text-orange-300 opacity-50">"</div>
-                  </div>
-                  <blockquote className="text-lg text-center italic mb-8 flex-grow text-gray-700">
-                    {testimonial.quote}
-                  </blockquote>
-                  <div className="text-center mt-auto">
-                    <p className="font-heading font-bold text-lg text-gray-900">{testimonial.author}</p>
-                    <p className="text-gray-600">{testimonial.position}</p>
-                    <p className="text-orange-500 font-medium">{testimonial.company}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>)}
-      </CarouselContent>
-      <div className="flex justify-center gap-2 mt-6">
-        <CarouselPrevious className="static relative transform-none bg-white hover:bg-gray-100 border-orange-200 text-orange-500 mx-2" />
-        <CarouselNext className="static relative transform-none bg-white hover:bg-gray-100 border-orange-200 text-orange-500 mx-2" />
-      </div>
-    </Carousel>;
-};
-export default Index;
+                  <div className="mr-4 bg-blue-100 rounded-full p

@@ -337,9 +337,9 @@ const Index = () => {
     <div className="text-center mb-20 animate-on-scroll">
       <div className="inline-block mb-3">
         <div className="flex items-center justify-center gap-2">
-          <span className="h-px w-8 bg-gradient-to-r from-transparent to-orange-400"></span>
-          <span className="text-orange-500 font-medium uppercase tracking-wider text-sm">Leadership</span>
-          <span className="h-px w-8 bg-gradient-to-l from-transparent to-orange-400"></span>
+          
+          
+          
         </div>
       </div>
       
@@ -358,7 +358,7 @@ const Index = () => {
             {/* Premium Image Effects */}
             <div className="absolute inset-0 z-10">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-600/30 via-amber-500/25 to-orange-400/20 mix-blend-multiply"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-black/0 to-black/40"></div>
+              <div className=""></div>
               <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black/70 to-transparent"></div>
             </div>
             
@@ -390,7 +390,7 @@ const Index = () => {
           </div>
           
           {/* Enhanced Bio Section with Premium Styling - 6/12 columns */}
-          <div className="p-10 md:p-14 lg:p-16 lg:col-span-6 flex flex-col justify-center relative">
+          <div className="p-10 md:p-14 lg:p-16 lg:col-span-6 flex flex-col justify-center relative py-0 px-[30px]">
             {/* Enhanced Subtle Decorative Elements */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-orange-100/40 rounded-full blur-[100px] opacity-60"></div>
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-100/30 rounded-full blur-[120px] opacity-50"></div>

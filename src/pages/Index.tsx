@@ -105,17 +105,13 @@ const Index = () => {
      <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-[90vh] flex flex-col justify-center bg-gradient-to-br from-[#FDF7F3] to-white">
   {/* Fullscreen Background Image */}
   <div className="absolute inset-0 z-0">
-    <img
-      src="/office2.png"
-      alt="Orange Office Technologies Building"
-      className="w-full h-full object-cover object-center"
-    />
+    <img src="/office2.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center" />
     <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent mix-blend-multiply"></div>
   </div>
 
   {/* Foreground Content */}
   <div className="container mx-auto px-4 relative z-10">
-    <div className="text-center lg:text-left max-w-3xl mx-auto">
+    <div className="text-left lg:text-left max-w-3xl mx-auto">
       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-600 mb-6 animate-fade-in text-sm font-medium">
         <Sparkles className="w-4 h-4" />
         <span>Logistics KPO Excellence</span>
@@ -154,7 +150,7 @@ const Index = () => {
       </div>
     </div>
   </div>
-</section>
+    </section>
 
       
       {/* Mission & Vision Section with Enhanced Design */}

@@ -1,9 +1,8 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Building2, FileCheck, Globe, Headset, Play, Shield, Users, ArrowLeft, Star, Sparkles, HeartHandshake, TrendingUp, Box, Package, Truck, Forklift, Container, ShippingBox } from "lucide-react";
+import { ArrowRight, Building2, FileCheck, Globe, Headset, Play, Shield, Users, ArrowLeft, Star, Sparkles, HeartHandshake, TrendingUp, Box, Package, Truck, Forklift, Container } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
 import { useEffect, useRef, useState } from "react";
@@ -120,7 +119,7 @@ const Index = () => {
         <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-[10%] animate-float opacity-70">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-3 rotate-6">
-              <ShippingBox size={40} className="text-orange-300" />
+              <Package size={40} className="text-orange-300" />
             </Card>
           </div>
           
@@ -485,17 +484,4 @@ const Index = () => {
               </Button>
             </div>
             <div className="order-1 lg:order-2 animate-on-scroll">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img src="/officebuild.png" alt="Orange Office Building" className="w-full h-auto" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-600/20 to-transparent mix-blend-multiply"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>;
-};
-
-export default Index;
+              <div

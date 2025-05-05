@@ -1,5 +1,7 @@
+
 import React from "react";
 import { cn } from "@/lib/utils";
+
 interface LogoCarouselProps {
   logos: {
     src: string;
@@ -9,6 +11,7 @@ interface LogoCarouselProps {
   autoScroll?: boolean;
   speed?: number; // pixels per second for scrolling speed
 }
+
 const LogoCarousel = ({
   logos,
   className,
@@ -23,9 +26,10 @@ const LogoCarousel = ({
   const logoWidthWithMargin = 200; // pixels approx including margin
 
   // Animation duration = total width / speed px per second
-  const animationDuration = logosCount * logoWidthWithMargin * 2 / speed; // times 2 because logos duplicated
+  const animationDuration = (logosCount * logoWidthWithMargin * 2) / speed; // times 2 because logos duplicated
 
-  return <>
+  return (
+    <>
       <style>
         {`
           @keyframes scrollLogos {
@@ -38,20 +42,38 @@ const LogoCarousel = ({
           }
         `}
       </style>
-      <div className="bg-inherit">
-        <div className={cn("flex items-center whitespace-nowrap", autoScroll ? "animate-scroll-logos" : "")} style={{
-        animationDuration: autoScroll ? `${animationDuration}s` : undefined,
-        animationTimingFunction: "linear",
-        animationIterationCount: "infinite",
-        animationName: autoScroll ? "scrollLogos" : undefined,
-        willChange: "transform"
-      }} aria-label="Company logos carousel" role="region">
+      <div className={cn("w-full overflow-hidden relative", className)}>
+        <div
+          className={cn(
+            "flex items-center whitespace-nowrap",
+            autoScroll ? "animate-scroll-logos" : "",
+          )}
+          style={{
+            animationDuration: autoScroll ? `${animationDuration}s` : undefined,
+            animationTimingFunction: "linear",
+            animationIterationCount: "infinite",
+            animationName: autoScroll ? "scrollLogos" : undefined,
+            willChange: "transform",
+          }}
+          aria-label="Company logos carousel"
+          role="region"
+        >
           {/* Duplicate logos for infinite scroll effect */}
-          {[...logos, ...logos].map((logo, index) => <div key={index} className="mx-8 flex-shrink-0">
-              <img src={logo.src} alt={logo.alt} className="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity" loading="lazy" draggable={false} />
-            </div>)}
+          {[...logos, ...logos].map((logo, index) => (
+            <div key={index} className="mx-8 flex-shrink-0">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity"
+                loading="lazy"
+                draggable={false}
+              />
+            </div>
+          ))}
         </div>
       </div>
-    </>;
+    </>
+  );
 };
+
 export { LogoCarousel };

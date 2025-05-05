@@ -102,76 +102,60 @@ const Index = () => {
       <Header />
       
       {/* Enhanced Hero Section - Updated with a single office building image */}
-      <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-to-br from-[#FDF7F3] to-white">
-        {/* Glass Geometric Pattern Overlays */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] transform translate-x-1/3 -translate-y-1/4">
-            <div className="w-full h-full bg-gradient-to-br from-orange-400/20 to-amber-300/20 transform rotate-45 rounded-[40%] animate-float"></div>
-          </div>
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] transform -translate-x-1/3 translate-y-1/4">
-            <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 transform -rotate-45 rounded-[40%] animate-float" style={{
-            animationDelay: "2s"
-          }}></div>
-          </div>
-        </div>
+     <section className="pt-24 md:pt-28 pb-20 relative overflow-hidden min-h-[90vh] flex flex-col justify-center bg-gradient-to-br from-[#FDF7F3] to-white">
+  {/* Fullscreen Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/office2.png"
+      alt="Orange Office Technologies Building"
+      className="w-full h-full object-cover object-center"
+    />
+    <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent mix-blend-multiply"></div>
+  </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-600 mb-6 animate-fade-in text-sm font-medium">
-                <Sparkles className="w-4 h-4" />
-                <span>Logistics KPO Excellence</span>
-              </div>
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-[#2C2C2C] leading-tight tracking-tight">
-                Your <span className="text-gradient bg-gradient-to-r from-orange-500 via-amber-500 to-orange-400 bg-clip-text text-transparent font-extrabold">Preferred</span><br className="hidden md:block" /> IT Partner
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
-                We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="glass-button bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
-                  <Link to="/contact" className="flex items-center gap-2">
-                    Get Started
-                    <ArrowRight className="h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" className="border-2 border-orange-400 text-orange-600 hover:bg-orange-50 rounded-xl">
-                  <Link to="/services" className="flex items-center gap-2">
-                    Our Services
-                    <ArrowRight className="h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-            <div className="relative mt-10 lg:mt-0 animate-fade-in-right">
-              {/* Hero Image - Single office building image */}
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
-                <img src="/office2.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/30 to-transparent mix-blend-multiply"></div>
-                <div className="absolute bottom-6 left-6 text-white">
-                  <p className="text-sm md:text-base text-white/80">Where innovation meets expertise</p>
-                </div>
-              </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-amber-400/30 to-orange-300/30 rounded-full blur-3xl animate-pulse-slow"></div>
-              <div className="absolute -bottom-16 -left-10 w-40 h-40 bg-gradient-to-br from-orange-500/20 to-red-400/20 rounded-full blur-3xl animate-float"></div>
-            </div>
-          </div>
-          
-          {/* Client logos - Auto-scrolling */}
-          <div className="mt-16 animate-fade-in delay-200">
-            <p className="text-gray-800 text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
-              <span className="h-px w-8 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></span>
-              Trusted by leading companies
-              <span className="h-px w-8 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></span>
-            </p>
-            <div className="p-4 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/30 shadow-lg">
-              <LogoCarousel logos={clientLogos} className="py-4" />
-            </div>
-          </div>
-        </div>
-      </section>
+  {/* Foreground Content */}
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="text-center lg:text-left max-w-3xl mx-auto">
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-600 mb-6 animate-fade-in text-sm font-medium">
+        <Sparkles className="w-4 h-4" />
+        <span>Logistics KPO Excellence</span>
+      </div>
+      <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in text-white leading-tight tracking-tight">
+        Your <span className="text-gradient bg-gradient-to-r from-orange-500 via-amber-500 to-orange-400 bg-clip-text text-transparent font-extrabold">Preferred</span><br className="hidden md:block" /> IT Partner
+      </h1>
+      <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
+        We deliver comprehensive back-office, IT, digital marketing, and telesales solutions tailored for freight forwarders.
+      </p>
+      <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+        <Button size="lg" className="glass-button bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
+          <Link to="/contact" className="flex items-center gap-2">
+            Get Started
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+        </Button>
+        <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 rounded-xl">
+          <Link to="/services" className="flex items-center gap-2">
+            Our Services
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+        </Button>
+      </div>
+    </div>
+
+    {/* Client Logos Carousel */}
+    <div className="mt-16 animate-fade-in delay-200 relative z-10">
+      <p className="text-white text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
+        <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
+        Trusted by leading companies
+        <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
+      </p>
+      <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/30 shadow-lg">
+        <LogoCarousel logos={clientLogos} className="py-4" />
+      </div>
+    </div>
+  </div>
+</section>
+
       
       {/* Mission & Vision Section with Enhanced Design */}
       <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden py-20">

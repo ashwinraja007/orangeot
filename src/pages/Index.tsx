@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -100,7 +101,8 @@ const Index = () => {
     };
   }, []);
   
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Redesigned Hero Section with Logistics KPO Imagery */}
@@ -319,9 +321,10 @@ const Index = () => {
             description: "Custom software development following industry best practices.",
             image: "/6.png",
             color: "from-cyan-500 to-blue-400"
-          }].map((service, index) => <Card key={index} className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
-            animationDelay: `${index * 100}ms`
-          }}>
+          }].map((service, index) => (
+              <Card key={index} className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
+                animationDelay: `${index * 100}ms`
+              }}>
                 <div className="h-44 relative overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
@@ -341,7 +344,8 @@ const Index = () => {
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -484,4 +488,32 @@ const Index = () => {
               </Button>
             </div>
             <div className="order-1 lg:order-2 animate-on-scroll">
-              <div
+              <div className="relative">
+                <div className="bg-white/60 backdrop-blur-sm p-3 rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                  <img 
+                    src="/officebuild.png" 
+                    alt="Orange Office Technologies Building" 
+                    className="rounded-xl w-full h-full object-cover shadow-inner" 
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 transform rotate-6">
+                  <div className="bg-white shadow-lg p-2 rounded-lg border border-gray-100">
+                    <img 
+                      src="/office2.png" 
+                      alt="Office Interior" 
+                      className="w-24 h-24 md:w-32 md:h-32 object-cover rounded" 
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Index;

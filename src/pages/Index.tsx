@@ -396,7 +396,7 @@ const Index = () => {
                 {/* CTA Button */}
                 <div>
                   <Link to="/founders" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white py-2 px-4 rounded-lg font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-                    Learn More About Our Leadership
+                    Know More  
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>

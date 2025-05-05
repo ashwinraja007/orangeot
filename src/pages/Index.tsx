@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -50,7 +49,6 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
-
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -100,7 +98,6 @@ const Index = () => {
       }
     };
   }, []);
-  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -132,7 +129,7 @@ const Index = () => {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white/40 text-white hover:bg-white/10 rounded-xl backdrop-blur-sm">
+              <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-gray-950">
                 <Link to="/services" className="flex items-center gap-2">
                   Our Services
                   <ArrowRight className="h-5 w-5" />
@@ -156,9 +153,7 @@ const Index = () => {
         
         {/* Bottom wave svg for smooth transition */}
         <div className="absolute bottom-0 left-0 right-0 w-full z-20">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" fill="#ffffff" preserveAspectRatio="none" className="w-full h-[120px]">
-            <path d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
-          </svg>
+          
         </div>
       </section>
 
@@ -312,26 +307,29 @@ const Index = () => {
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-amber-200/5 to-orange-300/10 blur-[80px]"></div>
           
           {/* Decorative elements */}
-          <div className="absolute top-40 left-20 w-20 h-20 rounded-full border-4 border-orange-200/20 animate-float opacity-60" style={{animationDelay: "1.2s"}}></div>
-          <div className="absolute bottom-40 right-40 w-32 h-32 rounded-full border-8 border-amber-300/10 animate-float opacity-30" style={{animationDelay: "2s"}}></div>
-          <div className="absolute top-1/4 right-1/4 w-16 h-16 rounded-full bg-gradient-to-br from-orange-500/10 to-amber-400/5 animate-float opacity-40" style={{animationDelay: "0.8s"}}></div>
+          <div className="absolute top-40 left-20 w-20 h-20 rounded-full border-4 border-orange-200/20 animate-float opacity-60" style={{
+          animationDelay: "1.2s"
+        }}></div>
+          <div className="absolute bottom-40 right-40 w-32 h-32 rounded-full border-8 border-amber-300/10 animate-float opacity-30" style={{
+          animationDelay: "2s"
+        }}></div>
+          <div className="absolute top-1/4 right-1/4 w-16 h-16 rounded-full bg-gradient-to-br from-orange-500/10 to-amber-400/5 animate-float opacity-40" style={{
+          animationDelay: "0.8s"
+        }}></div>
         </div>
         
-        <svg className="absolute top-0 left-0 w-full text-white" style={{transform: "translateY(-1px)"}} fill="currentColor" viewBox="0 0 1440 40">
+        <svg className="absolute top-0 left-0 w-full text-white" style={{
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,32L120,26.7C240,21,480,11,720,10.7C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
         </svg>
         
         <div className="container mx-auto px-4 relative z-10">
           {/* Section Header with Refined Design */}
           <div className="text-center mb-16 animate-on-scroll">
-            <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-orange-100/50 rounded-full text-orange-600 mb-4 text-sm font-medium border border-orange-200/50">
-              <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
-              <span>Visionary Leadership</span>
-            </div>
             
-            <h2 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-5 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
-              Meet Our Visionary Leader
-            </h2>
+            
+            <h2 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-5 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">Meet Our Leader</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               The driving force behind Orange Office Technologies' success and innovation
             </p>
@@ -339,11 +337,10 @@ const Index = () => {
 
           {/* Founder Showcase with Premium Visual Treatment */}
           <div className="max-w-6xl mx-auto">
-            <Card className="border-none overflow-hidden bg-white group animate-on-scroll" 
-                 style={{
-                   borderRadius: "3rem",
-                   boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 40px -20px rgba(245, 130, 32, 0.2)"
-                 }}>
+            <Card className="border-none overflow-hidden bg-white group animate-on-scroll" style={{
+            borderRadius: "3rem",
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 40px -20px rgba(245, 130, 32, 0.2)"
+          }}>
               <CardContent className="p-0">
                 <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[650px]">
                   {/* Founder Image with Sophisticated Effects - 5/12 columns */}
@@ -351,14 +348,10 @@ const Index = () => {
                     {/* Image with gradient overlay */}
                     <div className="absolute inset-0 z-10">
                       <div className="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-amber-500/30 to-orange-400/20 mix-blend-multiply"></div>
-                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-black/0 to-black/50"></div>
+                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-black/0 to-black/50 py-0 my-0"></div>
                     </div>
                     
-                    <img 
-                      src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" 
-                      alt="Mr. Sudhir KU" 
-                      className="w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-all duration-1500 ease-out"
-                    />
+                    <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-all duration-1500 ease-out" />
                     
                     {/* Experience badge with glow effect */}
                     <div className="absolute top-8 right-8 z-20">
@@ -412,43 +405,36 @@ const Index = () => {
                       
                       {/* Key achievements with visual distinction */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                        {[
-                          {
-                            title: "Global Reach", 
-                            description: "Operations spanning across 3 continents",
-                            color: "from-blue-50 to-blue-100/30",
-                            borderColor: "border-blue-200"
-                          },
-                          {
-                            title: "Client Success", 
-                            description: "50+ satisfied enterprise clients worldwide",
-                            color: "from-green-50 to-emerald-100/30",
-                            borderColor: "border-green-200"
-                          },
-                          {
-                            title: "Industry Pioneer", 
-                            description: "First to introduce specialized KPO services",
-                            color: "from-orange-50 to-amber-100/30",
-                            borderColor: "border-orange-200"
-                          },
-                          {
-                            title: "Digital Transformation", 
-                            description: "Leading technological innovation",
-                            color: "from-purple-50 to-violet-100/30",
-                            borderColor: "border-purple-200"
-                          }
-                        ].map((achievement, index) => (
-                          <div key={index} className={`bg-gradient-to-br ${achievement.color} p-4 rounded-xl border ${achievement.borderColor} hover:shadow-md transition-all duration-300 group/card`}>
+                        {[{
+                        title: "Global Reach",
+                        description: "Operations spanning across 3 continents",
+                        color: "from-blue-50 to-blue-100/30",
+                        borderColor: "border-blue-200"
+                      }, {
+                        title: "Client Success",
+                        description: "50+ satisfied enterprise clients worldwide",
+                        color: "from-green-50 to-emerald-100/30",
+                        borderColor: "border-green-200"
+                      }, {
+                        title: "Industry Pioneer",
+                        description: "First to introduce specialized KPO services",
+                        color: "from-orange-50 to-amber-100/30",
+                        borderColor: "border-orange-200"
+                      }, {
+                        title: "Digital Transformation",
+                        description: "Leading technological innovation",
+                        color: "from-purple-50 to-violet-100/30",
+                        borderColor: "border-purple-200"
+                      }].map((achievement, index) => <div key={index} className={`bg-gradient-to-br ${achievement.color} p-4 rounded-xl border ${achievement.borderColor} hover:shadow-md transition-all duration-300 group/card`}>
                             <h4 className="font-semibold text-gray-800 mb-1 group-hover/card:text-orange-600 transition-colors duration-300">{achievement.title}</h4>
                             <p className="text-sm text-gray-600">{achievement.description}</p>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                       
                       {/* Enhanced CTA Button */}
                       <Button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-xl shadow-md group overflow-hidden relative">
                         <Link to="/founders" className="flex items-center gap-2 justify-center py-1">
-                          <span className="relative z-10">Discover Our Founder's Journey</span>
+                          <span className="relative z-10">Know More</span>
                           <ArrowRight className="h-5 w-5 relative z-10 transform transition-transform group-hover:translate-x-1" />
                           <div className="absolute inset-0 bg-white/20 -translate-x-full skew-x-12 group-hover:translate-x-full transition-transform duration-700"></div>
                         </Link>

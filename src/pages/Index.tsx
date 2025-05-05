@@ -112,7 +112,7 @@ const Index = () => {
         {/* Foreground Content */}
         <div className="container mx-auto px-4 relative z-10 my-auto py-16 md:py-24">
           <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-400/20 text-orange-300 mb-8 animate-fade-in text-sm font-medium backdrop-blur-sm border border-orange-400/20">
+            <div className="inline-flex items-center gap-2 rounded-full bg-orange-400/20 text-orange-300 mb-8 animate-fade-in text-sm font-medium backdrop-blur-sm border border-orange-400/20 px-[16px] py-[8px]">
               <Sparkles className="w-4 h-4" />
               <span>Logistics KPO Excellence</span>
             </div>
@@ -145,7 +145,7 @@ const Index = () => {
               Trusted by leading companies
               <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
             </p>
-            <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/30 shadow-lg">
+            <div className="p-4 rounded-2xl backdrop-blur-sm border border-white/30 shadow-lg py-0 bg-white px-0">
               <LogoCarousel logos={clientLogos} className="py-4" />
             </div>
           </div>
@@ -299,8 +299,8 @@ const Index = () => {
         </div>
       </section>
 
-{/* Founder Section - Luxury Premium Design with Enhanced Visual Appeal */}
-<section className="py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-white relative overflow-hidden">
+    {/* Founder Section - Luxury Premium Design with Enhanced Visual Appeal */}
+    <section className="py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-white relative overflow-hidden">
   {/* Enhanced Dynamic Background */}
   <div className="absolute inset-0 z-0 overflow-hidden">
     <div className="absolute top-0 right-0 w-[900px] h-[900px] rounded-full bg-gradient-to-br from-orange-300/10 to-amber-200/15 blur-[120px]"></div>
@@ -308,27 +308,27 @@ const Index = () => {
     
     {/* Animated Decorative Elements */}
     <div className="absolute top-40 left-20 w-24 h-24 rounded-full border-4 border-orange-200/30 animate-float opacity-70" style={{
-      animationDelay: "1.2s",
-      animationDuration: "8s"
-    }}></div>
+          animationDelay: "1.2s",
+          animationDuration: "8s"
+        }}></div>
     <div className="absolute bottom-40 right-40 w-36 h-36 rounded-full border-8 border-amber-300/20 animate-float opacity-40" style={{
-      animationDelay: "2s",
-      animationDuration: "12s"
-    }}></div>
+          animationDelay: "2s",
+          animationDuration: "12s"
+        }}></div>
     <div className="absolute top-1/4 right-1/4 w-20 h-20 rounded-full bg-gradient-to-br from-orange-500/15 to-amber-400/10 animate-float opacity-50" style={{
-      animationDelay: "0.8s",
-      animationDuration: "10s"
-    }}></div>
+          animationDelay: "0.8s",
+          animationDuration: "10s"
+        }}></div>
     <div className="absolute bottom-1/3 left-1/4 w-16 h-16 rounded-full bg-gradient-to-br from-amber-400/15 to-orange-300/10 animate-float opacity-40" style={{
-      animationDelay: "1.5s",
-      animationDuration: "9s"
-    }}></div>
+          animationDelay: "1.5s",
+          animationDuration: "9s"
+        }}></div>
   </div>
   
   {/* Improved Wave Separator */}
   <svg className="absolute top-0 left-0 w-full text-white" style={{
-    transform: "translateY(-1px)"
-  }} fill="currentColor" viewBox="0 0 1440 50">
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 50">
     <path d="M0,40L80,36.7C160,33,320,27,480,23.3C640,20,800,20,960,23.3C1120,27,1280,33,1360,36.7L1440,40L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
   </svg>
   
@@ -364,11 +364,7 @@ const Index = () => {
             
             {/* Optimized Image with Enhanced Animation */}
             <div className="absolute inset-0 overflow-hidden">
-              <img 
-                src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" 
-                alt="Mr. Sudhir KU" 
-                className="w-full h-full object-cover object-center scale-105 group-hover:scale-[1.12] transition-all duration-2000 ease-out"
-              />
+              <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover object-center scale-105 group-hover:scale-[1.12] transition-all duration-2000 ease-out" />
             </div>
             
             {/* Enhanced Experience Badge with Premium Effect */}
@@ -424,35 +420,34 @@ const Index = () => {
               {/* Enhanced Achievement Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
                 {[{
-                  title: "Global Reach",
-                  description: "Operations spanning across 3 continents",
-                  icon: "🌍",
-                  color: "from-blue-50 to-blue-100/50",
-                  borderColor: "border-blue-200",
-                  iconBg: "bg-blue-100"
-                }, {
-                  title: "Client Success",
-                  description: "50+ satisfied enterprise clients worldwide",
-                  icon: "🏆",
-                  color: "from-green-50 to-emerald-100/50",
-                  borderColor: "border-green-200",
-                  iconBg: "bg-green-100"
-                }, {
-                  title: "Industry Pioneer",
-                  description: "First to introduce specialized KPO services",
-                  icon: "🚀",
-                  color: "from-orange-50 to-amber-100/50",
-                  borderColor: "border-orange-200",
-                  iconBg: "bg-orange-100"
-                }, {
-                  title: "Digital Transformation",
-                  description: "Leading technological innovation",
-                  icon: "💻",
-                  color: "from-purple-50 to-violet-100/50",
-                  borderColor: "border-purple-200",
-                  iconBg: "bg-purple-100"
-                }].map((achievement, index) => (
-                  <div key={index} className={`bg-gradient-to-br ${achievement.color} p-5 rounded-2xl border ${achievement.borderColor} hover:shadow-lg transition-all duration-300 group/card transform hover:-translate-y-1`}>
+                      title: "Global Reach",
+                      description: "Operations spanning across 3 continents",
+                      icon: "🌍",
+                      color: "from-blue-50 to-blue-100/50",
+                      borderColor: "border-blue-200",
+                      iconBg: "bg-blue-100"
+                    }, {
+                      title: "Client Success",
+                      description: "50+ satisfied enterprise clients worldwide",
+                      icon: "🏆",
+                      color: "from-green-50 to-emerald-100/50",
+                      borderColor: "border-green-200",
+                      iconBg: "bg-green-100"
+                    }, {
+                      title: "Industry Pioneer",
+                      description: "First to introduce specialized KPO services",
+                      icon: "🚀",
+                      color: "from-orange-50 to-amber-100/50",
+                      borderColor: "border-orange-200",
+                      iconBg: "bg-orange-100"
+                    }, {
+                      title: "Digital Transformation",
+                      description: "Leading technological innovation",
+                      icon: "💻",
+                      color: "from-purple-50 to-violet-100/50",
+                      borderColor: "border-purple-200",
+                      iconBg: "bg-purple-100"
+                    }].map((achievement, index) => <div key={index} className={`bg-gradient-to-br ${achievement.color} p-5 rounded-2xl border ${achievement.borderColor} hover:shadow-lg transition-all duration-300 group/card transform hover:-translate-y-1`}>
                     <div className="flex items-start gap-3">
                       <div className={`${achievement.iconBg} w-10 h-10 rounded-full flex items-center justify-center text-lg`}>
                         {achievement.icon}
@@ -464,8 +459,7 @@ const Index = () => {
                         <p className="text-gray-600">{achievement.description}</p>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               
               {/* Premium CTA Button */}
@@ -487,7 +481,7 @@ const Index = () => {
       </div>
     </div>
   </div>
-</section>
+    </section>
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-orange-50" style={{

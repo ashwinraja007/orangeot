@@ -37,12 +37,12 @@ export const MapComponent = ({ className, locations = [], showPopup }: MapCompon
       {
         title: "MK Insignia, Kolkata",
         description: "Our main headquarters",
-        coordinates: [88.4284, 22.5726] // Kolkata coords
+        coordinates: [88.4284, 22.5726] as [number, number] // Kolkata coords
       },
       {
         title: "MK Tower, New Delhi", 
         description: "Our northern India office",
-        coordinates: [77.2090, 28.6139] // Delhi coords
+        coordinates: [77.2090, 28.6139] as [number, number] // Delhi coords
       }
     ];
     
@@ -51,7 +51,7 @@ export const MapComponent = ({ className, locations = [], showPopup }: MapCompon
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/light-v11',
-      center: mapLocations[0]?.coordinates || [80.2707, 13.0827], // Chennai coordinates as default
+      center: mapLocations[0]?.coordinates || [80.2707, 13.0827] as [number, number], // Chennai coordinates as default
       zoom: 10,
       pitch: 45,
       bearing: 20,
@@ -94,7 +94,7 @@ export const MapComponent = ({ className, locations = [], showPopup }: MapCompon
       
       // Add marker to map with popup
       new mapboxgl.Marker(markerEl)
-        .setLngLat(location.coordinates)
+        .setLngLat(location.coordinates as [number, number])
         .setPopup(popup)
         .addTo(map.current);
     });

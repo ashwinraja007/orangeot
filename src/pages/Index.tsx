@@ -379,11 +379,11 @@ const Index = () => {
             
             {/* Premium Bottom Text Area */}
             <div className="absolute bottom-0 left-0 right-0 p-10 z-20">
-              <div className="backdrop-blur-md bg-black/40 p-8 rounded-3xl border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
-                <h3 className="text-4xl md:text-5xl font-bold text-white mb-3">Mr. Sudhir KU</h3>
+              <div className="backdrop-blur-md bg-black/40 p-8 rounded-3xl border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 py-0 px-[63px]">
+                <h3 className="text-4xl font-bold text-white mb-3 md:text-3xl">Mr. Sudhir KU</h3>
                 <div className="flex items-center gap-4">
-                  <div className="h-0.5 w-12 bg-gradient-to-r from-orange-400 to-amber-300"></div>
-                  <p className="text-white/90 font-light text-lg">Founder & Director</p>
+                  
+                  <p className="text-white/90 font-light text-lg">Director</p>
                 </div>
               </div>
             </div>

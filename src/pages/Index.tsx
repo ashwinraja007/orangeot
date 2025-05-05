@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -50,7 +49,6 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
-
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -100,9 +98,7 @@ const Index = () => {
       }
     };
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section - Updated to occupy full viewport height with no white space */}
@@ -225,8 +221,8 @@ const Index = () => {
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
         
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L60,4C120,8,240,16,360,18.7C480,21,600,19,720,13.3C840,8,960,0,1080,0C1200,0,1320,8,1380,12L1440,16L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         
@@ -335,14 +331,14 @@ const Index = () => {
               <div className="relative lg:col-span-5 h-full min-h-[300px] md:min-h-[400px]">
                 {/* Experience Badge - Now on the left corner */}
                 <div className="absolute top-4 left-4 z-20">
-                  <div className="bg-gradient-to-br from-amber-400 to-orange-500 text-white px-4 py-2 rounded-full font-medium text-sm shadow-lg border border-white/30 backdrop-blur-sm">
-                    <span className="mr-1">✦</span> 35+ Years Experience
+                  <div className="bg-gradient-to-br from-amber-400 to-orange-500 text-white rounded-full font-medium text-sm shadow-lg border border-white/30 backdrop-blur-sm py-[7px] px-[2px]">
+                     35+ Years Experience
                   </div>
                 </div>
                 
                 {/* Image without colored overlay */}
                 <div className="absolute inset-0 overflow-hidden">
-                  <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-all duration-1000 ease-out" />
+                  <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-center scale-100 group-hover:scale-105 transition-all duration-1000 ease-out object-contain" />
                   {/* Light bottom gradient for text readability */}
                   <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
@@ -350,12 +346,12 @@ const Index = () => {
                 {/* Name Tag */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
                   <h3 className="text-2xl font-bold text-white mb-0">Mr. Sudhir KU</h3>
-                  <p className="text-white/90 text-sm">Director & Founder</p>
+                  <p className="text-white/90 text-sm">Director </p>
                 </div>
               </div>
               
               {/* Bio Section - Now more compact */}
-              <div className="p-6 lg:p-8 lg:col-span-7 flex flex-col justify-center">
+              <div className="p-6 lg:p-8 lg:col-span-7 flex flex-col justify-center py-[56px]">
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-orange-200">
                   A Legacy of Excellence in Global Logistics
                 </h3>
@@ -384,8 +380,7 @@ const Index = () => {
                     title: "Digital Innovation",
                     description: "Leading tech adaptation",
                     icon: "💻"
-                  }].map((achievement, index) => (
-                    <div key={index} className="bg-gray-50 p-3 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex items-center gap-2">
+                  }].map((achievement, index) => <div key={index} className="bg-gray-50 p-3 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex items-center gap-2">
                       <div className="bg-amber-100 w-8 h-8 rounded-full flex items-center justify-center text-lg shrink-0">
                         {achievement.icon}
                       </div>
@@ -395,8 +390,7 @@ const Index = () => {
                         </h4>
                         <p className="text-gray-600 text-xs">{achievement.description}</p>
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
                 
                 {/* CTA Button */}
@@ -499,8 +493,6 @@ const Index = () => {
         {/* Add footer here or additional content */}
         <Footer />
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

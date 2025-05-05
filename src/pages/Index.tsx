@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -49,6 +50,7 @@ const clientLogos = [{
   src: "/63048c170f81a.png",
   alt: "aerofreight"
 }];
+
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -98,7 +100,9 @@ const Index = () => {
       }
     };
   }, []);
-  return <div className="min-h-screen flex flex-col">
+
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Enhanced Hero Section - Updated to occupy full viewport height with no white space */}
@@ -221,8 +225,8 @@ const Index = () => {
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
         
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
+          transform: "translateY(-1px)"
+        }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L60,4C120,8,240,16,360,18.7C480,21,600,19,720,13.3C840,8,960,0,1080,0C1200,0,1320,8,1380,12L1440,16L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
         
@@ -489,4 +493,14 @@ const Index = () => {
         <svg className="absolute top-0 left-0 w-full text-white" style={{
         transform: "translateY(-1px)"
       }} fill="currentColor" viewBox="0 0 1440 40">
-          <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,
+          <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+        </svg>
+        
+        {/* Add footer here or additional content */}
+        <Footer />
+      </section>
+    </div>
+  );
+};
+
+export default Index;

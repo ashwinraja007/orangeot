@@ -105,7 +105,7 @@ const Index = () => {
      <section className="pt-0 relative overflow-hidden min-h-[100vh] flex flex-col justify-center bg-black">
         {/* Fullscreen Background Image */}
         <div className="absolute inset-0 z-0">
-          <img src="/he1.jpg" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center" />
+          <img src="/he.jpg" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/50 to-black/60 mix-blend-multiply"></div>
         </div>
 
@@ -116,7 +116,7 @@ const Index = () => {
               <Sparkles className="w-4 h-4" />
               <span>Logistics KPO Excellence</span>
             </div>
-            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 animate-fade-in text-white leading-tight tracking-tight">Excellence<span className="text-gradient bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-extrabold">Logistics</span><br className="hidden md:block" /> IT Partner
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 animate-fade-in text-white leading-tight tracking-tight"> Powering <span className="text-gradient bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-extrabold">Logistics</span><br className="hidden md:block" /> Excellence
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
               Back Office | IT Solutions | Digital Marketing | Inside Sales Your Growth, Our Support

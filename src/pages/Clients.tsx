@@ -154,10 +154,10 @@ const Clients = () => {
           }}>
               <CarouselContent>
                 {clientLogos.map((client, index) => <CarouselItem key={index} className={`${isMobile ? 'basis-1/2' : 'basis-1/4'} p-2`}>
-                    <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center h-full transform hover:-translate-y-1 border border-gray-100">
+                    <div className="rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center h-full transform hover:-translate-y-1 border border-gray-100 bg-slate-200">
                       <img src={client.logo} alt={client.name} className="h-16 w-auto mb-4 opacity-80 hover:opacity-100 transition-opacity" />
                       <h3 className="font-heading font-bold text-lg text-center text-gray-800">{client.name}</h3>
-                      <p className="text-[#F58220] text-sm text-center">{client.industry}</p>
+                      
                     </div>
                   </CarouselItem>)}
               </CarouselContent>

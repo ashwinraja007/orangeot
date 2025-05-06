@@ -102,7 +102,7 @@ const Clients = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen flex flex-col bg-gray-950">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
@@ -218,7 +218,14 @@ const Clients = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-[#2C2C2C] to-[#444444] text-white relative overflow-hidden">
         {/* Background decorative elements */}
-        
+        <div className="absolute inset-0 overflow-hidden opacity-10">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] transform translate-x-1/3 -translate-y-1/4">
+            <div className="w-full h-full bg-[#F58220]/30 transform rotate-45"></div>
+          </div>
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] transform -translate-x-1/3 translate-y-1/4">
+            <div className="w-full h-full bg-[#FFC78E]/30 transform -rotate-45"></div>
+          </div>
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">

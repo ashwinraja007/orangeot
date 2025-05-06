@@ -116,7 +116,7 @@ const Index = () => {
               <Sparkles className="w-4 h-4" />
               <span>Logistics KPO Excellence</span>
             </div>
-            <h1 className="font-heading font-bold text-5xl md:text-6xl mb-8 animate-fade-in text-white leading-tight tracking-tight lg:text-5xl"> Powering <span className="text-gradient bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-extrabold">Logistics</span><br className="hidden md:block" /> Excellence
+            <h1 className="font-heading font-bold text-5xl md:text-6xl mb-8 animate-fade-in text-white leading-tight tracking-tight lg:text-5xl my-[5px] px-[5px]"> Powering <span className="text-gradient bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-extrabold">Logistics</span><br className="hidden md:block" /> Excellence
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
               Back Office | IT Solutions | Digital Marketing | Inside Sales Your Growth, Our Support
@@ -138,7 +138,7 @@ const Index = () => {
           </div>
 
           {/* Client Logos Carousel */}
-          <div className="mt-20 animate-fade-in delay-200 relative z-10">
+          <div className="mt-20 animate-fade-in delay-200 relative z-10 my-[69px]">
             <p className="text-white text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
               <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
               Trusted by leading companies

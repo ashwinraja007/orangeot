@@ -102,60 +102,55 @@ const Index = () => {
       <Header />
       
       {/* Enhanced Hero Section - Updated to occupy full viewport height with no white space */}
-     <section className="pt-0 relative overflow-hidden min-h-[100vh] flex flex-col justify-center bg-black">
-        {/* Fullscreen Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img src="/he.jpg" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/50 to-black/60 mix-blend-multiply"></div>
-        </div>
+     <section className="pt-0 relative overflow-hidden min-h-[100vh] flex flex-col justify-between bg-black">
+  {/* Background */}
+  <div className="absolute inset-0 z-0">
+    <img src="/he.jpg" alt="Orange Office Technologies Building" className="w-full h-full object-cover object-center" />
+    <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/50 to-black/60 mix-blend-multiply"></div>
+  </div>
 
-        {/* Foreground Content */}
-        <div className="container mx-auto px-4 relative z-10 my-auto py-16 md:py-24">
-          <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
-            <div className="inline-flex items-center gap-2 rounded-full bg-orange-400/20 text-orange-300 mb-8 animate-fade-in text-sm font-medium backdrop-blur-sm border border-orange-400/20 px-[16px] py-[8px]">
-              <Sparkles className="w-4 h-4" />
-              <span>Logistics KPO Excellence</span>
-            </div>
-            <h1 className="font-heading font-bold text-5xl md:text-6xl mb-8 animate-fade-in text-white leading-tight tracking-tight lg:text-5xl my-[5px] px-[5px]"> Powering <span className="text-gradient bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-extrabold">Logistics</span><br className="hidden md:block" /> Excellence
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
-              Back Office | IT Solutions | Digital Marketing | Inside Sales Your Growth, Our Support
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="glass-button bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
-                <Link to="/contact" className="flex items-center gap-2">
-                  Get Started
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-gray-950">
-                <Link to="/services" className="flex items-center gap-2">
-                  Our Services
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
+  {/* Foreground Content */}
+  <div className="container mx-auto px-4 relative z-10 py-16 md:py-24 flex flex-col flex-grow justify-center">
+    <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
+      <div className="inline-flex items-center gap-2 rounded-full bg-orange-400/20 text-orange-300 mb-8 animate-fade-in text-sm font-medium backdrop-blur-sm border border-orange-400/20 px-[16px] py-[8px]">
+        <Sparkles className="w-4 h-4" />
+        <span>Logistics KPO Excellence</span>
+      </div>
+      <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 animate-fade-in text-white leading-tight tracking-normal break-words">
+        Powering <span className="text-gradient bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-extrabold">Logistics</span><br className="hidden md:block" /> Excellence
+      </h1>
+      <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
+        Back Office | IT Solutions | Digital Marketing | Inside Sales Your Growth, Our Support
+      </p>
+      <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+        <Button size="lg" className="glass-button bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
+          <Link to="/contact" className="flex items-center gap-2">
+            Get Started
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+        </Button>
+        <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-gray-950">
+          <Link to="/services" className="flex items-center gap-2">
+            Our Services
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+        </Button>
+      </div>
+    </div>
+  </div>
 
-          {/* Client Logos Carousel */}
-          <div className="mt-20 animate-fade-in delay-200 relative z-10 my-[69px]">
-            <p className="text-white text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
-              <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
-              Trusted by leading companies
-              <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
-            </p>
-            <div className="p-4 rounded-2xl backdrop-blur-sm border border-white/30 shadow-lg py-0 bg-white px-0">
-              <LogoCarousel logos={clientLogos} className="py-4" />
-            </div>
-          </div>
-        </div>
-        
-        {/* Bottom wave svg for smooth transition */}
-        <div className="absolute bottom-0 left-0 right-0 w-full z-20">
-          
-        </div>
-      </section>
-
+  {/* Logo Carousel pinned to bottom */}
+  <div className="mt-auto relative z-10 mb-8 px-4">
+    <p className="text-white text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
+      <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
+      Trusted by leading companies
+      <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
+    </p>
+    <div className="p-4 rounded-2xl backdrop-blur-sm border border-white/30 shadow-lg bg-white">
+      <LogoCarousel logos={clientLogos} className="py-4" />
+    </div>
+  </div>
+</section>
       
       {/* Mission & Vision Section with Enhanced Design */}
       <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden py-20">

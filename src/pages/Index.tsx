@@ -483,7 +483,7 @@ const Index = () => {
       </section>
 
       {/* Enhanced Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <section className="bg-gradient-to-br from-gray-50 to-white relative overflow-hidden py-0">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
         transform: "translateY(-1px)"
       }} fill="currentColor" viewBox="0 0 1440 40">

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 export const Footer = () => {
-  return <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white relative">
+  return <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white relative mx-0 my-[123px]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-500/20 to-transparent" />
       
       <div className="container mx-auto px-4 pt-16 pb-8">

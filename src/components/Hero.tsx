@@ -21,7 +21,7 @@ export const Hero = ({
       </div>
 
       {/* Foreground Content */}
-      <div className="container mx-auto px-4 relative z-10 py-8 md:py-16 flex flex-col justify-between h-full">
+      <div className="container mx-auto px-4 relative z-10 md:py-16 flex flex-col justify-between h-full py-[49px]">
         <div className="flex-grow flex items-center mx-0 my-8 md:my-[184px]">
           <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0 my-[24px]">
             <div className="inline-flex items-center gap-2 rounded-full bg-orange-400/20 text-orange-300 mb-4 md:mb-8 animate-fade-in text-sm font-medium backdrop-blur-sm border border-orange-400/20 px-[16px] py-[8px]">
@@ -58,7 +58,7 @@ export const Hero = ({
             Trusted by leading companies
             <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
           </p>
-          <div className="p-2 md:p-4 rounded-2xl backdrop-blur-sm border border-black/10 shadow-lg py-0 bg-white px-0 my-[7px]">
+          <div className="p-2 md:p-4 rounded-2xl backdrop-blur-sm border border-black/10 shadow-lg py-0 bg-white px-0 my-0">
             <LogoCarousel logos={logos} className="py-2 md:py-4" />
           </div>
         </div>

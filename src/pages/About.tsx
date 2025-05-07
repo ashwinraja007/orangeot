@@ -99,7 +99,7 @@ const About = () => {
           }, {
             title: "Client Focus",
             description: "Placing client needs at the center of our operations."
-          }].map((value, index) => <div key={index} className="p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow bg-slate-200">
+          }].map((value, index) => <div key={index} className="p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow bg-slate-200 text-orange-500">
                 <h3 className="text-xl font-bold mb-3 text-gray-800">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>)}

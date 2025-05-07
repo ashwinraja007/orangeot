@@ -49,25 +49,25 @@ const testimonials = [{
   author: "Buddhika Liyanage",
   position: "Director Business Development",
   company: "GC Singapore",
-  image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80"
+  image: "62fb78ee5cd45.png"
 }, {
   quote: "Orange Office Technologies has been a game-changer for us. Their expertise in documentation and operation has streamlined our processes significantly. Their team is efficient, professional, and always ready to assist. The real-time system-based logistics they offer is unmatched in the industry.",
   author: "June Koh",
   position: "Director",
   company: "GGL",
-  image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80"
+  image: "/62fb7890bc643.png"
 }, {
   quote: "The customer service and nomination handling provided by OOT are exceptional. Their team goes above and beyond to ensure that every booking and nomination is handled flawlessly. This level of dedication has significantly improved our customer satisfaction.",
   author: "Philip Sinnappan",
   position: "Director",
   company: "OECL Malaysia",
-  image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&q=80"
+  image: "/62fb7958e1cf7.png"
 }, {
   quote: "OOT's process mapping and consultation services have revolutionized our logistics operations. Their insights and coordinated approach have led to remarkable improvements in both efficiency and productivity. We truly value their partnership.",
   author: "Ellath Pramodh",
   position: "Country Manager",
   company: "OECL Thailand",
-  image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
+  image: "/62fb7958e1cf7.png"
 }];
 
 const Clients = () => {

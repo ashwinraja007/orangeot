@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,21 +9,43 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Hero } from "@/components/Hero";
 
 // Client logos data
-const clientLogos = [
-  { src: "/62fb7958e1cf7.png", alt: "OECL" },
-  { src: "/62fb78ee5cd45.png", alt: "GC" },
-  { src: "/62fb77880f0df.png", alt: "amass" },
-  { src: "/62fb79231e921.png", alt: "oneglobal" },
-  { src: "/62fb77c2d5890.png", alt: "citygen" },
-  { src: "/62fb783408cd1.png", alt: "futurenet" },
-  { src: "/62fb7890bc643.png", alt: "ggl" },
-  { src: "/62fb79b61d0c8.png", alt: "primeshiping" },
-  { src: "/62fb79faa960d.png", alt: "shipsoft" },
-  { src: "/62fb7adfb0edb.png", alt: "haixun" },
-  { src: "/63048b56bd44e.png", alt: "moltech" },
-  { src: "/63048c170f81a.png", alt: "aerofreight" }
-];
-
+const clientLogos = [{
+  src: "/62fb7958e1cf7.png",
+  alt: "OECL"
+}, {
+  src: "/62fb78ee5cd45.png",
+  alt: "GC"
+}, {
+  src: "/62fb77880f0df.png",
+  alt: "amass"
+}, {
+  src: "/62fb79231e921.png",
+  alt: "oneglobal"
+}, {
+  src: "/62fb77c2d5890.png",
+  alt: "citygen"
+}, {
+  src: "/62fb783408cd1.png",
+  alt: "futurenet"
+}, {
+  src: "/62fb7890bc643.png",
+  alt: "ggl"
+}, {
+  src: "/62fb79b61d0c8.png",
+  alt: "primeshiping"
+}, {
+  src: "/62fb79faa960d.png",
+  alt: "shipsoft"
+}, {
+  src: "/62fb7adfb0edb.png",
+  alt: "haixun"
+}, {
+  src: "/63048b56bd44e.png",
+  alt: "moltech"
+}, {
+  src: "/63048c170f81a.png",
+  alt: "aerofreight"
+}];
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -74,9 +95,7 @@ const Index = () => {
       }
     };
   }, []);
-  
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section - now using the new component and properly passing clientLogos */}
@@ -206,7 +225,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-6 bg-slate-200">
                   <h3 className="font-heading font-bold text-xl mb-3 group-hover:text-gray-700 transition-colors">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <Link to="/services" className="inline-flex items-center text-orange-500 font-medium group">
@@ -231,8 +250,8 @@ const Index = () => {
         
         {/* Wave Separator */}
         <svg className="absolute top-0 left-0 w-full text-white" style={{
-          transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 50">
+        transform: "translateY(-1px)"
+      }} fill="currentColor" viewBox="0 0 1440 50">
           <path d="M0,40L80,36.7C160,33,320,27,480,23.3C640,20,800,20,960,23.3C1120,27,1280,33,1360,36.7L1440,40L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
         
@@ -287,22 +306,22 @@ const Index = () => {
                   {/* Achievements - Now in a more compact row for mobile and desktop */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                     {[{
-                      title: "Global Reach",
-                      description: "Operations across 3 continents",
-                      icon: "🌍"
-                    }, {
-                      title: "Client Success",
-                      description: "50+ enterprise clients",
-                      icon: "🏆"
-                    }, {
-                      title: "Industry Pioneer",
-                      description: "First specialized KPO services",
-                      icon: "🚀"
-                    }, {
-                      title: "Digital Innovation",
-                      description: "Leading tech adaptation",
-                      icon: "💻"
-                    }].map((achievement, index) => <div key={index} className="bg-gray-50 p-3 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex items-center gap-2">
+                    title: "Global Reach",
+                    description: "Operations across 3 continents",
+                    icon: "🌍"
+                  }, {
+                    title: "Client Success",
+                    description: "50+ enterprise clients",
+                    icon: "🏆"
+                  }, {
+                    title: "Industry Pioneer",
+                    description: "First specialized KPO services",
+                    icon: "🚀"
+                  }, {
+                    title: "Digital Innovation",
+                    description: "Leading tech adaptation",
+                    icon: "💻"
+                  }].map((achievement, index) => <div key={index} className="bg-gray-50 p-3 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex items-center gap-2">
                         <div className="bg-amber-100 w-8 h-8 rounded-full flex items-center justify-center text-lg shrink-0">
                           {achievement.icon}
                         </div>
@@ -333,7 +352,7 @@ const Index = () => {
       <section className="py-20 bg-white relative overflow-hidden">
         <svg className="absolute top-0 left-0 w-full text-orange-50" style={{
         transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,0L40,4C80,8,160,16,240,18.7C320,21,400,19,480,13.3C560,8,640,0,720,0C800,0,880,8,960,12C1040,16,1120,16,1200,12C1280,8,1360,0,1400,-4L1440,-8L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
         </svg>
         
@@ -407,15 +426,13 @@ const Index = () => {
       <section className="bg-gradient-to-br from-gray-50 to-white relative overflow-hidden py-0">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
         transform: "translateY(-1px)"
-        }} fill="currentColor" viewBox="0 0 1440 40">
+      }} fill="currentColor" viewBox="0 0 1440 40">
           <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
         
         {/* Add footer here or additional content */}
         <Footer />
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

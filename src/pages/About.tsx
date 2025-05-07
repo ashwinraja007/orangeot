@@ -23,10 +23,10 @@ const About = () => {
 
       {/* Who We Are */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-start">
+        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-2xl font-bold mb-2">Who We Are</h2>
-            <p className="text-gray-600 mb-2">
+            <h2 className="text-2xl font-bold mb-4">Who We Are</h2>
+            <p className="text-gray-600 mb-4">
               Orange Office Technologies (OOT Pvt. Ltd.) is a Global Capability Centre (GCC) supporting a group of companies
               engaged in shipping, logistics, and third-party warehousing (3PL) services. We deliver advanced digital solutions
               and operational support that drive innovation and efficiency.
@@ -36,8 +36,8 @@ const About = () => {
               through scalable and forward-thinking solutions.
             </p>
           </div>
-          <div className="relative">
-            <div className="max-w-sm mx-auto lg:ml-auto lg:mr-0 overflow-hidden rounded-2xl shadow-xl border-4 border-white">
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="w-4/5 max-w-sm overflow-hidden rounded-2xl shadow-xl border-4 border-white">
               <AspectRatio ratio={1} className="bg-muted">
                 <img
                   src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&h=800&q=80"

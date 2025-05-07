@@ -43,38 +43,33 @@ const clientLogos = [{
   logo: "/62fb79b61d0c8.png"
 }];
 
-// Testimonials data
+// Updated Testimonials data
 const testimonials = [{
-  quote: "Orange Office Technologies has transformed how we handle our logistics operations. Their documentation services have reduced our processing time by 40%.",
-  author: "James Wilson",
-  position: "Operations Manager",
-  company: "Global Freight Solutions",
+  quote: "The digital marketing services provided by OOT have significantly boosted our online presence. Their team crafted a comprehensive strategy that effectively reached new customers and enhanced our brand visibility. We couldn't be happier with the results.",
+  author: "Buddhika Liyanage",
+  position: "Director Business Development",
+  company: "GC Singapore",
   image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80"
 }, {
-  quote: "The team at OOT provided excellent support for our digital transition. Their IT expertise and industry knowledge made the process seamless.",
-  author: "Sarah Chen",
-  position: "IT Director",
-  company: "Pacific Shipping Lines",
+  quote: "Orange Office Technologies has been a game-changer for us. Their expertise in documentation and operation has streamlined our processes significantly. Their team is efficient, professional, and always ready to assist. The real-time system-based logistics they offer is unmatched in the industry.",
+  author: "June Koh",
+  position: "Director",
+  company: "GGL",
   image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80"
 }, {
-  quote: "Their customer service team is exceptional. Our clients have noticed the difference in responsiveness and accuracy since we partnered with Orange Office.",
-  author: "Michael Rodriguez",
-  position: "Customer Service Head",
-  company: "Express Logistics",
+  quote: "The customer service and nomination handling provided by OOT are exceptional. Their team goes above and beyond to ensure that every booking and nomination is handled flawlessly. This level of dedication has significantly improved our customer satisfaction.",
+  author: "Philip Sinnappan",
+  position: "Director",
+  company: "OECL Malaysia",
   image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&q=80"
 }, {
-  quote: "We've seen a 30% increase in operational efficiency since implementing their back-office solutions. Highly recommended for logistics companies.",
-  author: "Lisa Johnson",
-  position: "CEO",
-  company: "Johnson Freight Services",
+  quote: "OOT's process mapping and consultation services have revolutionized our logistics operations. Their insights and coordinated approach have led to remarkable improvements in both efficiency and productivity. We truly value their partnership.",
+  author: "Ellath Pramodh",
+  position: "Country Manager",
+  company: "OECL Thailand",
   image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
-}, {
-  quote: "The digital marketing campaign they designed for us brought in 40% more qualified leads in just three months. Exceptional results!",
-  author: "David Kim",
-  position: "Marketing Director",
-  company: "Asia Connect Logistics",
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
 }];
+
 const Clients = () => {
   const [api, setApi] = useState(null);
   const [clientsApi, setClientsApi] = useState(null);
@@ -135,9 +130,6 @@ const Clients = () => {
           
         </div>
       </section>
-
-      {/* Trust Indicators */}
-      
 
       {/* Client Logo Showcase with Auto-Scrolling */}
       <section className="py-16 bg-gray-50 relative overflow-hidden">

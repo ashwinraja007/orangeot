@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -61,3 +62,86 @@ const About = () => {
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-xl shadow-md">
             <div className="flex items-center gap-3 mb-4">
+              <Target className="h-10 w-10 text-orange-500 p-2 bg-orange-100 rounded-full" />
+              <h3 className="text-xl font-bold">Our Mission</h3>
+            </div>
+            <p className="text-gray-600">
+              To provide industry-leading digital solutions and operational support that empower logistics companies to 
+              achieve operational excellence, while delivering exceptional value and service to their customers.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <div className="flex items-center gap-3 mb-4">
+              <TrendingUp className="h-10 w-10 text-amber-500 p-2 bg-amber-100 rounded-full" />
+              <h3 className="text-xl font-bold">Our Vision</h3>
+            </div>
+            <p className="text-gray-600">
+              To be the global leader in logistics technology and services, recognized for innovation, reliability, 
+              and strategic partnerships that transform the industry's digital landscape.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-10 text-center">Our Core Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Excellence",
+                description: "Delivering high-quality solutions that exceed expectations."
+              },
+              {
+                title: "Innovation",
+                description: "Pioneering new approaches to logistics challenges."
+              },
+              {
+                title: "Integrity",
+                description: "Operating with transparency, honesty, and accountability."
+              },
+              {
+                title: "Collaboration",
+                description: "Working together to achieve shared success."
+              },
+              {
+                title: "Agility",
+                description: "Adapting quickly to changing market conditions."
+              },
+              {
+                title: "Client Focus",
+                description: "Placing client needs at the center of our operations."
+              }
+            ].map((value, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-bold mb-3 text-gray-800">{value.title}</h3>
+                <p className="text-gray-600">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Logistics Operations?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Partner with Orange Office Technologies for innovative solutions that drive efficiency and growth.
+          </p>
+          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-500">
+            <Link to="/contact" className="flex items-center gap-2">
+              Contact Us Today
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default About;

@@ -48,7 +48,7 @@ const LogoCarousel = ({
       }} aria-label="Company logos carousel" role="region">
           {/* Duplicate logos for infinite scroll effect */}
           {[...logos, ...logos].map((logo, index) => <div key={index} className="mx-8 flex-shrink-0">
-              <img src={logo.src} alt={logo.alt} loading="lazy" draggable={false} className="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity object-cover" />
+              <img src={logo.src} alt={logo.alt} loading="lazy" draggable={false} className="h-20 w-auto object-cover" />
             </div>)}
         </div>
       </div>

@@ -1,50 +1,22 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Award, ArrowRight, Activity, BarChart, Building2, Briefcase, Globe, Headset, Shield, Target, TrendingUp, Users, FileCheck } from "lucide-react";
+import { Award, ArrowRight, Target, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const About = () => {
-  const values = [
-    { icon: Shield, title: "Quality", description: "Delivering excellence in every solution and service" },
-    { icon: Target, title: "Innovation", description: "Embracing cutting-edge technology for optimal solutions" },
-    { icon: Users, title: "Agility", description: "Adapting quickly to meet evolving industry demands" }
-  ];
-
-  const expertise = [
-    { icon: Building2, title: "Warehouse Management Systems (WMS)" },
-    { icon: Activity, title: "Transportation & Fleet Management" },
-    { icon: TrendingUp, title: "Supply Chain Automation & Optimization" },
-    { icon: Briefcase, title: "ERP Integration & Enterprise Software" },
-    { icon: BarChart, title: "Business Intelligence & Analytics" },
-    { icon: Shield, title: "Infrastructure Support & Security Management" }
-  ];
-
-  const metrics = [
-    { number: "35+", label: "Years Experience" },
-    { number: "100+", label: "Happy Employees" },
-    { number: "50+", label: "Satisfied Clients" },
-    { number: "200+", label: "Projects Completed" }
-  ];
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
 
       {/* Hero */}
-      <section className="pt-28 pb-20 bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] translate-x-1/4 -translate-y-1/4">
-          <div className="w-full h-full bg-gradient-to-br from-orange-400/20 to-amber-300/20 rotate-45 rounded-[40%] animate-float" />
-        </div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] -translate-x-1/4 translate-y-1/4">
-          <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 -rotate-45 rounded-[40%] animate-float" style={{ animationDelay: "2s" }} />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10 text-center">
+      <section className="pt-28 pb-20 bg-gradient-to-br from-primary/10 to-accent/10 text-center">
+        <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">About Us</h1>
-          <p className="text-xl text-gray-600">Driving Innovation in IT, Logistics Support, and Digital Services</p>
+          <p className="text-xl text-gray-600">
+            Driving Innovation in IT, Logistics Support, and Digital Services
+          </p>
         </div>
       </section>
 
@@ -64,7 +36,6 @@ const About = () => {
             </p>
           </div>
           <div className="relative">
-            {/* Modified image container for better content adaptation */}
             <div className="max-w-sm mx-auto lg:ml-auto lg:mr-0 overflow-hidden rounded-2xl shadow-xl border-4 border-white">
               <AspectRatio ratio={1} className="bg-muted">
                 <img

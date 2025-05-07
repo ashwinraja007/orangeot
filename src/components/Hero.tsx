@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -24,7 +23,7 @@ export const Hero = ({
       {/* Foreground Content */}
       <div className="container mx-auto px-4 relative z-10 py-8 md:py-16 flex flex-col justify-between h-full">
         <div className="flex-grow flex items-center mx-0 my-8 md:my-[184px]">
-          <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
+          <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0 my-[24px]">
             <div className="inline-flex items-center gap-2 rounded-full bg-orange-400/20 text-orange-300 mb-4 md:mb-8 animate-fade-in text-sm font-medium backdrop-blur-sm border border-orange-400/20 px-[16px] py-[8px]">
               <Sparkles className="w-4 h-4" />
               <span>Logistics KPO Excellence</span>
@@ -42,7 +41,7 @@ export const Hero = ({
                   <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-slate-50 text-sm md:text-base">
+              <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-sm md:text-base text-slate-950">
                 <Link to="/services" className="flex items-center gap-2">
                   Our Services
                   <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />

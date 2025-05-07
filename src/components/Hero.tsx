@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -59,7 +58,7 @@ export const Hero = ({
             Trusted by leading companies
             <span className="h-px w-8 bg-gradient-to-r from-transparent via-slate-50/30 to-transparent"></span>
           </p>
-          <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl backdrop-blur-sm border border-white/10 shadow-lg py-0 bg-white/5">
+          <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl backdrop-blur-sm border border-white/10 shadow-lg py-0 bg-slate-50 px-[24px]">
             <LogoCarousel logos={logos} className="py-2 sm:py-4" />
           </div>
         </div>

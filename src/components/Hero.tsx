@@ -1,9 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
-
 interface HeroProps {
   logos: {
     src: string;
@@ -11,17 +9,14 @@ interface HeroProps {
   }[];
   backgroundImage?: string;
 }
-
-export const Hero = ({ logos, backgroundImage = "/he.jpg" }: HeroProps) => {
-  return (
-    <section className="pt-0 relative overflow-hidden min-h-[100vh] flex flex-col justify-center bg-black">
+export const Hero = ({
+  logos,
+  backgroundImage = "/he.jpg"
+}: HeroProps) => {
+  return <section className="pt-0 relative overflow-hidden min-h-[100vh] flex flex-col justify-center bg-black">
       {/* Fullscreen Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={backgroundImage} 
-          alt="Hero Background" 
-          className="w-full h-full object-cover object-center" 
-        />
+        <img src={backgroundImage} alt="Hero Background" className="w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/50 to-black/60 mix-blend-multiply"></div>
       </div>
 
@@ -46,7 +41,7 @@ export const Hero = ({ logos, backgroundImage = "/he.jpg" }: HeroProps) => {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-white">
+              <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-slate-950">
                 <Link to="/services" className="flex items-center gap-2">
                   Our Services
                   <ArrowRight className="h-5 w-5" />
@@ -68,6 +63,5 @@ export const Hero = ({ logos, backgroundImage = "/he.jpg" }: HeroProps) => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };

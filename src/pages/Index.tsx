@@ -78,7 +78,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section - now using the new component */}
+      {/* Hero Section - now using the new component and properly passing clientLogos */}
       <Hero logos={clientLogos} />
       
       {/* Mission & Vision Section with Enhanced Design */}
@@ -325,8 +325,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* About Us Section with Enhanced Layout */}
       <section className="py-20 bg-white relative overflow-hidden">

@@ -53,7 +53,7 @@ export const Hero = ({
 
         {/* Client Logos Carousel moved to bottom of hero */}
        <div className="mt-20 animate-fade-in delay-200 relative z-10 bg-inherit">
-          <p className="text-black text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
+          <p className="text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2 text-slate-50">
             <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
             Trusted by leading companies
             <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>

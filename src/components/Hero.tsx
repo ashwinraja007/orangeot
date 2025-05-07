@@ -58,7 +58,7 @@ export const Hero = ({
             Trusted by leading companies
             <span className="h-px w-8 bg-gradient-to-r from-transparent via-slate-50/30 to-transparent"></span>
           </p>
-          <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl backdrop-blur-sm border border-white/10 shadow-lg py-0 bg-slate-50 px-[24px]">
+          <div className="p-2 sm:p-4 rounded-xl backdrop-blur-sm border border-white/10 shadow-lg py-0 bg-slate-50 px-0 sm:rounded-3xl">
             <LogoCarousel logos={logos} className="py-2 sm:py-4" />
           </div>
         </div>

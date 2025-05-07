@@ -1,8 +1,10 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Award, ArrowRight, Activity, BarChart, Building2, Briefcase, Globe, Headset, Shield, Target, TrendingUp, Users, FileCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const About = () => {
   const values = [
@@ -62,13 +64,16 @@ const About = () => {
             </p>
           </div>
           <div className="relative">
-            <div className="aspect-square overflow-hidden rounded-2xl shadow-2xl border-4 border-white">
-              <img
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&h=800&q=80"
-                alt="Modern Office"
-                className="w-full h-full object-cover transition-transform hover:scale-105 duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-multiply" />
+            {/* Modified image container for better content adaptation */}
+            <div className="max-w-sm mx-auto lg:ml-auto lg:mr-0 overflow-hidden rounded-2xl shadow-xl border-4 border-white">
+              <AspectRatio ratio={1} className="bg-muted">
+                <img
+                  src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&h=800&q=80"
+                  alt="Modern Office"
+                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply" />
+              </AspectRatio>
             </div>
 
             {/* Badge */}

@@ -36,7 +36,7 @@ export const Header = () => {
     to: "/clients",
     label: "Clients"
   }];
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-2" : "bg-white/80 backdrop-blur-sm py-3"}`}>
+  return <header className="my-[15px]">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 group" aria-label="Home">

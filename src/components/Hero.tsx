@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
+
 interface HeroProps {
   logos: {
     src: string;
@@ -10,6 +11,7 @@ interface HeroProps {
   }[];
   backgroundImage?: string;
 }
+
 export const Hero = ({
   logos,
   backgroundImage = "/he.jpg"
@@ -54,16 +56,15 @@ export const Hero = ({
 
         {/* Client Logos Carousel moved to bottom of hero */}
        <div className="mt-20 animate-fade-in delay-200 relative z-10 bg-white">
-  <p className="text-black text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
-    <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
-    Trusted by leading companies
-    <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
-  </p>
-  <div className="p-4 rounded-2xl backdrop-blur-sm border border-black/10 shadow-lg py-0 bg-white px-0">
-    <LogoCarousel logos={logos} className="py-4" />
-  </div>
-</div>
-
+          <p className="text-black text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
+            <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
+            Trusted by leading companies
+            <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
+          </p>
+          <div className="p-4 rounded-2xl backdrop-blur-sm border border-black/10 shadow-lg py-0 bg-white px-0">
+            <LogoCarousel logos={logos} className="py-4" />
+          </div>
+        </div>
       </div>
     </section>;
 };

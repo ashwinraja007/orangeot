@@ -1,7 +1,8 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Award, ArrowRight, Target, TrendingUp } from "lucide-react";
+import { Award, ArrowRight, Target, TrendingUp, Shield, Users, Zap, ThumbsUp, CheckCircle, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 const About = () => {
@@ -76,33 +77,70 @@ const About = () => {
         </div>
       </section>
 
-      {/* Core Values */}
+      {/* Enhanced Core Values with Images */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-10 text-center">Our Core Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[{
-            title: "Excellence",
-            description: "Delivering high-quality solutions that exceed expectations."
-          }, {
-            title: "Innovation",
-            description: "Pioneering new approaches to logistics challenges."
-          }, {
-            title: "Integrity",
-            description: "Operating with transparency, honesty, and accountability."
-          }, {
-            title: "Collaboration",
-            description: "Working together to achieve shared success."
-          }, {
-            title: "Agility",
-            description: "Adapting quickly to changing market conditions."
-          }, {
-            title: "Client Focus",
-            description: "Placing client needs at the center of our operations."
-          }].map((value, index) => <div key={index} className="p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow bg-slate-200 text-orange-500">
-                <h3 className="text-xl font-bold mb-3 text-gray-800">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>)}
+              title: "Excellence",
+              description: "Delivering high-quality solutions that exceed expectations.",
+              icon: Award,
+              image: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=500&h=300&q=80",
+              color: "bg-blue-500"
+            }, {
+              title: "Innovation",
+              description: "Pioneering new approaches to logistics challenges.",
+              icon: Zap,
+              image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=500&h=300&q=80",
+              color: "bg-amber-500"
+            }, {
+              title: "Integrity",
+              description: "Operating with transparency, honesty, and accountability.",
+              icon: Shield,
+              image: "https://images.unsplash.com/photo-1579389083395-4507e98b5e67?auto=format&fit=crop&w=500&h=300&q=80",
+              color: "bg-green-500"
+            }, {
+              title: "Collaboration",
+              description: "Working together to achieve shared success.",
+              icon: Users,
+              image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&h=300&q=80",
+              color: "bg-purple-500"
+            }, {
+              title: "Agility",
+              description: "Adapting quickly to changing market conditions.",
+              icon: ThumbsUp,
+              image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&h=300&q=80",
+              color: "bg-pink-500"
+            }, {
+              title: "Client Focus",
+              description: "Placing client needs at the center of our operations.",
+              icon: Heart,
+              image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&h=300&q=80",
+              color: "bg-cyan-500"
+            }].map((value, index) => (
+              <div key={index} className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div className="h-40 relative overflow-hidden">
+                  <img 
+                    src={value.image} 
+                    alt={value.title} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute top-4 right-4">
+                    <div className={`${value.color} p-2 rounded-full`}>
+                      <value.icon className="h-5 w-5 text-white" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">{value.title}</h3>
+                  </div>
+                </div>
+                <div className="p-5 bg-white">
+                  <p className="text-gray-600">{value.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -41,7 +41,7 @@ export const Hero = ({
                   <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
-              <Button size="sm" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-white sm:size-lg">
+              <Button size="sm" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm sm:size-lg text-slate-950">
                 <Link to="/services" className="flex items-center gap-2">
                   Our Services
                   <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />

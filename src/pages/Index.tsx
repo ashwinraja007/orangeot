@@ -118,9 +118,7 @@ const Index = () => {
             </div>
             <h1 className="font-heading text-5xl md:text-6xl mb-8 animate-fade-in text-white leading-tight tracking-tight lg:text-6xl font-bold"> Powering <span className="text-gradient bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-extrabold">Logistics</span><br className="hidden md:block" /> Excellence
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">
-              Back Office | IT Solutions | Digital Marketing | Inside Sales Your Growth, Our Support
-            </p>
+            <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">Back Office | IT Solutions | Digital Marketing | Inside Sales </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button size="lg" className="glass-button bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border-0">
                 <Link to="/contact" className="flex items-center gap-2">

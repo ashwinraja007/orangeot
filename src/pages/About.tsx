@@ -54,7 +54,7 @@ const About = () => {
       <Header />
       
       {/* Hero Section with Improved Visual */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden py-[50px]">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] transform translate-x-1/4 -translate-y-1/4">
           <div className="w-full h-full bg-gradient-to-br from-orange-400/20 to-amber-300/20 transform rotate-45 rounded-[40%] animate-float"></div>
         </div>
@@ -66,8 +66,8 @@ const About = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">About Us</h1>
-            <p className="text-xl text-gray-600 mb-8 animate-fade-in">Driving Innovation in IT, Logistics Support, and Digital Services</p>
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in my-[12px]">About Us</h1>
+            <p className="text-xl text-gray-600 mb-8 animate-fade-in py-[5px]">Driving Innovation in IT, Logistics Support, and Digital Services</p>
           </div>
         </div>
       </section>

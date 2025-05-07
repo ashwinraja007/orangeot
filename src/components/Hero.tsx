@@ -52,7 +52,7 @@ export const Hero = ({
         </div>
 
         {/* Client Logos Carousel moved to bottom of hero */}
-       <div className="mt-8 sm:mt-12 md:mt-20 animate-fade-in delay-200 relative z-10 bg-inherit">
+       <div className="mt-8 sm:mt-12 md:mt-20 animate-fade-in delay-200 relative z-10 bg-inherit my-0">
           <p className="text-center mb-3 sm:mb-6 text-xs sm:text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2 text-slate-50">
             <span className="h-px w-8 bg-gradient-to-r from-transparent via-slate-50/30 to-transparent"></span>
             Trusted by leading companies

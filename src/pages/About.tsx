@@ -3,32 +3,53 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Award, ArrowRight, Activity, BarChart, Building2, Briefcase, Globe, Headset, Shield, Target, TrendingUp, Users, FileCheck } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const About = () => {
-  const values = [
-    { icon: Shield, title: "Quality", description: "Delivering excellence in every solution and service" },
-    { icon: Target, title: "Innovation", description: "Embracing cutting-edge technology for optimal solutions" },
-    { icon: Users, title: "Agility", description: "Adapting quickly to meet evolving industry demands" }
-  ];
-
-  const expertise = [
-    { icon: Building2, title: "Warehouse Management Systems (WMS)" },
-    { icon: Activity, title: "Transportation & Fleet Management" },
-    { icon: TrendingUp, title: "Supply Chain Automation & Optimization" },
-    { icon: Briefcase, title: "ERP Integration & Enterprise Software" },
-    { icon: BarChart, title: "Business Intelligence & Analytics" },
-    { icon: Shield, title: "Infrastructure Support & Security Management" }
-  ];
-
-  const metrics = [
-    { number: "35+", label: "Years Experience" },
-    { number: "100+", label: "Happy Employees" },
-    { number: "50+", label: "Satisfied Clients" },
-    { number: "200+", label: "Projects Completed" }
-  ];
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  const values = [{
+    icon: Shield,
+    title: "Quality",
+    description: "Delivering excellence in every solution and service"
+  }, {
+    icon: Target,
+    title: "Innovation",
+    description: "Embracing cutting-edge technology for optimal solutions"
+  }, {
+    icon: Users,
+    title: "Agility",
+    description: "Adapting quickly to meet evolving industry demands"
+  }];
+  const expertise = [{
+    icon: Building2,
+    title: "Warehouse Management Systems (WMS)"
+  }, {
+    icon: Activity,
+    title: "Transportation & Fleet Management"
+  }, {
+    icon: TrendingUp,
+    title: "Supply Chain Automation & Optimization"
+  }, {
+    icon: Briefcase,
+    title: "ERP Integration & Enterprise Software"
+  }, {
+    icon: BarChart,
+    title: "Business Intelligence & Analytics"
+  }, {
+    icon: Shield,
+    title: "Infrastructure Support & Security Management"
+  }];
+  const metrics = [{
+    number: "35+",
+    label: "Years Experience"
+  }, {
+    number: "100+",
+    label: "Happy Employees"
+  }, {
+    number: "50+",
+    label: "Satisfied Clients"
+  }, {
+    number: "200+",
+    label: "Projects Completed"
+  }];
+  return <div className="min-h-screen flex flex-col">
       <Header />
 
       {/* Hero */}
@@ -37,7 +58,9 @@ const About = () => {
           <div className="w-full h-full bg-gradient-to-br from-orange-400/20 to-amber-300/20 rotate-45 rounded-[40%] animate-float" />
         </div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] -translate-x-1/4 translate-y-1/4">
-          <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 -rotate-45 rounded-[40%] animate-float" style={{ animationDelay: "2s" }} />
+          <div className="w-full h-full bg-gradient-to-br from-blue-400/20 to-cyan-300/10 -rotate-45 rounded-[40%] animate-float" style={{
+          animationDelay: "2s"
+        }} />
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
@@ -63,12 +86,8 @@ const About = () => {
           </div>
           <div className="relative">
             <div className="aspect-square overflow-hidden rounded-2xl shadow-2xl border-4 border-white">
-              <img
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&h=800&q=80"
-                alt="Modern Office"
-                className="w-full h-full object-cover transition-transform hover:scale-105 duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-multiply" />
+              <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&h=800&q=80" alt="Modern Office" className="w-half h-half transition-transform hover:scale-105 duration-700 object-contain" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-multiply my-[55px]" />
             </div>
 
             {/* Badge */}
@@ -126,11 +145,7 @@ const About = () => {
                 We are committed to quality, agility, and continuous innovation — delivering measurable value to our partners.
               </p>
             </div>
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
-              alt="Team"
-              className="rounded-xl shadow-lg w-full h-auto hidden md:block"
-            />
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Team" className="rounded-xl shadow-lg w-full h-auto hidden md:block" />
           </div>
         </div>
       </section>
@@ -158,8 +173,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;

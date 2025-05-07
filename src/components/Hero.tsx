@@ -52,16 +52,17 @@ export const Hero = ({
         </div>
 
         {/* Client Logos Carousel moved to bottom of hero */}
-        <div className="mt-auto animate-fade-in delay-200 relative z-10 mb-8">
-          <p className="text-white text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
-            <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
-            Trusted by leading companies
-            <span className="h-px w-8 bg-gradient-to-r from-transparent via-white to-transparent"></span>
-          </p>
-          <div className="p-4 rounded-2xl backdrop-blur-sm border border-white/30 shadow-lg py-0 bg-white/10 px-0">
-            <LogoCarousel logos={logos} className="py-4" />
-          </div>
-        </div>
+       <div className="mt-20 animate-fade-in delay-200 relative z-10 bg-white">
+  <p className="text-black text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2">
+    <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
+    Trusted by leading companies
+    <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
+  </p>
+  <div className="p-4 rounded-2xl backdrop-blur-sm border border-black/10 shadow-lg py-0 bg-white px-0">
+    <LogoCarousel logos={clientLogos} className="py-4" />
+  </div>
+</div>
+
       </div>
     </section>;
 };

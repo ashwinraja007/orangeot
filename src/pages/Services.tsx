@@ -1,56 +1,59 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileCheck, Users, Globe, Building2, Headset, Shield, ArrowRight, MessageSquare, BarChart } from "lucide-react";
+import { FileCheck, Users, Globe, Building2, Headset, Shield, ArrowRight, MessageSquare, BarChart, Ship, Computer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
+
 const Services = () => {
   const services = [{
-    icon: FileCheck,
+    icon: Ship,
     title: "Documentation Services",
-    description: "Expert documentation handling including invoices, credit notes, and job profit statements.",
+    description: "Our expert team ensures accurate and timely preparation of all essential shipping and logistics documents, including Bill of Lading, commercial invoices, packing lists, and certificates.",
     image: "/1.png",
     link: "/services/documentation",
     color: "from-blue-500/20 to-blue-600/20",
     badge: "Popular"
   }, {
     icon: Users,
-    title: "Sales Support",
-    description: "Centralized sales support for lead management and customer relationships.",
+    title: "Sales Support Desk",
+    description: "Our Sales Support Desk functions as an extension of your sales team, offering centralized support to manage leads, client inquiries, and CRM tasks.",
     image: "/2.png",
     link: "/services/salessupport",
     color: "from-amber-500/20 to-amber-600/20"
   }, {
     icon: Globe,
-    title: "Digital Marketing",
-    description: "Comprehensive digital marketing solutions to boost your online presence.",
+    title: "Digital Marketing for Logistics",
+    description: "With a focus on the freight forwarding and logistics sector, we provide tailored digital marketing services including SEO, Google Ads, content marketing, and social media campaigns.",
     image: "/3.png",
     link: "/services/digitalmarketing",
     color: "from-green-500/20 to-green-600/20"
   }, {
     icon: Building2,
-    title: "Accounts Management",
-    description: "Professional accounting services for trade and non-trade transactions.",
+    title: "Account Management",
+    description: "From freight invoicing to payment follow-ups, our account management team ensures financial accuracy and transparency for better control over cash flow.",
     image: "/4.png",
     link: "/services/AccountsManagement",
     color: "from-purple-500/20 to-purple-600/20"
   }, {
     icon: Headset,
-    title: "Customer Service",
-    description: "Dedicated customer service team handling bookings and nominations.",
+    title: "Customer Service & Nomination",
+    description: "Our trained professionals act as an extension of your customer service team, managing inquiries, follow-ups, and shipment status updates.",
     image: "/5.png",
     link: "/services/customerservice",
     color: "from-pink-500/20 to-pink-600/20"
   }, {
-    icon: Shield,
+    icon: Computer,
     title: "Software Solutions",
-    description: "Custom software development following industry best practices.",
+    description: "We support logistics firms with robust IT solutions including WMS, TMS, and FMS systems that streamline day-to-day operations.",
     image: "/6.png",
     link: "/services/SoftwareSolutions",
     color: "from-cyan-500/20 to-cyan-600/20",
     badge: "New"
   }];
+  
   const benefitsList = [{
     icon: <MessageSquare className="h-10 w-10 text-primary" />,
     title: "Streamlined Communication",
@@ -68,26 +71,26 @@ const Services = () => {
       <Header />
       
       {/* Hero Section with Gradient Background */}
-<GradientBackground 
-  className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
-  variant="primary" 
-  intensity="medium" 
-  animated={true}
->
-  <div className="container mx-auto px-4">
-    <div className="max-w-3xl mx-auto text-center">
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-100 text-cyan-600 mb-6">
-        <span className="font-medium">Our Services</span>
-      </div>
-      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
-        Comprehensive Solutions for Logistics Excellence
-      </h1>
-      <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
-        Innovative services designed specifically for the freight forwarding and logistics industry
-      </p>
-    </div>
-  </div>
-</GradientBackground>
+      <GradientBackground 
+        className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
+        variant="primary" 
+        intensity="medium" 
+        animated={true}
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-100 text-cyan-600 mb-6">
+              <span className="font-medium">Our Services</span>
+            </div>
+            <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
+              Comprehensive Solutions for Logistics Excellence
+            </h1>
+            <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
+              Innovative services designed specifically for the freight forwarding and logistics industry
+            </p>
+          </div>
+        </div>
+      </GradientBackground>
 
 
       {/* Services Grid with Enhanced Design */}
@@ -147,8 +150,111 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      
+      {/* Service Descriptions - NEW SECTION */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
+              Services Offered
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Comprehensive solutions tailored specifically for logistics and freight forwarding companies
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100 shadow-lg">
+              <div className="flex items-start mb-6">
+                <div className="bg-blue-500 text-white p-3 rounded-xl mr-4">
+                  <Ship className="h-6 w-6" />
+                </div>
+                <h3 className="font-heading font-bold text-2xl">Documentation Services</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Our expert team ensures accurate and timely preparation of all essential shipping and logistics documents, including Bill of Lading, commercial invoices, packing lists, and certificates. We help reduce compliance risks and streamline operations for freight forwarders and logistics providers globally.
+              </p>
+              <Button asChild variant="outline" className="mt-4">
+                <Link to="/services/documentation">Learn More</Link>
+              </Button>
+            </div>
+            
+            <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100 shadow-lg">
+              <div className="flex items-start mb-6">
+                <div className="bg-amber-500 text-white p-3 rounded-xl mr-4">
+                  <Users className="h-6 w-6" />
+                </div>
+                <h3 className="font-heading font-bold text-2xl">Sales Support Desk</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Our Sales Support Desk functions as an extension of your sales team, offering centralized support to manage leads, client inquiries, and CRM tasks. We streamline communication, track lead progress, and handle sales documentation—allowing your team to focus on conversions while we manage the backend process.
+              </p>
+              <Button asChild variant="outline" className="mt-4">
+                <Link to="/services/salessupport">Learn More</Link>
+              </Button>
+            </div>
+            
+            <div className="bg-rose-50 p-8 rounded-2xl border border-rose-100 shadow-lg">
+              <div className="flex items-start mb-6">
+                <div className="bg-rose-500 text-white p-3 rounded-xl mr-4">
+                  <Headset className="h-6 w-6" />
+                </div>
+                <h3 className="font-heading font-bold text-2xl">Customer Service & Nomination Handling</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Our trained professionals act as an extension of your customer service team, managing inquiries, follow-ups, and shipment status updates. We also specialize in nomination handling by maintaining strong communication with overseas agents to ensure smooth cargo movement and documentation flow.
+              </p>
+              <Button asChild variant="outline" className="mt-4">
+                <Link to="/services/customerservice">Learn More</Link>
+              </Button>
+            </div>
+            
+            <div className="bg-purple-50 p-8 rounded-2xl border border-purple-100 shadow-lg">
+              <div className="flex items-start mb-6">
+                <div className="bg-purple-500 text-white p-3 rounded-xl mr-4">
+                  <Building2 className="h-6 w-6" />
+                </div>
+                <h3 className="font-heading font-bold text-2xl">Account Management</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                From freight invoicing to payment follow-ups, our account management team ensures financial accuracy and transparency. We handle receivables, reconciliation, and regular reporting, enabling better control over cash flow and customer accounts.
+              </p>
+              <Button asChild variant="outline" className="mt-4">
+                <Link to="/services/AccountsManagement">Learn More</Link>
+              </Button>
+            </div>
+            
+            <div className="bg-cyan-50 p-8 rounded-2xl border border-cyan-100 shadow-lg">
+              <div className="flex items-start mb-6">
+                <div className="bg-cyan-500 text-white p-3 rounded-xl mr-4">
+                  <Computer className="h-6 w-6" />
+                </div>
+                <h3 className="font-heading font-bold text-2xl">Software Solutions</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                We support logistics firms with robust IT solutions including WMS, TMS, and FMS systems that streamline day-to-day operations. Our IT experts also assist in implementation, data integration, and user training to ensure system efficiency and productivity.
+              </p>
+              <Button asChild variant="outline" className="mt-4">
+                <Link to="/services/SoftwareSolutions">Learn More</Link>
+              </Button>
+            </div>
+            
+            <div className="bg-green-50 p-8 rounded-2xl border border-green-100 shadow-lg">
+              <div className="flex items-start mb-6">
+                <div className="bg-green-500 text-white p-3 rounded-xl mr-4">
+                  <Globe className="h-6 w-6" />
+                </div>
+                <h3 className="font-heading font-bold text-2xl">Digital Marketing for Logistics</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                With a focus on the freight forwarding and logistics sector, we provide tailored digital marketing services including SEO, Google Ads, content marketing, and social media campaigns—enhancing brand visibility, customer engagement, and lead generation.
+              </p>
+              <Button asChild variant="outline" className="mt-4">
+                <Link to="/services/digitalmarketing">Learn More</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <GradientBackground className="py-16" variant="accent" intensity="strong" animated={true}>

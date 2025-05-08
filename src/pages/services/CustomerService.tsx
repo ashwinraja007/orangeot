@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -6,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Headset, MessageSquare, Clock, Users, CheckSquare, BarChart } from "lucide-react";
+
 const CustomerService = () => {
   const services = [{
     icon: MessageSquare,
@@ -24,6 +26,7 @@ const CustomerService = () => {
     title: "Performance Reporting",
     description: "Regular service level reports and continuous quality improvement."
   }];
+  
   const testimonials = [{
     quote: "Their customer service team has been instrumental in improving our client satisfaction rates. They understand the urgency in logistics and respond accordingly.",
     author: "Sarah Johnson",
@@ -35,6 +38,7 @@ const CustomerService = () => {
     position: "CEO",
     company: "Pacific Freight Solutions"
   }];
+  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -69,10 +73,10 @@ const CustomerService = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">
-                Customer-Centric Support for Logistics
+                Customer Service & Nomination Handling
               </h2>
               <p className="text-gray-600 mb-6">
-                In the fast-paced world of freight forwarding and logistics, responsive and knowledgeable customer service is essential. Our dedicated team serves as an extension of your business, ensuring your clients receive prompt and professional assistance.
+                Our trained professionals act as an extension of your customer service team, managing inquiries, follow-ups, and shipment status updates. We also specialize in nomination handling by maintaining strong communication with overseas agents to ensure smooth cargo movement and documentation flow.
               </p>
               <p className="text-gray-600 mb-6">
                 We understand the unique challenges and time-sensitive nature of logistics operations, and our specialists are trained to handle everything from routine inquiries to complex booking processes.
@@ -162,8 +166,47 @@ const CustomerService = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      
+      {/* Key Benefits */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
+              Benefits of Our Customer Service
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              How our service enhances your customer's experience
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[{
+              icon: Users,
+              title: "Professional Representation",
+              description: "Trained specialists who represent your company professionally"
+            }, {
+              icon: Clock,
+              title: "Extended Hours Coverage",
+              description: "Support available beyond standard business hours"
+            }, {
+              icon: MessageSquare,
+              title: "Multilingual Support",
+              description: "Service in multiple languages for global operations"
+            }, {
+              icon: CheckSquare,
+              title: "Reduced Response Time",
+              description: "Quick responses to all customer inquiries and issues"
+            }].map((benefit, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-pink-100 mb-4">
+                  <benefit.icon className="h-7 w-7 text-pink-600" />
+                </div>
+                <h3 className="font-heading font-bold text-lg mb-2">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-pink-500 to-rose-500 text-white">

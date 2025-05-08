@@ -1,16 +1,13 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { LogoCarousel } from "@/components/ui/logo-carousel";
+
 interface HeroProps {
-  logos: {
-    src: string;
-    alt: string;
-  }[];
   backgroundImage?: string;
 }
+
 export const Hero = ({
-  logos,
   backgroundImage = "/he.jpg"
 }: HeroProps) => {
   return <section className="pt-0 relative overflow-hidden min-h-[90vh] md:min-h-[100vh] flex flex-col justify-between bg-black">
@@ -41,25 +38,13 @@ export const Hero = ({
                   <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-sm md:text-base text-slate-950">
+              <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 rounded-xl backdrop-blur-sm text-sm md:text-base text-white">
                 <Link to="/services" className="flex items-center gap-2">
                   Our Services
                   <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
                 </Link>
               </Button>
             </div>
-          </div>
-        </div>
-
-        {/* Client Logos Carousel moved to bottom of hero */}
-       <div className="mt-6 md:mt-20 animate-fade-in delay-200 relative z-10 bg-inherit">
-          <p className="text-center mb-3 md:mb-6 text-xs md:text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2 text-slate-50">
-            <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
-            Trusted by leading companies
-            <span className="h-px w-8 bg-gradient-to-r from-transparent via-black to-transparent"></span>
-          </p>
-          <div className="p-2 md:p-4 rounded-2xl backdrop-blur-sm border border-black/10 shadow-lg py-0 bg-white px-0 my-0">
-            <LogoCarousel logos={logos} className="py-2 md:py-4" />
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Hero } from "@/components/Hero";
+import { LogoCarousel } from "@/components/ui/logo-carousel";
 
 // Client logos data
 const clientLogos = [{
@@ -98,8 +99,8 @@ const Index = () => {
   return <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section - now using the new component and properly passing clientLogos */}
-      <Hero logos={clientLogos} />
+      {/* Hero Section - now uses the Hero component without logos */}
+      <Hero />
       
       {/* Mission & Vision Section with Enhanced Design */}
       <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden py-20">
@@ -158,6 +159,22 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Client Logos Carousel moved below Mission & Vision */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <p className="text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2 text-gray-600">
+              <span className="h-px w-12 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></span>
+              Trusted by leading companies
+              <span className="h-px w-12 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></span>
+            </p>
+          </div>
+          <div className="p-4 rounded-2xl bg-white border border-gray-100 shadow-lg">
+            <LogoCarousel logos={clientLogos} className="py-4" />
+          </div>
+        </div>
+      </section>
+
       {/* Services Section with Enhanced Cards */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
@@ -179,40 +196,46 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[{
             icon: FileCheck,
-            title: "Documentation",
-            description: "Expert documentation services including invoices, credit notes, and job profit statements.",
+            title: "Documentation Services",
+            description: "Expert documentation handling including invoices, credit notes, and job profit statements.",
             image: "/1.png",
-            color: "from-blue-500 to-cyan-400"
+            color: "from-blue-500 to-cyan-400",
+            link: "/services/documentation"
           }, {
             icon: Users,
-            title: "Sales Support",
-            description: "Centralized sales support desk for lead management and customer relationships.",
+            title: "Sales Support Desk",
+            description: "Centralized sales support for lead management and customer relationships.",
             image: "/2.png",
-            color: "from-amber-500 to-orange-400"
+            color: "from-amber-500 to-orange-400",
+            link: "/services/salessupport"
           }, {
             icon: Globe,
             title: "Digital Marketing",
             description: "Comprehensive digital marketing solutions to boost your online presence.",
             image: "/3.png",
-            color: "from-green-500 to-emerald-400"
+            color: "from-green-500 to-emerald-400",
+            link: "/services/digitalmarketing"
           }, {
             icon: Building2,
-            title: "Accounts Management",
+            title: "Account Management",
             description: "Professional accounting services for trade and non-trade transactions.",
             image: "/4.png",
-            color: "from-purple-500 to-violet-400"
+            color: "from-purple-500 to-violet-400",
+            link: "/services/AccountsManagement"
           }, {
             icon: Headset,
             title: "Customer Service",
             description: "Dedicated customer service team for bookings and nominations.",
             image: "/5.png",
-            color: "from-pink-500 to-rose-400"
+            color: "from-pink-500 to-rose-400",
+            link: "/services/customerservice"
           }, {
             icon: Shield,
             title: "Software Solutions",
             description: "Custom software development following industry best practices.",
             image: "/6.png",
-            color: "from-cyan-500 to-blue-400"
+            color: "from-cyan-500 to-blue-400",
+            link: "/services/SoftwareSolutions"
           }].map((service, index) => <Card key={index} className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{
             animationDelay: `${index * 100}ms`
           }}>
@@ -228,7 +251,7 @@ const Index = () => {
                 <CardContent className="p-6 bg-slate-200">
                   <h3 className="font-heading font-bold text-xl mb-3 group-hover:text-gray-700 transition-colors">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Link to="/services" className="inline-flex items-center text-orange-500 font-medium group">
+                  <Link to={service.link} className="inline-flex items-center text-orange-500 font-medium group">
                     <span className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-orange-500 after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                       Learn more
                     </span>

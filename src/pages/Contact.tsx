@@ -77,14 +77,14 @@ const Contact = () => {
   // Map locations for Chennai and Kochi offices
   const officeLocations = [{
     title: "Chennai - Headquarters",
-    description: "KAIZEN" 2nd & 3rd Floor ,New No.G3 (Old No.G1), G Block, Plot No.565Q, 18th Street, Chinthamani, Anna Nagar East, Chennai: 600102",
+    description: "KAIZEN 2nd & 3rd Floor, New No.G3 (Old No.G1), G Block, Plot No.565Q, 18th Street, Chinthamani, Anna Nagar East, Chennai: 600102",
     coordinates: [80.2707, 13.0827],
     timing: "Mon - Fri: 9:00 AM - 6:00 PM",
     phone: "+91 44 4796 5437",
     email: "info@orangeot.com"
   }, {
     title: "Kochi Office",
-    description: "No 34/656, Neelima, Toll Jn,Edappally , Ernakulam , Kochi, Kerala 682024,(Landmark : OPP Metro Pillar 394",
+    description: "No 34/656, Neelima, Toll Jn, Edappally, Ernakulam, Kochi, Kerala 682024, (Landmark: OPP Metro Pillar 394)",
     coordinates: [76.3219, 9.9816],
     timing: "Mon - Fri: 9:00 AM - 6:00 PM",
     phone: "+91 44 4796 5437",
@@ -292,4 +292,5 @@ const Contact = () => {
       <Footer />
     </div>;
 };
+
 export default Contact;

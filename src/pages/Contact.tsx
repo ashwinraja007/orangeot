@@ -264,7 +264,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 mb-12">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gray-800">Visit Our Locations</h2>
-            <p className="text-lg text-gray-600">Find us at our convenient office locations in Chennai and Kochi</p>
+            <p className="text-lg text-gray-600">Find us at our convenient office locations in Chennai </p>
           </div>
         </div>
         

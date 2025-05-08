@@ -160,7 +160,7 @@ const Index = () => {
       </section>
 
       {/* Client Logos Carousel moved below Mission & Vision */}
-      <section className="bg-slate-50 py-[2px]">
+      <section className="bg-slate-50 py-0">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <p className="text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2 text-gray-600">
@@ -176,14 +176,10 @@ const Index = () => {
       </section>
 
       {/* Services Section with Enhanced Cards */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden bg-slate-50">
         
-        <svg className="absolute top-0 left-0 w-full text-white" style={{
-        transform: "translateY(-1px)"
-      }} fill="currentColor" viewBox="0 0 1440 40">
-          <path d="M0,0L60,4C120,8,240,16,360,18.7C480,21,600,19,720,13.3C840,8,960,0,1080,0C1200,0,1320,8,1380,12L1440,16L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-        </svg>
+        
+        
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">

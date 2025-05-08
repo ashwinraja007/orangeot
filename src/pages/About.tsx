@@ -23,15 +23,12 @@ const About = () => {
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-2xl font-bold mb-4">Who We Are</h2>
-            <p className="text-gray-600 mb-4">
-              Orange Office Technologies (OOT Pvt. Ltd.) is a Global Capability Centre (GCC) supporting a group of companies
-              engaged in shipping, logistics, and third-party warehousing (3PL) services. We deliver advanced digital solutions
-              and operational support that drive innovation and efficiency.
-            </p>
-            <p className="text-gray-600">
-              With deep industry expertise and a commitment to agility and quality, we empower logistics operations globally
-              through scalable and forward-thinking solutions.
-            </p>
+            <p className="text-gray-600 mb-4">Orange Office Technologies (OOT Pvt. Ltd.) is a Global Capability Centre (GCC) supporting a group of companies engaged in shipping, logistics, and third-party warehousing (3PL) services. As a centralized technology hub, OOT delivers advanced digital solutions and operational support that drive innovation and efficiency across the logistics value chain.</p>
+            <p className="text-gray-600">With a strong foundation built on logistics domain expertise and technology-driven innovation, we specialize in delivering real-time, integrated IT solutions that drive productivity and digital transformation. Our IT division develops and implements customized software solutions that enable clients to stay ahead in today’s fast-paced logistics environment.
+
+With a skilled team of professionals and deep industry experience, OOT ensures high-performance standards and continuous process improvements. We align closely with our group companies to deliver agile, scalable, and forward-thinking solutions that power global logistics operations.
+
+As we continue to scale across industries, our commitment remains rooted in quality, agility, and continuous innovation — delivering measurable value to our partners worldwide.</p>
           </div>
           <div className="relative flex justify-center lg:justify-end">
             <div className="w-4/5 max-w-sm overflow-hidden rounded-2xl shadow-xl border-4 border-white">
@@ -51,30 +48,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="bg-gradient-to-r from-orange-50 to-amber-50 py-16">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
-          <div className="bg-white p-6 rounded-xl shadow-md">
-            <div className="flex items-center gap-3 mb-4">
-              <Target className="h-10 w-10 text-orange-500 p-2 bg-orange-100 rounded-full" />
-              <h3 className="text-xl font-bold">Our Mission</h3>
-            </div>
-            <p className="text-gray-600">
-              To provide industry-leading digital solutions and operational support that empower logistics companies to 
-              achieve operational excellence, while delivering exceptional value and service to their customers.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-md">
-            <div className="flex items-center gap-3 mb-4">
-              <TrendingUp className="h-10 w-10 text-amber-500 p-2 bg-amber-100 rounded-full" />
-              <h3 className="text-xl font-bold">Our Vision</h3>
-            </div>
-            <p className="text-gray-600">
-              To be the global leader in logistics technology and services, recognized for innovation, reliability, 
-              and strategic partnerships that transform the industry's digital landscape.
-            </p>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Core Values */}
       <section className="py-16 bg-white">

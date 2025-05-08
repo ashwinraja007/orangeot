@@ -18,27 +18,27 @@ const clientLogos = [{
   industry: "Shipping",
   logo: "/62fb78ee5cd45.png"
 }, {
-  name: "amass",
+  name: "Amass",
   industry: "Freight Forwarding",
   logo: "/62fb77880f0df.png"
 }, {
-  name: "oneglobal",
+  name: "Oneglobal",
   industry: "Supply Chain",
   logo: "/62fb79231e921.png"
 }, {
-  name: "citygen",
+  name: "Citygen",
   industry: "Transportation",
   logo: "/62fb77c2d5890.png"
 }, {
-  name: "futurenet",
+  name: "Futurenet",
   industry: "Warehousing",
   logo: "/62fb783408cd1.png"
 }, {
-  name: "ggl",
+  name: "GGL",
   industry: "Distribution",
   logo: "/62fb7890bc643.png"
 }, {
-  name: "primeshiping",
+  name: "Primeshiping",
   industry: "Export/Import",
   logo: "/62fb79b61d0c8.png"
 }];

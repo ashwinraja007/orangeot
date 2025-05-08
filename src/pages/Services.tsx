@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,7 +5,6 @@ import { FileCheck, Users, Globe, Building2, Headset, Shield, ArrowRight, Messag
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { GradientBackground } from "@/components/GradientBackground";
-
 const Services = () => {
   const services = [{
     icon: Ship,
@@ -53,7 +51,6 @@ const Services = () => {
     color: "from-cyan-500/20 to-cyan-600/20",
     badge: "New"
   }];
-  
   const benefitsList = [{
     icon: <MessageSquare className="h-10 w-10 text-primary" />,
     title: "Streamlined Communication",
@@ -71,15 +68,10 @@ const Services = () => {
       <Header />
       
       {/* Hero Section with Gradient Background */}
-      <GradientBackground 
-        className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
-        variant="primary" 
-        intensity="medium" 
-        animated={true}
-      >
+      <GradientBackground className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" variant="primary" intensity="medium" animated={true}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-100 text-cyan-600 mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-cyan-100 text-cyan-600 mb-6 py-[6px] px-[17px]">
               <span className="font-medium">Our Services</span>
             </div>
             <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
@@ -94,7 +86,7 @@ const Services = () => {
 
 
       {/* Services Grid with Enhanced Design */}
-      <section className="py-20 -mt-10 bg-white relative z-10">
+      <section className="-mt-10 bg-white relative z-10 my-0 py-[89px]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 animate-fade-in overflow-hidden border-none" style={{

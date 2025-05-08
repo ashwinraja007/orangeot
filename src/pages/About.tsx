@@ -9,7 +9,7 @@ const About = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-28 pb-20 bg-gradient-to-br from-primary/10 to-accent/10 text-center py-[30px]">
+      <section className="pt-28 pb-20 bg-gradient-to-br from-primary/10 to-accent/10 text-center py-[33px]">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">About Us</h1>
           <p className="text-xl text-gray-600">Empowering the Logistics Industry Through Smart Back-Office and Digital Solutions

@@ -160,7 +160,7 @@ const Index = () => {
       </section>
 
       {/* Client Logos Carousel moved below Mission & Vision */}
-      <section className="py-16 bg-slate-50">
+      <section className="bg-slate-50 py-[2px]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <p className="text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2 text-gray-600">

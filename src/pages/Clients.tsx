@@ -69,7 +69,6 @@ const testimonials = [{
   company: "OECL Thailand",
   image: "/62fb7958e1cf7.png"
 }];
-
 const Clients = () => {
   const [api, setApi] = useState(null);
   const [clientsApi, setClientsApi] = useState(null);
@@ -179,9 +178,7 @@ const Clients = () => {
                         <CardContent className="p-0">
                           <div className="bg-gradient-to-br from-[#F58220]/10 to-white p-8 flex flex-col h-full">
                             <div className="flex items-center mb-6">
-                              <div className="mr-4 h-16 w-16 rounded-full overflow-hidden border-2 border-[#F58220] flex-shrink-0">
-                                <img src={testimonial.image} alt={testimonial.author} className="h-full w-full object-cover" />
-                              </div>
+                              
                               <div>
                                 <p className="font-heading font-bold text-lg text-gray-800">{testimonial.author}</p>
                                 <p className="text-[#F58220]">{testimonial.position}</p>

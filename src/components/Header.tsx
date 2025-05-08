@@ -1,19 +1,15 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-
   useEffect(() => {
     setIsMenuOpen(false);
     window.scrollTo(0, 0);
   }, [location.pathname]);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -21,7 +17,6 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const navItems = [{
     to: "/",
     label: "Home"
@@ -41,34 +36,33 @@ export const Header = () => {
     to: "/clients",
     label: "Clients"
   }];
-  
-  return <header className={`my-[15px] transition-all duration-300 ${scrolled ? "shadow-md bg-white/90 backdrop-blur-md" : ""}`}>
+  return <header className="my-[15px]">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 group" aria-label="Home">
             <img alt="Orange Office Technologies" className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10" src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png" />
-            <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-primary-dark">
+            <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800">
               Orange Office Technologies
             </span>
           </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            {navItems.map(item => <Link key={item.label} to={item.to} className={`font-medium transition-colors duration-300 relative text-primary-dark hover:text-primary
+            {navItems.map(item => <Link key={item.label} to={item.to} className={`font-medium transition-colors duration-300 relative text-gray-800 hover:text-orange-500
                 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 
                 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 
-                hover:after:origin-bottom-left after:bg-primary ${location.pathname === item.to ? "text-primary after:scale-x-100 after:bg-primary" : ""}`}>
+                hover:after:origin-bottom-left after:bg-orange-500 ${location.pathname === item.to ? "text-orange-500 after:scale-x-100 after:bg-orange-500" : ""}`}>
                 {item.label}
               </Link>)}
 
-            <Button className="text-sm sm:text-base bg-gradient-to-r from-primary to-accent-coral hover:from-primary/90 hover:to-accent-coral/90 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-royal rounded-xl text-white py-0 px-[16px]">
+            <Button className="text-sm sm:text-base bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-shine rounded-xl text-white py-0 px-[16px]">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </nav>
 
           {/* Mobile menu toggle button */}
           <div className="md:hidden flex items-center">
-            <button className="ml-2 p-2 hover:bg-primary-light rounded-lg transition-colors text-primary-dark" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu" aria-expanded={isMenuOpen}>
+            <button className="ml-2 p-2 hover:bg-gray-100/10 rounded-lg transition-colors text-gray-800" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu" aria-expanded={isMenuOpen}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
@@ -78,10 +72,10 @@ export const Header = () => {
       {/* Mobile nav */}
       {isMenuOpen && <div className="md:hidden bg-white/95 backdrop-blur-md border-b animate-fade-in">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-3">
-            {navItems.map(item => <Link key={item.label} to={item.to} className={`text-base text-primary-dark hover:text-primary font-medium py-2 transition-colors duration-300 ${location.pathname === item.to ? "text-primary" : ""}`} onClick={() => setIsMenuOpen(false)}>
+            {navItems.map(item => <Link key={item.label} to={item.to} className={`text-base text-gray-800 hover:text-orange-500 font-medium py-2 transition-colors duration-300 ${location.pathname === item.to ? "text-orange-500" : ""}`} onClick={() => setIsMenuOpen(false)}>
                 {item.label}
               </Link>)}
-            <Button className="w-full text-base bg-gradient-to-r from-primary to-accent-coral hover:from-primary/90 hover:to-accent-coral/90 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-royal rounded-xl text-white">
+            <Button className="w-full text-base bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-shine rounded-xl text-white">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </nav>

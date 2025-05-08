@@ -244,7 +244,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <CardContent className="p-6 bg-slate-200">
+                <CardContent className="p-6 bg-slate-50">
                   <h3 className="font-heading font-bold text-xl mb-3 group-hover:text-gray-700 transition-colors">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <Link to={service.link} className="inline-flex items-center text-orange-500 font-medium group">

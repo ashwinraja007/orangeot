@@ -1,28 +1,29 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 40 30% 98%;
+    --background: 260 30% 98%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 24 100% 50%;
+    --primary: 260 30% 54%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 24 30% 95%;
-    --secondary-foreground: 24 10% 10%;
-    --muted: 24 20% 96%;
-    --muted-foreground: 24 10% 40%;
-    --accent: 24 100% 90%;
-    --accent-foreground: 24 10% 10%;
+    --secondary: 260 30% 95%;
+    --secondary-foreground: 260 10% 10%;
+    --muted: 260 20% 96%;
+    --muted-foreground: 260 10% 40%;
+    --accent: 260 100% 90%;
+    --accent-foreground: 260 10% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 24 15% 90%;
-    --input: 24 15% 90%;
-    --ring: 24 100% 50%;
+    --border: 260 15% 90%;
+    --input: 260 15% 90%;
+    --ring: 260 100% 50%;
     --radius: 0.75rem;
   }
 
@@ -56,26 +57,7 @@
     @apply text-sm sm:text-base md:text-lg leading-relaxed;
   }
 
-  /* Custom Typography */
-  /* h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight;
-  }
-
-  h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight;
-  }
-
-  h3 {
-    @apply text-xl md:text-2xl lg:text-3xl font-semibold;
-  }
-
-  h4 {
-    @apply text-lg md:text-xl font-semibold;
-  }
-
-  p {
-    @apply text-base md:text-lg leading-relaxed;
-  } */
+  /* ... keep existing code (custom typography section) */
 
   /* Custom Classes */
   .text-balance {
@@ -137,7 +119,7 @@
   }
   
   .advanced-card::before {
-    @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-br from-silver-gray/5 to-gray-100/5 opacity-0 transition-opacity duration-300;
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-coral/5 to-primary/5 opacity-0 transition-opacity duration-300;
   }
   
   .advanced-card:hover::before {
@@ -149,81 +131,67 @@
     @apply transition-transform duration-300 hover:scale-110;
   }
 
-  /* Silver glow effect */
-  .silver-glow {
+  /* Royal glow effect */
+  .royal-glow {
     @apply relative;
   }
 
-  .silver-glow::after {
-    @apply content-[''] absolute -inset-0.5 bg-gradient-to-r from-silver-gray/30 to-white/30 rounded-lg blur opacity-75 transition duration-1000 animate-pulse pointer-events-none;
+  .royal-glow::after {
+    @apply content-[''] absolute -inset-0.5 bg-gradient-to-r from-accent-coral/30 to-primary/30 rounded-lg blur opacity-75 transition duration-1000 animate-pulse pointer-events-none;
   }
 
-  .silver-glow:hover::after {
+  .royal-glow:hover::after {
     @apply opacity-100;
   }
 
   /* Custom Colors */
-  .text-primary-orange {
-    color: #F58220;
+  .text-primary-purple {
+    color: #7E69AB;
   }
 
-  .bg-primary-orange {
-    background-color: #F58220;
+  .bg-primary-purple {
+    background-color: #7E69AB;
   }
 
   .text-dark {
-    color: #2C2C2C;
+    color: #1A1F2C;
   }
 
   .bg-light {
-    background-color: #FDF7F3;
+    background-color: #F5F3FA;
   }
 
-  .text-accent-peach {
-    color: #FFC78E;
+  .text-accent-gold {
+    color: #D4B483;
   }
 
-  .bg-accent-peach {
-    background-color: #FFC78E;
+  .bg-accent-gold {
+    background-color: #D4B483;
   }
 
-  .text-accent-coral {
-    color: #FF7F50;
+  .text-accent-bright {
+    color: #9b87f5;
   }
 
-  .bg-accent-coral {
-    background-color: #FF7F50;
+  .bg-accent-bright {
+    background-color: #9b87f5;
   }
 }
 
 @layer components {
-  .geometric-pattern {
-    @apply absolute w-full h-full bg-gradient-to-br from-[#F58220]/10 to-transparent transform;
-  }
-  
-  .hero-heading {
-    @apply font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-[#2C2C2C] leading-tight tracking-tight;
-  }
-  
-  .hero-subheading {
-    @apply text-lg md:text-xl text-gray-700 leading-relaxed;
-  }
-  
-  .video-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300;
-  }
+  /* ... keep existing code (components layer styles) */
 
-  /* Modern card styles */
+  /* Modern card styles with royal theme */
   .modern-card {
-    @apply rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-none overflow-hidden hover:-translate-y-1;
+    @apply rounded-2xl bg-white shadow-lg hover:shadow-royal-glow transition-all duration-300 border-none overflow-hidden hover:-translate-y-1;
   }
 
-  /* New service card styles */
+  /* New service card styles with royal theme */
   .service-card {
-    @apply rounded-2xl bg-gradient-to-br from-white to-gray-50/80 shadow-lg hover:shadow-xl transition-all duration-300 border-none overflow-hidden hover:-translate-y-1;
+    @apply rounded-2xl bg-gradient-to-br from-white to-primary-light/80 shadow-lg hover:shadow-xl transition-all duration-300 border-none overflow-hidden hover:-translate-y-1;
   }
 
-  /* Gradient border utilities */
+  /* Gradient border utilities with royal colors */
   .gradient-border {
     position: relative;
     border-radius: 0.75rem;
@@ -235,7 +203,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 2px;
-    background: linear-gradient(to right, #F58220, #FFC78E);
+    background: linear-gradient(to right, #7E69AB, #9b87f5);
     -webkit-mask: 
       linear-gradient(#fff 0 0) content-box, 
       linear-gradient(#fff 0 0);
@@ -245,120 +213,66 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }
+
+  /* Royal button style */
+  .royal-button {
+    @apply rounded-md bg-gradient-to-r from-primary to-accent-coral text-white px-4 py-2 shadow-md transition-all duration-300 hover:shadow-royal-glow hover:-translate-y-0.5;
+  }
 }
 
 @layer utilities {
-  .section-padding {
-    @apply py-16 md:py-24 px-4 md:px-8;
+  /* ... keep existing code (utilities layer styles) */
+
+  .text-royal {
+    @apply text-[#7E69AB];
+  }
+
+  .bg-royal {
+    @apply bg-[#7E69AB];
+  }
+
+  .border-royal {
+    @apply border-[#7E69AB];
+  }
+
+  .from-royal {
+    @apply from-[#7E69AB];
+  }
+
+  .to-royal {
+    @apply to-[#7E69AB];
+  }
+
+  /* Enhanced hover effects with royal theme */
+  .hover-royal {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-royal-glow;
   }
   
-  .clip-path-slant {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  }
-  
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .text-silver {
-    @apply text-[#9F9EA1];
-  }
-
-  .bg-silver {
-    @apply bg-[#9F9EA1];
-  }
-
-  .border-silver {
-    @apply border-[#9F9EA1];
-  }
-
-  .from-silver {
-    @apply from-[#9F9EA1];
-  }
-
-  .to-silver {
-    @apply to-[#9F9EA1];
-  }
-
-  /* Enhanced hover effects */
-  .hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
-  }
-  
-  /* Enhanced button hover effects */
-  .btn-hover-shine {
+  /* Enhanced button hover effects with royal theme */
+  .btn-hover-royal {
     @apply relative overflow-hidden;
   }
   
-  .btn-hover-shine::after {
-    @apply content-[''] absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-white/30 skew-x-45 transition-all duration-700;
+  .btn-hover-royal::after {
+    @apply content-[''] absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent to-accent-coral/30 skew-x-45 transition-all duration-700;
   }
   
-  .btn-hover-shine:hover::after {
+  .btn-hover-royal:hover::after {
     @apply left-[100%];
   }
 }
 
-/* Custom animations */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+/* ... keep existing code (custom animations and animation classes) */
+
+/* Royal glowing text */
+.text-royal-glow {
+  text-shadow: 0 0 10px rgba(126, 105, 171, 0.5),
+               0 0 20px rgba(126, 105, 171, 0.3),
+               0 0 30px rgba(126, 105, 171, 0.1);
 }
 
-@keyframes pulse-slow {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 0.8; }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Animation classes */
-.animate-float {
-  animation: float 6s infinite ease-in-out;
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 4s infinite ease-in-out;
-}
-
-.animate-fade-in {
-  opacity: 0;
-  animation: fade-in 1s forwards;
-}
-
-.delay-75 {
-  animation-delay: 75ms;
-}
-
-.delay-100 {
-  animation-delay: 100ms;
-}
-
-.delay-150 {
-  animation-delay: 150ms;
-}
-
-.delay-200 {
-  animation-delay: 200ms;
-}
-
-.animate-count-up {
-  counter-reset: count 0;
-  animation: count-up 2s forwards ease-out;
-}
-
-/* Silver glowing text */
-.text-glow {
-  text-shadow: 0 0 10px rgba(159, 158, 161, 0.5),
-               0 0 20px rgba(159, 158, 161, 0.3),
-               0 0 30px rgba(159, 158, 161, 0.1);
-}
-
-/* Silver glowing border */
-.silver-border-glow {
-  box-shadow: 0 0 5px rgba(159, 158, 161, 0.5),
-              0 0 10px rgba(159, 158, 161, 0.3);
+/* Royal glowing border */
+.royal-border-glow {
+  box-shadow: 0 0 5px rgba(126, 105, 171, 0.5),
+              0 0 10px rgba(126, 105, 171, 0.3);
 }

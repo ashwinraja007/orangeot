@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -15,13 +16,13 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#F58220",
-          dark: "#2C2C2C",
-          light: "#FDF7F3",
+          DEFAULT: "#7E69AB", // Royal purple as primary color
+          dark: "#1A1F2C",    // Dark navy for contrast
+          light: "#F5F3FA",   // Light lavender for backgrounds
         },
         accent: {
-          peach: "#FFC78E",
-          coral: "#FF7F50",
+          peach: "#D4B483",   // Gold accent
+          coral: "#9b87f5",    // Bright purple accent
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -157,16 +158,16 @@ export default {
         glass: "0 4px 30px rgba(0, 0, 0, 0.1)",
         hover: "0 10px 40px -15px rgba(0, 0, 0, 0.15)",
         card: "0 7px 20px rgba(0, 0, 0, 0.05)",
-        "silver-glow": "0 0 15px rgba(159, 158, 161, 0.7)",
+        "royal-glow": "0 0 15px rgba(126, 105, 171, 0.7)",
       },
       backdropBlur: {
         glass: "blur(10px)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(135deg, #303030 0%, #505050 100%)",
+        "hero-gradient": "linear-gradient(135deg, #1A1F2C 0%, #403E43 100%)",
         "card-gradient": "linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05))",
-        "silver-shine": "linear-gradient(90deg, transparent, rgba(159, 158, 161, 0.3), transparent)",
+        "royal-shine": "linear-gradient(90deg, transparent, rgba(126, 105, 171, 0.3), transparent)",
       },
       // Add custom skew transform
       skew: {

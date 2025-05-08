@@ -37,13 +37,13 @@ export const GradientBackground = ({
     
     switch (variant) {
       case "primary":
-        return `from-primary/${fromOpacity} via-accent/${viaOpacity} to-background`;
+        return `from-primary/${fromOpacity} via-accent-coral/${viaOpacity} to-background`;
       case "secondary":
-        return `from-accent/${fromOpacity} via-primary/${viaOpacity} to-background`;
+        return `from-accent-coral/${fromOpacity} via-primary/${viaOpacity} to-background`;
       case "accent":
-        return `from-accent/${fromOpacity} via-background/${viaOpacity} to-primary/${toOpacity}`;
+        return `from-accent-coral/${fromOpacity} via-background/${viaOpacity} to-primary/${toOpacity}`;
       default:
-        return `from-primary/${fromOpacity} via-accent/${viaOpacity} to-background`;
+        return `from-primary/${fromOpacity} via-accent-coral/${viaOpacity} to-background`;
     }
   };
   

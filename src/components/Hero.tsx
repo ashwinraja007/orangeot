@@ -16,13 +16,13 @@ export const Hero = ({
 
       {/* Foreground Content */}
       <div className="container mx-auto px-4 relative z-10 md:py-16 flex flex-col justify-between h-full py-0">
-        <div className="flex-grow flex items-center mx-0 md:my-[87px] my-0">
+        <div className="flex-grow flex items-center mx-0 md:my-[87px] my-[35px]">
           <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0 my-[24px]">
             <div className="inline-flex items-center gap-2 rounded-full bg-orange-400/20 text-orange-300 mb-4 md:mb-8 animate-fade-in text-sm font-medium backdrop-blur-sm border border-orange-400/20 px-[16px] py-[8px]">
               <Sparkles className="w-4 h-4" />
               <span>Logistics KPO Excellence</span>
             </div>
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl mb-4 md:mb-8 animate-fade-in text-white leading-tight tracking-tight font-bold lg:text-5xl my-[68px]">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl mb-4 md:mb-8 animate-fade-in text-white leading-tight tracking-tight font-bold lg:text-5xl">
               Powering <span className="text-gradient bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-extrabold">Logistics</span><br className="hidden md:block" /> Excellence
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-4 md:mb-8 animate-fade-in delay-75 max-w-lg mx-auto lg:mx-0">

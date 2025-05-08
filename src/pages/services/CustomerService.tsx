@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,57 +6,40 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Headset, MessageSquare, Clock, Users, CheckSquare, BarChart } from "lucide-react";
-
 const CustomerService = () => {
-  const services = [
-    {
-      icon: MessageSquare,
-      title: "Inquiry Management",
-      description: "Efficient handling of customer inquiries through multiple channels."
-    },
-    {
-      icon: CheckSquare,
-      title: "Booking & Nominations",
-      description: "Processing shipment bookings and managing carrier nominations."
-    },
-    {
-      icon: Clock,
-      title: "24/7 Support",
-      description: "Round-the-clock assistance for time-critical logistics operations."
-    },
-    {
-      icon: BarChart,
-      title: "Performance Reporting",
-      description: "Regular service level reports and continuous quality improvement."
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Their customer service team has been instrumental in improving our client satisfaction rates. They understand the urgency in logistics and respond accordingly.",
-      author: "Sarah Johnson",
-      position: "Operations Manager",
-      company: "Global Logistics Inc."
-    },
-    {
-      quote: "The team at Orange Office Technologies handles our customer inquiries with professionalism and efficiency. They've become an extension of our company.",
-      author: "Michael Chen",
-      position: "CEO",
-      company: "Pacific Freight Solutions"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  const services = [{
+    icon: MessageSquare,
+    title: "Inquiry Management",
+    description: "Efficient handling of customer inquiries through multiple channels."
+  }, {
+    icon: CheckSquare,
+    title: "Booking & Nominations",
+    description: "Processing shipment bookings and managing carrier nominations."
+  }, {
+    icon: Clock,
+    title: "24/7 Support",
+    description: "Round-the-clock assistance for time-critical logistics operations."
+  }, {
+    icon: BarChart,
+    title: "Performance Reporting",
+    description: "Regular service level reports and continuous quality improvement."
+  }];
+  const testimonials = [{
+    quote: "Their customer service team has been instrumental in improving our client satisfaction rates. They understand the urgency in logistics and respond accordingly.",
+    author: "Sarah Johnson",
+    position: "Operations Manager",
+    company: "Global Logistics Inc."
+  }, {
+    quote: "The team at Orange Office Technologies handles our customer inquiries with professionalism and efficiency. They've become an extension of our company.",
+    author: "Michael Chen",
+    position: "CEO",
+    company: "Pacific Freight Solutions"
+  }];
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
      {/* Hero Section */}
-<GradientBackground 
-  className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
-  variant="primary" 
-  intensity="medium"
-  animated={true}
->
+    <GradientBackground className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" variant="primary" intensity="medium" animated={true}>
   <div className="container mx-auto px-4">
     <div className="max-w-3xl mx-auto text-center">
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 text-pink-600 mb-6">
@@ -70,11 +52,7 @@ const CustomerService = () => {
       <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
         Dedicated customer service team handling bookings, nominations, and inquiries for your logistics business
       </p>
-      <Button 
-        size="lg" 
-        className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" 
-        asChild
-      >
+      <Button size="lg" className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" asChild>
         <Link to="/contact" className="flex items-center gap-2">
           Explore Our Solutions
           <ArrowRight className="h-5 w-5" />
@@ -82,7 +60,7 @@ const CustomerService = () => {
       </Button>
     </div>
   </div>
-</GradientBackground>
+    </GradientBackground>
 
 
       {/* Service Overview */}
@@ -109,11 +87,7 @@ const CustomerService = () => {
               </div>
             </div>
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" 
-                alt="Customer Service Team" 
-                className="w-full h-full object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Customer Service Team" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
               <div className="absolute bottom-8 left-8 right-8 text-white">
                 <h3 className="text-2xl font-bold mb-2">Dedicated Support Team</h3>
@@ -137,8 +111,7 @@ const CustomerService = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {services.map((service, index) => (
-              <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-white hover:-translate-y-1 rounded-2xl">
+            {services.map((service, index) => <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-white hover:-translate-y-1 rounded-2xl">
                 <CardContent className="p-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-pink-100 mb-6">
                     <service.icon className="h-8 w-8 text-pink-600" />
@@ -146,8 +119,7 @@ const CustomerService = () => {
                   <h3 className="font-heading font-bold text-xl mb-3">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -166,65 +138,32 @@ const CustomerService = () => {
 
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  number: "01",
-                  title: "Inquiry Receipt",
-                  description: "We receive customer inquiries through multiple channels and log them in our tracking system."
-                },
-                {
-                  number: "02",
-                  title: "Professional Response",
-                  description: "Our trained specialists provide prompt, accurate, and helpful responses to all inquiries."
-                },
-                {
-                  number: "03",
-                  title: "Follow-up & Resolution",
-                  description: "We ensure complete resolution and follow up to confirm customer satisfaction."
-                }
-              ].map((step, index) => (
-                <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden bg-gradient-to-br from-pink-50 to-white group hover:-translate-y-1 rounded-2xl">
+              {[{
+              number: "01",
+              title: "Inquiry Receipt",
+              description: "We receive customer inquiries through multiple channels and log them in our tracking system."
+            }, {
+              number: "02",
+              title: "Professional Response",
+              description: "Our trained specialists provide prompt, accurate, and helpful responses to all inquiries."
+            }, {
+              number: "03",
+              title: "Follow-up & Resolution",
+              description: "We ensure complete resolution and follow up to confirm customer satisfaction."
+            }].map((step, index) => <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden bg-gradient-to-br from-pink-50 to-white group hover:-translate-y-1 rounded-2xl">
                   <CardContent className="p-8">
                     <div className="text-3xl font-bold text-pink-500 mb-4">{step.number}</div>
                     <h3 className="font-heading font-bold text-xl mb-3">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-pink-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Hear from businesses that have enhanced their customer experience with our services
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-none shadow-xl overflow-hidden bg-white rounded-2xl">
-                <CardContent className="p-8">
-                  <div className="text-5xl text-pink-300 mb-4">"</div>
-                  <p className="text-gray-600 italic mb-6">{testimonial.quote}</p>
-                  <div>
-                    <p className="font-heading font-bold text-lg">{testimonial.author}</p>
-                    <p className="text-gray-500">{testimonial.position}</p>
-                    <p className="text-pink-500 font-medium">{testimonial.company}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-pink-500 to-rose-500 text-white">
@@ -244,8 +183,6 @@ const CustomerService = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default CustomerService;

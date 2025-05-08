@@ -42,7 +42,7 @@ const Founders = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     {/* Image Section */}
                     <div className="h-full relative overflow-hidden">
-                      <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover object-center" />
+                      <img alt="Mr. Sudhir KU" className="w-full h-full object-cover object-center" src="/lovable-uploads/8c197c79-48aa-49bc-87a8-fbf680fa6afd.png" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent my-[28px]"></div>
                       <div className="absolute bottom-0 left-0 p-6 md:p-8 text-white">
                         <h3 className="text-3xl font-bold mb-1">Mr. Sudhir KU</h3>

@@ -1,4 +1,3 @@
-
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
@@ -53,10 +52,8 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-sm text-gray-400">
                 <MapPin size={20} className="text-primary flex-shrink-0 mt-1" />
-                <span>
-                  "KAIZEN" 2nd & 3rd Floor, Anna Nagar East,
-                  Chennai: 600102
-                </span>
+                <span>KAIZEN” 2nd &amp; 3rd Floor ,New No.G3 (Old No.G1), G Block, Plot No.565Q, 18th Street, Chinthamani, Anna Nagar East, 
+   Chennai 600102</span>
               </li>
               {/* Added Kochi Office address */}
               <li className="flex items-start space-x-3 text-sm text-gray-400">

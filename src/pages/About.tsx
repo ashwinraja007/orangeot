@@ -24,18 +24,13 @@ const About = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4">Who We Are</h2>
             <p className="text-gray-600 mb-4">Orange Office Technologies (OOT Pvt. Ltd.) is a specialized back-office service provider catering exclusively to the global shipping, freight forwarding, and third-party warehousing (3PL) industries. With a strong foundation in logistics domain expertise and digital innovation, OOT delivers integrated operational support and IT solutions that streamline processes, enhance productivity, and drive sustainable growth across the logistics value chain.</p>
-            <p className="text-gray-600">We support our clients by managing their core non-customer-facing functions — including documentation, sales support, customer service, accounting, and digital services — allowing them to focus on their core logistics operations. Our deep industry knowledge combined with a skilled workforce ensures service excellence, operational efficiency, and real-time adaptability in today’s dynamic market.
-
-
-In addition to our back-office services, OOT offers tailored software solutions and digital transformation tools designed specifically for logistics businesses. Our IT capabilities include Freight Management Systems (FMS), Warehouse Management Systems (WMS), and Transport Management Systems (TMS), enabling clients to digitize their operations and gain competitive advantage.
-
-          </p>
+            <p className="text-gray-600">We support our clients by managing their core non-customer-facing functions  including documentation, sales support, customer service, accounting, and digital services allowing them to focus on their core logistics operations. Our deep industry knowledge combined with a skilled workforce ensures service excellence, operational efficiency, and real-time adaptability in today’s dynamic market. In addition to our back-office services, OOT offers tailored software solutions and digital transformation tools designed specifically for logistics businesses. Our IT capabilities include Freight Management Systems (FMS), Warehouse Management Systems (WMS), and Transport Management Systems (TMS), enabling clients to digitize their operations and gain competitive advantage.</p>
           </div>
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex justify-center lg:justify-end my-[5px]">
             <div className="w-4/5 max-w-sm overflow-hidden rounded-2xl shadow-xl border-4 border-white">
               <AspectRatio ratio={1} className="bg-muted">
                 <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&h=800&q=80" alt="Modern Office" className="w-full h-full object-cover transition-transform hover:scale-105 duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply my-0" />
               </AspectRatio>
             </div>
             <div className="absolute -bottom-5 -right-5 bg-white rounded-xl shadow-xl p-3 max-w-xs">

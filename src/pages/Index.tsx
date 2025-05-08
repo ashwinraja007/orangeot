@@ -139,8 +139,8 @@ const Index = () => {
             <Card className="border-none rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden bg-white">
               <CardContent className="p-0 relative">
                 <div className="h-56 md:h-64 overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80" alt="Our Vision" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+                  <img alt="Our Vision" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/lovable-uploads/80922c9b-79f9-4226-8e07-491c1056064e.jpg" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent py-0 px-[15px] my-0 mx-[48px]"></div>
                 </div>
                 <div className="relative">
                   <div className="bg-white p-8 relative z-10">

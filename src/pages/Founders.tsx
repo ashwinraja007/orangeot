@@ -43,7 +43,7 @@ const Founders = () => {
                     {/* Image Section */}
                     <div className="h-full relative overflow-hidden">
                       <img src="/lovable-uploads/dcab3f93-8fa0-480c-b028-e34b3d358821.png" alt="Mr. Sudhir KU" className="w-full h-full object-cover object-center" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent my-px"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent my-[28px]"></div>
                       <div className="absolute bottom-0 left-0 p-6 md:p-8 text-white">
                         <h3 className="text-3xl font-bold mb-1">Mr. Sudhir KU</h3>
                         <p className="text-white/90 text-xl">Director </p>
@@ -56,7 +56,7 @@ const Founders = () => {
                     {/* Content Section - Improved with better spacing and organization */}
                     <div className="p-6 md:p-8 bg-gradient-to-br from-white to-orange-50/30">
                       <div className="prose max-w-none">
-                        <h2 className="text-2xl font-bold mb-4 text-gray-900">A Visionary Leader</h2>
+                        
                         <p className="text-gray-700 mb-4">
                           Mr. Sudhir KU, the visionary Director of Orange Office Technologies Pvt Ltd, brings a rich professional 
                           journey spanning over 35 years. His career reflects a rare blend of perseverance, adaptability, and forward-thinking leadership.

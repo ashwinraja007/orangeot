@@ -9,12 +9,12 @@ const About = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-28 pb-20 bg-gradient-to-br from-primary/10 to-accent/10 text-center">
+      <section className="pt-28 pb-20 bg-gradient-to-br from-primary/10 to-accent/10 text-center py-[30px]">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">About Us</h1>
-          <p className="text-xl text-gray-600">
-            Driving Innovation in IT, Logistics Support, and Digital Services
-          </p>
+          <p className="text-xl text-gray-600">Empowering the Logistics Industry Through Smart Back-Office and Digital Solutions
+
+        </p>
         </div>
       </section>
 
@@ -23,12 +23,13 @@ const About = () => {
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-2xl font-bold mb-4">Who We Are</h2>
-            <p className="text-gray-600 mb-4">Orange Office Technologies (OOT Pvt. Ltd.) is a Global Capability Centre (GCC) supporting a group of companies engaged in shipping, logistics, and third-party warehousing (3PL) services. As a centralized technology hub, OOT delivers advanced digital solutions and operational support that drive innovation and efficiency across the logistics value chain.</p>
-            <p className="text-gray-600">With a strong foundation built on logistics domain expertise and technology-driven innovation, we specialize in delivering real-time, integrated IT solutions that drive productivity and digital transformation. Our IT division develops and implements customized software solutions that enable clients to stay ahead in today’s fast-paced logistics environment.
+            <p className="text-gray-600 mb-4">Orange Office Technologies (OOT Pvt. Ltd.) is a specialized back-office service provider catering exclusively to the global shipping, freight forwarding, and third-party warehousing (3PL) industries. With a strong foundation in logistics domain expertise and digital innovation, OOT delivers integrated operational support and IT solutions that streamline processes, enhance productivity, and drive sustainable growth across the logistics value chain.</p>
+            <p className="text-gray-600">We support our clients by managing their core non-customer-facing functions — including documentation, sales support, customer service, accounting, and digital services — allowing them to focus on their core logistics operations. Our deep industry knowledge combined with a skilled workforce ensures service excellence, operational efficiency, and real-time adaptability in today’s dynamic market.
 
-With a skilled team of professionals and deep industry experience, OOT ensures high-performance standards and continuous process improvements. We align closely with our group companies to deliver agile, scalable, and forward-thinking solutions that power global logistics operations.
 
-As we continue to scale across industries, our commitment remains rooted in quality, agility, and continuous innovation — delivering measurable value to our partners worldwide.</p>
+In addition to our back-office services, OOT offers tailored software solutions and digital transformation tools designed specifically for logistics businesses. Our IT capabilities include Freight Management Systems (FMS), Warehouse Management Systems (WMS), and Transport Management Systems (TMS), enabling clients to digitize their operations and gain competitive advantage.
+
+          </p>
           </div>
           <div className="relative flex justify-center lg:justify-end">
             <div className="w-4/5 max-w-sm overflow-hidden rounded-2xl shadow-xl border-4 border-white">

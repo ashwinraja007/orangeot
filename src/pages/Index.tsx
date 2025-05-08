@@ -18,34 +18,34 @@ const clientLogos = [{
   alt: "GC"
 }, {
   src: "/62fb77880f0df.png",
-  alt: "amass"
+  alt: "Amass"
 }, {
   src: "/62fb79231e921.png",
-  alt: "oneglobal"
+  alt: "Oneglobal"
 }, {
   src: "/62fb77c2d5890.png",
-  alt: "citygen"
+  alt: "Citygen"
 }, {
   src: "/62fb783408cd1.png",
-  alt: "futurenet"
+  alt: "Futurenet"
 }, {
   src: "/62fb7890bc643.png",
-  alt: "ggl"
+  alt: "GGL"
 }, {
   src: "/62fb79b61d0c8.png",
-  alt: "primeshiping"
+  alt: "Primeshiping"
 }, {
   src: "/62fb79faa960d.png",
-  alt: "shipsoft"
+  alt: "Shipsoft"
 }, {
   src: "/62fb7adfb0edb.png",
-  alt: "haixun"
+  alt: "Haixun"
 }, {
   src: "/63048b56bd44e.png",
-  alt: "moltech"
+  alt: "Moltech"
 }, {
   src: "/63048c170f81a.png",
-  alt: "aerofreight"
+  alt: "Aerofreight"
 }];
 const Index = () => {
   // Intersection Observer for scroll animations

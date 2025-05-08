@@ -16,7 +16,7 @@ export const Hero = ({
 
       {/* Foreground Content */}
       <div className="container mx-auto px-4 relative z-10 md:py-16 flex flex-col justify-between h-full py-0">
-        <div className="flex-grow flex items-center mx-0 md:my-[87px] my-[35px]">
+        <div className="flex-grow flex items-center mx-0 md:my-[87px] my-0">
           <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0 my-[24px]">
             <div className="inline-flex items-center gap-2 rounded-full bg-orange-400/20 text-orange-300 mb-4 md:mb-8 animate-fade-in text-sm font-medium backdrop-blur-sm border border-orange-400/20 px-[16px] py-[8px]">
               <Sparkles className="w-4 h-4" />

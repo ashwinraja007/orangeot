@@ -4,11 +4,21 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 interface HeroProps {
   backgroundImages?: string[];
+  backgroundCaptions?: string[];
 }
+
 export const Hero = ({
-  backgroundImages = ["/1h.png", "/3h.png", "/4h.png", "/5h.png", "/3h.png"]
+  backgroundImages = ["/1h.png", "/3h.png", "/4h.png", "/5h.png", "/3h.png"],
+  backgroundCaptions = [
+    "Global Freight Solutions",
+    "Digital Freight Intelligence",
+    "24/7 Back Office Support",
+    "Empowering Freight Forwarders",
+    "Data-Driven Logistics Services"
+  ]
 }: HeroProps) => {
   const settings = {
     autoplay: true,
@@ -20,13 +30,26 @@ export const Hero = ({
     dots: false,
     pauseOnHover: false
   };
-  return <section className="relative overflow-hidden min-h-[90vh] md:min-h-[100vh] flex flex-col justify-between bg-white">
+
+  return (
+    <section className="relative overflow-hidden min-h-[90vh] md:min-h-[100vh] flex flex-col justify-between bg-white">
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         <Slider {...settings}>
-          {backgroundImages.map((img, idx) => <div key={idx}>
-              <img src={img} alt={`Slide ${idx + 1}`} className="w-full h-screen object-cover object-center" />
-            </div>)}
+          {backgroundImages.map((img, idx) => (
+            <div key={idx} className="relative w-full h-screen">
+              <img
+                src={img}
+                alt={`Slide ${idx + 1}`}
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+                <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-500 via-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
+                  {backgroundCaptions[idx]}
+                </h2>
+              </div>
+            </div>
+          ))}
         </Slider>
       </div>
 
@@ -49,11 +72,11 @@ export const Hero = ({
               Back Office | IT Solutions | Digital Marketing | Inside Sales
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
-              
-              
+              {/* Buttons or links can go here */}
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

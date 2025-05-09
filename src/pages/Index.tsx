@@ -10,21 +10,43 @@ import { Hero } from "@/components/Hero";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
 
 // Client logos data
-const clientLogos = [
-  { src: "/62fb7958e1cf7.png", alt: "OECL" },
-  { src: "/62fb78ee5cd45.png", alt: "GC" },
-  { src: "/62fb77880f0df.png", alt: "Amass" },
-  { src: "/62fb79231e921.png", alt: "Oneglobal" },
-  { src: "/62fb77c2d5890.png", alt: "Citygen" },
-  { src: "/62fb783408cd1.png", alt: "Futurenet" },
-  { src: "/62fb7890bc643.png", alt: "GGL" },
-  { src: "/62fb79b61d0c8.png", alt: "Primeshiping" },
-  { src: "/62fb79faa960d.png", alt: "Shipsoft" },
-  { src: "/62fb7adfb0edb.png", alt: "Haixun" },
-  { src: "/63048b56bd44e.png", alt: "Moltech" },
-  { src: "/63048c170f81a.png", alt: "Aerofreight" }
-];
-
+const clientLogos = [{
+  src: "/62fb7958e1cf7.png",
+  alt: "OECL"
+}, {
+  src: "/62fb78ee5cd45.png",
+  alt: "GC"
+}, {
+  src: "/62fb77880f0df.png",
+  alt: "Amass"
+}, {
+  src: "/62fb79231e921.png",
+  alt: "Oneglobal"
+}, {
+  src: "/62fb77c2d5890.png",
+  alt: "Citygen"
+}, {
+  src: "/62fb783408cd1.png",
+  alt: "Futurenet"
+}, {
+  src: "/62fb7890bc643.png",
+  alt: "GGL"
+}, {
+  src: "/62fb79b61d0c8.png",
+  alt: "Primeshiping"
+}, {
+  src: "/62fb79faa960d.png",
+  alt: "Shipsoft"
+}, {
+  src: "/62fb7adfb0edb.png",
+  alt: "Haixun"
+}, {
+  src: "/63048b56bd44e.png",
+  alt: "Moltech"
+}, {
+  src: "/63048c170f81a.png",
+  alt: "Aerofreight"
+}];
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -74,9 +96,7 @@ const Index = () => {
       }
     };
   }, []);
-  
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
@@ -100,7 +120,7 @@ const Index = () => {
               <CardContent className="p-0 relative">
                 <div className="h-56 md:h-64 overflow-hidden">
                   <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Our Mission" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+                  
                 </div>
                 <div className="relative">
                   <div className="bg-white p-8 relative z-10">
@@ -120,7 +140,7 @@ const Index = () => {
               <CardContent className="p-0 relative">
                 <div className="h-56 md:h-64 overflow-hidden">
                   <img alt="Our Vision" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/lovable-uploads/80922c9b-79f9-4226-8e07-491c1056064e.jpg" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+                  
                 </div>
                 <div className="relative">
                   <div className="bg-white p-8 relative z-10">
@@ -217,7 +237,7 @@ const Index = () => {
           }}>
                 <div className="h-44 relative overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                  
                   <div className="absolute top-0 right-0 m-4">
                     <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}>
                       <service.icon className="h-6 w-6 text-white" />
@@ -430,8 +450,6 @@ const Index = () => {
         {/* Add footer here or additional content */}
         <Footer />
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

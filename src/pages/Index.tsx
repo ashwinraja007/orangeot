@@ -208,7 +208,7 @@ const Index = () => {
             icon: Globe,
             title: "Digital Marketing",
             description: "Comprehensive digital marketing solutions to boost your online presence.",
-            image: "/3.png",
+            image: "/10.png",
             color: "from-green-500 to-emerald-400",
             link: "/services/digitalmarketing"
           }, {
@@ -222,14 +222,14 @@ const Index = () => {
             icon: Headset,
             title: "Customer Service",
             description: "Dedicated customer service team for bookings and nominations.",
-            image: "/5.png",
+            image: "/12.png",
             color: "from-pink-500 to-rose-400",
             link: "/services/customerservice"
           }, {
             icon: Shield,
             title: "Software Solutions",
             description: "Custom software development following industry best practices.",
-            image: "/6.png",
+            image: "/13.png",
             color: "from-cyan-500 to-blue-400",
             link: "/services/SoftwareSolutions"
           }].map((service, index) => <Card key={index} className="group border-none rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-on-scroll overflow-hidden bg-white" style={{

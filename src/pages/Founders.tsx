@@ -19,10 +19,10 @@ const Founders = () => {
     year: "Present",
     event: "Leading global expansion and digital transformation initiatives"
   }];
-  const expertises = ["Back-office operations", "Supply chain management", "Digital transformation", "Global logistics", "Strategic partnerships" , "IT solutions"];
+  const expertises = ["Back-office operations", "Supply chain management", "Digital transformation", "Global logistics", "Strategic partnerships", "IT solutions"];
   return <div className="min-h-screen flex flex-col bg-gradient-to-br from-white to-orange-50">
       <Header />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-20 py-0">
         {/* Hero Section - Improved with better spacing and visual elements */}
         <section className="py-12 relative overflow-hidden">
           <div className="absolute inset-0 bg-pattern opacity-5"></div>

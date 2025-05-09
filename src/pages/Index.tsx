@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Hero } from "@/components/Hero";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
+import { GlobalImpact } from "@/components/GlobalImpact";
 
 // Client logos data
 const clientLogos = [{
@@ -439,6 +440,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Global Impact Section - Added before the footer */}
+      <GlobalImpact />
+
       {/* Enhanced Stats Section */}
       <section className="bg-gradient-to-br from-gray-50 to-white relative overflow-hidden py-0">
         <svg className="absolute top-0 left-0 w-full text-white" style={{
@@ -447,7 +451,7 @@ const Index = () => {
           <path d="M0,16L80,13.3C160,11,320,5,480,8C640,11,800,21,960,21.3C1120,21,1280,11,1360,5.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
         
-        {/* Add footer here or additional content */}
+        {/* Footer */}
         <Footer />
       </section>
     </div>;

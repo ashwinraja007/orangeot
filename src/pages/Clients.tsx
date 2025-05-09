@@ -7,6 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { useEffect, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom";
+import { GlobalImpact } from "@/components/GlobalImpact";
 
 // Client logos - in a real implementation, these would be actual client logos
 const clientLogos = [{
@@ -96,6 +97,7 @@ const Clients = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -160,6 +162,9 @@ const Clients = () => {
           </div>
         </div>
       </section>
+
+      {/* Added Global Impact Section after Clients section */}
+      <GlobalImpact />
 
       {/* Testimonials Carousel with Images - Auto-scrolling */}
       <section className="py-16 bg-white">

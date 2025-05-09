@@ -10,43 +10,21 @@ import { Hero } from "@/components/Hero";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
 
 // Client logos data
-const clientLogos = [{
-  src: "/62fb7958e1cf7.png",
-  alt: "OECL"
-}, {
-  src: "/62fb78ee5cd45.png",
-  alt: "GC"
-}, {
-  src: "/62fb77880f0df.png",
-  alt: "Amass"
-}, {
-  src: "/62fb79231e921.png",
-  alt: "Oneglobal"
-}, {
-  src: "/62fb77c2d5890.png",
-  alt: "Citygen"
-}, {
-  src: "/62fb783408cd1.png",
-  alt: "Futurenet"
-}, {
-  src: "/62fb7890bc643.png",
-  alt: "GGL"
-}, {
-  src: "/62fb79b61d0c8.png",
-  alt: "Primeshiping"
-}, {
-  src: "/62fb79faa960d.png",
-  alt: "Shipsoft"
-}, {
-  src: "/62fb7adfb0edb.png",
-  alt: "Haixun"
-}, {
-  src: "/63048b56bd44e.png",
-  alt: "Moltech"
-}, {
-  src: "/63048c170f81a.png",
-  alt: "Aerofreight"
-}];
+const clientLogos = [
+  { src: "/62fb7958e1cf7.png", alt: "OECL" },
+  { src: "/62fb78ee5cd45.png", alt: "GC" },
+  { src: "/62fb77880f0df.png", alt: "Amass" },
+  { src: "/62fb79231e921.png", alt: "Oneglobal" },
+  { src: "/62fb77c2d5890.png", alt: "Citygen" },
+  { src: "/62fb783408cd1.png", alt: "Futurenet" },
+  { src: "/62fb7890bc643.png", alt: "GGL" },
+  { src: "/62fb79b61d0c8.png", alt: "Primeshiping" },
+  { src: "/62fb79faa960d.png", alt: "Shipsoft" },
+  { src: "/62fb7adfb0edb.png", alt: "Haixun" },
+  { src: "/63048b56bd44e.png", alt: "Moltech" },
+  { src: "/63048c170f81a.png", alt: "Aerofreight" }
+];
+
 const Index = () => {
   // Intersection Observer for scroll animations
   const observerRef = useRef(null);
@@ -96,19 +74,21 @@ const Index = () => {
       }
     };
   }, []);
-  return <div className="min-h-screen flex flex-col">
+  
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section - now uses the Hero component without logos */}
+      {/* Hero Section */}
       <Hero />
       
       {/* Mission & Vision Section with Enhanced Design */}
-      <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden my-0 py-[23px]">
+      <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden py-16">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-300/10 to-orange-300/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/5 rounded-full blur-3xl my-0 py-0 bg-slate-200"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 animate-on-scroll">
+          <div className="text-center mb-12 animate-on-scroll">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-gradient bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 bg-clip-text text-transparent">Mission & Vision</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Revolutionizing logistics operations through innovation and expertise
@@ -140,7 +120,7 @@ const Index = () => {
               <CardContent className="p-0 relative">
                 <div className="h-56 md:h-64 overflow-hidden">
                   <img alt="Our Vision" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/lovable-uploads/80922c9b-79f9-4226-8e07-491c1056064e.jpg" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent py-0 px-[15px] my-0 mx-[48px]"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 </div>
                 <div className="relative">
                   <div className="bg-white p-8 relative z-10">
@@ -159,11 +139,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Client Logos Carousel moved below Mission & Vision */}
-      <section className="py-0 bg-slate-100">
-        <div className="container mx-auto px-4 my-[82px]">
-          <div className="text-center mb-10">
-            <p className="text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2 text-gray-600">
+      {/* Client Logos Carousel */}
+      <section className="py-12 bg-slate-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <p className="text-center mb-4 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2 text-gray-600">
               <span className="h-px w-12 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></span>
               Trusted by leading companies
               <span className="h-px w-12 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></span>
@@ -450,6 +430,8 @@ const Index = () => {
         {/* Add footer here or additional content */}
         <Footer />
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;

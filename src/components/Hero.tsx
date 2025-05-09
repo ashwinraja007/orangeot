@@ -1,15 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 interface HeroProps {
   backgroundImages?: string[];
 }
-
 export const Hero = ({
   backgroundImages = ["/1h.png", "/3h.png", "/4h.png", "/5h.png", "/3h.png"]
 }: HeroProps) => {
@@ -23,28 +20,20 @@ export const Hero = ({
     dots: false,
     pauseOnHover: false
   };
-
-  return (
-    <section className="relative overflow-hidden min-h-[90vh] md:min-h-[100vh] flex flex-col justify-between bg-white">
+  return <section className="relative overflow-hidden min-h-[90vh] md:min-h-[100vh] flex flex-col justify-between bg-white">
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         <Slider {...settings}>
-          {backgroundImages.map((img, idx) => (
-            <div key={idx}>
-              <img 
-                src={img} 
-                alt={`Slide ${idx + 1}`} 
-                className="w-full h-screen object-cover object-center" 
-              />
-            </div>
-          ))}
+          {backgroundImages.map((img, idx) => <div key={idx}>
+              <img src={img} alt={`Slide ${idx + 1}`} className="w-full h-screen object-cover object-center" />
+            </div>)}
         </Slider>
       </div>
 
       {/* Foreground Content */}
       <div className="container mx-auto px-4 relative z-10 flex flex-col justify-between h-full">
         <div className="flex-grow flex items-center">
-          <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0 bg-white/80 backdrop-blur-md rounded-xl p-6 shadow-lg my-12 md:my-16">
+          <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0 bg-white/80 backdrop-blur-md rounded-xl p-6 shadow-lg my-12 md:my-[240px]">
             <div className="inline-flex items-center gap-2 rounded-full bg-orange-100 text-orange-700 mb-4 md:mb-6 text-sm font-medium px-4 py-2 border border-orange-300">
               <Sparkles className="w-4 h-4" />
               <span>Logistics KPO Excellence</span>
@@ -76,6 +65,5 @@ export const Hero = ({
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };

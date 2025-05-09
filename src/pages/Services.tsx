@@ -141,114 +141,11 @@ const Services = () => {
       </section>
 
       {/* Service Descriptions - NEW SECTION */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
-              Services Offered
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Comprehensive solutions tailored specifically for logistics and freight forwarding companies
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100 shadow-lg">
-              <div className="flex items-start mb-6">
-                <div className="bg-blue-500 text-white p-3 rounded-xl mr-4">
-                  <Ship className="h-6 w-6" />
-                </div>
-                <h3 className="font-heading font-bold text-2xl">Documentation Services</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Our expert team ensures accurate and timely preparation of all essential shipping and logistics documents, including Bill of Lading, commercial invoices, packing lists, and certificates. We help reduce compliance risks and streamline operations for freight forwarders and logistics providers globally.
-              </p>
-              <Button asChild variant="outline" className="mt-4">
-                <Link to="/services/documentation">Learn More</Link>
-              </Button>
-            </div>
-            
-            <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100 shadow-lg">
-              <div className="flex items-start mb-6">
-                <div className="bg-amber-500 text-white p-3 rounded-xl mr-4">
-                  <Users className="h-6 w-6" />
-                </div>
-                <h3 className="font-heading font-bold text-2xl">Sales Support Desk</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Our Sales Support Desk functions as an extension of your sales team, offering centralized support to manage leads, client inquiries, and CRM tasks. We streamline communication, track lead progress, and handle sales documentation—allowing your team to focus on conversions while we manage the backend process.
-              </p>
-              <Button asChild variant="outline" className="mt-4">
-                <Link to="/services/salessupport">Learn More</Link>
-              </Button>
-            </div>
-            
-            <div className="bg-rose-50 p-8 rounded-2xl border border-rose-100 shadow-lg">
-              <div className="flex items-start mb-6">
-                <div className="bg-rose-500 text-white p-3 rounded-xl mr-4">
-                  <Headset className="h-6 w-6" />
-                </div>
-                <h3 className="font-heading font-bold text-2xl">Customer Service & Nomination Handling</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Our trained professionals act as an extension of your customer service team, managing inquiries, follow-ups, and shipment status updates. We also specialize in nomination handling by maintaining strong communication with overseas agents to ensure smooth cargo movement and documentation flow.
-              </p>
-              <Button asChild variant="outline" className="mt-4">
-                <Link to="/services/customerservice">Learn More</Link>
-              </Button>
-            </div>
-            
-            <div className="bg-purple-50 p-8 rounded-2xl border border-purple-100 shadow-lg">
-              <div className="flex items-start mb-6">
-                <div className="bg-purple-500 text-white p-3 rounded-xl mr-4">
-                  <Building2 className="h-6 w-6" />
-                </div>
-                <h3 className="font-heading font-bold text-2xl">Account Management</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                From freight invoicing to payment follow-ups, our account management team ensures financial accuracy and transparency. We handle receivables, reconciliation, and regular reporting, enabling better control over cash flow and customer accounts.
-              </p>
-              <Button asChild variant="outline" className="mt-4">
-                <Link to="/services/AccountsManagement">Learn More</Link>
-              </Button>
-            </div>
-            
-            <div className="bg-cyan-50 p-8 rounded-2xl border border-cyan-100 shadow-lg">
-              <div className="flex items-start mb-6">
-                <div className="bg-cyan-500 text-white p-3 rounded-xl mr-4">
-                  <Computer className="h-6 w-6" />
-                </div>
-                <h3 className="font-heading font-bold text-2xl">Software Solutions</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We support logistics firms with robust IT solutions including WMS, TMS, and FMS systems that streamline day-to-day operations. Our IT experts also assist in implementation, data integration, and user training to ensure system efficiency and productivity.
-              </p>
-              <Button asChild variant="outline" className="mt-4">
-                <Link to="/services/SoftwareSolutions">Learn More</Link>
-              </Button>
-            </div>
-            
-            <div className="bg-green-50 p-8 rounded-2xl border border-green-100 shadow-lg">
-              <div className="flex items-start mb-6">
-                <div className="bg-green-500 text-white p-3 rounded-xl mr-4">
-                  <Globe className="h-6 w-6" />
-                </div>
-                <h3 className="font-heading font-bold text-2xl">Digital Marketing for Logistics</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                With a focus on the freight forwarding and logistics sector, we provide tailored digital marketing services including SEO, Google Ads, content marketing, and social media campaigns—enhancing brand visibility, customer engagement, and lead generation.
-              </p>
-              <Button asChild variant="outline" className="mt-4">
-                <Link to="/services/digitalmarketing">Learn More</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <GradientBackground className="py-16" variant="accent" intensity="strong" animated={true}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 py-[18px]">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl mb-6">
               Ready to Transform Your Operations?

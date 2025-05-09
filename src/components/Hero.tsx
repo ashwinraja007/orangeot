@@ -50,8 +50,7 @@ export const Hero = ({
 
       {/* Slide Caption - Left Corner with Animation */}
       <div className="absolute bottom-12 left-6 md:left-12 lg:left-24 z-20">
-        <div className={`rounded-lg px-6 py-4 backdrop-blur-sm bg-black/30 border-l-4 border-orange-500 
-                      transition-opacity duration-500 transform ${textVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+        <div className="my-[112px] mx-[118px]">
           <h2 className="text-xl md:text-3xl font-bold text-white">
             {backgroundCaptions[activeSlide]}
           </h2>

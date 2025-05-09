@@ -103,9 +103,9 @@ const Index = () => {
       <Hero />
       
       {/* Mission & Vision Section with Enhanced Design */}
-      <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden py-20">
+      <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden my-0 py-[23px]">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-300/10 to-orange-300/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/5 rounded-full blur-3xl my-0 py-0"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-on-scroll">
@@ -160,8 +160,8 @@ const Index = () => {
       </section>
 
       {/* Client Logos Carousel moved below Mission & Vision */}
-      <section className="bg-slate-50 py-0">
-        <div className="container mx-auto px-4">
+      <section className="py-0 bg-slate-100">
+        <div className="container mx-auto px-4 my-[82px]">
           <div className="text-center mb-10">
             <p className="text-center mb-6 text-sm uppercase tracking-wider font-medium flex items-center justify-center gap-2 text-gray-600">
               <span className="h-px w-12 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></span>

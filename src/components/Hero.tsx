@@ -5,24 +5,32 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
+
 interface HeroProps {
   backgroundImages?: string[];
   backgroundCaptions?: string[];
 }
+
 export const Hero = ({
   backgroundImages = ["/1h.png", "/3h.png", "/4h.png", "/5h.png", "/3h.png"],
-  backgroundCaptions = ["Global Freight Solutions", "Digital Freight Intelligence", "24/7 Back Office Support", "Empowering Freight Forwarders", "Data-Driven Logistics Services"]
+  backgroundCaptions = [
+    "Global Freight Solutions",
+    "Digital Freight Intelligence",
+    "24/7 Back Office Support",
+    "Empowering Freight Forwarders",
+    "Data-Driven Logistics Services"
+  ]
 }: HeroProps) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [textVisible, setTextVisible] = useState(true);
 
-  // Animation effect for text transitions
   useEffect(() => {
     const timer = setTimeout(() => {
       setTextVisible(true);
     }, 200);
     return () => clearTimeout(timer);
   }, [activeSlide]);
+
   const settings = {
     autoplay: true,
     autoplaySpeed: 4000,
@@ -37,21 +45,34 @@ export const Hero = ({
       setActiveSlide(next);
     }
   };
-  return <section className="relative overflow-hidden min-h-[90vh] md:min-h-[100vh] flex flex-col justify-between bg-white">
+
+  return (
+    <section className="relative overflow-hidden min-h-[90vh] md:min-h-[100vh] flex flex-col justify-between bg-white">
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         <Slider {...settings}>
-          {backgroundImages.map((img, idx) => <div key={idx} className="relative w-full h-screen">
-              <img src={img} alt={`Slide ${idx + 1}`} className="w-full h-full object-cover object-center" />
-              
-            </div>)}
+          {backgroundImages.map((img, idx) => (
+            <div key={idx} className="relative w-full h-screen">
+              <img
+                src={img}
+                alt={`Slide ${idx + 1}`}
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+            </div>
+          ))}
         </Slider>
       </div>
 
-      {/* Slide Caption - Left Corner with Animation */}
-      <div className="absolute bottom-12 left-6 md:left-12 lg:left-24 z-20">
-        <div className="my-[131px] mx-[116px]">
-          <h2 className="text-xl md:text-3xl font-bold text-white">
+      {/* Slide Caption - Centered and Slightly Higher */}
+      <div className="absolute top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+        <div
+          className={`rounded-lg px-6 py-4 backdrop-blur-sm bg-black/30 border-l-4 border-orange-500 
+                    transition-opacity duration-500 transform ${
+                      textVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+                    }`}
+        >
+          <h2 className="text-xl md:text-3xl font-bold text-white text-center">
             {backgroundCaptions[activeSlide]}
           </h2>
         </div>
@@ -76,11 +97,11 @@ export const Hero = ({
               Back Office | IT Solutions | Digital Marketing | Inside Sales
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
-              
-              
+              {/* Add CTA buttons or links here if needed */}
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

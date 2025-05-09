@@ -12,7 +12,7 @@ interface HeroProps {
 }
 
 export const Hero = ({
-  backgroundImages = ["/1.png", "/2.png", "/4.png", "/5.png","/3.png"],
+  backgroundImages = ["/1h.png", "/2h.png", "/4h.png", "/5h.png","/3h.png"],
 }: HeroProps) => {
   const settings = {
     autoplay: true,

@@ -99,9 +99,7 @@ const Services = () => {
                   <div className="absolute top-4 right-4">
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
-                  {service.badge && <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded">
-                      {service.badge}
-                    </div>}
+                  {service.badge}
                 </div>
                 <CardContent className="p-6 rounded-lg bg-slate-50">
                   <h3 className="font-heading font-bold text-xl mb-3">{service.title}</h3>

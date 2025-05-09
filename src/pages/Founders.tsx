@@ -19,7 +19,7 @@ const Founders = () => {
     year: "Present",
     event: "Leading global expansion and digital transformation initiatives"
   }];
-  const expertises = ["Back-office operations", "Supply chain management", "Digital transformation", "Global logistics", "Strategic partnerships"];
+  const expertises = ["Back-office operations", "Supply chain management", "Digital transformation", "Global logistics", "Strategic partnerships" , "IT solutions"];
   return <div className="min-h-screen flex flex-col bg-gradient-to-br from-white to-orange-50">
       <Header />
       <main className="flex-grow pt-20">

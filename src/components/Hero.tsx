@@ -64,12 +64,12 @@ export const Hero = ({
         </Slider>
       </div>
 
-      {/* Slide Caption - Centered and Slightly Higher */}
-      <div className="absolute Bottom-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+      {/* Slide Caption - Bottom Center */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20">
         <div
           className={`rounded-lg px-6 py-4 backdrop-blur-sm bg-black/30 border-l-4 border-orange-500 
                     transition-opacity duration-500 transform ${
-                      textVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+                      textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                     }`}
         >
           <h2 className="text-xl md:text-3xl font-bold text-white text-center">
@@ -97,7 +97,7 @@ export const Hero = ({
               Back Office | IT Solutions | Digital Marketing | Inside Sales
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
-              {/* Add CTA buttons or links here if needed */}
+              {/* Optional CTA buttons go here */}
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const Services = () => {
     icon: Globe,
     title: "Digital Marketing for Logistics",
     description: "With a focus on the freight forwarding and logistics sector, we provide tailored digital marketing services including SEO, Google Ads, content marketing, and social media campaigns.",
-    image: "/3.png",
+    image: "/10.png",
     link: "/services/digitalmarketing",
     color: "from-green-500/20 to-green-600/20"
   }, {
@@ -39,14 +39,14 @@ const Services = () => {
     icon: Headset,
     title: "Customer Service & Nomination",
     description: "Our trained professionals act as an extension of your customer service team, managing inquiries, follow-ups, and shipment status updates.",
-    image: "/5.png",
+    image: "/12.png",
     link: "/services/customerservice",
     color: "from-pink-500/20 to-pink-600/20"
   }, {
     icon: Computer,
     title: "Software Solutions",
     description: "We support logistics firms with robust IT solutions including WMS, TMS, and FMS systems that streamline day-to-day operations.",
-    image: "/6.png",
+    image: "/13.png",
     link: "/services/SoftwareSolutions",
     color: "from-cyan-500/20 to-cyan-600/20",
     badge: "New"

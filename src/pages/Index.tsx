@@ -417,8 +417,8 @@ const Index = () => {
             <div className="order-1 lg:order-2 animate-on-scroll">
               <div className="relative">
                 <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                  <img src="/office.png" alt="Orange Office Technologies Building" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent"></div>
+                  <img alt="Orange Office Technologies Building" className="w-full h-full object-cover" src="/lovable-uploads/04a753dd-ba7f-4011-8785-b8ca9ae84e26.png" />
+                  
                 </div>
                 
                 {/* Floating card */}

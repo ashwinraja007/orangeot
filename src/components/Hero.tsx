@@ -48,12 +48,17 @@ export const Hero = ({
 
       {/* Slide Caption - Bottom Center */}
       <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
-  <div className="bg-zinc-100">
-    <h2 className="text-xl md:text-3xl font-bold text-center text-orange-500">
+  <div
+    className={`rounded-lg px-6 py-4 backdrop-blur-sm bg-black/30 border-l-4 border-orange-500 
+                transition-opacity duration-500 transform ${
+                  textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                }`}
+  >
+    <h2 className="text-xl md:text-3xl font-bold text-white text-center">
       {backgroundCaptions[activeSlide]}
     </h2>
   </div>
-    </div>
+</div>
 
       {/* Foreground Content */}
       <div className="container mx-auto px-4 relative z-10 flex flex-col justify-between h-full">

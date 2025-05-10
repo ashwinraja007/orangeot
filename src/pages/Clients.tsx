@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -70,6 +71,7 @@ const testimonials = [{
   company: "OECL Thailand",
   image: "/62fb7958e1cf7.png"
 }];
+
 const Clients = () => {
   const [api, setApi] = useState(null);
   const [clientsApi, setClientsApi] = useState(null);
@@ -98,7 +100,8 @@ const Clients = () => {
     window.scrollTo(0, 0);
   }, []);
   
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
@@ -146,13 +149,14 @@ const Clients = () => {
             loop: true
           }}>
               <CarouselContent>
-                {clientLogos.map((client, index) => <CarouselItem key={index} className={`${isMobile ? 'basis-1/2' : 'basis-1/4'} p-2`}>
+                {clientLogos.map((client, index) => (
+                  <CarouselItem key={index} className={`${isMobile ? 'basis-1/2' : 'basis-1/4'} p-2`}>
                     <div className="rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center h-full transform hover:-translate-y-1 border border-gray-100 bg-slate-200">
                       <img src={client.logo} alt={client.name} className="h-16 w-auto mb-4 opacity-80 hover:opacity-100 transition-opacity" />
                       <h3 className="font-heading font-bold text-lg text-center text-gray-800">{client.name}</h3>
-                      
                     </div>
-                  </CarouselItem>)}
+                  </CarouselItem>
+                ))}
               </CarouselContent>
               <div className="flex justify-center mt-8 gap-2">
                 <CarouselPrevious className="relative static translate-y-0 left-0" />
@@ -163,7 +167,7 @@ const Clients = () => {
         </div>
       </section>
 
-      {/* Added Global Impact Section after Clients section */}
+      {/* Added Global Impact Section */}
       <GlobalImpact />
 
       {/* Testimonials Carousel with Images - Auto-scrolling */}
@@ -177,13 +181,13 @@ const Clients = () => {
             loop: true
           }}>
               <CarouselContent>
-                {testimonials.map((testimonial, index) => <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className={isMobile ? "basis-full" : "basis-1/2"}>
                     <div className="p-4">
                       <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 h-full overflow-hidden">
                         <CardContent className="p-0">
                           <div className="bg-gradient-to-br from-[#F58220]/10 to-white p-8 flex flex-col h-full">
                             <div className="flex items-center mb-6">
-                              
                               <div>
                                 <p className="font-heading font-bold text-lg text-gray-800">{testimonial.author}</p>
                                 <p className="text-[#F58220]">{testimonial.position}</p>
@@ -198,7 +202,8 @@ const Clients = () => {
                         </CardContent>
                       </Card>
                     </div>
-                  </CarouselItem>)}
+                  </CarouselItem>
+                ))}
               </CarouselContent>
               <div className="flex justify-center mt-8 gap-2">
                 <CarouselPrevious className="relative static translate-y-0 left-0" />
@@ -240,6 +245,8 @@ const Clients = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Clients;

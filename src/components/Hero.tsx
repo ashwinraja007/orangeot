@@ -65,7 +65,7 @@ export const Hero = ({
       </div>
 
       {/* Slide Caption - Bottom Center */}
-      <div className="absolute bottom-17 left-1/2 transform -translate-x-1/2 z-20">
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-20">
         <div
           className={`rounded-lg px-6 py-4 backdrop-blur-sm bg-black/30 border-l-4 border-orange-500 
                     transition-opacity duration-500 transform ${

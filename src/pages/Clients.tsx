@@ -163,11 +163,8 @@ const Clients = () => {
         </div>
       </section>
 
-       {/* Global Impact Section - Added before the footer */}
+      {/* Added Global Impact Section after Clients section */}
       <GlobalImpact />
-
-      {/* Enhanced Stats Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-white relative overflow-hidden py-0">
 
       {/* Testimonials Carousel with Images - Auto-scrolling */}
       <section className="py-16 bg-white">

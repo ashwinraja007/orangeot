@@ -59,16 +59,6 @@ export const GlobalImpact = () => {
             Transforming logistics operations across continents with innovative solutions and exceptional service
           </p>
         </div>
-        
-        {/* World Map Background with Stats */}
-        <div className="relative">
-          <div className="mx-auto mb-12 max-w-4xl opacity-20 hidden lg:block">
-            <img 
-              src="https://images.unsplash.com/photo-1589519160732-57fc498494f8?auto=format&fit=crop&q=80&w=1200" 
-              alt="World Map" 
-              className="w-full h-auto"
-            />
-          </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 relative -mt-0 lg:-mt-96">
             {impactStats.map((stat, index) => (

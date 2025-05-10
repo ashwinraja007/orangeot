@@ -104,7 +104,7 @@ const Index = () => {
       <Hero />
       
       {/* Mission & Vision Section with Enhanced Design */}
-      <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden my-0 py-0">
+      <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden py-16">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-300/10 to-orange-300/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-blue-300/10 to-cyan-300/5 rounded-full blur-3xl"></div>
         

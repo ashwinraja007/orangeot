@@ -10,8 +10,8 @@ interface HeroProps {
   backgroundCaptions?: string[];
 }
 export const Hero = ({
-  backgroundImages = ["/1h.png", "/8h.png", "/4h.png", "/5h.png", "/3h.png"],
-  backgroundCaptions = ["Global Freight Solutions", "Digital Freight Intelligence", "24/7 Back Office Support", "Empowering Freight Forwarders", "Data-Driven Logistics Services"]
+  backgroundImages = ["/1h.png", "/15h.png", "/14h.png", "/16h.png", "/18h.png", "/17h.png"],
+  backgroundCaptions = ["Documentation Services", "Sales Support Desk", "Digital Marketing for Logistics", "Account Management", "Software Solutions", "Customer Service & Nomination"]
 }: HeroProps) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [textVisible, setTextVisible] = useState(true);

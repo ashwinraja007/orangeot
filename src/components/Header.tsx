@@ -45,6 +45,7 @@ export const Header = () => {
               <span className="ml-2 font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800">
                 Orange Office Technologies
               </span>
+              <p className="font-medium text-gray-800 text-xs sm:text-sm">Logistics KPO Excellence</p>
             </Link>
             
             <div className="mt-1 ml-0">

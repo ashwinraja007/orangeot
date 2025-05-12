@@ -2,13 +2,16 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
   useEffect(() => {
     setIsMenuOpen(false);
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
   const navItems = [{
     to: "/",
     label: "Home"
@@ -28,19 +31,26 @@ export const Header = () => {
     to: "/clients",
     label: "Clients"
   }];
+
   return <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex flex-col items-start group" aria-label="Home">
-            <div className="flex items-center space-x-2">
-              <img alt="Orange Office Technologies" className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10" src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png" />
-              <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800">
-                Orange Office Technologies
-              </span>
-            </div>
-            <div className="mt-1 pl-2">
-              <p className="font-medium text-gray-800 text-sm">Logistics KPO Excellence</p>
-              <p className="text-gray-600 text-base">Logistics-Back office, IT Solutions, Digital Marketing, Inside Sales</p>
+          <Link to="/" className="flex items-start group" aria-label="Home">
+            <div className="flex flex-col">
+              <div className="flex items-center space-x-2">
+                <img 
+                  alt="Orange Office Technologies" 
+                  className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10" 
+                  src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png" 
+                />
+                <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800">
+                  Orange Office Technologies
+                </span>
+              </div>
+              <div className="mt-1 ml-10 sm:ml-12">
+                <p className="font-medium text-gray-800 text-sm">Logistics KPO Excellence</p>
+                <p className="text-gray-600 text-xs sm:text-sm">Logistics-Back office, IT Solutions, Digital Marketing, Inside Sales</p>
+              </div>
             </div>
           </Link>
 
@@ -53,7 +63,7 @@ export const Header = () => {
                 {item.label}
               </Link>)}
 
-            <Button className="text-sm sm:text-base bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-shine rounded-xl text-white py-0 px-[16px]">
+            <Button className="text-sm sm:text-base bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-md hover:shadow-lg transition-all duration-300 btn-hover-shine rounded-xl text-white py-0 px-4">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </nav>

@@ -21,6 +21,7 @@ const clientLogos = [
 ];
 
 const testimonials = [
+  const testimonials = [
   {
     quote: "The digital marketing services provided by OOT have significantly boosted our online presence...",
     author: "Buddhika Liyanage",
@@ -48,6 +49,62 @@ const testimonials = [
     position: "Country Manager",
     company: "OECL Thailand",
     image: "/62fb7958e1cf7.png"
+  },
+  {
+    quote: "Partnering with Orange Office Technologies has been a game-changer for our operations. Their back-office support—from documentation to customer service—has significantly improved our turnaround times and client satisfaction. Their team is efficient, professional, and truly understands the logistics domain.",
+    author: "Krishna Kumar",
+    position: "CEO",
+    company: "OECL Malaysia",
+    image: "/62fb7958e1cf7.png"
+  },
+  {
+    quote: "OOT helped us revamp our digital identity—from website improvements to running LinkedIn and Google campaigns. The results were measurable, and the ROI has been encouraging. Professional, responsive, and easy to work with.",
+    author: "Sunder Shenoy",
+    position: "Director",
+    company: "GGL India",
+    image: "/62fb7890bc643.png"
+  },
+  {
+    quote: "What stood out with OOT is their deep knowledge of logistics workflows. Their sales support desk and accounting assistance have helped us streamline operations and focus more on scaling. Excellent coordination and timely deliverables every time.",
+    author: "V. Sumi Kumar",
+    position: "Director",
+    company: "OECL Singapore",
+    image: "/62fb7958e1cf7.png"
+  },
+  {
+    quote: "The support from OOT’s digital marketing and inside sales team has not only helped generate leads but also improved our market visibility. Combining back-office expertise with tech-enabled marketing makes them a unique and valuable partner.",
+    author: "Alwyn D’ Souza",
+    position: "Director Business Development",
+    company: "GGL USA",
+    image: "/62fb7890bc643.png"
+  },
+  {
+    quote: "OOT’s IT solutions helped us integrate our freight, transport, and warehouse management processes seamlessly. The level of customization and technical support they provide is unmatched. They feel less like a vendor and more like an extended part of our team",
+    author: "Sukant S Das",
+    position: "Director",
+    company: "Moltech UK",
+    image: "/default-placeholder.png"
+  },
+  {
+    quote: "From LC documentation to invoice management, OOT’s precision and consistency are impressive. We’ve seen significant gains in efficiency and compliance. A truly reliable KPO partner.",
+    author: "Thilankan Rohan",
+    position: "Country Head",
+    company: "Global Consolidators Sri Lanka",
+    image: "/62fb78ee5cd45.png"
+  },
+  {
+    quote: "Our experience with OOT’s digital marketing team has been exceptional. Their content, creatives, and targeted campaigns have made a big difference in our engagement. It’s rare to find a marketing partner that speaks the logistics language so fluently.",
+    author: "Edmund Francis",
+    position: "General Manager",
+    company: "GGL Australia",
+    image: "/62fb7890bc643.png"
+  },
+  {
+    quote: "We struggled with brand visibility until OOT stepped in. Their social media creatives, email campaigns, and PPC execution brought in leads we never reached before. They truly understand logistics and how to market it digitally.",
+    author: "James David Philipose",
+    position: "Director",
+    company: "Arabian Future Net Shipping Company",
+    image: "/default-placeholder.png"
   }
 ];
 

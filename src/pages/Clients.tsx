@@ -21,7 +21,6 @@ const clientLogos = [
 ];
 
 const testimonials = [
-  const testimonials = [
   {
     quote: "The digital marketing services provided by OOT have significantly boosted our online presence...",
     author: "Buddhika Liyanage",

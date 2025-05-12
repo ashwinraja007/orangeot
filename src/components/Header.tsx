@@ -42,7 +42,7 @@ export const Header = () => {
                 className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10" 
                 src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png" 
               />
-              <span className="ml-2 font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800">
+               <span className="font-heading text-base sm:text-lg font-semibold text-gray-800 md:text-lg">
                 Orange Office Technologies
               </span>
               <p className="font-medium text-gray-800 text-xs sm:text-sm">Logistics KPO Excellence</p>

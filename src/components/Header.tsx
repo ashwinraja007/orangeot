@@ -38,7 +38,7 @@ export const Header = () => {
                 Orange Office Technologies
               </span>
               <p className="font-medium text-gray-800 text-xs sm:text-sm">Logistics KPO Excellence</p>
-              <p className="text-gray-600 text-xs sm:text-sm">Back office, IT Solutions, Digital Marketing, Inside Sales</p>
+              
             </div>
           </Link>
 

@@ -98,6 +98,7 @@ const Index = () => {
     };
   }, []);
   return <div className="min-h-screen flex flex-col">
+      <GlobalImpact />
       <Header />
       
       {/* Hero Section */}

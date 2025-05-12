@@ -52,7 +52,7 @@ const testimonials = [
   {
     quote: "Partnering with Orange Office Technologies has been a game-changer for our operations. Their back-office support—from documentation to customer service—has significantly improved our turnaround times and client satisfaction. Their team is efficient, professional, and truly understands the logistics domain.",
     author: "Krishna Kumar",
-    position: "CEO",
+    position: "Director",
     company: "OECL Malaysia",
     image: "/62fb7958e1cf7.png"
   },

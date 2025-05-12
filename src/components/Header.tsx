@@ -26,15 +26,21 @@ export const Header = () => {
     <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2 group" aria-label="Home">
-            <img
-              alt="Orange Office Technologies"
-              className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10"
-              src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png"
-            />
-            <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800">
-              Orange Office Technologies
-            </span>
+          <Link to="/" className="flex flex-col items-start group" aria-label="Home">
+            <div className="flex items-center space-x-2">
+              <img
+                alt="Orange Office Technologies"
+                className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10"
+                src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png"
+              />
+              <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800">
+                Orange Office Technologies
+              </span>
+            </div>
+            <div className="mt-1 pl-2">
+              <p className="text-xs font-medium text-gray-800">Logistics KPO Excellence</p>
+              <p className="text-[10px] text-gray-600">Logistics-Back office, IT Solutions, Digital Marketing, Inside Sales</p>
+            </div>
           </Link>
 
           {/* Desktop nav */}

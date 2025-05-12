@@ -29,7 +29,7 @@ const Founders = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-10">
               
-              <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-gradient bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent animate-fade-in">Meet Our Leader</h1>
+              <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-gradient bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent animate-fade-in">Meet Our Director</h1>
               <p className="text-gray-600 max-w-2xl mx-auto text-lg animate-fade-in delay-75">
                 The driving force behind Orange Office Technologies' innovation and success
               </p>
@@ -57,10 +57,7 @@ const Founders = () => {
                     <div className="p-6 md:p-8 bg-gradient-to-br from-white to-orange-50/30">
                       <div className="prose max-w-none">
                         
-                        <p className="text-gray-700 mb-4">
-                          Mr. Sudhir KU, the visionary Director of Orange Office Technologies Pvt Ltd, brings a rich professional 
-                          journey spanning over 35 years. His career reflects a rare blend of perseverance, adaptability, and forward-thinking leadership.
-                        </p>
+                        <p className="text-gray-700 mb-4">Mr. Sudhir KU, the Director of Orange Office Technologies Pvt Ltd, brings a rich professional journey spanning over 35 years. His career reflects a rare blend of perseverance, adaptability, and forward-thinking leadership.</p>
                         <p className="text-gray-700 mb-4">
                           Starting his professional journey in 1991 in the courier industry, Mr. Sudhir gradually advanced into the 
                           logistics and freight forwarding sector. His career has taken him across various regions of India and extended globally 

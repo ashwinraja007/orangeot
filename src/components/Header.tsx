@@ -38,11 +38,11 @@ export const Header = () => {
                 Orange Office Technologies
               </span>
               <p className="font-medium text-gray-800 text-xs sm:text-sm">Logistics KPO Excellence</p>
-              <div className="mt-1 ml-0">
-              <p className="text-gray-600 text-xs sm:text-sm">Logistics-Back office, IT Solutions, Digital Marketing, Inside Sales</p>
             </div>
           </Link>
-           </div>
+            <div className="mt-1 ml-0">
+              <p className="text-gray-600 text-xs sm:text-sm">Logistics-Back office, IT Solutions, Digital Marketing, Inside Sales</p>
+            </div>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">

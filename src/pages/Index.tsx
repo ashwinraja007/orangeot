@@ -97,7 +97,6 @@ const Index = () => {
       }
     };
   }, []);
-  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -279,10 +278,8 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-4 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">Meet Our Leader</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              The visionary force behind Orange Office Technologies' innovation and global success
-            </p>
+            <h2 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-4 text-gradient bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">Meet Our Director</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">The force behind Orange Office Technologies' innovation and global success</p>
           </div>
 
           {/* Updated Founder Card */}

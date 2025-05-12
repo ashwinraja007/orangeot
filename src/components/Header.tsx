@@ -2,13 +2,16 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
   useEffect(() => {
     setIsMenuOpen(false);
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
   const navItems = [{
     to: "/",
     label: "Home"
@@ -28,19 +31,26 @@ export const Header = () => {
     to: "/clients",
     label: "Clients"
   }];
+
   return <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center group" aria-label="Home">
-            <img alt="Orange Office Technologies" className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10" src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png" />
-            <div className="ml-2 flex flex-col">
-              <span className="font-heading text-base sm:text-lg font-semibold text-gray-800 md:text-lg">
+          <div className="flex flex-col">
+            <Link to="/" className="flex items-center group" aria-label="Home">
+              <img 
+                alt="Orange Office Technologies" 
+                className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10" 
+                src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png" 
+              />
+              <span className="ml-2 font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800">
                 Orange Office Technologies
               </span>
-              <p className="font-medium text-gray-800 text-xs sm:text-sm">Logistics KPO Excellence</p>
-              <p className="text-gray-600 text-xs sm:text-sm">Back office, IT Solutions, Digital Marketing, Inside Sales</p>
+            </Link>
+            
+            <div className="mt-1 ml-0">
+              <p className="text-gray-600 text-xs sm:text-sm">Logistics-Back office, IT Solutions, Digital Marketing, Inside Sales</p>
             </div>
-          </Link>
+          </div>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">

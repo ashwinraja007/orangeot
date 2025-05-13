@@ -36,7 +36,7 @@ const SoftwareSolutions = () => {
         <Shield className="h-6 w-6 mt-20" />
        <span className="text-4xl font-bold mt-20">Software Solutions</span>
       </div>
-      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
+      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in mt-10">
         Advanced Software for Logistics
       </h1>
       <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">

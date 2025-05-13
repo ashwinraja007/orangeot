@@ -145,8 +145,8 @@ const SalesSupport = () => {
                       Orange Office Technologies' sales support desk has transformed how we manage our sales pipeline. Their team's understanding of the freight forwarding industry allows them to qualify leads effectively, resulting in a 40% increase in our conversion rate.
                     </p>
                     <div>
-                      <p className="font-bold text-lg">James Wilson</p>
-                      <p className="opacity-80">Sales Director, Global Logistics Inc.</p>
+                      <p className="font-bold text-lg">Buddhika Liyanage</p>
+                      <p className="opacity-80">Director Sales, Global Consolidators, Singapore</p>
                     </div>
                   </div>
                   <div className="hidden md:block">

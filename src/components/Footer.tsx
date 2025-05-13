@@ -21,7 +21,7 @@ export const Footer = () => {
               <a href="https://www.facebook.com/people/Orange-Office-Technologies-Pvt-Ltd/61566454888473/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/checkpoint/hibernate/reactivate?id=AQEL33EgPQBNQg&ut=3XORg3zSuokbM1" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/orange-office-technologies-pvt-ltd/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>

@@ -28,7 +28,7 @@ const Documentation = () => {
   <div className="container mx-auto px-4">
     <div className="max-w-4xl mx-auto text-center">
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
-        <FileCheck className="h-7 w-7" />
+        <FileCheck className="h-7 w-7 mt-20" />
         <span className="font-medium mt-20">Documentation</span>
       </div>
       <h1 className="font-heading font-bold text-3xl md:text-5xl mb-6 animate-fade-in">

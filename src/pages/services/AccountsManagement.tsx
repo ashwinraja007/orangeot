@@ -44,38 +44,38 @@ const AccountsManagement = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-{/* Hero Section */}
-<GradientBackground 
-  className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
-  variant="primary" 
-  intensity="medium"
-  animated={true}
->
-  <div className="container mx-auto px-4">
-    <div className="max-w-3xl mx-auto text-center">
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-600 mb-6">
-        <Building2 className="h-4 w-4" />
-        <span className="font-medium">Accounts Management</span>
-      </div>
-      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
-        Professional Accounting Services
-      </h1>
-      <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
-        Streamline your financial operations with our comprehensive accounting services
-      </p>
-      <Button 
-        size="lg" 
-        className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" 
-        asChild
+      {/* Hero Section with increased padding to prevent header overlap */}
+      <GradientBackground 
+        className="pt-40 pb-20 min-h-[60vh] flex items-center justify-center" 
+        variant="primary" 
+        intensity="medium"
+        animated={true}
       >
-        <Link to="/contact" className="flex items-center gap-2">
-          Consult Our Experts
-          <ArrowRight className="h-5 w-5" />
-        </Link>
-      </Button>
-    </div>
-  </div>
-</GradientBackground>
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-600 mb-6">
+              <Building2 className="h-4 w-4" />
+              <span className="font-medium">Account Management</span>
+            </div>
+            <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
+              Financial Management Excellence
+            </h1>
+            <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
+              From freight invoicing to payment follow-ups, our account management team ensures financial accuracy and transparency
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" 
+              asChild
+            >
+              <Link to="/contact" className="flex items-center gap-2">
+                Consult Our Experts
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </GradientBackground>
 
       {/* Service Overview */}
       <section className="py-20 bg-white">
@@ -83,17 +83,17 @@ const AccountsManagement = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">
-                Expert Financial Management for Logistics
+                Comprehensive Financial Management
               </h2>
               <p className="text-gray-600 mb-6">
-                Our Accounts Management services provide comprehensive financial solutions specifically tailored for freight forwarding and logistics businesses. We handle everything from day-to-day bookkeeping to complex financial reporting.
+                We handle receivables, reconciliation, and regular reporting, enabling better control over cash flow and customer accounts. Our dedicated team ensures every financial aspect of your logistics business is handled with precision and care.
               </p>
               <p className="text-gray-600 mb-6">
-                With our team of experienced accountants, you can focus on growing your business while we ensure your financial operations run smoothly and accurately.
+                With our account management services, you can focus on growing your business while we ensure your financial operations run smoothly and efficiently.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600" asChild>
-                  <Link to="/contact">Get a Free Assessment</Link>
+                  <Link to="/contact">Get Started</Link>
                 </Button>
                 <Button variant="outline" asChild>
                   <Link to="/services">View All Services</Link>
@@ -121,7 +121,7 @@ const AccountsManagement = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
-              Our Accounting Services
+              Our Financial Services
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Comprehensive financial management solutions for logistics and freight forwarding companies
@@ -161,7 +161,7 @@ const AccountsManagement = () => {
               </div>
               <div className="md:col-span-3">
                 <h2 className="font-heading font-bold text-3xl mb-6">
-                  Benefits of Our Accounting Services
+                  Benefits of Our Account Management
                 </h2>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -178,57 +178,6 @@ const AccountsManagement = () => {
                   </Link>
                 </Button>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Timeline */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
-              Our Process
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              How we ensure efficient and accurate financial management for your business
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="relative border-l-2 border-purple-200 pl-8 space-y-16 ml-4">
-              {[
-                {
-                  icon: Clock,
-                  title: "Initial Assessment",
-                  description: "We analyze your current financial processes and identify areas for improvement."
-                },
-                {
-                  icon: FileCheck,
-                  title: "Service Implementation",
-                  description: "Our team sets up customized accounting workflows tailored to your business needs."
-                },
-                {
-                  icon: Calculator,
-                  title: "Regular Processing",
-                  description: "We handle day-to-day transactions, ensure timely payments, and maintain accurate records."
-                },
-                {
-                  icon: Building2,
-                  title: "Reporting & Analysis",
-                  description: "Receive comprehensive financial reports and insights to help make informed business decisions."
-                }
-              ].map((step, index) => (
-                <div key={index} className="relative">
-                  <div className="absolute -left-[44px] w-8 h-8 rounded-full bg-white border-2 border-purple-400 flex items-center justify-center shadow-md">
-                    <step.icon className="h-4 w-4 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -29,6 +28,16 @@ const DigitalMarketing = () => {
       icon: BarChart,
       title: "Analytics & Reporting",
       description: "Gain insights into your digital performance with comprehensive analytics and regular reporting."
+    },
+    {
+      icon: Globe,
+      title: "Google Ads",
+      description: "Targeted advertising campaigns on Google's search network to reach potential clients actively searching for logistics services."
+    },
+    {
+      icon: Megaphone,
+      title: "PPC Campaigns",
+      description: "Pay-per-click campaigns designed to drive qualified traffic and generate leads for your logistics business."
     }
   ];
 
@@ -43,9 +52,9 @@ const DigitalMarketing = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-     {/* Hero Section */}
+     {/* Hero Section with increased padding to prevent header overlap */}
 <GradientBackground 
-  className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" 
+  className="pt-40 pb-20 min-h-[60vh] flex items-center justify-center" 
   variant="secondary" 
   intensity="medium"
   animated={true}
@@ -75,7 +84,6 @@ const DigitalMarketing = () => {
     </div>
   </div>
 </GradientBackground>
-
 
       {/* Service Overview */}
       <section className="py-20 bg-white">
@@ -116,7 +124,7 @@ const DigitalMarketing = () => {
         </div>
       </section>
 
-      {/* Strategies Section */}
+      {/* Strategies Section - Updated with additional strategies */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -128,7 +136,7 @@ const DigitalMarketing = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {strategies.map((strategy, index) => (
               <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-white hover:-translate-y-1 rounded-2xl">
                 <CardContent className="p-8">

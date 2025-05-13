@@ -17,7 +17,14 @@ export const Footer = () => {
             <p className="text-sm text-gray-400">
               Orange Office Technologies Pvt Ltd. is a Neutral KPO Service Provider offering expert services in logistics operations.
             </p>
-            
+            <div className="flex space-x-4">
+              <a href="https://www.facebook.com/people/Orange-Office-Technologies-Pvt-Ltd/61566454888473/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="https://www.linkedin.com/checkpoint/hibernate/reactivate?id=AQEL33EgPQBNQg&ut=3XORg3zSuokbM1" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -94,14 +101,6 @@ export const Footer = () => {
             <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} Orange Office Technologies Pvt Ltd. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <a href="https://www.facebook.com/people/Orange-Office-Technologies-Pvt-Ltd/61566454888473/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="https://www.linkedin.com/checkpoint/hibernate/reactivate?id=AQEL33EgPQBNQg&ut=3XORg3zSuokbM1" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
         </div>
       </div>

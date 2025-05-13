@@ -16,8 +16,8 @@ const SalesSupport = () => {
       <div className="flex flex-col items-center gap-8">
         <div className="flex-1 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
-            <Users className="h-8 w-8" />
-            <span className="font-medium">Sales Support</span>
+            <Users className="h-8 w-8 mt-20" />
+            <span className="font-medium mt-20">Sales Support</span>
           </div>
           <h1 className="font-heading font-bold text-3xl md:text-5xl mb-6 animate-fade-in">
             Boost Your Sales Performance

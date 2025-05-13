@@ -34,7 +34,7 @@ const SoftwareSolutions = () => {
     <div className="max-w-3xl mx-auto text-center">
       <div className="inline-flex items-center gap-2 text-purple-600 mb-6\\n\\n">
         <Shield className="h-6 w-6 mt-20" />
-        <span className="font-medium mt-20">Software Solutions</span>
+        <span className="font-large mt-20">Software Solutions</span>
       </div>
       <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
         Advanced Software for Logistics

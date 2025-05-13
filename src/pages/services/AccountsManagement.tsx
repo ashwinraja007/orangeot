@@ -67,9 +67,7 @@ const AccountsManagement = () => {
               <p className="text-gray-600 mb-6">
                 At Orange Office Technologies, our dedicated Account Management services are tailored to support the financial operations of logistics and freight forwarding companies with precision, transparency, and consistency.
               </p>
-              <p className="text-gray-600 mb-6">
-                Our experienced back-office team manages every aspect of your accounts lifecycle — from freight invoicing to payment follow-ups, ensuring your billing processes are accurate, timely, and fully compliant with global standards. We work closely with your operations and customer service teams to ensure that invoicing aligns with service delivery and contractual terms.
-              </p>
+              <p className="text-gray-600 mb-6">Our experienced back-office team manages every aspect of your accounts lifecycle  from freight invoicing to payment follow-ups, ensuring your billing processes are accurate, timely, and fully compliant with global standards. We work closely with your operations and customer service teams to ensure that invoicing aligns with service delivery and contractual terms.</p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600" asChild>
                   <Link to="/contact">Get Started</Link>

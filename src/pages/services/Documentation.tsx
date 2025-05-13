@@ -29,7 +29,7 @@ const Documentation = () => {
     <div className="max-w-4xl mx-auto text-center">
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
         <FileCheck className="h-7 w-7" />
-        <span className="font-medium">Documentation</span>
+        <span className="font-medium mt-20">Documentation</span>
       </div>
       <h1 className="font-heading font-bold text-3xl md:text-5xl mb-6 animate-fade-in">
         Expert Documentation Services

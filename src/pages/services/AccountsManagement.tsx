@@ -6,55 +6,34 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Building2, FileText, Receipt, Calculator, FileCheck, Clock, CheckCircle, CreditCard, BarChart3, Database } from "lucide-react";
-
 const AccountsManagement = () => {
-  const services = [
-    {
-      icon: FileText,
-      title: "Freight Invoice Generation & Verification",
-      description: "We prepare and validate invoices based on shipping instructions, tariffs, and service agreements, reducing disputes and delays."
-    },
-    {
-      icon: Receipt,
-      title: "Receivables Management",
-      description: "From tracking outstanding invoices to following up with clients, we streamline your collections process to improve cash flow and reduce DSO."
-    },
-    {
-      icon: CreditCard,
-      title: "Bank Reconciliation & Ledger Management",
-      description: "We maintain accurate records by reconciling bank statements, customer payments, and accounting entries, ensuring books are always audit-ready."
-    },
-    {
-      icon: Database,
-      title: "Customer Account Maintenance",
-      description: "We monitor customer account activity, resolve billing issues, and manage credit terms to support sustainable client relationships."
-    },
-    {
-      icon: BarChart3,
-      title: "Customized Financial Reporting",
-      description: "Receive periodic reports on aging, collections, revenue summaries, and cash flow to support informed decision-making and strategic planning."
-    }
-  ];
-
-  const benefits = [
-    "Domain Expertise in logistics and freight finance",
-    "Seamless Integration with your existing ERP or accounting software",
-    "Real-Time Reporting and dashboards for better visibility",
-    "Dedicated Support Team for issue resolution and escalation",
-    "Reduced operational load while enhancing transparency"
-  ];
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  const services = [{
+    icon: FileText,
+    title: "Freight Invoice Generation & Verification",
+    description: "We prepare and validate invoices based on shipping instructions, tariffs, and service agreements, reducing disputes and delays."
+  }, {
+    icon: Receipt,
+    title: "Receivables Management",
+    description: "From tracking outstanding invoices to following up with clients, we streamline your collections process to improve cash flow and reduce DSO."
+  }, {
+    icon: CreditCard,
+    title: "Bank Reconciliation & Ledger Management",
+    description: "We maintain accurate records by reconciling bank statements, customer payments, and accounting entries, ensuring books are always audit-ready."
+  }, {
+    icon: Database,
+    title: "Customer Account Maintenance",
+    description: "We monitor customer account activity, resolve billing issues, and manage credit terms to support sustainable client relationships."
+  }, {
+    icon: BarChart3,
+    title: "Customized Financial Reporting",
+    description: "Receive periodic reports on aging, collections, revenue summaries, and cash flow to support informed decision-making and strategic planning."
+  }];
+  const benefits = ["Domain Expertise in logistics and freight finance", "Seamless Integration with your existing ERP or accounting software", "Real-Time Reporting and dashboards for better visibility", "Dedicated Support Team for issue resolution and escalation", "Reduced operational load while enhancing transparency"];
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section with proper padding and alignment */}
-      <GradientBackground 
-        className="pt-32 pb-20 flex items-center justify-center" 
-        variant="primary" 
-        intensity="medium"
-        animated={true}
-      >
+      <GradientBackground className="pt-32 pb-20 flex items-center justify-center" variant="primary" intensity="medium" animated={true}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-600 mb-6">
@@ -67,11 +46,7 @@ const AccountsManagement = () => {
             <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
               From freight invoicing to payment follow-ups, our account management team ensures financial accuracy and transparency
             </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" 
-              asChild
-            >
+            <Button size="lg" className="bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" asChild>
               <Link to="/contact" className="flex items-center gap-2">
                 Consult Our Experts
                 <ArrowRight className="h-5 w-5" />
@@ -105,11 +80,7 @@ const AccountsManagement = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src="/api/placeholder/800/800" 
-                alt="Accounts Management" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/api/placeholder/800/800" alt="Accounts Management" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
               <div className="absolute bottom-8 left-8 right-8 text-white">
                 <h3 className="text-2xl font-bold mb-2">Financial Expertise</h3>
@@ -133,8 +104,7 @@ const AccountsManagement = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
-              <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-white hover:-translate-y-1 rounded-2xl">
+            {services.map((service, index) => <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-white hover:-translate-y-1 rounded-2xl">
                 <CardContent className="p-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-100 mb-6">
                     <service.icon className="h-8 w-8 text-purple-600" />
@@ -142,8 +112,7 @@ const AccountsManagement = () => {
                   <h3 className="font-heading font-bold text-xl mb-3">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -155,12 +124,8 @@ const AccountsManagement = () => {
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-2">
                 <div className="aspect-square rounded-3xl overflow-hidden shadow-xl relative">
-                  <img 
-                    src="/api/placeholder/600/600" 
-                    alt="Financial Growth" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-transparent mix-blend-multiply"></div>
+                  <img alt="Financial Growth" className="w-full h-full object-cover" src="/lovable-uploads/067f7800-e861-47eb-bc5c-35218f9f6d34.jpg" />
+                  
                 </div>
               </div>
               <div className="md:col-span-3">
@@ -168,12 +133,10 @@ const AccountsManagement = () => {
                   Why Choose Us?
                 </h2>
                 <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                  {benefits.map((benefit, index) => <li key={index} className="flex items-start gap-3">
                       <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                       <span className="text-gray-600">{benefit}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 <p className="mt-6 text-gray-600">
                   With Orange Office Technologies as your KPO partner, you gain access to reliable account management solutions that reduce operational load, enhance transparency, and allow your core team to focus on business growth.
@@ -208,8 +171,6 @@ const AccountsManagement = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AccountsManagement;

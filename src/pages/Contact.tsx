@@ -93,7 +93,7 @@ const Contact = () => {
   // Social media icons with updated links
   const socialIcons = {
     facebook: <a href="https://www.facebook.com/people/Orange-Office-Technologies-Pvt-Ltd/61566454888473/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Facebook size={20} /></a>,
-    linkedin: <a href="https://www.linkedin.com/checkpoint/hibernate/reactivate?id=AQEL33EgPQBNQg&ut=3XORg3zSuokbM1" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Linkedin size={20} /></a>,
+    linkedin: <a href="https://www.linkedin.com/company/orange-office-technologies-pvt-ltd/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Linkedin size={20} /></a>,
   };
 
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-white to-orange-50">

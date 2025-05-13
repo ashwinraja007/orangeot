@@ -20,7 +20,7 @@ export const Header = () => {
     label: "Services"
   }, {
     to: "/founders",
-    label: "Founders"
+    label: "Management"
   }, {
     to: "/careers",
     label: "Careers"

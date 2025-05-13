@@ -1,3 +1,4 @@
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
@@ -52,7 +53,7 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-sm text-gray-400">
                 <MapPin size={20} className="text-primary flex-shrink-0 mt-1" />
-                <span>KAIZEN” 2nd &amp; 3rd Floor ,New No.G3 (Old No.G1), G Block, Plot No.565Q, 18th Street, Chinthamani, Anna Nagar East, 
+                <span>KAIZEN" 2nd &amp; 3rd Floor ,New No.G3 (Old No.G1), G Block, Plot No.565Q, 18th Street, Chinthamani, Anna Nagar East, 
    Chennai 600102</span>
               </li>
               {/* Added Kochi Office address */}
@@ -94,8 +95,12 @@ export const Footer = () => {
               © {new Date().getFullYear()} Orange Office Technologies Pvt Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              
-              
+              <a href="https://www.facebook.com/people/Orange-Office-Technologies-Pvt-Ltd/61566454888473/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="https://www.linkedin.com/checkpoint/hibernate/reactivate?id=AQEL33EgPQBNQg&ut=3XORg3zSuokbM1" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
             </div>
           </div>
         </div>

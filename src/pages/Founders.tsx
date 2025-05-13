@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Award, Star, Calendar, Briefcase, MapPin, Globe, Mail, Phone, Linkedin, Twitter, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-const Founders = () => {
+const management = () => {
   const achievements = ["35+ years of industry experience", "Pioneered specialized back-office services for freight forwarding", "Expanded operations across multiple global locations", "Led digital transformation initiatives in logistics sector"];
   const milestones = [{
     year: "1991",
@@ -189,4 +189,4 @@ const Founders = () => {
       <Footer />
     </div>;
 };
-export default Founders;
+export default management;

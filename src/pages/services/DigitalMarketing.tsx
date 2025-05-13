@@ -54,12 +54,12 @@ const DigitalMarketing = () => {
     <div className="max-w-3xl mx-auto text-center">
       {/* Category Tag */}
       <div className="inline-flex items-center gap-2 text-purple-600 mb-6\\n\\n">
-        <Globe className="h-4 w-4 mt-20" />
-        <span className="font-medium mt-20">Digital Marketing</span>
+        <Globe className="h-8 w-8 mt-20" />
+        <span className="text-4xl font-bold mt-20">Digital Marketing</span>
       </div>
 
       {/* Hero Heading */}
-      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
+      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in mt-20">
         Boost Your Online Presence
       </h1>
 

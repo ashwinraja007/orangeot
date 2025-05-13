@@ -49,16 +49,11 @@ const DigitalMarketing = () => {
       <Header />
       
      {/* Hero Section with fixed header spacing */}
-<GradientBackground
-  className="pt-48 pb-20 min-h-[70vh] flex items-center justify-center"
-  variant="secondary"
-  intensity="medium"
-  animated={true}
->
+    <GradientBackground className="pt-48 pb-20 min-h-[70vh] flex items-center justify-center" variant="secondary" intensity="medium" animated={true}>
   <div className="container mx-auto px-6">
     <div className="max-w-3xl mx-auto text-center">
       {/* Category Tag */}
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-600 mb-6">
+      <div className="inline-flex items-center gap-2 text-purple-600 mb-6\\n\\n">
         <Globe className="h-4 w-4 mt-20" />
         <span className="font-medium mt-20">Digital Marketing</span>
       </div>
@@ -74,11 +69,7 @@ const DigitalMarketing = () => {
       </p>
 
       {/* CTA Button */}
-      <Button
-        size="lg"
-        className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3"
-        asChild
-      >
+      <Button size="lg" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-3" asChild>
         <Link to="/contact" className="flex items-center gap-2">
           Get Started
           <ArrowRight className="h-5 w-5" />
@@ -86,7 +77,7 @@ const DigitalMarketing = () => {
       </Button>
     </div>
   </div>
-</GradientBackground>
+    </GradientBackground>
 
       {/* Service Overview */}
       <section className="py-20 bg-white">

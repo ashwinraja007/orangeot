@@ -101,7 +101,7 @@ const Contact = () => {
       
       {/* Enhanced Hero Section with Gradient */}
       <GradientBackground variant="primary" intensity="medium" animated={true} className="pt-28 pb-16">
-        <section className="container mx-auto px-4 mt-40">
+        <section className="container mx-auto px-4 mt-20">
           <div className="max-w-4xl mx-auto text-center">
             <div className={cn("inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-4 transform transition-all duration-700", isPageLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5")}>
               <ContactIcon size={16} />

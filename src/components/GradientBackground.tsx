@@ -82,6 +82,6 @@ export const GradientBackground = ({
   return <div ref={ref} className="">
       <div style={gradientStyle} className="" />
       <div style={gradientStyle} className="py-0 mx-0" />
-      <div className="relative z-10">{children}</div>
+      <div className="">{children}</div>
     </div>;
 };

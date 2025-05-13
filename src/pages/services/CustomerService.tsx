@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Headset, MessageSquare, Clock, Users, CheckSquare, BarChart } from "lucide-react";
-
 const CustomerService = () => {
   const services = [{
     icon: MessageSquare,
@@ -26,7 +24,6 @@ const CustomerService = () => {
     title: "Performance Reporting",
     description: "Regular service level reports and continuous quality improvement."
   }];
-  
   const testimonials = [{
     quote: "Their customer service team has been instrumental in improving our client satisfaction rates. They understand the urgency in logistics and respond accordingly.",
     author: "Sarah Johnson",
@@ -38,7 +35,6 @@ const CustomerService = () => {
     position: "CEO",
     company: "Pacific Freight Solutions"
   }];
-  
   return <div className="min-h-screen flex flex-col">
       <Header />
       
@@ -46,7 +42,7 @@ const CustomerService = () => {
     <GradientBackground className="pt-32 pb-20 min-h-[60vh] flex items-center justify-center" variant="primary" intensity="medium" animated={true}>
   <div className="container mx-auto px-4">
     <div className="max-w-3xl mx-auto text-center">
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 text-pink-600 mb-6">
+      <div className="inline-flex items-center gap-2 text-purple-600 mb-6\\n\\n">
         <Headset className="h-4 w-4 mt-20" />
         <span className="font-medium mt-20">Customer Service</span>
       </div>
@@ -180,30 +176,28 @@ const CustomerService = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[{
-              icon: Users,
-              title: "Professional Representation",
-              description: "Trained specialists who represent your company professionally"
-            }, {
-              icon: Clock,
-              title: "Extended Hours Coverage",
-              description: "Support available beyond standard business hours"
-            }, {
-              icon: MessageSquare,
-              title: "Multilingual Support",
-              description: "Service in multiple languages for global operations"
-            }, {
-              icon: CheckSquare,
-              title: "Reduced Response Time",
-              description: "Quick responses to all customer inquiries and issues"
-            }].map((benefit, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+            icon: Users,
+            title: "Professional Representation",
+            description: "Trained specialists who represent your company professionally"
+          }, {
+            icon: Clock,
+            title: "Extended Hours Coverage",
+            description: "Support available beyond standard business hours"
+          }, {
+            icon: MessageSquare,
+            title: "Multilingual Support",
+            description: "Service in multiple languages for global operations"
+          }, {
+            icon: CheckSquare,
+            title: "Reduced Response Time",
+            description: "Quick responses to all customer inquiries and issues"
+          }].map((benefit, index) => <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-pink-100 mb-4">
                   <benefit.icon className="h-7 w-7 text-pink-600" />
                 </div>
                 <h3 className="font-heading font-bold text-lg mb-2">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>

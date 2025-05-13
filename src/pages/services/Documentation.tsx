@@ -24,7 +24,7 @@ const Documentation = () => {
       <Header />
       
       {/* Hero Section */}
-    <GradientBackground className="pt-32 pb-16 mt-20 min-h-[50vh] flex items-center justify-center" variant="primary" intensity="medium" animated={true}>
+    <GradientBackground className="pt-40 pb-16 min-h-[50vh] flex items-center justify-center" variant="primary" intensity="medium" animated={true}>
   <div className="container mx-auto px-4">
     <div className="max-w-4xl mx-auto text-center">
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">

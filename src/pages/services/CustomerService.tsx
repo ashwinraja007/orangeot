@@ -47,8 +47,8 @@ const CustomerService = () => {
   <div className="container mx-auto px-4">
     <div className="max-w-3xl mx-auto text-center">
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 text-pink-600 mb-6">
-        <Headset className="h-4 w-4" />
-        <span className="font-medium">Customer Service</span>
+        <Headset className="h-4 w-4 mt-20" />
+        <span className="font-medium mt-20">Customer Service</span>
       </div>
       <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
         Exceptional Customer Experience

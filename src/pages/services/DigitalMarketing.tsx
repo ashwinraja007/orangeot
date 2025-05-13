@@ -50,7 +50,7 @@ const DigitalMarketing = () => {
       
      {/* Hero Section with increased padding to prevent header overlap */}
     <GradientBackground className="pt-40 pb-20 min-h-[60vh] flex items-center justify-center" variant="secondary" intensity="medium" animated={true}>
-  <div className="container mx-auto px-4">
+  <div className="container mx-auto px-6">
     <div className="max-w-3xl mx-auto text-center">
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-600 mb-6">
         <Globe className="h-4 w-4" />

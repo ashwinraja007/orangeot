@@ -59,7 +59,7 @@ const DigitalMarketing = () => {
       </div>
 
       {/* Hero Heading */}
-      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in mt-20">
+      <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in mt-10">
         Boost Your Online Presence
       </h1>
 

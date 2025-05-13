@@ -80,11 +80,11 @@ const AccountsManagement = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
-              <img src="/api/placeholder/800/800" alt="Accounts Management" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
+              <img alt="Accounts Management" className="w-full h-full object-cover" src="/lovable-uploads/1b594179-11a8-4158-8891-0d269d378ec2.jpg" />
+              
               <div className="absolute bottom-8 left-8 right-8 text-white">
-                <h3 className="text-2xl font-bold mb-2">Financial Expertise</h3>
-                <p className="text-white/80">Specialized accounting for logistics businesses</p>
+                
+                
               </div>
             </div>
           </div>

@@ -37,8 +37,8 @@ const AccountsManagement = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-600 mb-6">
-              <Building2 className="h-4 w-4" />
-              <span className="font-medium">🧾 Account Management</span>
+              <Building2 className="h-4 w-4 mt-20" />
+              <span className="font-medium mt-20">🧾 Account Management</span>
             </div>
             <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in">
               Financial Management Excellence

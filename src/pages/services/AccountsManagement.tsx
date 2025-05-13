@@ -36,7 +36,7 @@ const AccountsManagement = () => {
       <GradientBackground className="pt-32 pb-20 flex items-center justify-center" variant="primary" intensity="medium" animated={true}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-600 mb-6">
+            <div className="inline-flex items-center gap-2 text-purple-600 mb-6\n\n">
               <Building2 className="h-4 w-4 mt-20" />
               <span className="font-medium mt-20">🧾 Account Management</span>
             </div>

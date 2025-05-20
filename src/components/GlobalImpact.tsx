@@ -24,8 +24,8 @@ export const GlobalImpact = () => {
     }, 
     {
       icon: CheckCircle,
-      title: "Completed Projects",
-      value: "1000+",
+      title: "Successful transactions per month",
+      value: "10000+",
       description: ""
     }
   ];

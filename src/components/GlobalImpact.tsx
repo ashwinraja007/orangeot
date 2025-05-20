@@ -19,7 +19,7 @@ export const GlobalImpact = () => {
     {
       icon: ThumbsUp,
       title: "Satisfied Clients",
-      value: "100+",
+      value: "20+",
       description: ""
     }, 
     {

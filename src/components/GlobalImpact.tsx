@@ -7,13 +7,13 @@ export const GlobalImpact = () => {
     {
       icon: Briefcase,
       title: "Years of Experience",
-      value: "20+",
+      value: "14+",
       description: ""
     }, 
     {
       icon: Smile,
       title: "Happy Employees",
-      value: "150+",
+      value: "200+",
       description: ""
     }, 
     {

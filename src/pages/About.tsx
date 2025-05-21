@@ -29,7 +29,7 @@ const About = () => {
           <div className="relative flex justify-center lg:justify-end my-[5px]">
             <div className="w-4/5 max-w-sm overflow-hidden rounded-2xl shadow-xl border-4 border-white">
               <AspectRatio ratio={1} className="bg-muted">
-                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&h=800&q=80" alt="Modern Office" className="w-full h-full object-cover transition-transform hover:scale-105 duration-700" />
+                <img src="aboutus.avif" alt="Modern Office" className="w-full h-full object-cover transition-transform hover:scale-105 duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply my-0" />
               </AspectRatio>
             </div>

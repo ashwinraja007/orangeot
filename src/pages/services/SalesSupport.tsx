@@ -150,7 +150,7 @@ const SalesSupport = () => {
                     </div>
                   </div>
                   <div className="hidden md:block">
-                    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80" alt="Team collaborating" className="w-full h-full object-cover" />
+                    <img src="/sales.avif" alt="Team collaborating" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </CardContent>

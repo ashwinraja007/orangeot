@@ -120,7 +120,7 @@ const Index = () => {
             <Card className="border-none rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 animate-on-scroll group hover:-translate-y-2 overflow-hidden bg-white">
               <CardContent className="p-0 relative">
                 <div className="h-56 md:h-64 overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Our Mission" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src="vision.avif" alt="Our Mission" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   
                 </div>
                 <div className="relative">

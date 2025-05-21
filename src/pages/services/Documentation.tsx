@@ -187,7 +187,7 @@ const Documentation = () => {
                     </Button>
                   </div>
                   <div className="hidden md:block">
-                    <img src="documentation.avif" alt="Documentation case study" className="w-full h-full object-cover" />
+                    <img src="/documentation.avif" alt="Documentation case study" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </CardContent>

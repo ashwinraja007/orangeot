@@ -103,7 +103,7 @@ const DigitalMarketing = () => {
               </div>
             </div>
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Digital Marketing" className="w-full h-full object-cover" />
+              <img src="/dm.jpg" alt="Digital Marketing" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
               <div className="absolute bottom-8 left-8 right-8 text-white">
                 <h3 className="text-2xl font-bold mb-2">Tailored Strategies</h3>

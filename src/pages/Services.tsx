@@ -30,9 +30,9 @@ const Services = () => {
     color: "from-green-500/20 to-green-600/20"
   }, {
     icon: Building2,
-    title: "Account Management",
+    title: "Financial Management",
     description: "From freight invoicing to payment follow-ups, our account management team ensures financial accuracy and transparency for better control over cash flow.",
-    image: "/4.png",
+    image: "/account.png",
     link: "/services/AccountsManagement",
     color: "from-purple-500/20 to-purple-600/20"
   }, {

@@ -74,7 +74,7 @@ const AccountsManagement = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
-              <img alt="Accounts Management" className="w-full h-full object-cover" src="/lovable-uploads/1b594179-11a8-4158-8891-0d269d378ec2.jpg" />
+              <img alt="Accounts Management" className="w-full h-full object-cover" src="/account 1.png" />
               
               <div className="absolute bottom-8 left-8 right-8 text-white">
                 
@@ -118,7 +118,7 @@ const AccountsManagement = () => {
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-2">
                 <div className="aspect-square rounded-3xl overflow-hidden shadow-xl relative">
-                  <img alt="Financial Growth" className="w-full h-full object-cover" src="/account1.png" />
+                  <img alt="Financial Growth" className="w-full h-full object-cover" src="/lovable-uploads/067f7800-e861-47eb-bc5c-35218f9f6d34.jpg" />
                   
                 </div>
               </div>

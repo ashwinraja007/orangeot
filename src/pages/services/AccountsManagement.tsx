@@ -36,12 +36,8 @@ const AccountsManagement = () => {
       <GradientBackground className="pt-32 pb-20 flex items-center justify-center" variant="primary" intensity="medium" animated={true}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 text-purple-600 mb-6\n\n">
-              <Building2 className="h-8 w-8 mt-20" />
-              <span className="text-4xl font-bold mt-20"> Account Management</span>
-            </div>
             <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 animate-fade-in mt-10">
-              Financial Management Excellence
+              Financial Management 
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-75">
               From freight invoicing to payment follow-ups, our account management team ensures financial accuracy and transparency
@@ -122,7 +118,7 @@ const AccountsManagement = () => {
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-2">
                 <div className="aspect-square rounded-3xl overflow-hidden shadow-xl relative">
-                  <img alt="Financial Growth" className="w-full h-full object-cover" src="/lovable-uploads/067f7800-e861-47eb-bc5c-35218f9f6d34.jpg" />
+                  <img alt="Financial Growth" className="w-full h-full object-cover" src="/account1.png" />
                   
                 </div>
               </div>

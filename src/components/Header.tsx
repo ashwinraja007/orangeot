@@ -37,7 +37,7 @@ export const Header = () => {
               <div className="ml-2 flex flex-col">
                 <Link to="/" className="group" aria-label="Home">
                   <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
-                    Orange Office Technologies
+                    Orange Office Technologies Pvt Ltd
                   </span>
                 </Link>
                 <p className="font-medium text-gray-800 text-xs sm:text-sm">Logistics KPO Excellence</p>

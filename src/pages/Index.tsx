@@ -214,9 +214,9 @@ const Index = () => {
             link: "/services/digitalmarketing"
           }, {
             icon: Building2,
-            title: "Account Management",
+            title: "Financial Management",
             description: "Professional accounting services for trade and non-trade transactions.",
-            image: "/4.png",
+            image: "/account.png",
             color: "from-purple-500 to-violet-400",
             link: "/services/AccountsManagement"
           }, {

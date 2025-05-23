@@ -33,7 +33,7 @@ const Services = () => {
     title: "Financial Management",
     description: "From freight invoicing to payment follow-ups, our account management team ensures financial accuracy and transparency for better control over cash flow.",
     image: "/account.png",
-    link: "/services/AccountsManagement",
+    link: "/services/FinancialManagement",
     color: "from-purple-500/20 to-purple-600/20"
   }, {
     icon: Headset,

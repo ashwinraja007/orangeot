@@ -11,16 +11,9 @@ interface HeroProps {
 }
 export const Hero = ({
   backgroundImages = ["/1h.png", "/15h.png", "/14h.png", "/16h.png", "/18h.png", "/17h.png"],
-  backgroundCaptions = ["Documentation Services", "Sales Support Desk", "Digital Marketing for Logistics", "Account Management", "Software Solutions", "Customer Service & Nomination"]
+  backgroundCaptions = ["Documentation Services", "Sales Support Desk", "Digital Marketing for Logistics", "Financial Management", "Software Solutions", "Customer Service & Nomination"]
 }: HeroProps) => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [textVisible, setTextVisible] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setTextVisible(true);
-    }, 200);
-    return () => clearTimeout(timer);
-  }, [activeSlide]);
   const settings = {
     autoplay: true,
     autoplaySpeed: 4000,
@@ -31,7 +24,6 @@ export const Hero = ({
     dots: false,
     pauseOnHover: false,
     beforeChange: (_current: number, next: number) => {
-      setTextVisible(false);
       setActiveSlide(next);
     }
   };
@@ -41,26 +33,51 @@ export const Hero = ({
         <Slider {...settings}>
           {backgroundImages.map((img, idx) => <div key={idx} className="relative w-full h-screen">
               <img src={img} alt={`Slide ${idx + 1}`} className="w-full h-full object-cover object-center" />
-              
             </div>)}
         </Slider>
       </div>
 
-      {/* Slide Caption - Bottom Center */}
-<div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
-  <div className={`rounded-lg px-6 py-4 backdrop-blur-sm bg-black/30 border-l-4 border-r-4 border-orange-500 
-                transition-opacity duration-500 transform ${textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-    <h2 className="text-xl md:text-3xl font-bold text-white text-center">
-      {backgroundCaptions[activeSlide]}
-    </h2>
-  </div>
-</div>
+      {/* Marquee Section - Fixed positioning and overflow */}
+      <div className="absolute bottom-6 left-0 right-0 z-20 overflow-hidden">
+        <div className="flex animate-marquee whitespace-nowrap py-4 my-[56px]">
+          {/* Duplicate the captions for seamless loop */}
+          {[...backgroundCaptions, ...backgroundCaptions, ...backgroundCaptions].map((caption, index) => <div key={index} className="inline-flex items-center mx-6 flex-shrink-0">
+              <span className="text-black text-lg md:text-2xl font-semibold bg-white px-6 py-3 rounded-md relative shadow-lg">
+                <span className="absolute left-0 top-0 h-full w-1 rounded-l-md bg-orange-500" />
+                <span className="absolute right-0 top-0 h-full w-1 rounded-r-md bg-orange-500" />
+                {caption}
+              </span>
+            </div>)}
+        </div>
+      </div>
 
       {/* Foreground Content */}
       <div className="container mx-auto px-4 relative z-10 flex flex-col justify-between h-full">
         <div className="flex-grow flex items-center">
-          
+          {/* Add your foreground content here */}
         </div>
       </div>
+
+      {/* Marquee animation CSS - Updated for better performance */}
+      <style>
+        {`
+          @keyframes marquee {
+            0% { 
+              transform: translateX(0); 
+            }
+            100% { 
+              transform: translateX(-33.333%); 
+            }
+          }
+          .animate-marquee {
+            animation: marquee 30s linear infinite;
+            display: flex;
+            width: max-content;
+          }
+          .animate-marquee:hover {
+            animation-play-state: paused;
+          }
+        `}
+      </style>
     </section>;
 };

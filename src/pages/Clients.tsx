@@ -17,7 +17,7 @@ const clientLogos = [
   { name: "Citygen", industry: "Transportation", logo: "/62fb77c2d5890.png" },
   { name: "Futurenet", industry: "Warehousing", logo: "/62fb783408cd1.png" },
   { name: "GGL", industry: "Distribution", logo: "/62fb7890bc643.png" },
-  { name: "Primeshiping", industry: "Export/Import", logo: "/62fb79b61d0c8.png" }
+  { name: "Primeshipping", industry: "Export/Import", logo: "/62fb79b61d0c8.png" }
 ];
 
 const testimonials = [

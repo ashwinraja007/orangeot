@@ -19,8 +19,8 @@ export const Header = () => {
     to: "/services",
     label: "Services"
   }, {
-    to: "/management",
-    label: "Management"
+    to: "/our-team",
+    label: "Our Team"
   }, {
     to: "/careers",
     label: "Careers"
@@ -33,19 +33,17 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <div className="flex items-start">
-              <img alt="Orange Office Technologies Pvt Ltd" className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10" src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png" />
+              <img alt="Orange Office Technologies" className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110 sm:h-10" src="/lovable-uploads/1c509753-a7c8-4889-be12-c391eed30fe3.png" />
               <div className="ml-2 flex flex-col">
                 <Link to="/" className="group" aria-label="Home">
-                  <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
-                    Orange Office Technologies Pvt Ltd
-                  </span>
+                  <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-gray-800 group-hover:text-orange-500 transition-colors duration-300">Orange Office Technologies Pvt Ltd</span>
                 </Link>
                 <p className="font-medium text-gray-800 text-xs sm:text-sm">Logistics KPO Excellence</p>
               </div>
             </div>
             
             <div className="mt-1 ml-0">
-              <p className="text-gray-600 text-xs sm:text-sm">Back office, IT Solutions, Digital Marketing, Inside Sales</p>
+              
             </div>
           </div>
 

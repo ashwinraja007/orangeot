@@ -33,23 +33,18 @@ const LocationsSection: React.FC = () => {
           <h3 className="text-xl font-semibold mb-4 text-gray-700">Select Location</h3>
 
           {[
-            { key: "Chennai", label: "Chennai" },
-            { key: "KeralaNeelima", label: "Kochi Office-1" },
-            { key: "KeralaCVM", label: "Kochi Office-2" },
-          ].map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setLocation(key as LocationKey)}
-              className={`block w-full py-3 px-4 rounded transition font-medium ${
-                location === key
-                  ? "bg-orange-600 text-white"
-                  : "bg-white text-orange-600 border border-orange-600 hover:bg-orange-600 hover:text-white"
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+  { key: "Chennai", label: "Chennai", caption: "Headquarters" },
+  { key: "KeralaNeelima", label: "Kochi Office-1", caption: "Middle East Service Centre 1" },
+  { key: "KeralaCVM", label: "Kochi Office-2", caption: "Middle East Service Centre 2" },
+].map(({ key, label, caption }) => (
+  <button
+    key={key}
+    className="p-4 m-2 border rounded text-center flex flex-col items-center"
+  >
+    <span className="text-base font-semibold">{label}</span>
+    <span className="text-sm text-gray-500">{caption}</span>
+  </button>
+))}
 
         {/* Map Section - 80% */}
         <div className="w-full md:w-[80%] h-[450px] relative shadow-2xl rounded-lg overflow-hidden">

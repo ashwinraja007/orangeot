@@ -272,7 +272,7 @@ const Index = () => {
     {/* Heading */}
     <div className="text-center mb-16">
       <h2 className="font-heading font-bold text-3xl text-transparent bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text md:text-5xl">
-        Meet Our Team
+        Meet Our Management Team
       </h2>
       <p className="text-gray-600 max-w-xl mx-auto mt-3 text-base md:text-lg">
         The force behind OOT's innovation and global success

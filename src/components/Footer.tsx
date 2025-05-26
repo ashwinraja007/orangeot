@@ -61,14 +61,22 @@ export const Footer = () => {
               <li className="flex items-start space-x-3 text-sm text-gray-400">
                 <MapPin size={20} className="text-primary flex-shrink-0 mt-1" />
                 <span>KAIZEN" 2nd &amp; 3rd Floor ,New No.G3 (Old No.G1), G Block, Plot No.565Q, 18th Street, Chinthamani, Anna Nagar East, 
-   Chennai 600102</span>
+   Chennai 600102.</span>
               </li>
               {/* Added Kochi Office address */}
               <li className="flex items-start space-x-3 text-sm text-gray-400">
                 <MapPin size={20} className="text-primary flex-shrink-0 mt-1" />
                 <span>
-                  No 34/656, Neelima, Toll Jn, Edappally, Ernakulam, Kochi, Kerala 682024
+                  No 34/656, Neelima, Toll Jn, Edappally, Ernakulam, Kochi, Kerala 682024.
                   <div className="text-xs text-gray-500">(Landmark: OPP Metro Pillar 394)</div>
+                </span>
+              </li>
+              {/* Added Kochi Office 2 address */}
+              <li className="flex items-start space-x-3 text-sm text-gray-400">
+                <MapPin size={20} className="text-primary flex-shrink-0 mt-1" />
+                <span>
+                 C.V.M Arcade, 1st & 2nd Floor , Club Junction Pukkattupady Road,Edappally - 682024.
+                  <div className="text-xs text-gray-500"></div>
                 </span>
               </li>
               <li className="flex items-center space-x-3 text-sm text-gray-400">

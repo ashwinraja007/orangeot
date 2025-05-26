@@ -79,14 +79,14 @@ const Contact = () => {
     phone: "+91 44 4796 5437",
     email: "info@orangeot.com"
   }, {
-    title: "Kochi Office",
+    title: "Kochi Office - Middle East Service Centre-1",
     description: "No 34/656, Neelima, Toll Jn, Edappally, Ernakulam, Kochi, Kerala 682024, (Landmark: OPP Metro Pillar 394)",
     coordinates: [76.3219, 9.9816],
     timing: "Mon - Fri: 9:00 AM - 6:00 PM",
     phone: "+91 44 4796 5437",
     email: "info@orangeot.com"
   }, {
-    title: "Kochi Office",
+    title: "Kochi Office - Middle East Service Centre-2",
     description: "C.V.M Arcade, 1st & 2nd Floor , Club Junction Pukkattupady Road, Edappally - 682024",
     coordinates: [76.3219, 9.9816],
     timing: "Mon - Fri: 9:00 AM - 6:00 PM",

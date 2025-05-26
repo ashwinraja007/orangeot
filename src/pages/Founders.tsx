@@ -47,7 +47,7 @@ const management = () => {
           <div className="absolute inset-0 bg-pattern opacity-5"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-10">
-              <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-gradient bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent animate-fade-in">Meet Our Team</h1>
+              <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-gradient bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent animate-fade-in">Meet Our Management Team</h1>
               <p className="text-gray-600 max-w-2xl mx-auto text-lg animate-fade-in delay-75">The driving force behind OOT's innovation and success</p>
             </div>
 
@@ -174,7 +174,7 @@ const management = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     {/* Image Section */}
                     <div className="relative">
-                      <img alt="Mr. Bennet Rajesh" className="w-full h-full object-cover" src="/bennetSir.png" />
+                      <img alt="Mr. Bennet Rajesh" className="w-full h-full object-cover" src="/lovable-uploads/df3269f2-c31f-4bea-aa62-53fd3aaf8a1b.png" />
                     </div>
 
                     {/* Text Content Section */}
@@ -223,7 +223,7 @@ const management = () => {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 md:gap-12">
                       {/* Key Achievements */}
                       <div className="space-y-6">
                         <div className="flex items-center gap-4 mb-6">
@@ -287,76 +287,7 @@ const management = () => {
                       </div>
 
                       {/* Career Milestones */}
-                      <div className="space-y-6">
-                        <div className="flex items-center gap-4 mb-6">
-                          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-400 shadow-lg">
-                            <Calendar className="h-8 w-8 text-white" />
-                          </div>
-                          <h3 className="text-2xl font-bold text-gray-900">Career Milestones</h3>
-                        </div>
-                        
-                        <div className="relative">
-                          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-orange-400 to-blue-400"></div>
-                          
-                          <div className="space-y-8">
-                            <div className="relative flex items-start gap-6">
-                              <div className="absolute left-6 w-4 h-4 rounded-full bg-white border-2 border-orange-400 flex items-center justify-center">
-                                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                              </div>
-                              <div className="ml-16 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                <div className="bg-orange-100 rounded-full px-3 py-1 text-sm text-orange-600 font-semibold inline-block mb-2">(1996–2007)</div>
-                                <p className="text-gray-800 font-medium mb-1">Kumaran Systems Pvt. Ltd – Sr. Technical Architect
-                              </p>
-                                <p className="text-gray-600 text-sm">Developed Java migration tools and managed architecture for U.S. and Canadian clients.</p>
-                              </div>
-                            </div>
-                            
-                            <div className="relative flex items-start gap-6">
-                              <div className="absolute left-6 w-4 h-4 rounded-full bg-white border-2 border-orange-400 flex items-center justify-center">
-                                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                              </div>
-                              <div className="ml-16 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                <div className="bg-orange-100 rounded-full px-3 py-1 text-sm text-orange-600 font-semibold inline-block mb-2">(2007–2009)</div>
-                                <p className="text-gray-800 font-medium mb-1">Wipro Technologies Ltd, Chennai-Senior Consultant – J2EE projects and Presales</p>
-                                <p className="text-gray-600 text-sm">Led solution architecture for Java-based insurance RFPs and delivery.</p>
-                              </div>
-                            </div>
-                            
-                            <div className="relative flex items-start gap-6">
-                              <div className="absolute left-6 w-4 h-4 rounded-full bg-white border-2 border-orange-400 flex items-center justify-center">
-                                <div className="w-2 h-2 rounded-full bg-orange-500"></div>
-                              </div>
-                              <div className="ml-16 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                <div className="rounded-full px-3 py-1 text-sm text-orange-600 font-semibold inline-block mb-2 bg-orange-100">(2009–2020)</div>
-                                <p className="text-gray-800 font-medium mb-1">Cognizant Technology Solutions  – Sr. Technical Architect – BFS</p>
-                                <p className="text-gray-600 text-sm">Delivered greenfield microservices, payment platforms, and real-time fraud systems for U.S. Bank, Canadian and APAC banks.</p>
-                              </div>
-                            </div>
-
-                            <div className="relative flex items-start gap-6">
-                              <div className="absolute left-6 w-4 h-4 rounded-full bg-white border-2 border-orange-400 flex items-center justify-center">
-                                <div className="w-2 h-2 rounded-full bg-orange-500"></div>
-                              </div>
-                            <div className="ml-16 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                <div className="rounded-full px-3 py-1 text-sm text-orange-600 font-semibold inline-block mb-2 bg-orange-100">(2020–2023)</div>
-                                <p className="text-gray-800 font-medium mb-1">Kumaran Systems Pvt. Ltd – Lead Technical Architect – Banking</p>
-                                <p className="text-gray-600 text-sm">Architected Azure cloud migration, pricing engines, and data mesh dashboards for top banking clients.</p>
-                              </div>
-                            </div>
-                            
-                            <div className="relative flex items-start gap-6">
-                              <div className="absolute left-6 w-4 h-4 rounded-full bg-white border-2 border-orange-400 flex items-center justify-center">
-                                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                              </div>
-                              <div className="ml-16 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                <div className="rounded-full px-3 py-1 text-sm text-orange-600 font-semibold inline-block mb-2 bg-orange-200">(2023–2024)</div>
-                                <p className="text-gray-800 font-medium mb-1">Onward Technologies Ltd – Enterprise Architect</p>
-                                <p className="text-gray-600 text-sm">Led Azure migration architecture and proof-of-concept designs for major Canadian bank applications.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      
                     </div>
                   </div>
                 </CardContent>

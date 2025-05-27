@@ -25,7 +25,7 @@ export const GlobalImpact = () => {
     {
       icon: CheckCircle,
       title: "Successful transactions per month",
-      value: "10000+",
+      value: "100000+",
       description: ""
     }
   ];

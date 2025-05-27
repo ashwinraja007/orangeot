@@ -39,9 +39,6 @@ const clientLogos = [{
   src: "/62fb79faa960d.png",
   alt: "Shipsoft"
 }, {
-  src: "/62fb7adfb0edb.png",
-  alt: "Haixun"
-}, {
   src: "/63048b56bd44e.png",
   alt: "Moltech"
 }, {

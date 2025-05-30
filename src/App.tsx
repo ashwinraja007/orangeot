@@ -17,6 +17,7 @@ import AccountsManagement from "./pages/services/AccountsManagement";
 import CustomerService from "./pages/services/CustomerService";
 import SoftwareSolutions from "./pages/services/SoftwareSolutions";
 import Careers from "./pages/Careers";
+import Thankyou from "./pages/Thankyou";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
 import Founders from "./pages/Founders";
@@ -43,6 +44,7 @@ const App: React.FC = () => (
             <Route path="/services/customerservice" element={<CustomerService />} />
             <Route path="/services/SoftwareSolutions" element={<SoftwareSolutions />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/thank-you" element={<Thankyou />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/Management-team" element={<Founders />} />

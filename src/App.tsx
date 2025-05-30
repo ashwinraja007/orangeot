@@ -17,7 +17,7 @@ import AccountsManagement from "./pages/services/AccountsManagement";
 import CustomerService from "./pages/services/CustomerService";
 import SoftwareSolutions from "./pages/services/SoftwareSolutions";
 import Careers from "./pages/Careers";
-import Thankyou from "./pages/Thankyou";
+import Thankyou from "./pages/thank-you";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
 import Founders from "./pages/Founders";

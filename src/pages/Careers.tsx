@@ -15,11 +15,18 @@ declare global {
 const Careers = () => {
   const [selectedJob, setSelectedJob] = useState<string | null>(null);
   const jobs = [{
-    title: "Full Stack Developer",
+    title: " Full Stack Developer (Warehouse & Supply Chain Domain)",
     location: "Chennai (Anna Nagar)",
     type: "Full Time",
-    experience: "3+ years"
+    experience: "10+ years",
+    Department: "Technology / Software Development"
   }, {
+    title: "Warehouse Management System (WMS) Business Analyst",
+    location: "Chennai",
+    type: "Full Time",
+    experience: "5+ years",
+    Department: "IT"
+  },{
     title: "Ocean Freight- Export Customer Service",
     location: "Chennai",
     type: "Full Time",

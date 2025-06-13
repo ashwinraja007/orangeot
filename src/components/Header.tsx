@@ -16,7 +16,7 @@ export const Header = () => {
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
     { to: "/services", label: "Services" },
-    { to: "/our-team", label: "Our Team" },
+    { to: "/our-team", label: "Our Management Team" }, // Updated label
     { to: "/employees-corner", label: "Employee's Corner" },
     { to: "/careers", label: "Careers" },
     { to: "/clients", label: "Clients" },
@@ -44,7 +44,7 @@ export const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-3 lg:space-x-4">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.label}

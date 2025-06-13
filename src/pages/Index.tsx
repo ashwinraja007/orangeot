@@ -286,7 +286,7 @@ const Index = () => {
           }, {
             name: "Mr. Bennet Rajesh",
             role: "Chief Technology Officer",
-            image: "/lovable-uploads/69211290-1cac-49a7-bb5c-7f107d2161b6.png",
+            image: "/bennetSir.png",
             desc: "27+ years of enterprise software and cloud innovation, driving digital transformation and scalable architecture.",
             link: "/our-team#cto"
           }].map((member, index) => <div key={index} className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 p-8 flex flex-col items-center text-center">

@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-500/20 to-transparent" />
       
       <div className="container mx-auto px-4 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/" className="inline-block">
@@ -91,17 +91,7 @@ export const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h4 className="font-bold text-lg mb-6">Newsletter</h4>
-            <p className="text-sm text-gray-400 mb-4">
-              Subscribe to our newsletter for updates and insights.
-            </p>
-            <div className="space-y-3">
-              <Input type="email" placeholder="Your email" className="bg-white/5 border-gray-800 text-white placeholder:text-gray-500" />
-              <Button className="w-full">Subscribe</Button>
-            </div>
-          </div>
-        </div>
+          
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 mt-12">

@@ -10,8 +10,7 @@ const LocationsSection: React.FC = () => {
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.154444741236!2d80.22038028418172!3d13.089396579393412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52642e68adc059%3A0x44809bfe043deede!2sOrange%20Office%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1748014304639!5m2!1sen!2sin',
     KeralaNeelima:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.867382313168!2d76.30683287569774!3d10.027800872554366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d4156faaa25%3A0xe9827e2acc19a094!2sOrange%20Office%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1748014370026!5m2!1sen!2sin',
-    KeralaCVM:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8683344590113!2d76.31051408393986!3d10.027722346994494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d5bc4f162f3%3A0x8f0b00fda4f74a01!2sCVM%20Arcade!5e0!3m2!1sen!2sin!4v1748014483347!5m2!1sen!2sin',
+    
   };
 
   return (
@@ -34,8 +33,7 @@ const LocationsSection: React.FC = () => {
 
           {[
             { key: "Chennai", label: "Chennai", caption: "Headquarters" },
-            { key: "KeralaNeelima", label: "Kochi Office", caption: "Middle East Service Centre-1" },
-            { key: "KeralaCVM", label: "Kochi Office", caption: "Middle East Service Centre-2" },
+            { key: "KeralaNeelima", label: "Kochi Office", caption: "Middle East Service Centre" },
           ].map(({ key, label, caption }) => (
             <button
               key={key}

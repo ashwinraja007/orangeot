@@ -111,14 +111,6 @@ const Contact = () => {
       timing: "Mon - Fri: 9:00 AM - 6:00 PM",
       phone: "+91 44 4796 5437",
       email: "info@orangeot.com"
-    },
-    {
-      title: "Kochi Office",
-      description: "C.V.M Arcade, 1st & 2nd Floor , Club Junction Pukkattupady Road, Edappally - 682024",
-      coordinates: [76.3219, 9.9816],
-      timing: "Mon - Fri: 9:00 AM - 6:00 PM",
-      phone: "+91 44 4796 5437",
-      email: "info@orangeot.com"
     }
   ];
 
